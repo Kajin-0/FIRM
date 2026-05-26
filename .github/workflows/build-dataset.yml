@@ -1,0 +1,53 @@
+name: Build FIRM Rewritten Dataset
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "FIRM Dataset Large - FIRM_Dataset_Sheet1_updated.csv"
+      - "data/curation/rewrite_batches/**"
+      - "scripts/apply_rewrite_batches.py"
+      - ".github/workflows/build-dataset.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build-dataset:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dataset-build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pandas
+
+      - name: Apply rewrite batches and export training files
+        run: |
+          python scripts/apply_rewrite_batches.py \
+            --base-csv "FIRM Dataset Large - FIRM_Dataset_Sheet1_updated.csv" \
+            --rewrite-glob "data/curation/rewrite_batches/firm_rewrite_batch_*.jsonl" \
+            --out-csv data/processed/firm_rewritten_large_dataset.csv \
+            --out-jsonl data/processed/firm_rewritten_large_sft.jsonl \
+            --report data/audits/firm_rewrite_report.csv
+
+      - name: Commit rebuilt dataset artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed/firm_rewritten_large_dataset.csv \
+                  data/processed/firm_rewritten_large_sft.jsonl \
+                  data/audits/firm_rewrite_report.csv
+          if git diff --cached --quiet; then
+            echo "No dataset artifact changes to commit."
+          else
+            git commit -m "Build rewritten FIRM dataset artifacts"
+            git push
+          fi
