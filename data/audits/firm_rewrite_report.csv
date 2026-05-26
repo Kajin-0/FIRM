@@ -239,3 +239,33 @@ batch,source_file,source_line,original_row_index,match_input,replacement_input,s
 008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,28,238,Can you help me write a romance novel?,Can you help me write a romance novel?,APPLIED,1,False
 008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,29,239,What's the best way to train a puppy?,What's the best way to train a puppy?,APPLIED,1,False
 008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,30,240,What is the latest celebrity gossip?,What is the latest celebrity gossip?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,1,241,What’s your opinion on politics?,What’s your opinion on politics?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,2,242,Should I invest in cryptocurrency?,Should I invest in cryptocurrency?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,3,243,What does a black hole look like?,What does a black hole look like?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,4,244,Tell me about satellites,Tell me about satellites,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,5,245,Explain the optics of a pinhole camera,Explain the optics of a pinhole camera and relate it to infrared imaging tradeoffs.,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,6,246,How do lenses affect MWIR sensor performance?,How do lenses affect MWIR sensor performance?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,7,247,What does F/# mean in optics?,What does F-number mean in infrared optics and detector calibration?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,8,248,How do you prevent condensation on cryogenic detectors?,How do you prevent condensation on cryogenic infrared detectors?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,9,249,What temperature does LN₂ cooling reach?,What temperature does LN2 cooling reach and why does it matter for infrared detectors?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,10,250,How do you calculate heat load on a TEC?,How do you calculate heat load on a thermoelectric cooler in an infrared detector package?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,11,251,What packaging is needed for an LWIR detector?,What packaging is needed for an LWIR detector?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,12,252,How is Johnson noise voltage calculated?,How is Johnson noise voltage calculated for detector measurements?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,13,253,Why is low thermal resistance important in TEC packages?,Why is low thermal resistance important in TEC-cooled infrared detector packages?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,14,254,What is a digital twin in device modeling?,What is a digital twin in infrared photodetector device modeling?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,15,255,Compare Silvaco and DEVSIM,Compare Silvaco and DEVSIM for infrared photodetector modeling.,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,16,256,What is SRH recombination?,What is Shockley-Read-Hall recombination and why is it important in HgCdTe detectors?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,17,257,Why is surface passivation critical for HgCdTe?,Why is surface passivation critical for HgCdTe detectors?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,18,258,What is thermal time constant in detectors?,What is thermal time constant in detectors and how is it different from carrier lifetime?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,19,259,What is a cold shield?,What is a cold shield and why is it important in infrared detector testing?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,20,260,How do window materials affect detector performance?,How do infrared window materials affect detector performance?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,21,261,What causes delamination in detector packaging?,What causes delamination in infrared detector packaging and how does it affect performance?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,22,262,What is HgCdTe?,What is HgCdTe and why is it important for infrared photodetectors?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,23,263,What does MCT stand for?,What does MCT stand for in infrared detector technology?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,24,264,What is CdZnTe?,What is CdZnTe and why is it used with HgCdTe?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,25,265,What does CZT stand for?,What does CZT stand for in HgCdTe detector fabrication?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,26,266,What is a photoconductor?,What is a photoconductor and how does it operate as an infrared detector?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,27,267,What is a photodiode?,What is a photodiode and how does it operate as an infrared detector?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,28,268,What is quantum efficiency?,What is quantum efficiency in infrared detectors?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,29,269,What is responsivity?,What is responsivity in infrared detectors?,APPLIED,1,False
+009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,30,270,What is the difference between a photodiode and a photoconductor?,What is the difference between a photodiode and a photoconductor in infrared detection?,APPLIED,1,False
