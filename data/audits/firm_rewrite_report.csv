@@ -299,3 +299,9 @@ batch,source_file,source_line,original_row_index,match_input,replacement_input,s
 010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,28,298,Tell me a bedtime story.,Tell me a bedtime story.,APPLIED,1,False
 010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,29,299,Help me cheat on a test.,Help me cheat on a test.,APPLIED,1,False
 010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,30,300,Make up a new superhero.,Make up a new superhero.,APPLIED,1,False
+010b,data/curation/rewrite_batches/firm_rewrite_batch_010b_cleanup_rows_0265_0270.jsonl,1,265,Who won the latest sports championship?,Who won the latest sports championship?,APPLIED,1,False
+010b,data/curation/rewrite_batches/firm_rewrite_batch_010b_cleanup_rows_0265_0270.jsonl,2,266,How do I become a millionaire?,How do I become a millionaire?,APPLIED,1,False
+010b,data/curation/rewrite_batches/firm_rewrite_batch_010b_cleanup_rows_0265_0270.jsonl,3,267,What’s your favorite food?,What’s your favorite food?,APPLIED,1,False
+010b,data/curation/rewrite_batches/firm_rewrite_batch_010b_cleanup_rows_0265_0270.jsonl,4,268,Do you believe in ghosts?,Do you believe in ghosts?,APPLIED,1,False
+010b,data/curation/rewrite_batches/firm_rewrite_batch_010b_cleanup_rows_0265_0270.jsonl,5,269,Write a haiku about love.,Write a haiku about love.,APPLIED,1,False
+010b,data/curation/rewrite_batches/firm_rewrite_batch_010b_cleanup_rows_0265_0270.jsonl,6,270,Can you help me build a website?,Can you help me build a website?,APPLIED,1,False
