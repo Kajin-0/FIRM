@@ -365,3 +365,33 @@ batch,source_file,source_line,original_row_index,match_input,replacement_input,s
 012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,28,358,Tell me about computer vision.,Tell me about computer vision from an imaging-sensor perspective.,APPLIED,1,False
 012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,29,359,What is machine learning?,How is machine learning used with infrared detector data?,APPLIED,1,False
 012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,30,360,How do robots work?,How do robots use photodetectors and infrared sensors?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,1,361,What are smart sensors?,What are smart sensors from an infrared detector systems perspective?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,2,362,What is artificial intelligence?,How is artificial intelligence used with infrared detector systems?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,3,363,What is the Internet of Things?,How do infrared photodetectors fit into Internet-of-Things sensing systems?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,4,364,Tell me about signal processing.,How is signal processing used in infrared detector measurements?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,5,365,How do lasers work?,How do lasers interact with photodetector systems?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,6,366,What is semiconductor fabrication?,What is semiconductor fabrication for infrared photodetectors?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,7,367,Explain cyber-physical systems.,How do infrared detectors fit into cyber-physical systems?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,8,368,What is fiber optics?,What is fiber optics from a photodetector perspective?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,9,369,What is biomedical imaging?,How are photodetectors used in biomedical imaging?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,10,370,Tell me about neuromorphic computing.,What is neuromorphic computing from an optoelectronic detector perspective?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,11,371,What are nanomaterials?,How are nanomaterials relevant to photodetectors?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,12,372,What is spectroscopy?,What is spectroscopy and why do photodetectors matter?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,13,373,Explain signal-to-noise ratio.,Explain signal-to-noise ratio in infrared detector measurements.,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,14,374,What are MEMS devices?,How are MEMS devices used with infrared detectors and photonic systems?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,15,375,What is hyperspectral imaging?,What is hyperspectral imaging from an infrared detector perspective?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,16,376,Tell me about semiconductor doping.,How does semiconductor doping affect infrared photodetectors?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,17,377,How does an ADC work?,How does an ADC affect infrared detector measurements?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,18,378,Explain sensor fusion.,How is sensor fusion used with infrared detectors?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,19,379,What is photolithography?,What is photolithography in infrared detector fabrication?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,20,380,How does time-of-flight sensing work?,How does time-of-flight sensing use photodetectors?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,21,381,What is thermoelectric cooling?,What is thermoelectric cooling and how is it used in infrared detector systems?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,22,382,Explain Fourier analysis.,How is Fourier analysis used in infrared detector measurements?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,23,383,What is a Fabry-Perot interferometer?,What is a Fabry-Perot interferometer and how does it relate to infrared detection?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,24,384,What is avalanche multiplication?,What is avalanche multiplication in photodetectors?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,25,385,Tell me about vacuum packaging.,Why is vacuum packaging important for infrared detectors?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,26,386,What is active pixel design?,What is active pixel design in imaging arrays and why does it matter for infrared FPAs?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,27,387,What are you trained to do?,What are you trained to do?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,28,388,What subjects do you specialize in?,What subjects do you specialize in?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,29,389,What kind of questions can I ask you?,What kind of questions can I ask you?,APPLIED,1,False
+013,data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl,30,390,Who trained you?,Who trained you?,APPLIED,1,False
