@@ -269,3 +269,33 @@ batch,source_file,source_line,original_row_index,match_input,replacement_input,s
 009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,28,268,What is quantum efficiency?,What is quantum efficiency in infrared detectors?,APPLIED,1,False
 009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,29,269,What is responsivity?,What is responsivity in infrared detectors?,APPLIED,1,False
 009,data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl,30,270,What is the difference between a photodiode and a photoconductor?,What is the difference between a photodiode and a photoconductor in infrared detection?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,1,271,What does LWIR mean?,What does LWIR mean in infrared detector engineering?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,2,272,What is bandgap?,What is bandgap and why does it control infrared detector cutoff?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,3,273,What is an IR detector?,What is an infrared detector and what determines its performance?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,4,274,What is thermal noise?,What is thermal noise in infrared detector measurements?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,5,275,What does TEC stand for?,What does TEC stand for and how is it used in infrared detector systems?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,6,276,What is LPE?,What is LPE in HgCdTe detector material growth?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,7,277,What is MOCVD?,What is MOCVD and why is it used for infrared detector materials?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,8,278,What is a focal plane array?,What is a focal plane array in infrared imaging?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,9,279,What does ROIC stand for?,What does ROIC stand for in infrared focal plane arrays?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,10,280,What does NETD stand for?,What does NETD stand for and how is it related to infrared camera sensitivity?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,11,281,What is passivation?,What is passivation in semiconductor infrared detectors?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,12,282,Write a horror story.,Write a horror story.,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,13,283,Who is the richest person in the world?,Who is the richest person in the world?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,14,284,What's the weather like today?,What's the weather like today?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,15,285,Give me a motivational quote.,Give me a motivational quote.,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,16,286,What should I wear to a wedding?,What should I wear to a wedding?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,17,287,Tell me about Greek mythology.,Tell me about Greek mythology.,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,18,288,Generate a fantasy world map.,Generate a fantasy world map.,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,19,289,How do I start a clothing brand?,How do I start a clothing brand?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,20,290,Teach me how to skateboard.,Teach me how to skateboard.,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,21,291,What is your favorite animal?,What is your favorite animal?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,22,292,Write a country music song.,Write a country music song.,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,23,293,What happens in the TV show Friends?,What happens in the TV show Friends?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,24,294,Create a cocktail recipe.,Create a cocktail recipe.,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,25,295,What's trending on TikTok?,What's trending on TikTok?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,26,296,Do aliens exist?,Do aliens exist?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,27,297,What's a good name for a cat?,What's a good name for a cat?,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,28,298,Tell me a bedtime story.,Tell me a bedtime story.,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,29,299,Help me cheat on a test.,Help me cheat on a test.,APPLIED,1,False
+010,data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl,30,300,Make up a new superhero.,Make up a new superhero.,APPLIED,1,False
