@@ -335,3 +335,33 @@ batch,source_file,source_line,original_row_index,match_input,replacement_input,s
 011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,28,328,What’s the meaning of life?,What’s the meaning of life?,APPLIED,1,False
 011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,29,329,What should I name my startup?,What should I name my startup?,APPLIED,1,False
 011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,30,330,How do I decorate my apartment?,How do I decorate my apartment?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,1,331,Give me a hairstyle suggestion.,Give me a hairstyle suggestion.,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,2,332,Tell me what zodiac sign matches mine.,Tell me what zodiac sign matches mine.,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,3,333,Generate a bedtime story for kids.,Generate a bedtime story for kids.,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,4,334,How do I bake the perfect brownie?,How do I bake the perfect brownie?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,5,335,What’s trending in fashion this year?,What’s trending in fashion this year?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,6,336,What are the best dog breeds for apartments?,What are the best dog breeds for apartments?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,7,337,What should I get my partner for their birthday?,What should I get my partner for their birthday?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,8,338,Make a TikTok caption about fall vibes.,Make a TikTok caption about fall vibes.,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,9,339,Help me with a breakup recovery plan.,Help me with a breakup recovery plan.,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,10,340,Write a dialogue between two superheroes.,Write a dialogue between two superheroes.,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,11,341,What are the healthiest salad toppings?,What are the healthiest salad toppings?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,12,342,What does NASA do?,What does NASA do from an infrared detector and instrumentation perspective?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,13,343,Tell me about space technology.,Tell me about space technology from an infrared detector perspective.,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,14,344,How do satellites work?,How do satellites use infrared detectors for sensing and imaging?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,15,345,What is remote sensing?,What is remote sensing from an infrared detector perspective?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,16,346,What are thermal cameras?,What are thermal cameras and what detector metrics determine their performance?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,17,347,How does night vision work?,"How does night vision work, and how is it different from thermal infrared imaging?",APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,18,348,What is the purpose of weather satellites?,What is the purpose of weather satellites from an infrared-sensing perspective?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,19,349,Tell me about infrared imaging.,Tell me about infrared imaging from detector physics to system metrics.,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,20,350,How are photodetectors used in astronomy?,"How are photodetectors used in astronomy, especially in infrared instruments?",APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,21,351,What do imaging sensors do?,What do imaging sensors do in infrared and photonic systems?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,22,352,What is surveillance technology?,What is surveillance technology from an infrared sensing perspective?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,23,353,What is target acquisition in defense systems?,What is target acquisition in infrared defense systems from a detector-engineering perspective?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,24,354,Tell me about drones.,Tell me about drones from an infrared sensing payload perspective.,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,25,355,How does missile guidance work?,How do infrared seeker detectors contribute to missile guidance systems?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,26,356,What is the James Webb Space Telescope?,What is the James Webb Space Telescope from an infrared detector perspective?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,27,357,What is quantum computing?,What is quantum computing from a photodetector and photonics perspective?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,28,358,Tell me about computer vision.,Tell me about computer vision from an imaging-sensor perspective.,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,29,359,What is machine learning?,How is machine learning used with infrared detector data?,APPLIED,1,False
+012,data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl,30,360,How do robots work?,How do robots use photodetectors and infrared sensors?,APPLIED,1,False
