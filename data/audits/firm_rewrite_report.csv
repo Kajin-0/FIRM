@@ -209,3 +209,33 @@ batch,source_file,source_line,original_row_index,match_input,replacement_input,s
 007,data/curation/rewrite_batches/firm_rewrite_batch_007_rows_0181_0210.jsonl,28,208,What are Te inclusions and how do they affect HgCdTe?,What are Te inclusions and how do they affect HgCdTe detectors?,APPLIED,1,False
 007,data/curation/rewrite_batches/firm_rewrite_batch_007_rows_0181_0210.jsonl,29,209,How do dislocations impact photoconductor performance?,How do dislocations impact HgCdTe photoconductor performance?,APPLIED,1,False
 007,data/curation/rewrite_batches/firm_rewrite_batch_007_rows_0181_0210.jsonl,30,210,What causes Cd-rich precipitates in HgCdTe layers?,What causes Cd-rich precipitates in HgCdTe layers and how do they affect detectors?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,1,211,How are precipitates removed or reduced after growth?,How are precipitates removed or reduced after HgCdTe growth?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,2,212,What are common substrate-originated defects in HgCdTe epitaxy?,What substrate-originated defects can propagate into HgCdTe epitaxy?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,3,213,What are dislocation loops and how do they form?,What are dislocation loops in HgCdTe-related materials and how can they form?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,4,214,What is the typical dislocation density in high-performance HgCdTe?,How should dislocation density requirements for high-performance HgCdTe be discussed?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,5,215,How does strain relaxation influence defect formation?,How does strain relaxation influence defect formation in HgCdTe epitaxy?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,6,216,What microscopy methods reveal defects in HgCdTe?,What microscopy and mapping methods reveal defects in HgCdTe?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,7,217,Why are twins and grain boundaries rare but critical in HgCdTe?,Why are twins and grain boundaries rare but critical in HgCdTe detector material?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,8,218,Write a joke about elephants.,Write a joke about elephants.,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,9,219,What did Einstein eat for breakfast?,What did Einstein eat for breakfast?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,10,220,Can you write me a poem about love?,Can you write me a poem about love?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,11,221,Give me some SEO tips for my website.,Give me some SEO tips for my website.,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,12,222,Summarize the Harry Potter books.,Summarize the Harry Potter books.,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,13,223,Make up a story about a detective.,Make up a story about a detective.,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,14,224,Who won the Oscar for Best Actor in 2023?,Who won the Oscar for Best Actor in 2023?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,15,225,Teach me how to play chess.,Teach me how to play chess.,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,16,226,Create a workout plan for me.,Create a workout plan for me.,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,17,227,Write an article about climate change.,Write an article about climate change.,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,18,228,What is the best pizza topping?,What is the best pizza topping?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,19,229,Generate a rap about summer vacation.,Generate a rap about summer vacation.,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,20,230,Tell me about famous painters in the 19th century.,Tell me about famous painters in the 19th century.,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,21,231,Give me a recipe for lasagna.,Give me a recipe for lasagna.,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,22,232,What's your favorite movie?,What's your favorite movie?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,23,233,Design me a tattoo.,Design me a tattoo.,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,24,234,Write a fictional news article.,Write a fictional news article.,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,25,235,Who is the best basketball player?,Who is the best basketball player?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,26,236,Describe the plot of a Marvel movie.,Describe the plot of a Marvel movie.,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,27,237,Help me make a social media plan.,Help me make a social media plan.,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,28,238,Can you help me write a romance novel?,Can you help me write a romance novel?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,29,239,What's the best way to train a puppy?,What's the best way to train a puppy?,APPLIED,1,False
+008,data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl,30,240,What is the latest celebrity gossip?,What is the latest celebrity gossip?,APPLIED,1,False
