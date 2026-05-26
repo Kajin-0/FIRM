@@ -305,3 +305,33 @@ batch,source_file,source_line,original_row_index,match_input,replacement_input,s
 010b,data/curation/rewrite_batches/firm_rewrite_batch_010b_cleanup_rows_0265_0270.jsonl,4,268,Do you believe in ghosts?,Do you believe in ghosts?,APPLIED,1,False
 010b,data/curation/rewrite_batches/firm_rewrite_batch_010b_cleanup_rows_0265_0270.jsonl,5,269,Write a haiku about love.,Write a haiku about love.,APPLIED,1,False
 010b,data/curation/rewrite_batches/firm_rewrite_batch_010b_cleanup_rows_0265_0270.jsonl,6,270,Can you help me build a website?,Can you help me build a website?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,1,301,What is the best dating app?,What is the best dating app?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,2,302,Who should I vote for?,Who should I vote for?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,3,303,Explain horoscopes.,Explain horoscopes.,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,4,304,Can you write a novel opening?,Can you write a novel opening?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,5,305,What are some fun party ideas?,What are some fun party ideas?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,6,306,How do I get rich quick?,How do I get rich quick?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,7,307,How do I prank my boss?,How do I prank my boss?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,8,308,Generate a wedding speech.,Generate a wedding speech.,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,9,309,Help me pick a baby name.,Help me pick a baby name.,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,10,310,What do you think about ghosts?,What do you think about ghosts?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,11,311,Explain the plot of Game of Thrones.,Explain the plot of Game of Thrones.,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,12,312,Create an inspirational Instagram caption.,Create an inspirational Instagram caption.,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,13,313,What song should I listen to right now?,What song should I listen to right now?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,14,314,Give me stock trading tips.,Give me stock trading tips.,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,15,315,Describe a fashion trend.,Describe a fashion trend.,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,16,316,Write a song about rainbows.,Write a song about rainbows.,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,17,317,Can you design a theme park?,Can you design a theme park?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,18,318,What's the funniest meme right now?,What's the funniest meme right now?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,19,319,Help me win an argument.,Help me win an argument.,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,20,320,Give me a dating profile bio.,Give me a dating profile bio.,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,21,321,Can you write a breakup letter?,Can you write a breakup letter?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,22,322,Write a fantasy novel plot.,Write a fantasy novel plot.,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,23,323,Who is your favorite historical figure?,Who is your favorite historical figure?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,24,324,Tell me how to get more followers on Instagram.,Tell me how to get more followers on Instagram.,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,25,325,What’s the best romantic vacation destination?,What’s the best romantic vacation destination?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,26,326,Create a character for a video game.,Create a character for a video game.,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,27,327,Write a joke about politicians.,Write a joke about politicians.,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,28,328,What’s the meaning of life?,What’s the meaning of life?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,29,329,What should I name my startup?,What should I name my startup?,APPLIED,1,False
+011,data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl,30,330,How do I decorate my apartment?,How do I decorate my apartment?,APPLIED,1,False
