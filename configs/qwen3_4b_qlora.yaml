@@ -1,0 +1,52 @@
+model_name: Qwen/Qwen3-4B
+output_dir: outputs/firm-qwen3-4b-qlora
+train_file: data/processed/firm_v1_balanced_train.jsonl
+validation_file: data/processed/firm_v1_balanced_valid.jsonl
+
+training:
+  method: qlora_sft
+  max_seq_length: 2048
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 8
+  learning_rate: 0.0002
+  num_train_epochs: 2
+  warmup_ratio: 0.03
+  lr_scheduler_type: cosine
+  logging_steps: 10
+  eval_steps: 100
+  save_steps: 100
+  save_total_limit: 2
+  gradient_checkpointing: true
+  optim: paged_adamw_8bit
+  report_to: none
+
+quantization:
+  load_in_4bit: true
+  bnb_4bit_quant_type: nf4
+  bnb_4bit_use_double_quant: true
+
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  bias: none
+  target_modules: all-linear
+
+firm_behavior:
+  answer_style:
+    - state assumptions when necessary
+    - give governing equations when relevant
+    - define variables and units
+    - connect equation to physical mechanism
+    - explain measurement consequence
+    - mention empirical caveats or failure modes
+  priority_domains:
+    - HgCdTe/MCT
+    - infrared photodetectors
+    - photoconductors
+    - detector noise
+    - blackbody radiometry
+    - lock-in measurements
+    - cryogenic testing
+    - LPE/MOCVD processing
