@@ -37,6 +37,16 @@ SYSTEM_PROMPT = (
 )
 
 
+def normalize_match_text(value: object) -> str:
+    """Normalize visually identical CSV/rewrite text for robust matching.
+
+    The legacy dataset contains non-breaking spaces in some unit strings, for example
+    "0.046\u00a0eV" and "302.9\u00a0K". Rewrite batches are often authored with normal
+    spaces. Matching should not fail only because of this invisible whitespace variant.
+    """
+    return " ".join(str(value).replace("\u00a0", " ").split()).strip()
+
+
 def read_legacy_csv(path: Path) -> pd.DataFrame:
     raw = pd.read_csv(path, header=None, dtype=str, keep_default_na=False)
     header_row = None
@@ -76,18 +86,19 @@ def apply_rewrites(df: pd.DataFrame, rewrites: List[dict]) -> tuple[pd.DataFrame
     out = df.copy()
     input_to_indices: Dict[str, List[int]] = {}
     for idx, row in out.iterrows():
-        input_to_indices.setdefault(str(row["input"]).strip(), []).append(idx)
+        input_to_indices.setdefault(normalize_match_text(row["input"]), []).append(idx)
 
     report = []
     seen_targets = set()
     for rw in rewrites:
-        match = str(rw["match_input"]).strip()
+        match_original = str(rw["match_input"]).strip()
+        match = normalize_match_text(match_original)
         repl = rw["replacement"]
         matches = input_to_indices.get(match, [])
         if not matches:
             status = "NO_MATCH"
         else:
-            # Apply to all exact input matches; normally one row.
+            # Apply to all normalized input matches; normally one row.
             for idx in matches:
                 for col in COLUMNS:
                     out.at[idx, col] = str(repl.get(col, out.at[idx, col])).strip()
@@ -100,10 +111,11 @@ def apply_rewrites(df: pd.DataFrame, rewrites: List[dict]) -> tuple[pd.DataFrame
             "source_file": rw.get("_source_file", ""),
             "source_line": rw.get("_source_line", ""),
             "original_row_index": rw.get("original_row_index", ""),
-            "match_input": match,
-            "replacement_input": repl.get("input", ""),
+            "match_input": match_original,
+            "normalized_match_input": match,
             "status": status,
             "match_count": len(matches),
+            "replacement_input": repl.get("input", ""),
             "duplicate_target_within_batches": duplicate_target,
         })
     return out, pd.DataFrame(report)
