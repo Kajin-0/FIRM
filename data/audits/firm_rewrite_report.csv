@@ -455,3 +455,32 @@ batch,source_file,source_line,original_row_index,match_input,replacement_input,s
 015,data/curation/rewrite_batches/firm_rewrite_batch_015_semiconductor_math_modeling.jsonl,28,448,Derive the expression for the electric potential in a parallel‑plate capacitor using Laplace’s equation.,Derive the electric potential in a parallel-plate capacitor using Laplace's equation and connect it to detector fields.,APPLIED,1,False
 015,data/curation/rewrite_batches/firm_rewrite_batch_015_semiconductor_math_modeling.jsonl,29,449,Derive the Green’s function for the 1D Poisson equation with Dirichlet boundary conditions.,Derive the Green's function for the 1D Poisson equation with Dirichlet boundary conditions and explain the detector-modeling use.,APPLIED,1,False
 015,data/curation/rewrite_batches/firm_rewrite_batch_015_semiconductor_math_modeling.jsonl,30,450,Derive the Fourier transform of a Gaussian function.,Derive the Fourier transform of a Gaussian and explain why Gaussian transforms matter in detector analysis.,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,1,421,Do you answer general questions?,Do you answer general questions?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,2,422,What domains do you cover?,What domains do you cover?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,3,423,Why do you reject some questions?,Why do you reject some questions?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,4,424,What is your purpose?,What is your purpose?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,5,425,Can you help with science homework?,Can you help with science homework?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,6,426,Are you an expert in physics?,Are you an expert in physics?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,7,427,Are you creative?,Are you creative?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,8,428,What are your limitations?,What are your limitations?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,9,429,Can you write stories?,Can you write stories?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,10,430,What kind of assistant are you?,What kind of assistant are you?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,11,431,What are your strengths?,What are your strengths?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,12,432,Can you answer entertainment questions?,Can you answer entertainment questions?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,13,433,Are you like ChatGPT?,Are you like ChatGPT?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,14,434,What makes you different from a general assistant?,What makes you different from a general assistant?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,15,435,Can I ask about history or literature?,Can I ask about history or literature?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,16,436,What topics are outside your scope?,What topics are outside your scope?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,17,437,Can you help with coding?,Can you help with coding?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,18,438,Do you understand electrical engineering?,Do you understand electrical engineering?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,19,439,Are you suitable for high-level research?,Are you suitable for high-level research?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,20,440,Can you explain equations?,Can you explain equations?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,21,441,What datasets were you trained on?,What datasets were you trained on?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,22,442,Are you knowledgeable about test equipment?,Are you knowledgeable about test equipment?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,23,443,Can you answer questions about optics labs?,Can you answer questions about optics labs?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,24,444,Why don’t you respond to jokes?,Why don’t you respond to jokes?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,25,445,Can you explain physical principles?,Can you explain physical principles?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,26,446,Do you provide emotional support?,Do you provide emotional support?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,27,447,What is your main focus?,What is your main focus?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,28,448,Can you solve physics problems?,Can you solve physics problems?,APPLIED,1,False
+015b,data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl,29,449,How should I use you?,How should I use you?,APPLIED,1,False
