@@ -189,6 +189,7 @@ class FoundationTests(unittest.TestCase):
             frozen = root / "eval_manifest.json"
             write_json(frozen, {"assets": [{"path": str(evaluation), "sha256": sha256(evaluation)}]})
             args = SimpleNamespace(model="Qwen/Qwen3-0.6B", model_revision="0"*40,
+                model_profile='legacy_causal', quantization='nf4',
                 dataset_manifest=manifest, eval_manifest=[frozen], train=str(train), valid=None,
                 out=str(root / "out"), run_id="test-fixture", seed=42, config=None,
                 max_seq_length=512, batch_size=1, grad_accum=4, lora_r=8, lora_alpha=16,

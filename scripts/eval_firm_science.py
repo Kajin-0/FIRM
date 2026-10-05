@@ -15,6 +15,7 @@ from firm_data import require_clean, sha256, write_json
 # dimension, factor to a common base; explicitly limited audited unit vocabulary.
 UNITS = {
     "1": ("dimensionless", 1), "": ("dimensionless", 1),
+    "dimensionless": ("dimensionless", 1),
     "s": ("time", 1), "ms": ("time", 1e-3), "us": ("time", 1e-6), "ns": ("time", 1e-9),
     "Hz": ("frequency", 1), "kHz": ("frequency", 1e3),
     "m": ("length", 1), "cm": ("length", .01), "um": ("length", 1e-6),
@@ -22,7 +23,7 @@ UNITS = {
     "K": ("temperature", 1), "eV": ("energy", 1.602176634e-19), "J": ("energy", 1),
     "Ohm": ("resistance", 1), "kOhm": ("resistance", 1e3),
     "Ohm*m": ("resistivity", 1), "Ohm*cm": ("resistivity", .01),
-    "V": ("voltage", 1), "mV": ("voltage", 1e-3),
+    "V": ("voltage", 1), "mV": ("voltage", 1e-3), "uV": ("voltage", 1e-6), "nV": ("voltage", 1e-9),
     "A": ("current", 1), "mA": ("current", 1e-3), "uA": ("current", 1e-6), "nA": ("current", 1e-9),
     "W": ("power", 1), "mW": ("power", 1e-3), "uW": ("power", 1e-6), "nW": ("power", 1e-9),
     "A/W": ("current_responsivity", 1), "V/W": ("voltage_responsivity", 1),
@@ -34,6 +35,17 @@ UNITS = {
     "m*sqrt(Hz)/W": ("detectivity", 1),
     "W/(m^2*sr*m)": ("spectral_radiance_lambda", 1),
     "W/(m^2*sr*um)": ("spectral_radiance_lambda", 1e6),
+    "S/m": ("conductivity", 1), "S/cm": ("conductivity", 100),
+    "m^3/C": ("Hall_coefficient", 1), "cm^3/C": ("Hall_coefficient", 1e-6),
+    "m^-3": ("number_density", 1), "cm^-3": ("number_density", 1e6),
+    "m^2/(V*s)": ("mobility", 1), "cm^2/(V*s)": ("mobility", 1e-4),
+    "deg": ("angle", math.pi/180), "rad": ("angle", 1),
+    "sr": ("solid_angle", 1), "um/K": ("cutoff_temperature_slope", 1e-6),
+    "m/K": ("cutoff_temperature_slope", 1),
+    "A^2": ("current_variance", 1), "V^2": ("voltage_variance", 1),
+    "W/(m^2*sr)": ("band_radiance", 1),
+    "s^-1": ("rate", 1), "1/s": ("rate", 1),
+    "cm^-1": ("inverse_length", 100), "m^-1": ("inverse_length", 1),
 }
 
 

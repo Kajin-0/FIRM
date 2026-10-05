@@ -1,0 +1,264 @@
+{
+  "answers_public": true,
+  "assets": [
+    {
+      "path": "evals/firm_science_dev_v1.jsonl",
+      "records": [
+        {
+          "category": "HgCdTe_edge_consistency",
+          "family_id": "HgCdTe_edge_consistency",
+          "id": "science_dev_001",
+          "record_sha256": "1da00cc7de1878ec105fc17732aac1894ef58eebf41d475c5cca02099c59eb58"
+        },
+        {
+          "category": "HgCdTe_sensitivity",
+          "family_id": "HgCdTe_sensitivity",
+          "id": "science_dev_002",
+          "record_sha256": "5dde75ff14194bed94070c4ae4c72602aeba2d616106bf206a75708c3df03a80"
+        },
+        {
+          "category": "HgCdTe_temperature_sign",
+          "family_id": "HgCdTe_temperature_sign",
+          "id": "science_dev_003",
+          "record_sha256": "737863a715603c7d7620e59c451fb197654c9e99f5b2110afdcfbe80201151fc"
+        },
+        {
+          "category": "four_terminal_transport",
+          "family_id": "four_terminal_transport",
+          "id": "science_dev_004",
+          "record_sha256": "a8fe2b7266bba7e0a1cf303b4aa199b7fbfef43878d74bbeb556acad1255ea0b"
+        },
+        {
+          "category": "geometry_uncertainty",
+          "family_id": "geometry_uncertainty",
+          "id": "science_dev_005",
+          "record_sha256": "02162a40edc0bba9d0ac269a67dec88227c2233df9dbf49eeacac14f1b7d54eb"
+        },
+        {
+          "category": "Hall_factor_transport",
+          "family_id": "Hall_factor_transport",
+          "id": "science_dev_006",
+          "record_sha256": "6ca08f6f399ef899f6edf4301174981a7870117ef2b7095a4cb0c7dcf3e5c6af"
+        },
+        {
+          "category": "two_carrier_Hall",
+          "family_id": "two_carrier_Hall",
+          "id": "science_dev_007",
+          "record_sha256": "7af5a4f9372fba61a8988efc84b848df0492b66290b03934a196892aada7e104"
+        },
+        {
+          "category": "bipolar_bar_resistance",
+          "family_id": "bipolar_bar_resistance",
+          "id": "science_dev_008",
+          "record_sha256": "77feffb5cea5666f9b34fe1b0c53380aaa8e3a6468387c40615497ada65419cc"
+        },
+        {
+          "category": "bias_gain_comparison",
+          "family_id": "bias_gain_comparison",
+          "id": "science_dev_009",
+          "record_sha256": "35068341bfb3f35b3921fe83c7c9b15c0fdb882dd62fc91d74146952621c965d"
+        },
+        {
+          "category": "photoconductor_gain_from_photons",
+          "family_id": "photoconductor_gain_from_photons",
+          "id": "science_dev_010",
+          "record_sha256": "b3de8fd2bd7b8e48543c544a984e609bcfae98268abb64be189b4e381618f256"
+        },
+        {
+          "category": "phase_lifetime",
+          "family_id": "phase_lifetime",
+          "id": "science_dev_011",
+          "record_sha256": "1ccf7bb135b500523e15df2a660bcacab06acd2b6b4509679e94117055f04fda"
+        },
+        {
+          "category": "Johnson_network",
+          "family_id": "Johnson_network",
+          "id": "science_dev_012",
+          "record_sha256": "799250771a5f3de55e381fba017c3439e5df6eca3c20df42fba545fc3baaa439"
+        },
+        {
+          "category": "shot_Johnson_readout_budget",
+          "family_id": "shot_Johnson_readout_budget",
+          "id": "science_dev_013",
+          "record_sha256": "2503f0f104a82e1f2bfa2bd8ad06ea81a241b1317d1a86861697a7d5224136b1"
+        },
+        {
+          "category": "PSD_ASD_sidedness",
+          "family_id": "PSD_ASD_sidedness",
+          "id": "science_dev_014",
+          "record_sha256": "89fe2feddea993a20b1ca7c77cf8229bedb2590ff029c30e00e0f1f2f6590011"
+        },
+        {
+          "category": "colored_noise_filtered_band",
+          "family_id": "colored_noise_filtered_band",
+          "id": "science_dev_015",
+          "record_sha256": "423631815e2d9f3a41ce5200c456a6c1574a265bf257b643b678fe44a6ea245f"
+        },
+        {
+          "category": "GR_spectral_inverse",
+          "family_id": "GR_spectral_inverse",
+          "id": "science_dev_016",
+          "record_sha256": "bdf1c3fe8dde60506005ba977fa1907b4ce02bf8b25d86691567197d90c7ceee"
+        },
+        {
+          "category": "multiple_GR_band",
+          "family_id": "multiple_GR_band",
+          "id": "science_dev_017",
+          "record_sha256": "8936ff1a39fa94c51a1dd4045fad7dcf406ed527c26ad0c6acbdc63a566c9843"
+        },
+        {
+          "category": "lockin_filter_order",
+          "family_id": "ENBW_filter_transfer",
+          "id": "science_dev_018",
+          "record_sha256": "15495014d86e1c54909d832495cf049f62b27645f28905fb654617a8acd4bc18"
+        },
+        {
+          "category": "unequal_pole_ENBW",
+          "family_id": "ENBW_filter_transfer",
+          "id": "science_dev_019",
+          "record_sha256": "6601b400f5c07adcc0395d944480ce5145d87d8c522c56d3234c35615fca22f6"
+        },
+        {
+          "category": "colored_noise_actual_filter",
+          "family_id": "colored_noise_actual_filter",
+          "id": "science_dev_020",
+          "record_sha256": "24fdf0edf8e32ea4906f82d5d579e1c1bdf8e8dbe095e6df4b676ededd2e5a3f"
+        },
+        {
+          "category": "chopper_RMS_fundamental",
+          "family_id": "chopper_RMS_fundamental",
+          "id": "science_dev_021",
+          "record_sha256": "3cda7c1fcf492e95bacb513002a036113d76e537a40d78d504d1a614b9df14a5"
+        },
+        {
+          "category": "Norton_voltage_responsivity",
+          "family_id": "Norton_voltage_responsivity",
+          "id": "science_dev_022",
+          "record_sha256": "65bf889ee9e8e6518b582008c4d35b71aeabb74bdb20ee5bee425315908ebc47"
+        },
+        {
+          "category": "area_normalized_sensitivity",
+          "family_id": "area_normalized_sensitivity",
+          "id": "science_dev_023",
+          "record_sha256": "e8cfcc7902873eccf267759d8b20c8475c716ccc2e5d8b6f80476f4a4eff983a"
+        },
+        {
+          "category": "cable_RC_deembedding",
+          "family_id": "cable_RC_deembedding",
+          "id": "science_dev_024",
+          "record_sha256": "a33432015c81d1215943a21ca6c831cb4e1b781b33919d7ddcbe703c6ceef748"
+        },
+        {
+          "category": "phase_magnitude_consistency",
+          "family_id": "phase_magnitude_consistency",
+          "id": "science_dev_025",
+          "record_sha256": "27e9161b9fb74d88ceee41b2c91788b6bbee49647de001e0f62d27d41f2c1e5a"
+        },
+        {
+          "category": "Planck_differential_radiance",
+          "family_id": "Planck_differential_radiance",
+          "id": "science_dev_026",
+          "record_sha256": "683a947531e91ab02291ab10227a056a62add9a7a7f0b3aaf72d043cef610e06"
+        },
+        {
+          "category": "finite_band_projected_throughput",
+          "family_id": "finite_band_projected_throughput",
+          "id": "science_dev_027",
+          "record_sha256": "d87081a4944444a7f532cd85508419cad847a4ee6e586eee643c7601c3012eb2"
+        },
+        {
+          "category": "finite_Fnumber_cone",
+          "family_id": "finite_Fnumber_cone",
+          "id": "science_dev_028",
+          "record_sha256": "e930090ee7c2fb1453a2c63c434666ae00f00e0f584d2e9e6c4b2a50445abaa9"
+        },
+        {
+          "category": "greybody_reflected_background",
+          "family_id": "greybody_reflected_background",
+          "id": "science_dev_029",
+          "record_sha256": "2eba33546089168a2ceceafc2efe0439b06a2b04636b51a0383e23ff025680fb"
+        },
+        {
+          "category": "band_photon_radiometry",
+          "family_id": "band_photon_radiometry",
+          "id": "science_dev_030",
+          "record_sha256": "29ff8fbbd0f245449c3d13b4178a21ac42c3718cd9612adb0d1d5fcdd46dc933"
+        },
+        {
+          "category": "absorption_collection_depth",
+          "family_id": "absorption_collection_depth",
+          "id": "science_dev_031",
+          "record_sha256": "5fd67bd363cc4dd4e4addf6a52e7a659a9cc999f14f77aa10563bb20e6e2e967"
+        },
+        {
+          "category": "transmission_thickness_inverse",
+          "family_id": "transmission_thickness_inverse",
+          "id": "science_dev_032",
+          "record_sha256": "eb22ff0cc5b9a17b5282993a462b7ebc8a7d206318f5ddbf9d7ed072ff2a4fc9"
+        },
+        {
+          "category": "diode_EQE_calibration",
+          "family_id": "diode_EQE_calibration",
+          "id": "science_dev_033",
+          "record_sha256": "20c9630b015928b395d3a6361f39c31e34c5ee7812534a694fdc18e1ce746765"
+        },
+        {
+          "category": "gain_responsivity_not_QE",
+          "family_id": "gain_responsivity_not_QE",
+          "id": "science_dev_034",
+          "record_sha256": "ed2c295fd7b572b104222543be8ecb38303a36f6c8f9a679e421d64815fdaac8"
+        },
+        {
+          "category": "NEP_calibration_uncertainty",
+          "family_id": "NEP_calibration_uncertainty",
+          "id": "science_dev_035",
+          "record_sha256": "f4ddeed489a77f6363c4843aa5a8a3dcd6298ab585576713f1e1ebe542800d5d"
+        },
+        {
+          "category": "Hall_density_uncertainty",
+          "family_id": "Hall_density_uncertainty",
+          "id": "science_dev_036",
+          "record_sha256": "88192e2cd7f77f192a52f40f9595c3bcc17c56f9c95130cfb3ccc7971cda5c6b"
+        },
+        {
+          "category": "Arrhenius_prefactor",
+          "family_id": "Arrhenius_prefactor",
+          "id": "science_dev_037",
+          "record_sha256": "7c336ac18bd6454ef2d5ad271e9f5e9cf841c5a17ad271a94dfcd33eab0423d7"
+        },
+        {
+          "category": "contact_geometry_diagnosis",
+          "family_id": "contact_geometry_diagnosis",
+          "id": "science_dev_038",
+          "record_sha256": "2abdb405575de33d20c5a68539967445ea7c5f97e0a60746803fe4876d5a0165"
+        },
+        {
+          "category": "readout_calibration_artifact",
+          "family_id": "readout_calibration_artifact",
+          "id": "science_dev_039",
+          "record_sha256": "ba3bd4cc1a0d5370fc5d169bff0bd7fe810ab261109a3be4b379c307bf74dc1b"
+        },
+        {
+          "category": "linked_detector_design",
+          "family_id": "linked_detector_design",
+          "id": "science_dev_040",
+          "record_sha256": "9fccbd2ea782f2e0a1b3ecce1d75bb4daad4c9a8ef97f7da502375b52933475e"
+        }
+      ],
+      "sha256": "d8cd02a8284c6fed3a8d2255a40e17dc54aa6fd4c29c3ddbaab0ea83e9f777c2"
+    }
+  ],
+  "benchmark_version": "firm_science_dev_v1",
+  "cases": 40,
+  "generation_date": "2026-10-05",
+  "leakage_policy": "All recognized legacy quantitative families reserved from reviewed seed; no seed text used by generator. Lexical and manual release checks still required.",
+  "limitations": "Not a hidden or permanent unbiased benchmark; shared core equations are expected domain knowledge.",
+  "quantities": 106,
+  "schema_version": "1.0",
+  "source_git_sha": "58b7e4db268730a10e42830407a2d7a0a1a246cd",
+  "source_sha256": {
+    "/home/User/FIRM/scripts/build_firm_science_dev.py": "5a42fbb923627c71de324c1a3af19bf0ecabeed655991d905e17b2d8a8a86185",
+    "scripts/firm_science_reference.py": "61e5acbbc6b576719eb90362951a1ff696a448193d831a04c7efb1b36b4de52a"
+  },
+  "status": "public development suite; analytic AI review and oracle tests; human expert signoff pending"
+}
