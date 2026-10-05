@@ -48,7 +48,7 @@ def pilot_items():
     gap = H*C/(9.4e-6*Q)
     x = bisect_composition(gap, 85)
     warm_gap = hsc_gap(x, 150)
-    add("numeric_pilot_001", "HgCdTe_composition_cutoff", 
+    add("numeric_pilot_001", "HgCdTe_composition_cutoff",
         "An ideal HgCdTe absorption edge at 85 K corresponds to a 9.4 um cutoff. Use ONLY the supplied empirical model "
         "Eg[eV] = -0.302 + 1.93*x - 0.810*x^2 + 0.832*x^3 + 5.35e-4*T[K]*(1-2*x), with 0.15 < x < 0.5. "
         "Infer x, then predict cutoff at 150 K for the same composition. Define your optical-edge assumption, check the root, "

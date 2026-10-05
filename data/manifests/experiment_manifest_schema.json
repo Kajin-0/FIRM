@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FIRM experiment manifest v1",
+  "type": "object",
+  "required": ["schema_version", "run_id", "git_sha", "base_model", "base_model_revision", "dataset_manifest", "eval_manifests", "training_method", "hyperparameters", "seed", "checkpoint_path", "adapter_path", "training_loss", "validation_loss", "benchmark_results", "notes", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "run_id": {"type": "string"}, "git_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "timestamp": {"type": "string"}, "base_model": {"type": "string"},
+    "base_model_revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "dataset_manifest": {"type": "object", "required": ["path", "sha256"]},
+    "eval_manifests": {"type": "array", "items": {"type": "object", "required": ["path", "sha256"]}},
+    "training_method": {"type": "string"}, "hyperparameters": {"type": "object"}, "seed": {"type": "integer"},
+    "hardware": {"type": "object"}, "software_versions": {"type": "object"},
+    "checkpoint_path": {"type": "string"}, "adapter_path": {"type": "string"},
+    "training_loss": {"type": ["number", "null"]}, "validation_loss": {"type": ["number", "null"]},
+    "benchmark_results": {"type": ["object", "null"]}, "notes": {"type": "string"},
+    "status": {"enum": ["dry_run_no_training", "training", "training_complete_benchmark_pending", "complete", "failed"]}
+  },
+  "allOf": [{"if": {"properties": {"status": {"enum": ["training", "training_complete_benchmark_pending", "complete"]}}},
+             "then": {"required": ["timestamp", "hardware", "software_versions"]}}]
+}

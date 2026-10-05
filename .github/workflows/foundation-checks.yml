@@ -1,0 +1,19 @@
+name: FIRM foundation checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  cpu-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile data tooling and run unit checks
+        run: |
+          python -m compileall -q scripts tests
+          python -m unittest discover -s tests -v
+      - name: Verify baseline request construction without inference
+        run: |
+          python scripts/run_firm_baseline.py --eval evals/firm_numeric_pilot_v1.jsonl --model Qwen/Qwen3.5-9B --model-revision c202236235762e1c871ad0ccb60c8ee5ba337b9a --out predictions/ci-unused.jsonl --dry-run

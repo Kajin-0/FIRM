@@ -1,0 +1,5 @@
+# Legacy CSV builders only. New audit/split/scoring tools use the Python standard library.
+pandas==2.3.3
+numpy==2.2.6
+scikit-learn==1.7.2
+pyyaml==6.0.3
