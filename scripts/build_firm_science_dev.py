@@ -12,7 +12,7 @@ from firm_data import digest, sha256, write_json, write_jsonl
 from firm_science_reference import C, H, KB, Q, HC_EV_UM, composition, enbw, gap, gap_dx, lorentzian_variance, planck, simpson
 
 
-def development_items():
+def development_items(version=2):
     items=[]
     def add(category, prompt, values, equation, rubric, family=None):
         identifier=f'science_dev_{len(items)+1:03}'
@@ -112,8 +112,14 @@ def development_items():
         mid=(lo+hi)/2
         if planck(10e-6,mid)<observed:lo=mid
         else:hi=mid
-    add('greybody_reflected_background','A 340 K opaque grey surface has spectral emissivity 0.70 at 10 um and reflects a uniform 295 K blackbody environment. Find observed spectral radiance per um and its single-wavelength equivalent blackbody temperature. Bound the equivalent temperature and state why one wavelength cannot determine both emissivity and true temperature.',
-        {'observed_radiance':(observed*1e-6,'W/(m^2*sr*um)'),'equivalent_temperature':((lo+hi)/2,'K')},'Bobs=epsilon*B(Tobject)+(1-epsilon)*B(Tenvironment); monotonic bracketed Planck inversion', ['Positive convex mixture must lie between component radiances/temperatures; no temperature above both components.'])
+    if version==1:
+        add('greybody_reflected_background','A 340 K opaque grey surface has spectral emissivity 0.70 at 10 um and reflects a uniform 295 K blackbody environment. Find observed spectral radiance per um and its single-wavelength equivalent blackbody temperature. Bound the equivalent temperature and state why one wavelength cannot determine both emissivity and true temperature.',
+            {'observed_radiance':(observed*1e-6,'W/(m^2*sr*um)'),'equivalent_temperature':((lo+hi)/2,'K')},'Bobs=epsilon*B(Tobject)+(1-epsilon)*B(Tenvironment); monotonic bracketed Planck inversion', ['Positive convex mixture must lie between component radiances/temperatures; no temperature above both components.'])
+    else:
+        ratio=planck(8e-6,330)/planck(12e-6,330)
+        add('two_color_temperature_inverse',f'Two absolutely calibrated narrow channels measure spectral radiance per um at 8 and 12 um from one opaque grey emitter. The ratio L8/L12 is {ratio:.12f}. Emissivity is unknown but identical at both wavelengths; reflected cold-background radiance is negligible. Infer temperature in the bracket 250..500 K using Planck, report the Rayleigh-Jeans high-temperature ratio limit, and explain why unequal emissivity would destroy unique thermometry.',
+            {'color_temperature':(330,'K'),'rayleigh_jeans_ratio_limit':((12/8)**4,'1')},'Common emissivity cancels; solve B_lambda(8um,T)/B_lambda(12um,T)=observed; high-T B_lambda proportional T/lambda4',
+            ['Two-channel spectral calibration and same emissivity are assumptions; one unknown emissivity per wavelength makes temperature non-identifiable.'])
     photons=simpson(lambda lam:planck(lam,390)*lam/(H*C),3.4e-6,4.6e-6);count=photons*5e-8*.02*.4
     add('band_photon_radiometry','A 390 K ideal blackbody has flat optical transmission 0.40 from 3.4 to 4.6 um. Detector area 5e-8 m^2 and projected solid angle 0.020 sr. Neglect cold-reference emission. Find incident photons/s in the band and diode current for wavelength-independent external QE 0.65. Explain why photon and energy integrals have different weights.',
         {'photon_rate':(count,'s^-1'),'photocurrent':(.65*Q*count,'A')},'Photon spectral radiance=B_lambda*lambda/(hc); integrate in metres; I=q*eta*photon_rate', ['Transmission and QE are separate; projected geometry and uniform band assumptions stated.'])
@@ -151,14 +157,16 @@ def development_items():
 
 
 def main():
-    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--out',type=Path,default=Path('evals/firm_science_dev_v1.jsonl'));args=ap.parse_args()
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--out',type=Path,default=Path('evals/firm_science_dev_v2.jsonl'));ap.add_argument('--version',type=int,choices=[1,2],default=2);args=ap.parse_args()
     manifest=args.out.with_name(args.out.stem+'_manifest.json')
     if args.out.exists() or manifest.exists():ap.error('Release exists; use a new version')
-    items=development_items()
+    items=development_items(args.version)
     from eval_firm_science import validate_benchmark
     validate_benchmark(items)
     write_jsonl(args.out,items)
-    write_json(manifest,{'schema_version':'1.0','benchmark_version':'firm_science_dev_v1','generation_date':'2026-10-05',
+    write_json(manifest,{'schema_version':'1.0','benchmark_version':args.out.stem,'generation_date':'2026-10-05',
+        'supersedes':'firm_science_dev_v1' if args.version==2 else None,
+        'change_description':'Case 029 now uses two-color thermometry; v1 greybody-mixture task was structurally related to a flagged legacy seed scenario. V1 preserved.' if args.version==2 else None,
         'status':'public development suite; analytic AI review and oracle tests; human expert signoff pending',
         'answers_public':True,'source_git_sha':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
         'source_sha256':{str(p):sha256(p) for p in [Path(__file__),Path('scripts/firm_science_reference.py')]},

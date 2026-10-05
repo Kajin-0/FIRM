@@ -3,6 +3,7 @@ import copy
 import json
 import math
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -79,7 +80,7 @@ class ScientificValidationTests(unittest.TestCase):
         n=20000;lo=7.6e-6;hi=10.3e-6;step=(hi-lo)/n
         midpoint=math.fsum(planck(lo+(k+.5)*step,360) for k in range(n))*step
         self.assertAlmostEqual(midpoint/items[26]['grading']['quantities']['band_radiance']['value'],1,places=8)
-        self.assertTrue(295<items[28]['grading']['quantities']['equivalent_temperature']['value']<340)
+        self.assertTrue(250<items[28]['grading']['quantities']['color_temperature']['value']<500)
         self.assertLess(items[30]['grading']['quantities']['external_QE']['value'],items[30]['grading']['quantities']['absorbed_incident_fraction']['value'])
 
     def test_added_unit_conversions_are_dimension_safe(self):
@@ -87,6 +88,54 @@ class ScientificValidationTests(unittest.TestCase):
         self.assertTrue(grade_quantity(gold,{'value':1e15,'unit':'cm^-3'})['numerical_correct'])
         self.assertFalse(grade_quantity(gold,{'value':1e21,'unit':'m^3/C'})['unit_correct'])
         self.assertTrue(grade_quantity({'value':.9,'unit':'m^2/(V*s)','rtol':1e-8,'atol':0},{'value':9000,'unit':'cm^2/(V*s)'})['numerical_correct'])
+        self.assertTrue(grade_quantity({'value':42e-9,'unit':'V','rtol':1e-8,'atol':0},{'value':42,'unit':'nV'})['numerical_correct'])
+
+    def test_reviewed_seed_has_disjoint_groups_and_no_erroneous_parents(self):
+        root=ROOT/'data/processed/firm3_reviewed_seed_v3'
+        manifest=json.loads((root/'manifest.json').read_text())
+        groups={};ids={}
+        for part in ['train','valid','test','quarantine']:
+            rows=[r['raw'] for r in require_clean(root/(part+'.jsonl'))]
+            groups[part]={r['metadata']['group_id'] for r in rows};ids[part]={r['id'] for r in rows}
+            for r in rows:
+                self.assertEqual(r['metadata']['partition'],part)
+                if part!='quarantine':
+                    self.assertIn(r['metadata']['provenance']['review_status'],['AI_analytically_reviewed','programmatically_corrected'])
+                    self.assertNotEqual(r['metadata']['scientific_review']['review_kind'],'programmatically_corrected')
+            for previous in groups:
+                if previous!=part:self.assertFalse(groups[previous]&groups[part])
+        self.assertEqual([len(ids[x]) for x in ['train','valid','test','quarantine']],[45,1,1,159])
+        for output in manifest['outputs']:self.assertEqual(sha256(root/output['path']),output['sha256'])
+        self.assertTrue(any(s['path']=='evals/firm_science_dev_v2.jsonl' for s in manifest['eval_sources']))
+
+    def test_dev_v2_preserves_other_39_cases(self):
+        old=development_items(1);new=development_items(2)
+        differences=[i for i,(a,b) in enumerate(zip(old,new)) if a!=b]
+        self.assertEqual(differences,[28])
+        for version in [1,2]:
+            actual=[r['raw'] for r in require_clean(ROOT/f'evals/firm_science_dev_v{version}.jsonl',evaluation=True)]
+            self.assertEqual(actual,development_items(version))
+
+
+    def test_compact_protocol_withholds_gold_and_cloud_models_rejected(self):
+        case=development_items()[0]
+        original=messages_for(case,'scientific-compact-v2')
+        altered=copy.deepcopy(case)
+        for q in altered['grading']['quantities'].values():q.update(value=98765,unit='madeup')
+        altered['grading']['manual_rubric']=['SECRET GOLD']
+        self.assertEqual(original,messages_for(altered,'scientific-compact-v2'))
+        import io
+        reply=io.BytesIO(json.dumps({'models':[{'name':'cloud:latest','digest':'x','remote_host':'ollama.com'}]}).encode())
+        with patch('run_firm_baseline.urllib.request.urlopen',return_value=reply):
+            with self.assertRaises(ValueError):ollama_metadata('http://127.0.0.1:11434','cloud:latest','x')
+
+    def test_extracted_package_rejects_changed_payload_without_git(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);payload=root/'payload.txt';payload.write_text('trusted fixture')
+            (root/'firm_gpu_package_manifest.json').write_text(json.dumps({'git_sha':'0'*40,'assets':[{'path':'payload.txt','sha256':sha256(payload)}]}))
+            self.assertEqual(repository_revision(root),'0'*40)
+            payload.write_text('changed fixture')
+            with self.assertRaises(ValueError):repository_revision(root)
 
     def test_original_smoke_reviews_pin_all_32_rows(self):
         d=json.loads((ROOT/'data/reviews/firm3_manual_decisions_v1.json').read_text())

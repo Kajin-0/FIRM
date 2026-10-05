@@ -1,0 +1,3988 @@
+{
+  "accounting": {
+    "canonical_records": 2581,
+    "excluded": 725,
+    "individually_or_programmatically_reviewed": 206,
+    "unreviewed_or_other_flags": 1650
+  },
+  "eval_sources": [
+    {
+      "path": "evals/firm_core_eval.jsonl",
+      "sha256": "4038e70b5503c7eff3c188d74ef44da6211e252d7edd0745f872ff130e10e46d"
+    },
+    {
+      "path": "evals/firm_domain_boundary_eval.jsonl",
+      "sha256": "23a66ef49345108c6f5514e8503c2475e2e932a6a3556766b07109ae7ac5d03e"
+    },
+    {
+      "path": "evals/firm_numeric_pilot_v1.jsonl",
+      "sha256": "ea40774d8beff73cd43859f5052c990a6d5973b3cadca88b2c9d8e98c6b96b5b"
+    },
+    {
+      "path": "evals/firm_science_dev_v1.jsonl",
+      "sha256": "d8cd02a8284c6fed3a8d2255a40e17dc54aa6fd4c29c3ddbaab0ea83e9f777c2"
+    },
+    {
+      "path": "evals/firm_science_dev_v2.jsonl",
+      "sha256": "ebfd7d3e62231fb1710ccd572bab24a1233f06b0d570e964aa40d8054db68164"
+    },
+    {
+      "path": "evals/firm_v2_expert_eval.jsonl",
+      "sha256": "edd2a8a3435aef8fb64366d473c203f9ecb5bce2696daed63f39b6c3c11b728f"
+    }
+  ],
+  "git_sha": "a3424f91518f3e1649f5d76a0eac9eb6140aa282",
+  "manual_decisions": {
+    "path": "data/reviews/firm3_manual_decisions_v1.json",
+    "sha256": "06ce60219e12a7d8dfb4ad35eb8ef987af37f834783c48e6574af70111497a10"
+  },
+  "method": "existing hash-assigned connected groups; cap3; whole-family quarantine",
+  "outputs": [
+    {
+      "path": "capped.jsonl",
+      "records": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "excluded.jsonl",
+      "records": 725,
+      "sha256": "0259ba94e25b20c62c03546370857c7b077e1c6dcce383c327bf1a502b702404"
+    },
+    {
+      "path": "quarantine.jsonl",
+      "records": 159,
+      "sha256": "e4d616432aea4736548ceacf59007be4c80bd9a1d9588853117abd493260e468"
+    },
+    {
+      "path": "test.jsonl",
+      "records": 1,
+      "sha256": "46e2d3cc5c965bdc30c70a989fd4441dbe067305d2beadef98207d2181b40696"
+    },
+    {
+      "path": "train.jsonl",
+      "records": 45,
+      "sha256": "afbd5aba5e95fa27cadda2905a3210b548936da6ce540acadd5e877d2b3199e1"
+    },
+    {
+      "path": "unreviewed.jsonl",
+      "records": 1650,
+      "sha256": "5e3ee1d47905624094c4063643adfa4c0007942625729a440ed3b378604cf5fb"
+    },
+    {
+      "path": "valid.jsonl",
+      "records": 1,
+      "sha256": "8a1837a4659bc866dac77486ff19a17f4e9bda511510095055fe1756fed7297b"
+    }
+  ],
+  "release": "firm3_reviewed_seed_v3",
+  "review_manifest": {
+    "path": "data/reviews/firm3_scientific_v1/manifest.json",
+    "sha256": "34b4f3ce4d64b0e26d64fc87b1cfd204e0e6b83a08e186bedba0b353f465b6c0"
+  },
+  "rights_status": "unresolved; E2 release gate",
+  "schema_version": "1.0",
+  "scientific_review": "Selected rows individually AI-reviewed or verified programmatic corrections; not human signoff",
+  "seed": 42,
+  "small_release_partition_adjustments": [
+    {
+      "from": "train",
+      "group_id": "a5605f6185ffc26c692bf836730adf7b34ef4e77b4217672cb1c8993ce015ac5",
+      "records": 1,
+      "to": "test"
+    }
+  ],
+  "sources": [
+    {
+      "path": "data/processed/firm_rewritten_large_sft.jsonl",
+      "sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "path": "data/processed/firm_v2_root_expert_sft.jsonl",
+      "sha256": "37a8e121036a9ae2f6d16a123b8efc160d1722bfd409b35b900e089af98dd2f0"
+    },
+    {
+      "path": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+      "sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+    },
+    {
+      "path": "data/processed/firm_v2_expert_hgcdte_deep_batch02.jsonl",
+      "sha256": "675fd8002bff3c3a08113ce2f3d71e68535339646eed2884e63dd8a8d6b0fff5"
+    },
+    {
+      "path": "data/processed/firm_v2_expert_hgcdte_deep_batch03.jsonl",
+      "sha256": "25cebc45acb71f398e2f8f597d9bc7599b99cbd59ff15c1364886cf2cd232c2c"
+    }
+  ],
+  "summary": {
+    "duplicate_pairs_collapsed": 0,
+    "groups_by_partition": {
+      "capped": 0,
+      "quarantine": 4,
+      "test": 1,
+      "train": 45,
+      "valid": 1
+    },
+    "input_records": 206,
+    "leakage": {
+      "closest_per_eval": [
+        {
+          "char_similarity": 0.4793388429752066,
+          "eval_id": "firm_core_001",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.25,
+          "reasons": [],
+          "source_line": 18,
+          "template_jaccard": 0.25
+        },
+        {
+          "char_similarity": 0.47368421052631576,
+          "eval_id": "firm_core_001",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.16666666666666666,
+          "reasons": [],
+          "source_line": 68,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.43478260869565216,
+          "eval_id": "firm_core_001",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.2727272727272727,
+          "reasons": [],
+          "source_line": 67,
+          "template_jaccard": 0.2727272727272727
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_002",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.13043478260869565,
+          "reasons": [],
+          "source_line": 61,
+          "template_jaccard": 0.13043478260869565
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_002",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.11764705882352941,
+          "reasons": [],
+          "source_line": 70,
+          "template_jaccard": 0.11764705882352941
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_002",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.10526315789473684,
+          "reasons": [],
+          "source_line": 22,
+          "template_jaccard": 0.10526315789473684
+        },
+        {
+          "char_similarity": 0.7006369426751592,
+          "eval_id": "firm_core_003",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.4375,
+          "reasons": [],
+          "source_line": 13,
+          "template_jaccard": 0.4375
+        },
+        {
+          "char_similarity": 0.5747126436781609,
+          "eval_id": "firm_core_003",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.2,
+          "reasons": [],
+          "source_line": 63,
+          "template_jaccard": 0.2
+        },
+        {
+          "char_similarity": 0.4520547945205479,
+          "eval_id": "firm_core_003",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.15789473684210525,
+          "reasons": [],
+          "source_line": 5,
+          "template_jaccard": 0.15789473684210525
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_004",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 14,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_004",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 61,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_004",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.13636363636363635,
+          "reasons": [],
+          "source_line": 70,
+          "template_jaccard": 0.13636363636363635
+        },
+        {
+          "char_similarity": 0.4623115577889447,
+          "eval_id": "firm_core_005",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.18181818181818182,
+          "reasons": [],
+          "source_line": 22,
+          "template_jaccard": 0.18181818181818182
+        },
+        {
+          "char_similarity": 0.39408866995073893,
+          "eval_id": "firm_core_005",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.18181818181818182
+        },
+        {
+          "char_similarity": 0.39408866995073893,
+          "eval_id": "firm_core_005",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.18181818181818182
+        },
+        {
+          "char_similarity": 0.52,
+          "eval_id": "firm_core_006",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.3,
+          "reasons": [],
+          "source_line": 22,
+          "template_jaccard": 0.3
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_006",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.10714285714285714,
+          "reasons": [],
+          "source_line": 8,
+          "template_jaccard": 0.17391304347826086
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_006",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.14814814814814814,
+          "reasons": [],
+          "source_line": 12,
+          "template_jaccard": 0.17391304347826086
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_007",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.11538461538461539,
+          "reasons": [],
+          "source_line": 63,
+          "template_jaccard": 0.11538461538461539
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_007",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.1111111111111111,
+          "reasons": [],
+          "source_line": 22,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_007",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.0967741935483871,
+          "reasons": [],
+          "source_line": 1,
+          "template_jaccard": 0.0967741935483871
+        },
+        {
+          "char_similarity": 0.42016806722689076,
+          "eval_id": "firm_core_008",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.1935483870967742,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.2222222222222222
+        },
+        {
+          "char_similarity": 0.42016806722689076,
+          "eval_id": "firm_core_008",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.1935483870967742,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.2222222222222222
+        },
+        {
+          "char_similarity": 0.4117647058823529,
+          "eval_id": "firm_core_008",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.15625,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.2222222222222222
+        },
+        {
+          "char_similarity": 0.5333333333333333,
+          "eval_id": "firm_core_009",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.15789473684210525,
+          "reasons": [],
+          "source_line": 70,
+          "template_jaccard": 0.15789473684210525
+        },
+        {
+          "char_similarity": 0.4830917874396135,
+          "eval_id": "firm_core_009",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.16,
+          "reasons": [],
+          "source_line": 61,
+          "template_jaccard": 0.16
+        },
+        {
+          "char_similarity": 0.4585987261146497,
+          "eval_id": "firm_core_009",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.16666666666666666,
+          "reasons": [],
+          "source_line": 49,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_010",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.12903225806451613,
+          "reasons": [],
+          "source_line": 1,
+          "template_jaccard": 0.12903225806451613
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_010",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.09090909090909091,
+          "reasons": [],
+          "source_line": 68,
+          "template_jaccard": 0.09090909090909091
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_010",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.08695652173913043,
+          "reasons": [],
+          "source_line": 53,
+          "template_jaccard": 0.08695652173913043
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_001",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.10526315789473684,
+          "reasons": [],
+          "source_line": 70,
+          "template_jaccard": 0.10526315789473684
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_001",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.09523809523809523,
+          "reasons": [],
+          "source_line": 22,
+          "template_jaccard": 0.09523809523809523
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_001",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.07692307692307693,
+          "reasons": [],
+          "source_line": 61,
+          "template_jaccard": 0.07692307692307693
+        },
+        {
+          "char_similarity": 0.3559322033898305,
+          "eval_id": "boundary_002",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.23529411764705882,
+          "reasons": [],
+          "source_line": 53,
+          "template_jaccard": 0.23529411764705882
+        },
+        {
+          "char_similarity": 0.29508196721311475,
+          "eval_id": "boundary_002",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.17391304347826086,
+          "reasons": [],
+          "source_line": 22,
+          "template_jaccard": 0.17391304347826086
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_002",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 8,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_003",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.125,
+          "reasons": [],
+          "source_line": 34,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_003",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.125,
+          "reasons": [],
+          "source_line": 72,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_003",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.1,
+          "reasons": [],
+          "source_line": 9,
+          "template_jaccard": 0.1
+        },
+        {
+          "char_similarity": 0.3902439024390244,
+          "eval_id": "boundary_004",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.16666666666666666,
+          "reasons": [],
+          "source_line": 55,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.27848101265822783,
+          "eval_id": "boundary_004",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.18181818181818182,
+          "reasons": [],
+          "source_line": 62,
+          "template_jaccard": 0.18181818181818182
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_004",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 45,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.5925925925925926,
+          "eval_id": "boundary_005",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.42857142857142855,
+          "reasons": [],
+          "source_line": 72,
+          "template_jaccard": 0.42857142857142855
+        },
+        {
+          "char_similarity": 0.56,
+          "eval_id": "boundary_005",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.2857142857142857,
+          "reasons": [],
+          "source_line": 4,
+          "template_jaccard": 0.2857142857142857
+        },
+        {
+          "char_similarity": 0.3492063492063492,
+          "eval_id": "boundary_005",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.18181818181818182,
+          "reasons": [],
+          "source_line": 57,
+          "template_jaccard": 0.18181818181818182
+        },
+        {
+          "char_similarity": 0.6176470588235294,
+          "eval_id": "boundary_006",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.4444444444444444,
+          "reasons": [],
+          "source_line": 57,
+          "template_jaccard": 0.4444444444444444
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_006",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.125,
+          "reasons": [],
+          "source_line": 4,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_006",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.125,
+          "reasons": [],
+          "source_line": 26,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_007",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.1111111111111111,
+          "reasons": [],
+          "source_line": 44,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_007",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.1,
+          "reasons": [],
+          "source_line": 40,
+          "template_jaccard": 0.1
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_007",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.09090909090909091,
+          "reasons": [],
+          "source_line": 11,
+          "template_jaccard": 0.09090909090909091
+        },
+        {
+          "char_similarity": 0.3939393939393939,
+          "eval_id": "boundary_008",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.18181818181818182,
+          "reasons": [],
+          "source_line": 34,
+          "template_jaccard": 0.18181818181818182
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_008",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 57,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_008",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.08333333333333333,
+          "reasons": [],
+          "source_line": 72,
+          "template_jaccard": 0.08333333333333333
+        },
+        {
+          "char_similarity": 0.4656084656084656,
+          "eval_id": "boundary_009",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 13,
+          "template_jaccard": 0.15384615384615385
+        },
+        {
+          "char_similarity": 0.267515923566879,
+          "eval_id": "boundary_009",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.17391304347826086,
+          "reasons": [],
+          "source_line": 57,
+          "template_jaccard": 0.17391304347826086
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_009",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.13793103448275862,
+          "reasons": [],
+          "source_line": 64,
+          "template_jaccard": 0.13793103448275862
+        },
+        {
+          "char_similarity": 0.5272727272727272,
+          "eval_id": "boundary_010",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.3125,
+          "reasons": [],
+          "source_line": 57,
+          "template_jaccard": 0.3125
+        },
+        {
+          "char_similarity": 0.375,
+          "eval_id": "boundary_010",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.2,
+          "reasons": [],
+          "source_line": 34,
+          "template_jaccard": 0.2
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "boundary_010",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 13,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_001",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.11764705882352941,
+          "reasons": [],
+          "source_line": 2,
+          "template_jaccard": 0.13114754098360656
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_001",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.10588235294117647,
+          "reasons": [],
+          "source_line": 3,
+          "template_jaccard": 0.13114754098360656
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_001",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.11764705882352941,
+          "reasons": [],
+          "source_line": 7,
+          "template_jaccard": 0.13114754098360656
+        },
+        {
+          "char_similarity": 0.19900497512437812,
+          "eval_id": "numeric_pilot_002",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.17567567567567569,
+          "reasons": [],
+          "source_line": 65,
+          "template_jaccard": 0.18333333333333332
+        },
+        {
+          "char_similarity": 0.19900497512437812,
+          "eval_id": "numeric_pilot_002",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.16,
+          "reasons": [],
+          "source_line": 103,
+          "template_jaccard": 0.18333333333333332
+        },
+        {
+          "char_similarity": 0.19900497512437812,
+          "eval_id": "numeric_pilot_002",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.16216216216216217,
+          "reasons": [],
+          "source_line": 124,
+          "template_jaccard": 0.18333333333333332
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_003",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.11538461538461539,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.11940298507462686
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_003",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.0875,
+          "reasons": [],
+          "source_line": 15,
+          "template_jaccard": 0.11940298507462686
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_003",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.10256410256410256,
+          "reasons": [],
+          "source_line": 29,
+          "template_jaccard": 0.11940298507462686
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_004",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.0975609756097561,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.07246376811594203
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_004",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.0975609756097561,
+          "reasons": [],
+          "source_line": 80,
+          "template_jaccard": 0.07246376811594203
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_004",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.08641975308641975,
+          "reasons": [],
+          "source_line": 133,
+          "template_jaccard": 0.07246376811594203
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_005",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.11594202898550725,
+          "reasons": [],
+          "source_line": 8,
+          "template_jaccard": 0.13793103448275862
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_005",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.1,
+          "reasons": [],
+          "source_line": 12,
+          "template_jaccard": 0.13793103448275862
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_005",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.1,
+          "reasons": [],
+          "source_line": 16,
+          "template_jaccard": 0.13793103448275862
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_006",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.09803921568627451,
+          "reasons": [],
+          "source_line": 2,
+          "template_jaccard": 0.12345679012345678
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_006",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.11,
+          "reasons": [],
+          "source_line": 3,
+          "template_jaccard": 0.12345679012345678
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_006",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.10891089108910891,
+          "reasons": [],
+          "source_line": 7,
+          "template_jaccard": 0.12345679012345678
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_007",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.08955223880597014,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_007",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.08955223880597014,
+          "reasons": [],
+          "source_line": 15,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_007",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.09090909090909091,
+          "reasons": [],
+          "source_line": 29,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_008",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.13513513513513514,
+          "reasons": [],
+          "source_line": 133,
+          "template_jaccard": 0.11764705882352941
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_008",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.13513513513513514,
+          "reasons": [],
+          "source_line": 150,
+          "template_jaccard": 0.11764705882352941
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_008",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.13513513513513514,
+          "reasons": [],
+          "source_line": 171,
+          "template_jaccard": 0.11764705882352941
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_001",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.1267605633802817,
+          "reasons": [],
+          "source_line": 42,
+          "template_jaccard": 0.07547169811320754
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_001",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.11428571428571428,
+          "reasons": [],
+          "source_line": 102,
+          "template_jaccard": 0.07547169811320754
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_001",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.11267605633802817,
+          "reasons": [],
+          "source_line": 116,
+          "template_jaccard": 0.07547169811320754
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_002",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.10294117647058823,
+          "reasons": [],
+          "source_line": 39,
+          "template_jaccard": 0.0784313725490196
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_002",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.10294117647058823,
+          "reasons": [],
+          "source_line": 107,
+          "template_jaccard": 0.0784313725490196
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_002",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.10294117647058823,
+          "reasons": [],
+          "source_line": 201,
+          "template_jaccard": 0.0784313725490196
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_003",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.09523809523809523,
+          "reasons": [],
+          "source_line": 39,
+          "template_jaccard": 0.06666666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_003",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.09523809523809523,
+          "reasons": [],
+          "source_line": 107,
+          "template_jaccard": 0.06666666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_003",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.09523809523809523,
+          "reasons": [],
+          "source_line": 201,
+          "template_jaccard": 0.06666666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_004",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.07017543859649122,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.11363636363636363
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_004",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.08928571428571429,
+          "reasons": [],
+          "source_line": 15,
+          "template_jaccard": 0.11363636363636363
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_004",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.07142857142857142,
+          "reasons": [],
+          "source_line": 29,
+          "template_jaccard": 0.11363636363636363
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_005",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.14814814814814814,
+          "reasons": [],
+          "source_line": 39,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_005",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.14814814814814814,
+          "reasons": [],
+          "source_line": 107,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_005",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.14814814814814814,
+          "reasons": [],
+          "source_line": 201,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_006",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.08,
+          "reasons": [],
+          "source_line": 47,
+          "template_jaccard": 0.07272727272727272
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_006",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.06153846153846154,
+          "reasons": [],
+          "source_line": 63,
+          "template_jaccard": 0.08
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_006",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.08,
+          "reasons": [],
+          "source_line": 94,
+          "template_jaccard": 0.07272727272727272
+        },
+        {
+          "char_similarity": 0.2822966507177033,
+          "eval_id": "science_dev_007",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.15789473684210525,
+          "reasons": [],
+          "source_line": 164,
+          "template_jaccard": 0.15555555555555556
+        },
+        {
+          "char_similarity": 0.27884615384615385,
+          "eval_id": "science_dev_007",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.16071428571428573,
+          "reasons": [],
+          "source_line": 39,
+          "template_jaccard": 0.15555555555555556
+        },
+        {
+          "char_similarity": 0.27751196172248804,
+          "eval_id": "science_dev_007",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.15789473684210525,
+          "reasons": [],
+          "source_line": 80,
+          "template_jaccard": 0.15555555555555556
+        },
+        {
+          "char_similarity": 0.2620320855614973,
+          "eval_id": "science_dev_008",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.15789473684210525,
+          "reasons": [],
+          "source_line": 36,
+          "template_jaccard": 0.13953488372093023
+        },
+        {
+          "char_similarity": 0.2613333333333333,
+          "eval_id": "science_dev_008",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.15789473684210525,
+          "reasons": [],
+          "source_line": 80,
+          "template_jaccard": 0.13953488372093023
+        },
+        {
+          "char_similarity": 0.26063829787234044,
+          "eval_id": "science_dev_008",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.17857142857142858,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.13953488372093023
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_009",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.11864406779661017,
+          "reasons": [],
+          "source_line": 130,
+          "template_jaccard": 0.1
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_009",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.11475409836065574,
+          "reasons": [],
+          "source_line": 36,
+          "template_jaccard": 0.1
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_009",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.11475409836065574,
+          "reasons": [],
+          "source_line": 142,
+          "template_jaccard": 0.1
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_010",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.14,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.13953488372093023
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_010",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.11764705882352941,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.13953488372093023
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_010",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.11764705882352941,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.13953488372093023
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_011",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.12962962962962962,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.18604651162790697
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_011",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.12962962962962962,
+          "reasons": [],
+          "source_line": 15,
+          "template_jaccard": 0.18604651162790697
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_011",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.1320754716981132,
+          "reasons": [],
+          "source_line": 29,
+          "template_jaccard": 0.18604651162790697
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_012",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.10869565217391304,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.15789473684210525
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_012",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.10869565217391304,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.15789473684210525
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_012",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.10869565217391304,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.15789473684210525
+        },
+        {
+          "char_similarity": 0.28874734607218683,
+          "eval_id": "science_dev_013",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.15873015873015872,
+          "reasons": [],
+          "source_line": 80,
+          "template_jaccard": 0.1568627450980392
+        },
+        {
+          "char_similarity": 0.2748414376321353,
+          "eval_id": "science_dev_013",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.16129032258064516,
+          "reasons": [],
+          "source_line": 106,
+          "template_jaccard": 0.1568627450980392
+        },
+        {
+          "char_similarity": 0.2681318681318681,
+          "eval_id": "science_dev_013",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.16071428571428573,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.1956521739130435
+        },
+        {
+          "char_similarity": 0.10584958217270195,
+          "eval_id": "science_dev_014",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.16666666666666666,
+          "reasons": [],
+          "source_line": 1,
+          "template_jaccard": 0.18181818181818182
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_014",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.11764705882352941,
+          "reasons": [],
+          "source_line": 8,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_014",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.11764705882352941,
+          "reasons": [],
+          "source_line": 12,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_015",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.10869565217391304,
+          "reasons": [],
+          "source_line": 63,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_015",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.07547169811320754,
+          "reasons": [],
+          "source_line": 8,
+          "template_jaccard": 0.11904761904761904
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_015",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.07547169811320754,
+          "reasons": [],
+          "source_line": 12,
+          "template_jaccard": 0.11904761904761904
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_016",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.09803921568627451,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_016",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.09803921568627451,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_016",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.09803921568627451,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_017",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.10869565217391304,
+          "reasons": [],
+          "source_line": 8,
+          "template_jaccard": 0.1388888888888889
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_017",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.0851063829787234,
+          "reasons": [],
+          "source_line": 12,
+          "template_jaccard": 0.1388888888888889
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_017",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.0851063829787234,
+          "reasons": [],
+          "source_line": 16,
+          "template_jaccard": 0.1388888888888889
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_018",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.06451612903225806,
+          "reasons": [],
+          "source_line": 2,
+          "template_jaccard": 0.09259259259259259
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_018",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.06557377049180328,
+          "reasons": [],
+          "source_line": 3,
+          "template_jaccard": 0.09259259259259259
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_018",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.08196721311475409,
+          "reasons": [],
+          "source_line": 7,
+          "template_jaccard": 0.09259259259259259
+        },
+        {
+          "char_similarity": 0.3116883116883117,
+          "eval_id": "science_dev_019",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.16,
+          "reasons": [],
+          "source_line": 156,
+          "template_jaccard": 0.17073170731707318
+        },
+        {
+          "char_similarity": 0.3081967213114754,
+          "eval_id": "science_dev_019",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.16326530612244897,
+          "reasons": [],
+          "source_line": 188,
+          "template_jaccard": 0.17073170731707318
+        },
+        {
+          "char_similarity": 0.3016393442622951,
+          "eval_id": "science_dev_019",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.16326530612244897,
+          "reasons": [],
+          "source_line": 178,
+          "template_jaccard": 0.17073170731707318
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_020",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.0967741935483871,
+          "reasons": [],
+          "source_line": 2,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_020",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.11666666666666667,
+          "reasons": [],
+          "source_line": 3,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_020",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.0967741935483871,
+          "reasons": [],
+          "source_line": 7,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.2885085574572127,
+          "eval_id": "science_dev_021",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.1702127659574468,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.21052631578947367
+        },
+        {
+          "char_similarity": 0.2787286063569682,
+          "eval_id": "science_dev_021",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.1956521739130435,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.21052631578947367
+        },
+        {
+          "char_similarity": 0.2787286063569682,
+          "eval_id": "science_dev_021",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.1702127659574468,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.21052631578947367
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_022",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.14035087719298245,
+          "reasons": [],
+          "source_line": 2,
+          "template_jaccard": 0.1702127659574468
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_022",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 3,
+          "template_jaccard": 0.1702127659574468
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_022",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.14035087719298245,
+          "reasons": [],
+          "source_line": 7,
+          "template_jaccard": 0.1702127659574468
+        },
+        {
+          "char_similarity": 0.2182741116751269,
+          "eval_id": "science_dev_023",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.24489795918367346,
+          "reasons": [],
+          "source_line": 92,
+          "template_jaccard": 0.24390243902439024
+        },
+        {
+          "char_similarity": 0.22842639593908629,
+          "eval_id": "science_dev_023",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.24489795918367346,
+          "reasons": [],
+          "source_line": 102,
+          "template_jaccard": 0.24390243902439024
+        },
+        {
+          "char_similarity": 0.2379746835443038,
+          "eval_id": "science_dev_023",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.24489795918367346,
+          "reasons": [],
+          "source_line": 112,
+          "template_jaccard": 0.24390243902439024
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_024",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.13333333333333333,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_024",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.0967741935483871,
+          "reasons": [],
+          "source_line": 15,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_024",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.11666666666666667,
+          "reasons": [],
+          "source_line": 29,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_025",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.08928571428571429,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_025",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.07017543859649122,
+          "reasons": [],
+          "source_line": 15,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_025",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.07142857142857142,
+          "reasons": [],
+          "source_line": 29,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_026",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.08695652173913043,
+          "reasons": [],
+          "source_line": 2,
+          "template_jaccard": 0.13725490196078433
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_026",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.1044776119402985,
+          "reasons": [],
+          "source_line": 3,
+          "template_jaccard": 0.13725490196078433
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_026",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.11940298507462686,
+          "reasons": [],
+          "source_line": 7,
+          "template_jaccard": 0.13725490196078433
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_027",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_027",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 172,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_027",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 175,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_028",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.10909090909090909,
+          "reasons": [],
+          "source_line": 77,
+          "template_jaccard": 0.10416666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_028",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.10714285714285714,
+          "reasons": [],
+          "source_line": 43,
+          "template_jaccard": 0.10416666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_028",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.10714285714285714,
+          "reasons": [],
+          "source_line": 102,
+          "template_jaccard": 0.10416666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_029",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.1,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.11904761904761904
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_029",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.1,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.11904761904761904
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_029",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.1,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.11904761904761904
+        },
+        {
+          "char_similarity": 0.2572062084257206,
+          "eval_id": "science_dev_030",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.15714285714285714,
+          "reasons": [],
+          "source_line": 141,
+          "template_jaccard": 0.14545454545454545
+        },
+        {
+          "char_similarity": 0.25333333333333335,
+          "eval_id": "science_dev_030",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.15714285714285714,
+          "reasons": [],
+          "source_line": 173,
+          "template_jaccard": 0.14545454545454545
+        },
+        {
+          "char_similarity": 0.252212389380531,
+          "eval_id": "science_dev_030",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.15714285714285714,
+          "reasons": [],
+          "source_line": 203,
+          "template_jaccard": 0.14545454545454545
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_031",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.0847457627118644,
+          "reasons": [],
+          "source_line": 107,
+          "template_jaccard": 0.08163265306122448
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_031",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.0847457627118644,
+          "reasons": [],
+          "source_line": 143,
+          "template_jaccard": 0.08163265306122448
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_031",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.0847457627118644,
+          "reasons": [],
+          "source_line": 182,
+          "template_jaccard": 0.08163265306122448
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_032",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.09259259259259259,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.08695652173913043
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_032",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.09259259259259259,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.08695652173913043
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_032",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.07272727272727272,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.08695652173913043
+        },
+        {
+          "char_similarity": 0.4129032258064516,
+          "eval_id": "science_dev_033",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.21428571428571427,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.22857142857142856
+        },
+        {
+          "char_similarity": 0.4064516129032258,
+          "eval_id": "science_dev_033",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.18604651162790697,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.22857142857142856
+        },
+        {
+          "char_similarity": 0.4064516129032258,
+          "eval_id": "science_dev_033",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.21428571428571427,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.22857142857142856
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_034",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.12244897959183673,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_034",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.12244897959183673,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_034",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.14583333333333334,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.19895287958115182,
+          "eval_id": "science_dev_035",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.23404255319148937,
+          "reasons": [],
+          "source_line": 95,
+          "template_jaccard": 0.175
+        },
+        {
+          "char_similarity": 0.20418848167539266,
+          "eval_id": "science_dev_035",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.20833333333333334,
+          "reasons": [],
+          "source_line": 59,
+          "template_jaccard": 0.175
+        },
+        {
+          "char_similarity": 0.20418848167539266,
+          "eval_id": "science_dev_035",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.20833333333333334,
+          "reasons": [],
+          "source_line": 104,
+          "template_jaccard": 0.175
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_036",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.1320754716981132,
+          "reasons": [],
+          "source_line": 178,
+          "template_jaccard": 0.09090909090909091
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_036",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.12962962962962962,
+          "reasons": [],
+          "source_line": 37,
+          "template_jaccard": 0.09090909090909091
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_036",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.12962962962962962,
+          "reasons": [],
+          "source_line": 76,
+          "template_jaccard": 0.09090909090909091
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_037",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.07272727272727272,
+          "reasons": [],
+          "source_line": 8,
+          "template_jaccard": 0.11363636363636363
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_037",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.07272727272727272,
+          "reasons": [],
+          "source_line": 12,
+          "template_jaccard": 0.11363636363636363
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_037",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.07272727272727272,
+          "reasons": [],
+          "source_line": 16,
+          "template_jaccard": 0.11363636363636363
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_038",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.09859154929577464,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_038",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.08333333333333333,
+          "reasons": [],
+          "source_line": 15,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_038",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.08450704225352113,
+          "reasons": [],
+          "source_line": 29,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_039",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.10909090909090909,
+          "reasons": [],
+          "source_line": 1,
+          "template_jaccard": 0.11320754716981132
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_039",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.10416666666666667,
+          "reasons": [],
+          "source_line": 73,
+          "template_jaccard": 0.10869565217391304
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_039",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.1,
+          "reasons": [],
+          "source_line": 13,
+          "template_jaccard": 0.10416666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_040",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.1388888888888889,
+          "reasons": [],
+          "source_line": 95,
+          "template_jaccard": 0.12790697674418605
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_040",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.13761467889908258,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.12790697674418605
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_040",
+          "eval_source": "evals/firm_science_dev_v1.jsonl",
+          "jaccard": 0.13761467889908258,
+          "reasons": [],
+          "source_line": 36,
+          "template_jaccard": 0.12790697674418605
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_001",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.1267605633802817,
+          "reasons": [],
+          "source_line": 42,
+          "template_jaccard": 0.07547169811320754
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_001",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.11428571428571428,
+          "reasons": [],
+          "source_line": 102,
+          "template_jaccard": 0.07547169811320754
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_001",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.11267605633802817,
+          "reasons": [],
+          "source_line": 116,
+          "template_jaccard": 0.07547169811320754
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_002",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.10294117647058823,
+          "reasons": [],
+          "source_line": 39,
+          "template_jaccard": 0.0784313725490196
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_002",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.10294117647058823,
+          "reasons": [],
+          "source_line": 107,
+          "template_jaccard": 0.0784313725490196
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_002",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.10294117647058823,
+          "reasons": [],
+          "source_line": 201,
+          "template_jaccard": 0.0784313725490196
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_003",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.09523809523809523,
+          "reasons": [],
+          "source_line": 39,
+          "template_jaccard": 0.06666666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_003",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.09523809523809523,
+          "reasons": [],
+          "source_line": 107,
+          "template_jaccard": 0.06666666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_003",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.09523809523809523,
+          "reasons": [],
+          "source_line": 201,
+          "template_jaccard": 0.06666666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_004",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.07017543859649122,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.11363636363636363
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_004",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.08928571428571429,
+          "reasons": [],
+          "source_line": 15,
+          "template_jaccard": 0.11363636363636363
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_004",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.07142857142857142,
+          "reasons": [],
+          "source_line": 29,
+          "template_jaccard": 0.11363636363636363
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_005",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.14814814814814814,
+          "reasons": [],
+          "source_line": 39,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_005",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.14814814814814814,
+          "reasons": [],
+          "source_line": 107,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_005",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.14814814814814814,
+          "reasons": [],
+          "source_line": 201,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_006",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.08,
+          "reasons": [],
+          "source_line": 47,
+          "template_jaccard": 0.07272727272727272
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_006",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.06153846153846154,
+          "reasons": [],
+          "source_line": 63,
+          "template_jaccard": 0.08
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_006",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.08,
+          "reasons": [],
+          "source_line": 94,
+          "template_jaccard": 0.07272727272727272
+        },
+        {
+          "char_similarity": 0.2822966507177033,
+          "eval_id": "science_dev_007",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.15789473684210525,
+          "reasons": [],
+          "source_line": 164,
+          "template_jaccard": 0.15555555555555556
+        },
+        {
+          "char_similarity": 0.27884615384615385,
+          "eval_id": "science_dev_007",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.16071428571428573,
+          "reasons": [],
+          "source_line": 39,
+          "template_jaccard": 0.15555555555555556
+        },
+        {
+          "char_similarity": 0.27751196172248804,
+          "eval_id": "science_dev_007",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.15789473684210525,
+          "reasons": [],
+          "source_line": 80,
+          "template_jaccard": 0.15555555555555556
+        },
+        {
+          "char_similarity": 0.2620320855614973,
+          "eval_id": "science_dev_008",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.15789473684210525,
+          "reasons": [],
+          "source_line": 36,
+          "template_jaccard": 0.13953488372093023
+        },
+        {
+          "char_similarity": 0.2613333333333333,
+          "eval_id": "science_dev_008",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.15789473684210525,
+          "reasons": [],
+          "source_line": 80,
+          "template_jaccard": 0.13953488372093023
+        },
+        {
+          "char_similarity": 0.26063829787234044,
+          "eval_id": "science_dev_008",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.17857142857142858,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.13953488372093023
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_009",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.11864406779661017,
+          "reasons": [],
+          "source_line": 130,
+          "template_jaccard": 0.1
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_009",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.11475409836065574,
+          "reasons": [],
+          "source_line": 36,
+          "template_jaccard": 0.1
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_009",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.11475409836065574,
+          "reasons": [],
+          "source_line": 142,
+          "template_jaccard": 0.1
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_010",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.14,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.13953488372093023
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_010",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.11764705882352941,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.13953488372093023
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_010",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.11764705882352941,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.13953488372093023
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_011",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.12962962962962962,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.18604651162790697
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_011",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.12962962962962962,
+          "reasons": [],
+          "source_line": 15,
+          "template_jaccard": 0.18604651162790697
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_011",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.1320754716981132,
+          "reasons": [],
+          "source_line": 29,
+          "template_jaccard": 0.18604651162790697
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_012",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.10869565217391304,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.15789473684210525
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_012",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.10869565217391304,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.15789473684210525
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_012",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.10869565217391304,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.15789473684210525
+        },
+        {
+          "char_similarity": 0.28874734607218683,
+          "eval_id": "science_dev_013",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.15873015873015872,
+          "reasons": [],
+          "source_line": 80,
+          "template_jaccard": 0.1568627450980392
+        },
+        {
+          "char_similarity": 0.2748414376321353,
+          "eval_id": "science_dev_013",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.16129032258064516,
+          "reasons": [],
+          "source_line": 106,
+          "template_jaccard": 0.1568627450980392
+        },
+        {
+          "char_similarity": 0.2681318681318681,
+          "eval_id": "science_dev_013",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.16071428571428573,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.1956521739130435
+        },
+        {
+          "char_similarity": 0.10584958217270195,
+          "eval_id": "science_dev_014",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.16666666666666666,
+          "reasons": [],
+          "source_line": 1,
+          "template_jaccard": 0.18181818181818182
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_014",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.11764705882352941,
+          "reasons": [],
+          "source_line": 8,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_014",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.11764705882352941,
+          "reasons": [],
+          "source_line": 12,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_015",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.10869565217391304,
+          "reasons": [],
+          "source_line": 63,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_015",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.07547169811320754,
+          "reasons": [],
+          "source_line": 8,
+          "template_jaccard": 0.11904761904761904
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_015",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.07547169811320754,
+          "reasons": [],
+          "source_line": 12,
+          "template_jaccard": 0.11904761904761904
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_016",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.09803921568627451,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_016",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.09803921568627451,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_016",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.09803921568627451,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_017",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.10869565217391304,
+          "reasons": [],
+          "source_line": 8,
+          "template_jaccard": 0.1388888888888889
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_017",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.0851063829787234,
+          "reasons": [],
+          "source_line": 12,
+          "template_jaccard": 0.1388888888888889
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_017",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.0851063829787234,
+          "reasons": [],
+          "source_line": 16,
+          "template_jaccard": 0.1388888888888889
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_018",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.06451612903225806,
+          "reasons": [],
+          "source_line": 2,
+          "template_jaccard": 0.09259259259259259
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_018",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.06557377049180328,
+          "reasons": [],
+          "source_line": 3,
+          "template_jaccard": 0.09259259259259259
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_018",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.08196721311475409,
+          "reasons": [],
+          "source_line": 7,
+          "template_jaccard": 0.09259259259259259
+        },
+        {
+          "char_similarity": 0.3116883116883117,
+          "eval_id": "science_dev_019",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.16,
+          "reasons": [],
+          "source_line": 156,
+          "template_jaccard": 0.17073170731707318
+        },
+        {
+          "char_similarity": 0.3081967213114754,
+          "eval_id": "science_dev_019",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.16326530612244897,
+          "reasons": [],
+          "source_line": 188,
+          "template_jaccard": 0.17073170731707318
+        },
+        {
+          "char_similarity": 0.3016393442622951,
+          "eval_id": "science_dev_019",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.16326530612244897,
+          "reasons": [],
+          "source_line": 178,
+          "template_jaccard": 0.17073170731707318
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_020",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.0967741935483871,
+          "reasons": [],
+          "source_line": 2,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_020",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.11666666666666667,
+          "reasons": [],
+          "source_line": 3,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_020",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.0967741935483871,
+          "reasons": [],
+          "source_line": 7,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.2885085574572127,
+          "eval_id": "science_dev_021",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.1702127659574468,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.21052631578947367
+        },
+        {
+          "char_similarity": 0.2787286063569682,
+          "eval_id": "science_dev_021",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.1956521739130435,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.21052631578947367
+        },
+        {
+          "char_similarity": 0.2787286063569682,
+          "eval_id": "science_dev_021",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.1702127659574468,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.21052631578947367
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_022",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.14035087719298245,
+          "reasons": [],
+          "source_line": 2,
+          "template_jaccard": 0.1702127659574468
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_022",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 3,
+          "template_jaccard": 0.1702127659574468
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_022",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.14035087719298245,
+          "reasons": [],
+          "source_line": 7,
+          "template_jaccard": 0.1702127659574468
+        },
+        {
+          "char_similarity": 0.2182741116751269,
+          "eval_id": "science_dev_023",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.24489795918367346,
+          "reasons": [],
+          "source_line": 92,
+          "template_jaccard": 0.24390243902439024
+        },
+        {
+          "char_similarity": 0.22842639593908629,
+          "eval_id": "science_dev_023",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.24489795918367346,
+          "reasons": [],
+          "source_line": 102,
+          "template_jaccard": 0.24390243902439024
+        },
+        {
+          "char_similarity": 0.2379746835443038,
+          "eval_id": "science_dev_023",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.24489795918367346,
+          "reasons": [],
+          "source_line": 112,
+          "template_jaccard": 0.24390243902439024
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_024",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.13333333333333333,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_024",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.0967741935483871,
+          "reasons": [],
+          "source_line": 15,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_024",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.11666666666666667,
+          "reasons": [],
+          "source_line": 29,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_025",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.08928571428571429,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_025",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.07017543859649122,
+          "reasons": [],
+          "source_line": 15,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_025",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.07142857142857142,
+          "reasons": [],
+          "source_line": 29,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_026",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.08695652173913043,
+          "reasons": [],
+          "source_line": 2,
+          "template_jaccard": 0.13725490196078433
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_026",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.1044776119402985,
+          "reasons": [],
+          "source_line": 3,
+          "template_jaccard": 0.13725490196078433
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_026",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.11940298507462686,
+          "reasons": [],
+          "source_line": 7,
+          "template_jaccard": 0.13725490196078433
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_027",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_027",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 172,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_027",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 175,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_028",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.10909090909090909,
+          "reasons": [],
+          "source_line": 77,
+          "template_jaccard": 0.10416666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_028",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.10714285714285714,
+          "reasons": [],
+          "source_line": 43,
+          "template_jaccard": 0.10416666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_028",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.10714285714285714,
+          "reasons": [],
+          "source_line": 102,
+          "template_jaccard": 0.10416666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_029",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.06153846153846154,
+          "reasons": [],
+          "source_line": 63,
+          "template_jaccard": 0.06666666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_029",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.06578947368421052,
+          "reasons": [],
+          "source_line": 161,
+          "template_jaccard": 0.045454545454545456
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_029",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.06493506493506493,
+          "reasons": [],
+          "source_line": 93,
+          "template_jaccard": 0.045454545454545456
+        },
+        {
+          "char_similarity": 0.2572062084257206,
+          "eval_id": "science_dev_030",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.15714285714285714,
+          "reasons": [],
+          "source_line": 141,
+          "template_jaccard": 0.14545454545454545
+        },
+        {
+          "char_similarity": 0.25333333333333335,
+          "eval_id": "science_dev_030",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.15714285714285714,
+          "reasons": [],
+          "source_line": 173,
+          "template_jaccard": 0.14545454545454545
+        },
+        {
+          "char_similarity": 0.252212389380531,
+          "eval_id": "science_dev_030",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.15714285714285714,
+          "reasons": [],
+          "source_line": 203,
+          "template_jaccard": 0.14545454545454545
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_031",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.0847457627118644,
+          "reasons": [],
+          "source_line": 107,
+          "template_jaccard": 0.08163265306122448
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_031",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.0847457627118644,
+          "reasons": [],
+          "source_line": 143,
+          "template_jaccard": 0.08163265306122448
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_031",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.0847457627118644,
+          "reasons": [],
+          "source_line": 182,
+          "template_jaccard": 0.08163265306122448
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_032",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.09259259259259259,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.08695652173913043
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_032",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.09259259259259259,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.08695652173913043
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_032",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.07272727272727272,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.08695652173913043
+        },
+        {
+          "char_similarity": 0.4129032258064516,
+          "eval_id": "science_dev_033",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.21428571428571427,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.22857142857142856
+        },
+        {
+          "char_similarity": 0.4064516129032258,
+          "eval_id": "science_dev_033",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.18604651162790697,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.22857142857142856
+        },
+        {
+          "char_similarity": 0.4064516129032258,
+          "eval_id": "science_dev_033",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.21428571428571427,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.22857142857142856
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_034",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.12244897959183673,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_034",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.12244897959183673,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_034",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.14583333333333334,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.19895287958115182,
+          "eval_id": "science_dev_035",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.23404255319148937,
+          "reasons": [],
+          "source_line": 95,
+          "template_jaccard": 0.175
+        },
+        {
+          "char_similarity": 0.20418848167539266,
+          "eval_id": "science_dev_035",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.20833333333333334,
+          "reasons": [],
+          "source_line": 59,
+          "template_jaccard": 0.175
+        },
+        {
+          "char_similarity": 0.20418848167539266,
+          "eval_id": "science_dev_035",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.20833333333333334,
+          "reasons": [],
+          "source_line": 104,
+          "template_jaccard": 0.175
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_036",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.1320754716981132,
+          "reasons": [],
+          "source_line": 178,
+          "template_jaccard": 0.09090909090909091
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_036",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.12962962962962962,
+          "reasons": [],
+          "source_line": 37,
+          "template_jaccard": 0.09090909090909091
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_036",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.12962962962962962,
+          "reasons": [],
+          "source_line": 76,
+          "template_jaccard": 0.09090909090909091
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_037",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.07272727272727272,
+          "reasons": [],
+          "source_line": 8,
+          "template_jaccard": 0.11363636363636363
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_037",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.07272727272727272,
+          "reasons": [],
+          "source_line": 12,
+          "template_jaccard": 0.11363636363636363
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_037",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.07272727272727272,
+          "reasons": [],
+          "source_line": 16,
+          "template_jaccard": 0.11363636363636363
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_038",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.09859154929577464,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_038",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.08333333333333333,
+          "reasons": [],
+          "source_line": 15,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_038",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.08450704225352113,
+          "reasons": [],
+          "source_line": 29,
+          "template_jaccard": 0.10714285714285714
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_039",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.10909090909090909,
+          "reasons": [],
+          "source_line": 1,
+          "template_jaccard": 0.11320754716981132
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_039",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.10416666666666667,
+          "reasons": [],
+          "source_line": 73,
+          "template_jaccard": 0.10869565217391304
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_039",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.1,
+          "reasons": [],
+          "source_line": 13,
+          "template_jaccard": 0.10416666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_040",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.1388888888888889,
+          "reasons": [],
+          "source_line": 95,
+          "template_jaccard": 0.12790697674418605
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_040",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.13761467889908258,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.12790697674418605
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "science_dev_040",
+          "eval_source": "evals/firm_science_dev_v2.jsonl",
+          "jaccard": 0.13761467889908258,
+          "reasons": [],
+          "source_line": 36,
+          "template_jaccard": 0.12790697674418605
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_001",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 63,
+          "template_jaccard": 0.14705882352941177
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_001",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.0975609756097561,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_001",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.1388888888888889,
+          "reasons": [],
+          "source_line": 22,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.3879310344827586,
+          "eval_id": "v2_002",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.2413793103448276,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.28
+        },
+        {
+          "char_similarity": 0.3879310344827586,
+          "eval_id": "v2_002",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.2413793103448276,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.28
+        },
+        {
+          "char_similarity": 0.3879310344827586,
+          "eval_id": "v2_002",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.2413793103448276,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.28
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_003",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.0851063829787234,
+          "reasons": [],
+          "source_line": 2,
+          "template_jaccard": 0.13513513513513514
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_003",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.1111111111111111,
+          "reasons": [],
+          "source_line": 3,
+          "template_jaccard": 0.13513513513513514
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_003",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.0851063829787234,
+          "reasons": [],
+          "source_line": 7,
+          "template_jaccard": 0.13513513513513514
+        },
+        {
+          "char_similarity": 0.25477707006369427,
+          "eval_id": "v2_004",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.15555555555555556,
+          "reasons": [],
+          "source_line": 1,
+          "template_jaccard": 0.1590909090909091
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_004",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.09090909090909091,
+          "reasons": [],
+          "source_line": 6,
+          "template_jaccard": 0.13333333333333333
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_004",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.09090909090909091,
+          "reasons": [],
+          "source_line": 15,
+          "template_jaccard": 0.13333333333333333
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_005",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.12903225806451613,
+          "reasons": [],
+          "source_line": 21,
+          "template_jaccard": 0.14814814814814814
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_005",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.09375,
+          "reasons": [],
+          "source_line": 23,
+          "template_jaccard": 0.14814814814814814
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_005",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.12903225806451613,
+          "reasons": [],
+          "source_line": 24,
+          "template_jaccard": 0.14814814814814814
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_006",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.13636363636363635,
+          "reasons": [],
+          "source_line": 18,
+          "template_jaccard": 0.13636363636363635
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_006",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.13043478260869565,
+          "reasons": [],
+          "source_line": 22,
+          "template_jaccard": 0.13043478260869565
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_006",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.11764705882352941,
+          "reasons": [],
+          "source_line": 33,
+          "template_jaccard": 0.11764705882352941
+        },
+        {
+          "char_similarity": 0.2634146341463415,
+          "eval_id": "v2_007",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.20833333333333334,
+          "reasons": [],
+          "source_line": 22,
+          "template_jaccard": 0.20833333333333334
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_007",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.125,
+          "reasons": [],
+          "source_line": 58,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_007",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.11538461538461539,
+          "reasons": [],
+          "source_line": 56,
+          "template_jaccard": 0.11538461538461539
+        },
+        {
+          "char_similarity": 0.24,
+          "eval_id": "v2_008",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.1875,
+          "reasons": [],
+          "source_line": 56,
+          "template_jaccard": 0.1875
+        },
+        {
+          "char_similarity": 0.23770491803278687,
+          "eval_id": "v2_008",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.2,
+          "reasons": [],
+          "source_line": 58,
+          "template_jaccard": 0.2
+        },
+        {
+          "char_similarity": 0.1925925925925926,
+          "eval_id": "v2_008",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.1875,
+          "reasons": [],
+          "source_line": 22,
+          "template_jaccard": 0.1875
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_009",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.14285714285714285,
+          "reasons": [],
+          "source_line": 22,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_009",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.1111111111111111,
+          "reasons": [],
+          "source_line": 13,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_009",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.1111111111111111,
+          "reasons": [],
+          "source_line": 58,
+          "template_jaccard": 0.1111111111111111
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_010",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.09090909090909091,
+          "reasons": [],
+          "source_line": 72,
+          "template_jaccard": 0.09090909090909091
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_010",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.08695652173913043,
+          "reasons": [],
+          "source_line": 33,
+          "template_jaccard": 0.08695652173913043
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_010",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.08,
+          "reasons": [],
+          "source_line": 20,
+          "template_jaccard": 0.08
+        }
+      ],
+      "findings": [],
+      "limitations": "Lexical and numeric-template candidates only; manual semantic review still required.",
+      "manual_review_exclusions": [
+        {
+          "prompt_sha256": "917bdae59dd310bbe43ee35065ec1f3a1c9936bbebddd9456d9462b4587592b5",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "b6f60d17ed8b000651ce8c4d95664285e20914b45d7c1002772513a6b2c14098",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "e200852b4d255a4913978fc1a875d38155e64f8945e81cf0ebb641cdff439a79",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "b7e41694e76f8e74893c0febca05d9d744a43177ec37218fdeb57a9f5f38a9e6",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "e02d9027decc9a7797dccc95e36e5868f004a90d36626135907e44ccc2a049fe",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "20534164987cd6a0c978b1027a455b7ae34ef3231668dcd402904c674f475223",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "0ba1b0fa837922def6f6e9d7830410a962d4b38b818b3a01fae30c03578696b0",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "6ceab6ba73b1582fa651c0d3a74b9ac6001dea8178147cb6a1841b1386d4659b",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "9cc26380926c7f4f513e1e884bedd4817e8ae6757ba9059a7c0a253b56fd9c4b",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "ae35e5e565793c72389daa218e28cab01606f0475fdd0251589d8a3666a1502a",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "c28b8312a61564675fcf8fb607d42be264dc5ef500543cf1c54147279288f947",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "3728777a4720dd9c879d5c87c21c8f21cf4ee0aaff4bb0c8709c6d8619c94274",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "e8f66fa643ae4aea23c2f8ccf03d3603615fb44cf06fe3ebc224a998cb9f42dd",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "d2c782c9a3ebcaa60f0031a3e107e823ecfbcafe433b55d2fc8685a2f2e1ce13",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "091efc80c2705d5aeea23531a3f65adb1e72a34295f872612d140391e6d08868",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "3a4b5858390d82e263775180b8228307efe5ae3969e8d9f5da809223f77a6386",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "beb7c72a1cd6127a0002edf8dd1d7f50fcd5b3908deab19baa5eaf8ff9d5d99d",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "1f063901c329c88bd96b19429b85d611b1166c4919069f3e69a5af6a3712981c",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "00ee92b0f2d123b785b14610a3364cf06897ef589693b7032fdb681ec4fee97d",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "56d7b7b79f96b800f61abbb4fe6e7913f54e93728e4d6a4c82415d35e94b6cad",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "8f510f6e8f2c3a47478bcea18561e35c849fc4803abaffd7ddf6e68d9d0bc13e",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "e1b55639e2d7bcc23b010e50258b4b22c77e11cd0f68b756d55cdc150aa75911",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "31818cd6eb0a719c4dd714e64ff4cd76d192d668affa89d04c078e1b747a8e55",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "a4767560f0ed40d7249f24a371186f2d43487b746ef496035e462e4f02a61ff4",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "d58a6560d5a660086d36538a9a5ed44a365268cb87281575d2d8a83a67c6779c",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "d585493062556eb3c21f652e4aa6d9c0ce0769d6e3bc902d95d178a406975e72",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "f4bc353394e6d6fce256ddbe6df239f523980cfa5e3a32e1d3b595a2280a6beb",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "62cd70dbb29ee35939c12e46a0db830a7c5e1dde6c1d6bef6337e6bc514581d0",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "693b405c03d6b4ac12400521658e3a1335fef17885b45618e432d557444f38fe",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "260bb44de7fb2619e51637ae1507f2555eab8de880733a779772613b00b0dd10",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "54b4072012c0a28f8719caab96414c8dab9f31794d0b464aa8f9ce38fcefe4e7",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "fea4d536810e4327f73bb69a743861cf8d54b8b792b805616b3a20d746fa332d",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "c0ba49fee2cf438ea6b89e516d3f8bcb48a6e8d6a59c8fb56c2abd036f009e77",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "e8c68c05fca242ec59184c5d327dc816c5665404fe3f8d81903d6f08215cb6d8",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "eb6aa828bf6d8e3de69223b2990d19547ad676a0badc383ddf13feabd57df0c4",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "4c25705afb4567aec219b534e26a2b79caca74318b812a62f769df8718e64377",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "63e285c6792fb2b922ed62a8dc86ee0606332a22b439ebca8e32574eb5c2c3de",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "a01296906fbd4452142680dad2e3edc754b88a2f52a4851aeb40f6cd86c12fdc",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "441ed6f55658be11faa8452de32b45de68c8a635742e832854f3521c6f75fc44",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "fedc7568e625f4f5f84f5e11b7f57b5d3abfdeb705fe52f900ac7ae396a5733c",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "f23965cf715d2103a3927c70ff4178c2bb59254811c795b246cd65fd155e44e3",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "04bcfe87201d6d6eb2aa846df2ba3e37379c8cc34a07dfe65a3bbc939fd1a72b",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "e980ea3787929f3418bedaefad477e52bdb38b8ed19928d7aeda7d57e2115ea2",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "6be44ad99088c8b4fe6400a5b6edccdf4ce197eb7f8f762442d8f063838bfd59",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "3cd88a53537b5e7bcade48b43d2ebb82041337c2fd69a44eaf62a403c69dad27",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "7cd6e5a8e1be807189ef10939f1d5931d10a42f756d29dce99042b1e027e8eba",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "9724d1adab96d3dd3bbe08c3cc368d807373a80fff78f3dd082e4458829062b5",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "62d3acb2c41124ffac0c6bbdcfb1741a148af567919c0c84af3c864bed99e26b",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "f88dc4ac83dd6de561b8dcf4b82f0bf7ab428280cedc8048b35498ce81581ba4",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "b43b173d9e82ee3113f6b619183d11fd0b164af28787ff9e4365a76cb4157661",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "61e1ab852b45b9c2c00b74a615c1ab5610be3aa030bb07286d8691401b239a60",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "546bd367f9e4dd73b10cbd5d1cbbbc60af1c2feeb0d38cc38fc47dba394e3bb9",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "f383753bc5776b008960fa43fbbb94a4de41cfae3e1aa804bfdf117ba98e899e",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "89670dfe25d7d1a96a92bcde8c0e00efe975e9fba20e07acb19e37e394be126a",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "1d39b12a70228710c266e35b75733aedb498b265d535c92ebb7c65d671bf4154",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "703ff01c07ab22d63e99a6310caa1bc3fa8627cd5ad805788f0c594eb2b84adf",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "6c5be138c63de1e777ecf1a7a3a1b9b56a796480a03b757a354f9b78f3f97d0f",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "5fead94c333136725895f10a0ba999cd9626259ef78c937257168d72ab455e63",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "2965a2e2e159140dc4b552fa0f52d578f8e9ad19561d0a8a17e6653e292c833c",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "facdc1091fa76b2d9d6c4e93b45a95cf71f44bd6c6b9fdea0112377626ac07d9",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "6e851515a0078349fbfc9283fdbb126c2f334b750add97ba233678b6cac64933",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "18085222991629f9b02720c25a444b79eb4476f89c0b2caaadc502eb60724b53",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "1581a371ff50d06a31bcdf49e35c104fd63c1482f7f86796838417f75f11b51d",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "9490f349a1de4b40fdf647074442e21608a900e3983f0261c6a35ef078362a18",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "aefe44d519093821496578283386218e3a0b1f3d5a2e8ceb8cd4ba37bfa1d43b",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "50c8c5563fa14c47b7d896c2bf18a7ae848f80e28cf679778c032f79b6fd2098",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "bd7f65737b3309575af775313b3f0562759c540f6401c9a14936d83bff605473",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "c0421c9569b8e68bd20db9f34943d3305a9d1eb87eac32d0832c630be2f6dcfd",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "65fc5c80fb53cd7414c94cc96b37b0f8fbfa07b674b3e5583e19fdb7f8151baa",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "6cfb78fb6e0d67ac3f9c5f6461069a6f42561e9c47678f8abc93fbd5c63f8d55",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "1305c9a6403e2e8d4889b803b08c6896410e51b4c2a158b79eeaa413aeb13b35",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "0e3db703ca53ae193b4d39a0066b4eb677868d4bbd48beb301d499ce79f20c61",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "33de11290a45024458d3760e1d9fafff2caac70c32be1d1ff8c614a98dc9f8b3",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "c8665eb9f5419cda5292c474de63af4f7255ccf89ab01d27ca4823af4af7e544",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "ee995ba46e5973995678cc4dc10661adb47cc769229bf2cac08f618afce7c0d7",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "ddaeb3a1ef42990bc443d0f26baa54710b04d147750a6f76c768bd5e8cbf95c3",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "4a38e779540005bac8a6847e72c5ef75330263676e9ca777a0ab95b9b5743fee",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "4ae67ae4d165206677e4cb84576724f51d3b6e4f1ec74064fe933b65bb7f7365",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "16d5fd5029a3a64850df9e703e095879adccef9299d74c639278d8a911375319",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "db0cd90f3d93671f250d61fdd8e09a8a229451eb32e79cfe9334da878adee1c6",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "2a1ce3785063f5ec379411a2c4820bf5e63030d0ea062f5328ce48677fef5e37",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "0b81abdaf0b22263fd8e0268bce88921ef31d96e872e5e232e3ab6219d0c4add",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "1eeb26314056eb7b297ba5a287bce6e68d9127aaa011d6f8610343208a620d33",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "83f15678a6843817e1425a55c5423cbd9d45f878b3f15a204c1a1bad6b7a0fd8",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "2f58171c04fe52f5705cb67cd6d40a770a150df4007f45e8288629584fd99d70",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "39fb66a7b90c12c614c30f421456d2835a2174083a50a4cda5561f2fdb2a29cd",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "2f1aef530d0f69ee46e41adc96459672718b0e609c1131105b90197a605db42d",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "406fd8c021e6959e951277717cefee0afb9f5fe613691f271a9c21f11830112a",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "a505602efb6335e2fc36d2b418c6caa7708cc3e80bd3e88f462e4dc3a09e4189",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "ccd97f65393281c8ca68c4942cc820f8524a0e116935c1e9dc6aa76c6b9765b2",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "9365578809b7016d498205ae4f6a4285c00e6af9071544aa7ddd7bef623e890e",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "09bb10392131a74966c03c2e8e51b64ba39468bebb5de9927e96818511e0fc09",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "4f0312adda80c15b6c29e8c27c1b0c8de0c1c34f129d635cfe459a16bff90bb8",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "53de58d073aa15ddaa68c01840050a177fac6d2edac9414dab43c4d11605887b",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "7d3f48b42759034c6879d2b17f69070f58ccccadf5616dad656921cea43c00dc",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "df481427bb9db00ed3cad2714f24064d426f48db4430a05fcebdfa42eec78c77",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "e2ef9b735070a8a2d147c484d2dc455ccf3345d2017df87e392046461830b8cc",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "48fa7edf1ca3f9680c9c5d73fe0f5eb85aa020117f966e92ce489b9a6a228d5d",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "a86f87249d14e24ad43a779cc381467ad8c22a326ffe23fdb0c1a7e92eda1bc0",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "9f83b7823f1deb6ac91b68755d07a342121f0dd31de5fb384e751dc9e948e43d",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "3e1c0a930383e59f7d355b7d6316454e8b165815ea6915dd8efea330d65ce683",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "6df5c94f947a953110a657b8e34250d3c3a111438fca0c682132c84862108770",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "7302d6b29a19a71c63499504479b3ae007e2c64db0823a8d394d62e98b309852",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "4a25c7e3c9e9a4cc8f68377ee159aa4bdf3397671e43e5500fc8a96ba30461d7",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "d0172783722100ca3f5c26f582e83ee34addc1df431667c458abd98a582af5ae",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "82610bafb7bae7bfb63275b212850370e567a99c87b93275ab8e3682c88a9715",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "c5da365fde9221b5706fe34662d2eb23dbc299e0c7c0f0988ad4876995370f06",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "e2406b8fb8a9404f154555a74b055d81d6fbff75e308a07091e79243277012b8",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "baaac9ac5001b254efd2147cab921ffab399a2e4bd94fd411d7f798f11a397c0",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "c9362b3aaf02b6defb5ea5835eec8285399702b80f55d523b95de4809c273fcb",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "0e5dce3127aa8c5dca383850745238182f20ee8dafc7ab55b2390d0dd75fd481",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "d0f90213f1a81341b6cb0fe64b38b47abe45c228d0391fcc0ce5bba84450849d",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "2f4c76cc6fd64ed9efe560710a2b2db8d36f9c455547eaa4e85f095bafceb59f",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "bb38d1faad4afb6764f6b33d2544f96df1c3bb1b52035f8fcbe7a983212dd1d1",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "15a1cee2f6ed4ea3fce107c21eecc05a7029a52400bcc969cca9b1f00b1369ff",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "238c94c02b1c7397012ab6bdc9887b7481c0b791da5f48de8720eb4cf306f16c",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "9b41ae4b01d5d84fced8a78d38a8c0624649892b3bec4672d9b5b0a341eac762",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "297e7ce2fd810e5d7b72245d453a49508ae7a0a4ce97fe3c2f2670b7ee9739fa",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "486fc545260a4aba33a7140b7c941c7ea12bf2b68b48597dc696d61dbe5ecde3",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "c99ccf2f6d29019b8f3c2f22dd7d193fd5324027151633564e518a8f9d1259fc",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "58f3f19d9ac033c67c5ed4e0738eab2307d529ad653d2998749cd3101d1c0a2b",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "62883a8bb4c0dac50cd851b8a7121eaa2b036c538c3c7a718b474335526e4339",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "929a95705e514e2b8c0f50b7fd403d646e20e713470acc9d851ded00f24d06f0",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "1182f32fa9d4a979d6c0cf9421189360160e19b794f5b857ddf6604281dd3451",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "09cadbc9ee7c613614666d6736c8a86d0e28d25414827662fbfb028b5821c5ae",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "5988d7cb66ec361376f3aca9513531ee51abaf582a5fcd1b30fb76d96076bb00",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "70748b10a6625821214ca697854b32b974353f32fd7212768d20a5ff1fca80f0",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "4b198d805ede51988b33f5a9be8d4f2f335d4c998b708b99fcb8cf47d4581298",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "0d6d379e1d0485a1db61815190af2ff19ba3dee56cd19ada356aae6b3ad68d41",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "d23cc74e03b2e208266f1919e7f45f4d09c94c751393d61daf5da372b89ed415",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "77d71909dec63c5ab5535f72e1f3d59f9ea59784676c37f919f32249a49d41b9",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "73e0ee089f9ba55564c55f01d766aa1481222749790e53387d12f3a1e37e8d1f",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "96c186b0c168c2bd83833773fa621ce8eb6b7fad58867ca66ed96d97549faee3",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "5e1d8b07d1a61ae9bc173476b86404eecc40cc0d74496a432b94f1b2a9e58415",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "5fcdcccf74d4de9c65e45f12a1cd82cc3d189552d45dd8037fd3c513d544aff5",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "8aa8d1b3c6e6688770679d29041159a4eb0a5cc83c266e3b631ea1f662ca9e51",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "bb7a1dbecf4d2b19f8566c8e09a56ccaaa7511d771b106270e32fef43a7f9c59",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "c1a0957b1ffad7d4d21d0b0992d614acb4e41871795e754ec3942279d5a01312",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "0e67e3e75ea422c2de01dd87a1686592ccd46b9ba3fc61471706962a8e1fb94b",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "0b8f70aaedf1792201c910bf60f014d23b5b51a17205a24275911e69e947d2c2",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "0483de7399a92a3eb1747cb06e60d392083596fceff3dc97565e205534c31e87",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "4fdd92614977c6fc12f59e126963e90fe8d4c06497f939b773fa072da648c3f8",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "f26464608ae5031441542c89aa02e4b88edf55821792a7d3bea118ea9d31aba6",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "334c92bc8b72c6863ab7e27fba2fd1a47b31403ca1255ae6b0d7129c3c218e86",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "efb8de06c9d1e7daa1ed3ee96ab82a2cbee80b78a4d7de17fbaa754c4d2b3f87",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "1e633cb331d99ff3049cb6bd1d0d74a31b9c408a4a71477a59e7fc0fff327c33",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "98723b3e532fee9138e87f1f1f9d46965b044078cce8903f054ddaddc25484cd",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "85b1806853193766e360caffc5c0d0c218ae6d7451bef39018c2bfd2ad3b097d",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "ad6e49e7dbde20e4f6ce22ba42f2589aa433d74f362403c72473c25d7fc6dd99",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "fdc08323f8b41bfe500d654d4585e5c5329d1b7ba1a3a9700c0132972ac5c796",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "1c126f49721e6f7a6afdd62cad671bcf3830fc0cfddc5187a9e874853df17bf8",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "c4a2fe42807079199daee8dad44f0d5ddec8c5037033e767b5bd93a2fa9e6c40",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "58fb4bf0a0e6e59f2bfac5c5c5f827a7cb4539585c93966c48147f427dbe01d1",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "7f0818a48b8eb72e93c72e2cf0dd3b72b352088ad271f44b49f0aa3329045035",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "4b8da59966bc6c0b2b9bc227224ea1d5390a6b87f7868811650442ac4b623832",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "cf8cc2c10b81943d976dd7e0d23f04c722cf3cb6c847bb98b033b80cd0acf065",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "2b552bf56553cdd4cfc88d23ce90425a4bf1d7fde1e1d4fb48d54296d0163142",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "186887c557b23d6b27970943fd7cd1e49bdc51fcbb4550b7d1ec0afdb8a608e9",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        },
+        {
+          "prompt_sha256": "be42925f904daf2a6d2b937252b2dacfb3b000cfa5379cda61d32aff9a640eae",
+          "reason": "Conservative development reservation of recognized legacy quantitative template family"
+        }
+      ],
+      "scientific_review_flags": {
+        "by_family": {
+          "Dstar_Jones": 150,
+          "NEP_integrated": 3,
+          "shot_limited_SNR": 3,
+          "shot_noise_RMS": 3
+        },
+        "count": 159,
+        "flagged": [],
+        "method": "seven exact legacy prompt families; final-number extraction; SI constants; 2% rounding tolerance",
+        "status": {
+          "pass": 159
+        }
+      },
+      "thresholds": {
+        "char": 0.8,
+        "token_jaccard": 0.65
+      }
+    },
+    "records_by_partition": {
+      "capped": 0,
+      "quarantine": 159,
+      "test": 1,
+      "train": 45,
+      "valid": 1
+    },
+    "unique_pairs": 206
+  },
+  "tool_sha256": {
+    "firm_data.py": "1c0de887163e64887a18f3b13d6f04fd021c03f5de19c0941d45da1e52d303de",
+    "review_firm_seed.py": "936f8b6eaf51cfab1e8a8a280c25f1a1d3d3cd464e7d3bc81f1f391eeef626d7",
+    "split_firm_data.py": "9a22afcfa6639d166760b56c82d1a19126f2499018c244292046b3755642be46"
+  }
+}

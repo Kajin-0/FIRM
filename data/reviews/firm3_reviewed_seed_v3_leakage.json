@@ -1,0 +1,3199 @@
+{
+  "closest_per_eval": [
+    {
+      "char_similarity": 0.4793388429752066,
+      "eval_id": "firm_core_001",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.25,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.25
+    },
+    {
+      "char_similarity": 0.47368421052631576,
+      "eval_id": "firm_core_001",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 41,
+      "template_jaccard": 0.16666666666666666
+    },
+    {
+      "char_similarity": 0.43478260869565216,
+      "eval_id": "firm_core_001",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.2727272727272727,
+      "reasons": [],
+      "source_line": 40,
+      "template_jaccard": 0.2727272727272727
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_002",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.13043478260869565,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.13043478260869565
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_002",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.11764705882352941,
+      "reasons": [],
+      "source_line": 43,
+      "template_jaccard": 0.11764705882352941
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_002",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.10526315789473684,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.10526315789473684
+    },
+    {
+      "char_similarity": 0.7006369426751592,
+      "eval_id": "firm_core_003",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.4375,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.4375
+    },
+    {
+      "char_similarity": 0.5747126436781609,
+      "eval_id": "firm_core_003",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.2,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.2
+    },
+    {
+      "char_similarity": 0.4520547945205479,
+      "eval_id": "firm_core_003",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.15789473684210525,
+      "reasons": [],
+      "source_line": 3,
+      "template_jaccard": 0.15789473684210525
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_004",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.14285714285714285,
+      "reasons": [],
+      "source_line": 8,
+      "template_jaccard": 0.14285714285714285
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_004",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.14285714285714285,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.14285714285714285
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_004",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.13636363636363635,
+      "reasons": [],
+      "source_line": 43,
+      "template_jaccard": 0.13636363636363635
+    },
+    {
+      "char_similarity": 0.4623115577889447,
+      "eval_id": "firm_core_005",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.18181818181818182,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.18181818181818182
+    },
+    {
+      "char_similarity": 0.3915343915343915,
+      "eval_id": "firm_core_005",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.19047619047619047,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.19047619047619047
+    },
+    {
+      "char_similarity": 0.20930232558139536,
+      "eval_id": "firm_core_005",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.2,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.2
+    },
+    {
+      "char_similarity": 0.52,
+      "eval_id": "firm_core_006",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.3,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.3
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_006",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.14285714285714285,
+      "reasons": [],
+      "source_line": 33,
+      "template_jaccard": 0.14285714285714285
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_006",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.13043478260869565,
+      "reasons": [],
+      "source_line": 31,
+      "template_jaccard": 0.13043478260869565
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_007",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.11538461538461539,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.11538461538461539
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_007",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.1111111111111111,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.1111111111111111
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_007",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.0967741935483871,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.0967741935483871
+    },
+    {
+      "char_similarity": 0.1623931623931624,
+      "eval_id": "firm_core_008",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.17857142857142858,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.17857142857142858
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_008",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.10714285714285714,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.10714285714285714
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_008",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.10344827586206896,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.10344827586206896
+    },
+    {
+      "char_similarity": 0.5333333333333333,
+      "eval_id": "firm_core_009",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.15789473684210525,
+      "reasons": [],
+      "source_line": 43,
+      "template_jaccard": 0.15789473684210525
+    },
+    {
+      "char_similarity": 0.4830917874396135,
+      "eval_id": "firm_core_009",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.16,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.16
+    },
+    {
+      "char_similarity": 0.4585987261146497,
+      "eval_id": "firm_core_009",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 25,
+      "template_jaccard": 0.16666666666666666
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_010",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.12903225806451613,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.12903225806451613
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_010",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 41,
+      "template_jaccard": 0.09090909090909091
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_010",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.08695652173913043,
+      "reasons": [],
+      "source_line": 29,
+      "template_jaccard": 0.08695652173913043
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_001",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.10526315789473684,
+      "reasons": [],
+      "source_line": 43,
+      "template_jaccard": 0.10526315789473684
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_001",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.09523809523809523,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.09523809523809523
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_001",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.07692307692307693,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.07692307692307693
+    },
+    {
+      "char_similarity": 0.3559322033898305,
+      "eval_id": "boundary_002",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.23529411764705882,
+      "reasons": [],
+      "source_line": 29,
+      "template_jaccard": 0.23529411764705882
+    },
+    {
+      "char_similarity": 0.29508196721311475,
+      "eval_id": "boundary_002",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.17391304347826086,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.17391304347826086
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_002",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.13636363636363635,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.13636363636363635
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_003",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.125,
+      "reasons": [],
+      "source_line": 20,
+      "template_jaccard": 0.125
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_003",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.125,
+      "reasons": [],
+      "source_line": 44,
+      "template_jaccard": 0.125
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_003",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.1,
+      "reasons": [],
+      "source_line": 4,
+      "template_jaccard": 0.1
+    },
+    {
+      "char_similarity": 0.3902439024390244,
+      "eval_id": "boundary_004",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 30,
+      "template_jaccard": 0.16666666666666666
+    },
+    {
+      "char_similarity": 0.27848101265822783,
+      "eval_id": "boundary_004",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.18181818181818182,
+      "reasons": [],
+      "source_line": 36,
+      "template_jaccard": 0.18181818181818182
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_004",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.14285714285714285,
+      "reasons": [],
+      "source_line": 24,
+      "template_jaccard": 0.14285714285714285
+    },
+    {
+      "char_similarity": 0.5925925925925926,
+      "eval_id": "boundary_005",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.42857142857142855,
+      "reasons": [],
+      "source_line": 44,
+      "template_jaccard": 0.42857142857142855
+    },
+    {
+      "char_similarity": 0.56,
+      "eval_id": "boundary_005",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.2857142857142857,
+      "reasons": [],
+      "source_line": 2,
+      "template_jaccard": 0.2857142857142857
+    },
+    {
+      "char_similarity": 0.3492063492063492,
+      "eval_id": "boundary_005",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.18181818181818182,
+      "reasons": [],
+      "source_line": 32,
+      "template_jaccard": 0.18181818181818182
+    },
+    {
+      "char_similarity": 0.6176470588235294,
+      "eval_id": "boundary_006",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.4444444444444444,
+      "reasons": [],
+      "source_line": 32,
+      "template_jaccard": 0.4444444444444444
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_006",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.125,
+      "reasons": [],
+      "source_line": 2,
+      "template_jaccard": 0.125
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_006",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.125,
+      "reasons": [],
+      "source_line": 15,
+      "template_jaccard": 0.125
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_007",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.1111111111111111,
+      "reasons": [],
+      "source_line": 23,
+      "template_jaccard": 0.1111111111111111
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_007",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.1,
+      "reasons": [],
+      "source_line": 22,
+      "template_jaccard": 0.1
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_007",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 6,
+      "template_jaccard": 0.09090909090909091
+    },
+    {
+      "char_similarity": 0.3939393939393939,
+      "eval_id": "boundary_008",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.18181818181818182,
+      "reasons": [],
+      "source_line": 20,
+      "template_jaccard": 0.18181818181818182
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_008",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.14285714285714285,
+      "reasons": [],
+      "source_line": 32,
+      "template_jaccard": 0.14285714285714285
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_008",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.08333333333333333,
+      "reasons": [],
+      "source_line": 44,
+      "template_jaccard": 0.08333333333333333
+    },
+    {
+      "char_similarity": 0.4656084656084656,
+      "eval_id": "boundary_009",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.15384615384615385,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.15384615384615385
+    },
+    {
+      "char_similarity": 0.267515923566879,
+      "eval_id": "boundary_009",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.17391304347826086,
+      "reasons": [],
+      "source_line": 32,
+      "template_jaccard": 0.17391304347826086
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_009",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.13793103448275862,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.13793103448275862
+    },
+    {
+      "char_similarity": 0.5272727272727272,
+      "eval_id": "boundary_010",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.3125,
+      "reasons": [],
+      "source_line": 32,
+      "template_jaccard": 0.3125
+    },
+    {
+      "char_similarity": 0.375,
+      "eval_id": "boundary_010",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.2,
+      "reasons": [],
+      "source_line": 20,
+      "template_jaccard": 0.2
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "boundary_010",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.14285714285714285,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.14285714285714285
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_001",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.06329113924050633,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.0847457627118644
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_001",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.05952380952380952,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.078125
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_001",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.05263157894736842,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.07142857142857142
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_002",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.08823529411764706,
+      "reasons": [],
+      "source_line": 33,
+      "template_jaccard": 0.1016949152542373
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_002",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.08695652173913043,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.1
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_002",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.07575757575757576,
+      "reasons": [],
+      "source_line": 12,
+      "template_jaccard": 0.08771929824561403
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_003",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.08823529411764706,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.09375
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_003",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.08108108108108109,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.08571428571428572
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_003",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.06756756756756757,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.07142857142857142
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_004",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.06944444444444445,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.078125
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_004",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.05714285714285714,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.06451612903225806
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_004",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.05128205128205128,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.05714285714285714
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_005",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.1016949152542373
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_005",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.08571428571428572,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.09523809523809523
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_005",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.07575757575757576,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.0847457627118644
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_006",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.06382978723404255,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.0759493670886076
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_006",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.06060606060606061,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.07142857142857142
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_006",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.043010752688172046,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.05128205128205128
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_007",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.07272727272727272,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.07692307692307693
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_007",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.06896551724137931,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.07272727272727272
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_007",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.06451612903225806,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.06779661016949153
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_008",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.07352941176470588,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.07575757575757576
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_008",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.07142857142857142,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.07352941176470588
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_008",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.06756756756756757,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.06944444444444445
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_001",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06349206349206349,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.08333333333333333
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_001",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.058823529411764705,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.07547169811320754
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_001",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.05,
+      "reasons": [],
+      "source_line": 28,
+      "template_jaccard": 0.06666666666666667
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_002",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06557377049180328,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.08333333333333333
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_002",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.05263157894736842,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.06818181818181818
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_002",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.05172413793103448,
+      "reasons": [],
+      "source_line": 3,
+      "template_jaccard": 0.06666666666666667
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_003",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.03773584905660377,
+      "reasons": [],
+      "source_line": 39,
+      "template_jaccard": 0.05128205128205128
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_003",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.037037037037037035,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.05
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_003",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.037037037037037035,
+      "reasons": [],
+      "source_line": 17,
+      "template_jaccard": 0.05
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_004",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.1,
+      "reasons": [],
+      "source_line": 28,
+      "template_jaccard": 0.1111111111111111
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_004",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.1
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_004",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06666666666666667,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.07317073170731707
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_005",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06521739130434782,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.07317073170731707
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_005",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.061224489795918366,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.06818181818181818
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_005",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.05660377358490566,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.0625
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_006",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06153846153846154,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.08
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_006",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.047619047619047616,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.0625
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_006",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.045454545454545456,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.058823529411764705
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_007",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.061224489795918366,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.06976744186046512
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_007",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.06818181818181818
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_007",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.06818181818181818
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_008",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.061224489795918366,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.075
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_008",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.07317073170731707
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_008",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.05454545454545454,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.06521739130434782
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_009",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.0784313725490196,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.08695652173913043
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_009",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.05660377358490566,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.0625
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_009",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.05263157894736842,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.057692307692307696
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_010",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.08333333333333333,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.09090909090909091
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_010",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.0625,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.06818181818181818
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_010",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.06521739130434782
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_011",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.125,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.13043478260869565
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_011",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.09302325581395349,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.0975609756097561
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_011",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.08888888888888889,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.09302325581395349
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_012",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.09523809523809523,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.10256410256410256
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_012",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.0975609756097561
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_012",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.08108108108108109,
+      "reasons": [],
+      "source_line": 19,
+      "template_jaccard": 0.08823529411764706
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_013",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.07692307692307693,
+      "reasons": [],
+      "source_line": 12,
+      "template_jaccard": 0.08695652173913043
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_013",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.07142857142857142,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.08
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_013",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.07017543859649122,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.0784313725490196
+    },
+    {
+      "char_similarity": 0.10584958217270195,
+      "eval_id": "science_dev_014",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.18181818181818182
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_014",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.13333333333333333,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.14634146341463414
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_014",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.09302325581395349,
+      "reasons": [],
+      "source_line": 12,
+      "template_jaccard": 0.10256410256410256
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_015",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.10869565217391304,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.125
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_015",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.09803921568627451,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.1111111111111111
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_015",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.10526315789473684
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_016",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.0851063829787234,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.1
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_016",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06382978723404255,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.075
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_016",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.061224489795918366,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.07142857142857142
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_017",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.0975609756097561,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.11428571428571428
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_017",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06976744186046512,
+      "reasons": [],
+      "source_line": 31,
+      "template_jaccard": 0.08108108108108109
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_017",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06818181818181818,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.07894736842105263
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_018",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.07142857142857142,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.07272727272727272
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_018",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.05660377358490566,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.057692307692307696
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_018",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.04081632653061224,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.041666666666666664
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_019",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.0975609756097561,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.10256410256410256
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_019",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.07317073170731707,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.07692307692307693
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_019",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.07142857142857142,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.075
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_020",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.09615384615384616,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.11363636363636363
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_020",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.05660377358490566,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.06666666666666667
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_020",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.05172413793103448,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.06
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_021",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.13636363636363635,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.15384615384615385
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_021",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.08888888888888889,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.1
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_021",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.0784313725490196,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.08695652173913043
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_022",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.10638297872340426,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.11627906976744186
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_022",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.10416666666666667,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.11363636363636363
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_022",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.0784313725490196,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.0851063829787234
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_023",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.08888888888888889,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.0975609756097561
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_023",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.0784313725490196,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.0851063829787234
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_023",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06976744186046512,
+      "reasons": [],
+      "source_line": 12,
+      "template_jaccard": 0.07692307692307693
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_024",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.08,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.08695652173913043
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_024",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.0784313725490196,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.0851063829787234
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_024",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.07142857142857142,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.07692307692307693
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_025",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.1,
+      "reasons": [],
+      "source_line": 28,
+      "template_jaccard": 0.10810810810810811
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_025",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.0975609756097561
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_025",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.08163265306122448,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.08695652173913043
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_026",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.11363636363636363
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_026",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.08620689655172414,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.10638297872340426
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_026",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.08620689655172414,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.10638297872340426
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_027",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.04918032786885246,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.058823529411764705
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_027",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.047619047619047616,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.05660377358490566
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_027",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.046875,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.05555555555555555
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_028",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.0975609756097561
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_028",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.08163265306122448,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.08695652173913043
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_028",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.07547169811320754,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.08
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_029",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06521739130434782,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.07142857142857142
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_029",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06382978723404255,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.06976744186046512
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_029",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.061224489795918366,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.06666666666666667
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_030",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.09375,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.1111111111111111
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_030",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.08064516129032258,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.09615384615384616
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_030",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.07246376811594203,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.0847457627118644
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_031",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.04081632653061224,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.044444444444444446
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_031",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.04081632653061224,
+      "reasons": [],
+      "source_line": 33,
+      "template_jaccard": 0.044444444444444446
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_031",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.04,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.043478260869565216
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_032",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.07142857142857142,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.0784313725490196
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_032",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.0625,
+      "reasons": [],
+      "source_line": 18,
+      "template_jaccard": 0.06976744186046512
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_032",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.0625,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.06976744186046512
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_033",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.0975609756097561,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.10810810810810811
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_033",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06976744186046512,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.07692307692307693
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_033",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06666666666666667,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.07317073170731707
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_034",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.1111111111111111,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.11627906976744186
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_034",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.0851063829787234,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.08888888888888889
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_034",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06818181818181818,
+      "reasons": [],
+      "source_line": 18,
+      "template_jaccard": 0.07142857142857142
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_035",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.07142857142857142,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.07894736842105263
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_035",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.05,
+      "reasons": [],
+      "source_line": 12,
+      "template_jaccard": 0.05555555555555555
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_035",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.045454545454545456,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.05
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_036",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06976744186046512,
+      "reasons": [],
+      "source_line": 39,
+      "template_jaccard": 0.07894736842105263
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_036",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06666666666666667,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.075
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_036",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06521739130434782,
+      "reasons": [],
+      "source_line": 31,
+      "template_jaccard": 0.07317073170731707
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_037",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.09433962264150944,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.10638297872340426
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_037",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.08163265306122448,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.09302325581395349
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_037",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.06521739130434782,
+      "reasons": [],
+      "source_line": 12,
+      "template_jaccard": 0.075
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_038",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.04918032786885246,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.05660377358490566
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_038",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.04838709677419355,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.05555555555555555
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_038",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.04477611940298507,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.05084745762711865
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_039",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.10909090909090909,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.11320754716981132
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_039",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.10416666666666667,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.10869565217391304
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_039",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.1,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.10416666666666667
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_040",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.05660377358490566,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.06896551724137931
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_040",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.047619047619047616,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.05813953488372093
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_040",
+      "eval_source": "evals/firm_science_dev_v1.jsonl",
+      "jaccard": 0.04716981132075472,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.05747126436781609
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_001",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06349206349206349,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.08333333333333333
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_001",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.058823529411764705,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.07547169811320754
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_001",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.05,
+      "reasons": [],
+      "source_line": 28,
+      "template_jaccard": 0.06666666666666667
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_002",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06557377049180328,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.08333333333333333
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_002",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.05263157894736842,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.06818181818181818
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_002",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.05172413793103448,
+      "reasons": [],
+      "source_line": 3,
+      "template_jaccard": 0.06666666666666667
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_003",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.03773584905660377,
+      "reasons": [],
+      "source_line": 39,
+      "template_jaccard": 0.05128205128205128
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_003",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.037037037037037035,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.05
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_003",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.037037037037037035,
+      "reasons": [],
+      "source_line": 17,
+      "template_jaccard": 0.05
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_004",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.1,
+      "reasons": [],
+      "source_line": 28,
+      "template_jaccard": 0.1111111111111111
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_004",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.1
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_004",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06666666666666667,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.07317073170731707
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_005",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06521739130434782,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.07317073170731707
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_005",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.061224489795918366,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.06818181818181818
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_005",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.05660377358490566,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.0625
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_006",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06153846153846154,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.08
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_006",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.047619047619047616,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.0625
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_006",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.045454545454545456,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.058823529411764705
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_007",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.061224489795918366,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.06976744186046512
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_007",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.06818181818181818
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_007",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.06818181818181818
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_008",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.061224489795918366,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.075
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_008",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.07317073170731707
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_008",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.05454545454545454,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.06521739130434782
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_009",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.0784313725490196,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.08695652173913043
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_009",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.05660377358490566,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.0625
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_009",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.05263157894736842,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.057692307692307696
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_010",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.08333333333333333,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.09090909090909091
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_010",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.0625,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.06818181818181818
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_010",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.06521739130434782
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_011",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.125,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.13043478260869565
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_011",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.09302325581395349,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.0975609756097561
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_011",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.08888888888888889,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.09302325581395349
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_012",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.09523809523809523,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.10256410256410256
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_012",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.0975609756097561
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_012",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.08108108108108109,
+      "reasons": [],
+      "source_line": 19,
+      "template_jaccard": 0.08823529411764706
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_013",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.07692307692307693,
+      "reasons": [],
+      "source_line": 12,
+      "template_jaccard": 0.08695652173913043
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_013",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.07142857142857142,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.08
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_013",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.07017543859649122,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.0784313725490196
+    },
+    {
+      "char_similarity": 0.10584958217270195,
+      "eval_id": "science_dev_014",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.18181818181818182
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_014",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.13333333333333333,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.14634146341463414
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_014",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.09302325581395349,
+      "reasons": [],
+      "source_line": 12,
+      "template_jaccard": 0.10256410256410256
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_015",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.10869565217391304,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.125
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_015",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.09803921568627451,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.1111111111111111
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_015",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.10526315789473684
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_016",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.0851063829787234,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.1
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_016",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06382978723404255,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.075
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_016",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.061224489795918366,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.07142857142857142
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_017",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.0975609756097561,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.11428571428571428
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_017",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06976744186046512,
+      "reasons": [],
+      "source_line": 31,
+      "template_jaccard": 0.08108108108108109
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_017",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06818181818181818,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.07894736842105263
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_018",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.07142857142857142,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.07272727272727272
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_018",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.05660377358490566,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.057692307692307696
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_018",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.04081632653061224,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.041666666666666664
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_019",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.0975609756097561,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.10256410256410256
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_019",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.07317073170731707,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.07692307692307693
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_019",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.07142857142857142,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.075
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_020",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.09615384615384616,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.11363636363636363
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_020",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.05660377358490566,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.06666666666666667
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_020",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.05172413793103448,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.06
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_021",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.13636363636363635,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.15384615384615385
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_021",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.08888888888888889,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.1
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_021",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.0784313725490196,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.08695652173913043
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_022",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.10638297872340426,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.11627906976744186
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_022",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.10416666666666667,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.11363636363636363
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_022",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.0784313725490196,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.0851063829787234
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_023",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.08888888888888889,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.0975609756097561
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_023",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.0784313725490196,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.0851063829787234
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_023",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06976744186046512,
+      "reasons": [],
+      "source_line": 12,
+      "template_jaccard": 0.07692307692307693
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_024",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.08,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.08695652173913043
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_024",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.0784313725490196,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.0851063829787234
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_024",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.07142857142857142,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.07692307692307693
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_025",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.1,
+      "reasons": [],
+      "source_line": 28,
+      "template_jaccard": 0.10810810810810811
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_025",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.0975609756097561
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_025",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.08163265306122448,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.08695652173913043
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_026",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.11363636363636363
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_026",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.08620689655172414,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.10638297872340426
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_026",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.08620689655172414,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.10638297872340426
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_027",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.04918032786885246,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.058823529411764705
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_027",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.047619047619047616,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.05660377358490566
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_027",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.046875,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.05555555555555555
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_028",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.0975609756097561
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_028",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.08163265306122448,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.08695652173913043
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_028",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.07547169811320754,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.08
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_029",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06153846153846154,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.06666666666666667
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_029",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.056338028169014086,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.06060606060606061
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_029",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.04838709677419355,
+      "reasons": [],
+      "source_line": 12,
+      "template_jaccard": 0.05263157894736842
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_030",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.09375,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.1111111111111111
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_030",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.08064516129032258,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.09615384615384616
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_030",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.07246376811594203,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.0847457627118644
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_031",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.04081632653061224,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.044444444444444446
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_031",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.04081632653061224,
+      "reasons": [],
+      "source_line": 33,
+      "template_jaccard": 0.044444444444444446
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_031",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.04,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.043478260869565216
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_032",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.07142857142857142,
+      "reasons": [],
+      "source_line": 35,
+      "template_jaccard": 0.0784313725490196
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_032",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.0625,
+      "reasons": [],
+      "source_line": 18,
+      "template_jaccard": 0.06976744186046512
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_032",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.0625,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.06976744186046512
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_033",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.0975609756097561,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.10810810810810811
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_033",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06976744186046512,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.07692307692307693
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_033",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06666666666666667,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.07317073170731707
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_034",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.1111111111111111,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.11627906976744186
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_034",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.0851063829787234,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.08888888888888889
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_034",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06818181818181818,
+      "reasons": [],
+      "source_line": 18,
+      "template_jaccard": 0.07142857142857142
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_035",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.07142857142857142,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.07894736842105263
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_035",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.05,
+      "reasons": [],
+      "source_line": 12,
+      "template_jaccard": 0.05555555555555555
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_035",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.045454545454545456,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.05
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_036",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06976744186046512,
+      "reasons": [],
+      "source_line": 39,
+      "template_jaccard": 0.07894736842105263
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_036",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06666666666666667,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.075
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_036",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06521739130434782,
+      "reasons": [],
+      "source_line": 31,
+      "template_jaccard": 0.07317073170731707
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_037",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.09433962264150944,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.10638297872340426
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_037",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.08163265306122448,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.09302325581395349
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_037",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.06521739130434782,
+      "reasons": [],
+      "source_line": 12,
+      "template_jaccard": 0.075
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_038",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.04918032786885246,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.05660377358490566
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_038",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.04838709677419355,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.05555555555555555
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_038",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.04477611940298507,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.05084745762711865
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_039",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.10909090909090909,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.11320754716981132
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_039",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.10416666666666667,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.10869565217391304
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_039",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.1,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.10416666666666667
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_040",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.05660377358490566,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.06896551724137931
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_040",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.047619047619047616,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.05813953488372093
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "science_dev_040",
+      "eval_source": "evals/firm_science_dev_v2.jsonl",
+      "jaccard": 0.04716981132075472,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.05747126436781609
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_001",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.14285714285714285,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.14705882352941177
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_001",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.1388888888888889,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.14285714285714285
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_001",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.08333333333333333,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.08571428571428572
+    },
+    {
+      "char_similarity": 0.3684210526315789,
+      "eval_id": "v2_002",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.23076923076923078,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.23076923076923078
+    },
+    {
+      "char_similarity": 0.208955223880597,
+      "eval_id": "v2_002",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.2,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.2
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_002",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.10714285714285714,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.10714285714285714
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_003",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.08108108108108109,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.08823529411764706
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_003",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.05555555555555555,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.06060606060606061
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_003",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.05405405405405406,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.058823529411764705
+    },
+    {
+      "char_similarity": 0.25477707006369427,
+      "eval_id": "v2_004",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.15555555555555556,
+      "reasons": [],
+      "source_line": 1,
+      "template_jaccard": 0.1590909090909091
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_004",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.11627906976744186,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.11904761904761904
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_004",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.11627906976744186,
+      "reasons": [],
+      "source_line": 31,
+      "template_jaccard": 0.11904761904761904
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_005",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.08333333333333333,
+      "reasons": [],
+      "source_line": 12,
+      "template_jaccard": 0.08333333333333333
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_005",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.08333333333333333,
+      "reasons": [],
+      "source_line": 28,
+      "template_jaccard": 0.08333333333333333
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_005",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.07407407407407407,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.07407407407407407
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_006",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.13636363636363635,
+      "reasons": [],
+      "source_line": 10,
+      "template_jaccard": 0.13636363636363635
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_006",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.13043478260869565,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.13043478260869565
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_006",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.11764705882352941,
+      "reasons": [],
+      "source_line": 19,
+      "template_jaccard": 0.11764705882352941
+    },
+    {
+      "char_similarity": 0.2634146341463415,
+      "eval_id": "v2_007",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.20833333333333334,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.20833333333333334
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_007",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.125,
+      "reasons": [],
+      "source_line": 33,
+      "template_jaccard": 0.125
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_007",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.11538461538461539,
+      "reasons": [],
+      "source_line": 31,
+      "template_jaccard": 0.11538461538461539
+    },
+    {
+      "char_similarity": 0.24,
+      "eval_id": "v2_008",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.1875,
+      "reasons": [],
+      "source_line": 31,
+      "template_jaccard": 0.1875
+    },
+    {
+      "char_similarity": 0.23770491803278687,
+      "eval_id": "v2_008",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.2,
+      "reasons": [],
+      "source_line": 33,
+      "template_jaccard": 0.2
+    },
+    {
+      "char_similarity": 0.1925925925925926,
+      "eval_id": "v2_008",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.1875,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.1875
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_009",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.14285714285714285,
+      "reasons": [],
+      "source_line": 13,
+      "template_jaccard": 0.14285714285714285
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_009",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.1111111111111111,
+      "reasons": [],
+      "source_line": 7,
+      "template_jaccard": 0.1111111111111111
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_009",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.1111111111111111,
+      "reasons": [],
+      "source_line": 33,
+      "template_jaccard": 0.1111111111111111
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_010",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.09090909090909091,
+      "reasons": [],
+      "source_line": 44,
+      "template_jaccard": 0.09090909090909091
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_010",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.08695652173913043,
+      "reasons": [],
+      "source_line": 19,
+      "template_jaccard": 0.08695652173913043
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_010",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.08,
+      "reasons": [],
+      "source_line": 12,
+      "template_jaccard": 0.08
+    }
+  ],
+  "dataset_manifest_sha256": "88fbf10096a8aaf040711d889ef94a48786347e34832de0d3dbaaf27f76a474a",
+  "deterministic_row_regeneration": "all seven JSONL outputs byte-identical",
+  "findings": [],
+  "limitations": "Lexical and numeric-template candidates only; manual semantic review still required.",
+  "manual_structural_policy": "All recognized legacy numerical families reserved; new scenario task structure differs from eligible qualitative anchors. Greybody-mixture overlap replaced by two-color inverse in dev v2.",
+  "thresholds": {
+    "char": 0.8,
+    "token_jaccard": 0.65
+  }
+}
