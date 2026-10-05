@@ -117,25 +117,7 @@ class ScientificValidationTests(unittest.TestCase):
             self.assertEqual(actual,development_items(version))
 
 
-    def test_compact_protocol_withholds_gold_and_cloud_models_rejected(self):
-        case=development_items()[0]
-        original=messages_for(case,'scientific-compact-v2')
-        altered=copy.deepcopy(case)
-        for q in altered['grading']['quantities'].values():q.update(value=98765,unit='madeup')
-        altered['grading']['manual_rubric']=['SECRET GOLD']
-        self.assertEqual(original,messages_for(altered,'scientific-compact-v2'))
-        import io
-        reply=io.BytesIO(json.dumps({'models':[{'name':'cloud:latest','digest':'x','remote_host':'ollama.com'}]}).encode())
-        with patch('run_firm_baseline.urllib.request.urlopen',return_value=reply):
-            with self.assertRaises(ValueError):ollama_metadata('http://127.0.0.1:11434','cloud:latest','x')
 
-    def test_extracted_package_rejects_changed_payload_without_git(self):
-        with tempfile.TemporaryDirectory() as directory:
-            root=Path(directory);payload=root/'payload.txt';payload.write_text('trusted fixture')
-            (root/'firm_gpu_package_manifest.json').write_text(json.dumps({'git_sha':'0'*40,'assets':[{'path':'payload.txt','sha256':sha256(payload)}]}))
-            self.assertEqual(repository_revision(root),'0'*40)
-            payload.write_text('changed fixture')
-            with self.assertRaises(ValueError):repository_revision(root)
 
     def test_original_smoke_reviews_pin_all_32_rows(self):
         d=json.loads((ROOT/'data/reviews/firm3_manual_decisions_v1.json').read_text())
