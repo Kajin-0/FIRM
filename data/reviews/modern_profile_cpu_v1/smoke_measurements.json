@@ -1,0 +1,43 @@
+{
+  "adapter_bytes": 14132,
+  "checkpoint_bytes": 166132,
+  "device": "CPU fixture",
+  "gradient_checks": [
+    {
+      "adapter_tensors": 24,
+      "frozen_gradients": 0,
+      "nonzero_gradient_tensors": 12,
+      "step": 1
+    },
+    {
+      "adapter_tensors": 24,
+      "frozen_gradients": 0,
+      "nonzero_gradient_tensors": 24,
+      "step": 2
+    }
+  ],
+  "steps": [
+    {
+      "allocated_bytes": null,
+      "input_tokens": 16,
+      "peak_allocated_bytes": null,
+      "peak_reserved_bytes": null,
+      "reserved_bytes": null,
+      "seconds": 0.14620852284133434,
+      "step": 1,
+      "supervised_tokens": 11,
+      "tokens_per_second": 109.43274502104927
+    },
+    {
+      "allocated_bytes": null,
+      "input_tokens": 16,
+      "peak_allocated_bytes": null,
+      "peak_reserved_bytes": null,
+      "reserved_bytes": null,
+      "seconds": 0.047857461497187614,
+      "step": 2,
+      "supervised_tokens": 11,
+      "tokens_per_second": 334.32613221535485
+    }
+  ]
+}

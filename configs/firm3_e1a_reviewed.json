@@ -1,0 +1,27 @@
+{
+  "batch_size": 1,
+  "dataset_manifest": "data/processed/firm3_reviewed_seed_v3/manifest.json",
+  "eval_manifest": [
+    "evals/firm_legacy_v1_manifest.json",
+    "evals/firm_numeric_pilot_v1_manifest.json",
+    "evals/firm_science_dev_v2_manifest.json"
+  ],
+  "eval_steps": 2,
+  "grad_accum": 4,
+  "lora_alpha": 16,
+  "lora_dropout": 0.0,
+  "lora_r": 8,
+  "max_seq_length": 2048,
+  "max_steps": 10,
+  "max_train_examples": 32,
+  "model": "Qwen/Qwen3-0.6B",
+  "model_profile": "legacy_causal",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "out": "outputs/E1A-reviewed-seed42",
+  "quantization": "nf4",
+  "run_id": "E1A-reviewed-seed42",
+  "save_steps": 2,
+  "seed": 42,
+  "train": "data/processed/firm3_reviewed_seed_v3/train.jsonl",
+  "valid": "data/processed/firm3_reviewed_seed_v3/valid.jsonl"
+}

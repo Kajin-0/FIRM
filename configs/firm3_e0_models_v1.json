@@ -1,0 +1,49 @@
+{
+  "models": [
+    {
+      "license": "apache-2.0",
+      "model": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "source": "https://huggingface.co/Qwen/Qwen3.5-9B",
+      "status": "NOT RUN pinned HF baseline"
+    },
+    {
+      "license": "apache-2.0",
+      "model": "mistralai/Ministral-3-14B-Reasoning-2512",
+      "revision": "51f9210f3cd20f3452a80d5819d15dc61cc50630",
+      "source": "https://huggingface.co/mistralai/Ministral-3-14B-Reasoning-2512",
+      "status": "NOT RUN pinned HF baseline"
+    },
+    {
+      "license": "apache-2.0",
+      "model": "Qwen/Qwen3.8-27B",
+      "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+      "source": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "status": "NOT RUN pinned HF baseline"
+    },
+    {
+      "license": "apache-2.0",
+      "model": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "source": "https://huggingface.co/Qwen/Qwen3-8B",
+      "status": "NOT RUN pinned HF baseline"
+    }
+  ],
+  "protocol": "scientific-compact-v2",
+  "reasoning": {
+    "context_length": 16384,
+    "max_tokens": 8192,
+    "seed": 42,
+    "temperature": 0,
+    "thinking": "on"
+  },
+  "rule": "Separate tracks and identical budget/prompt within a track. Reasoning-only models excluded from standard rather than silently using their default.",
+  "schema_version": "1.0",
+  "standard": {
+    "context_length": 8192,
+    "max_tokens": 4096,
+    "seed": 42,
+    "temperature": 0,
+    "thinking": "off"
+  }
+}

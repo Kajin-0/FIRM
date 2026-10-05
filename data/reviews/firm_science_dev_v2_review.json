@@ -1,0 +1,328 @@
+{
+  "benchmark_sha256": "ebfd7d3e62231fb1710ccd572bab24a1233f06b0d570e964aa40d8054db68164",
+  "items": [
+    {
+      "category": "HgCdTe_edge_consistency",
+      "equations": "Eg=hc/(q*lambda); independent Newton root; fixed-x warm gap; residual=measured-predicted",
+      "id": "science_dev_001",
+      "quantities": 3,
+      "review_notes": "Root uses the supplied empirical relation only; residual alone does not diagnose gradients.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "HgCdTe_sensitivity",
+      "equations": "dEg/dx=1.93-1.62x+2.496x2-.00107T; lambda=hc/Eg; first-order derivative propagation",
+      "id": "science_dev_002",
+      "quantities": 3,
+      "review_notes": "dEg/dx includes -0.00107T; dLambda/dT negative here; x is dimensionless.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "HgCdTe_temperature_sign",
+      "equations": "Supplied model substitution; DeltaEg=.000535*DeltaT*(1-2x)",
+      "id": "science_dev_003",
+      "quantities": 4,
+      "review_notes": "The empirical positive temperature slope follows 1-2x, not a universal gap trend.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "four_terminal_transport",
+      "equations": "rho=R4*W*t/L; sigma=1/rho; Rc=(R2-R4)/2",
+      "id": "science_dev_004",
+      "quantities": 3,
+      "review_notes": "Four-terminal bulk geometry; equal ohmic contacts; two-terminal intercept interpretation is conditional.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "geometry_uncertainty",
+      "equations": "Independent log-derivative variances sum; .02²+.03²+.05²+.01²=.0039",
+      "id": "science_dev_005",
+      "quantities": 2,
+      "review_notes": "Independent relative variances sum; covariance omitted explicitly.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "Hall_factor_transport",
+      "equations": "RH=VH*t/(I*B); n=rH/(q*abs(RH)); mu=abs(RH)*sigma/rH",
+      "id": "science_dev_006",
+      "quantities": 3,
+      "review_notes": "RH sign from stated polarities; rH in both density and drift-mobility conversion.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "two_carrier_Hall",
+      "equations": "Two-carrier low-field conductivity/Hall formula supplied; q=1.602176634e-19 C",
+      "id": "science_dev_007",
+      "quantities": 2,
+      "review_notes": "Mobility-squared weighting determines Hall sign; single-carrier inversion invalid.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "bipolar_bar_resistance",
+      "equations": "sigma=q*(n*mu_n+p*mu_p); R=L/(sigma*W*t)",
+      "id": "science_dev_008",
+      "quantities": 2,
+      "review_notes": "Parallel electron/hole conductivity; uniform electrical cross-section.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "bias_gain_comparison",
+      "equations": "tau_t=L2/(mu*V); gain=tau/tau_t",
+      "id": "science_dev_009",
+      "quantities": 3,
+      "review_notes": "Transit=L²/(muV); lifetime independent; bias voltage active, low-field reinjection model.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "photoconductor_gain_from_photons",
+      "equations": "Ri=I/P; Ri=eta*g*q*lambda/(hc)",
+      "id": "science_dev_010",
+      "quantities": 2,
+      "review_notes": "External generation probability excludes gain; responsivity alone does not identify microscopic lifetime.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "phase_lifetime",
+      "equations": "phase=-atan(omega*tau); at -45 degrees omega*tau=1; |H(2fc)|=1/sqrt5",
+      "id": "science_dev_011",
+      "quantities": 2,
+      "review_notes": "Phase -45deg fixes omega*tau=1; phenomenological pole not a unique recombination channel.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "Johnson_network",
+      "equations": "Independent Norton PSDs 4kBT/R sum; multiply by R_parallel2",
+      "id": "science_dev_012",
+      "quantities": 2,
+      "review_notes": "Independent Norton PSDs at distinct temperatures; output sees parallel resistance.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "shot_Johnson_readout_budget",
+      "equations": "SI=2q*(Ibackground+Idark)+4kBT/R+amplifier_ASD2; NEP=sqrt(SI)/Ri",
+      "id": "science_dev_013",
+      "quantities": 3,
+      "review_notes": "Poisson dark/background shot sources plus Johnson/readout PSDs; divide ASD by Ri for NEP density.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "PSD_ASD_sidedness",
+      "equations": "One-sided PSD=2*two-sided positive-frequency PSD; ASD=sqrt(PSD); variance=S_one*positive_bandwidth",
+      "id": "science_dev_014",
+      "quantities": 2,
+      "review_notes": "One-sided PSD is doubled; ASD sqrt2; positive band integrated once.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "colored_noise_filtered_band",
+      "equations": "variance=A*ln(fhi/flo)+Swhite*(fhi-flo); no ASD integration",
+      "id": "science_dev_015",
+      "quantities": 2,
+      "review_notes": "Integrate PSD not ASD; finite lower frequency cutoff; log colored variance.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "GR_spectral_inverse",
+      "equations": "After subtracting white: ratio=2.5=(1+4z)/(1+z), z=1; variance=S0*pi*fc/2",
+      "id": "science_dev_016",
+      "quantities": 4,
+      "review_notes": "White plateau subtracted before ratio inversion; GR integrated over positive frequencies.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "multiple_GR_band",
+      "equations": "Each variance=S0/(2*pi*tau)*(atan(2*pi*tau*fhi)-atan(2*pi*tau*flo)); independent variances sum",
+      "id": "science_dev_017",
+      "quantities": 2,
+      "review_notes": "Independent Lorentzian variances summed, not RMS; same one-sided convention.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "lockin_filter_order",
+      "equations": "int0inf [1+(2*pi*f*tau)2]^-2 df=1/(8*tau)",
+      "id": "science_dev_018",
+      "quantities": 2,
+      "review_notes": "Two identical cascaded pole magnitudes squared: ENBW=1/(8tau), post-mixer convention supplied.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "unequal_pole_ENBW",
+      "equations": "Partial fractions: int |H1*H2|2 df=1/[4*(tau1+tau2)]",
+      "id": "science_dev_019",
+      "quantities": 2,
+      "review_notes": "Unequal-pole partial-fraction integral 1/[4(tau1+tau2)].",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "colored_noise_actual_filter",
+      "equations": "Composite Simpson 8192 panels of PSD*|H|2; unfiltered analytic log integral",
+      "id": "science_dev_020",
+      "quantities": 2,
+      "review_notes": "Colored PSD weighted by true filter; independently verified analytic antiderivative.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "chopper_RMS_fundamental",
+      "equations": "Square-wave difference dP: fundamental peak=2*dP/pi; RMS=peak/sqrt2",
+      "id": "science_dev_021",
+      "quantities": 4,
+      "review_notes": "Square wave fundamental peak=2*dP/pi; RMS=peak/sqrt2; DC mean distinct.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "Norton_voltage_responsivity",
+      "equations": "Norton source sees Rd||RL; Rv=Ri*(Rd||RL)",
+      "id": "science_dev_022",
+      "quantities": 2,
+      "review_notes": "Explicit Norton parallel output model; AC bias reference grounded, load shunts defined output.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "area_normalized_sensitivity",
+      "equations": "1 mm2=.01 cm2; Dstar=sqrt(A_cm2)/NEP_ASD",
+      "id": "science_dev_023",
+      "quantities": 3,
+      "review_notes": "mm² to cm² factor .01; no bandwidth factor for density NEP.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "cable_RC_deembedding",
+      "equations": "tauRC=R*C; solve cascade amplitude; phases add with omega=2*pi*f",
+      "id": "science_dev_024",
+      "quantities": 3,
+      "review_notes": "R*C de-embedded from product of pole magnitudes; phases add in radians then degrees.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "phase_magnitude_consistency",
+      "equations": "tau_mag=sqrt(1/mag2-1)/omega; tau_phase=tan(absphase)/omega",
+      "id": "science_dev_025",
+      "quantities": 3,
+      "review_notes": "Magnitude/phase imply inconsistent pole times; timing offsets and multiple poles remain possible.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "Planck_differential_radiance",
+      "equations": "Planck SI B_lambda; multiply by 1e-6 for per-um radiance",
+      "id": "science_dev_026",
+      "quantities": 3,
+      "review_notes": "Planck per-m to per-um factor 1e-6; differential temperature not optical calibration.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "finite_band_projected_throughput",
+      "equations": "Composite Simpson Planck integral; Omega_projected=pi*sin2(theta); P=A*t*Omega*band_radiance",
+      "id": "science_dev_027",
+      "quantities": 3,
+      "review_notes": "Band integration in metres; pi*sin²(theta) is projected solid angle, no extra pi.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "finite_Fnumber_cone",
+      "equations": "sin2(arctan(1/(2F)))=1/(4F2+1); Omega=pi*sin2",
+      "id": "science_dev_028",
+      "quantities": 2,
+      "review_notes": "Exact defined cone tan(theta)=1/(2F); paraxial overestimate 1/(4F²).",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "two_color_temperature_inverse",
+      "equations": "Common emissivity cancels; solve B_lambda(8um,T)/B_lambda(12um,T)=observed; high-T B_lambda proportional T/lambda4",
+      "id": "science_dev_029",
+      "quantities": 2,
+      "review_notes": "Common emissivity cancels; Planck ratio monotone on bracket; Rayleigh-Jeans lambda^-4.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "band_photon_radiometry",
+      "equations": "Photon spectral radiance=B_lambda*lambda/(hc); integrate in metres; I=q*eta*photon_rate",
+      "id": "science_dev_030",
+      "quantities": 2,
+      "review_notes": "Photon radiance integrates B_lambda*lambda/(hc), external QE applied after optical transmission.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "absorption_collection_depth",
+      "equations": "All depths converted to cm; EQE=(1-R)*alpha/(alpha+1/Lc)*(1-exp(-(alpha+1/Lc)*t))",
+      "id": "science_dev_031",
+      "quantities": 2,
+      "review_notes": "cm lengths consistently; collection probability reduces external QE below absorbed incident fraction.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "transmission_thickness_inverse",
+      "equations": "ln(T1/T2)=alpha*(t2-t1), cm thickness; C=T1*exp(alpha*t1)",
+      "id": "science_dev_032",
+      "quantities": 2,
+      "review_notes": "Common surface factor cancels between logarithmic transmission ratios; no back reflection.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "diode_EQE_calibration",
+      "equations": "eta_ext=Ri*hc/(q*lambda); I=Ri*Pincident",
+      "id": "science_dev_033",
+      "quantities": 2,
+      "review_notes": "Gain-free external QE uses incident power; responsivity=q*eta*lambda/(hc).",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "gain_responsivity_not_QE",
+      "equations": "Ri=eta*g*q*lambda/(hc); apparent EQE=eta*g",
+      "id": "science_dev_034",
+      "quantities": 2,
+      "review_notes": "Apparent gain-enhanced EQE differs from generation efficiency; bias supplies energy.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "NEP_calibration_uncertainty",
+      "equations": "log NEP=e-R; log Dstar=.5*logA-logNEP; independent fractional variances sum",
+      "id": "science_dev_035",
+      "quantities": 3,
+      "review_notes": "Dstar has half the fractional area coefficient; independent calibration covariance assumed absent.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "Hall_density_uncertainty",
+      "equations": "Independent logarithmic derivative variance=.05²+.01²+.02²+.03²+.04²=.0055",
+      "id": "science_dev_036",
+      "quantities": 2,
+      "review_notes": "Hall-factor, density and geometry errors all explicit; two-carrier bias is not covered by variance.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "Arrhenius_prefactor",
+      "equations": "Ea=kB*ln[(I2/T2²)/(I1/T1²)]/(1/T1-1/T2), convert J to eV",
+      "id": "science_dev_037",
+      "quantities": 2,
+      "review_notes": "T² prefactor removed before slope; apparent activation energy not unique mechanism.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "contact_geometry_diagnosis",
+      "equations": "Geometry slope=rho/S; intercept=2Rc; common shift changes intercept under model",
+      "id": "science_dev_038",
+      "quantities": 3,
+      "review_notes": "R versus length slope gives rho; intercept gives two equal Rc, geometry/model conditional.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "readout_calibration_artifact",
+      "equations": "Z=V/I; same current with doubled readout gain explains doubled voltage",
+      "id": "science_dev_039",
+      "quantities": 3,
+      "review_notes": "Dummy-injection readout gain change explains voltage change; detector current unchanged.",
+      "status": "accept_under_explicit_model"
+    },
+    {
+      "category": "linked_detector_design",
+      "equations": "sigma=q*n*mu; R=L/(sigma*Wt); transit=L2/(muV); g=tau/transit; Ri=eta*g*q*lambda/(hc); SI=4kBT/R+readout2; Dstar=sqrt(A_cm2)/NEP",
+      "id": "science_dev_040",
+      "quantities": 8,
+      "review_notes": "Optical area L*W differs from electrical W*t; density NEP and Jones sqrtcm area; only declared noise sources.",
+      "status": "accept_under_explicit_model"
+    }
+  ],
+  "reviewer": "Codex analytical scenario review, not human signoff",
+  "schema_version": "1.0",
+  "structural_policy": "Numerical template families excluded from reviewed seed; greybody mixture replaced in v2; shared elementary physics retained."
+}

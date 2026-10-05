@@ -1,0 +1,102 @@
+{
+  "GPU_measured": false,
+  "adapter_reload_success": true,
+  "checkpoint_resume_success": true,
+  "completion_masks": [
+    {
+      "id": "firm3_0027c52061dda11630a2ef14870065ac6f8c37a37992bc320df2a5266b550d11",
+      "supervised_tokens": 192,
+      "tokens": 276
+    },
+    {
+      "id": "firm3_008a7c330c5123b9e0801aaf37025a5df33ae06e850c302ad38d75f29ea81d41",
+      "supervised_tokens": 71,
+      "tokens": 140
+    },
+    {
+      "id": "firm3_00e910d56cefe7eb26db39e35084fa9dedf8a95680ebff7ec8260aee82e6d5b5",
+      "supervised_tokens": 123,
+      "tokens": 198
+    },
+    {
+      "id": "firm3_015ff2dcdf831df8bb6f16af2c9826a70f14dd7d821f2baf073befd791b7c526",
+      "supervised_tokens": 84,
+      "tokens": 156
+    },
+    {
+      "id": "firm3_01f9459f66c97b1c24e28f6f4f88be628f70b8f34435bbcebb27a728d07b9faf",
+      "supervised_tokens": 20,
+      "tokens": 90
+    },
+    {
+      "id": "firm3_0255fc6f7dd5577d09c831284151e192d77e99148cd8900f1fbf7fa0e61affac",
+      "supervised_tokens": 62,
+      "tokens": 133
+    },
+    {
+      "id": "firm3_02cb4869e0a1f53143e4b136ebeda1e85e851296a6e4c760fe651a540dec688b",
+      "supervised_tokens": 112,
+      "tokens": 192
+    },
+    {
+      "id": "firm3_02f8c25be4ca7e3ffb7df1b6a780cebefd769f1dfe2233dc50383c0a17703e3b",
+      "supervised_tokens": 40,
+      "tokens": 115
+    }
+  ],
+  "fixture_parameters": 58208,
+  "gradient_checks": [
+    {
+      "adapter_tensors": 24,
+      "frozen_gradients": 0,
+      "nonzero_gradient_tensors": 12,
+      "step": 1
+    },
+    {
+      "adapter_tensors": 24,
+      "frozen_gradients": 0,
+      "nonzero_gradient_tensors": 24,
+      "step": 2
+    }
+  ],
+  "hybrid_layers": [
+    "linear_attention",
+    "linear_attention",
+    "linear_attention",
+    "full_attention"
+  ],
+  "limitations": [
+    "Random tiny architecture, not pretrained Qwen3.5-9B",
+    "CPU float32, not GPU BF16 or 4-bit",
+    "Real pinned tokenizer masks tested separately; vision inference not tested"
+  ],
+  "native_class": "Qwen3_5ForConditionalGeneration",
+  "native_source_sha256": "d0c8561d91e31e50d9a57b74196c5a7ad023e42ebe9f84004d0a535310879939",
+  "python": "3.13.7",
+  "reload_max_absolute_error": 0.0,
+  "software_versions": {
+    "accelerate": "1.15.0",
+    "bitsandbytes": "0.50.2",
+    "datasets": "4.7.0",
+    "peft": "0.21.2",
+    "torch": "2.9.1+cpu",
+    "transformers": "5.18.0",
+    "trl": "1.14.1"
+  },
+  "status": "PASS tiny CPU software fixture only",
+  "target_modules": [
+    "model.language_model.layers.0.mlp.down_proj",
+    "model.language_model.layers.0.mlp.gate_proj",
+    "model.language_model.layers.0.mlp.up_proj",
+    "model.language_model.layers.1.mlp.down_proj",
+    "model.language_model.layers.1.mlp.gate_proj",
+    "model.language_model.layers.1.mlp.up_proj",
+    "model.language_model.layers.2.mlp.down_proj",
+    "model.language_model.layers.2.mlp.gate_proj",
+    "model.language_model.layers.2.mlp.up_proj",
+    "model.language_model.layers.3.mlp.down_proj",
+    "model.language_model.layers.3.mlp.gate_proj",
+    "model.language_model.layers.3.mlp.up_proj"
+  ],
+  "vision_and_all_frozen_tensors_unchanged": true
+}
