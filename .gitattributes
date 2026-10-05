@@ -1,0 +1,2 @@
+# Preserve the publisher license byte-for-byte, including CRLF endings.
+data/reviews/modern_profile_cpu_v1/QWEN_LICENSE.txt -text whitespace=cr-at-eol

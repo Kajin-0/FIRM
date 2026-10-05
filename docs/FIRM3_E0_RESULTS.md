@@ -16,6 +16,14 @@ Manual analytic inspection found incorrect composition/warm-cutoff behavior; NEP
 
 The verbose protocol was unsuitable for the local budget. A separate `scientific-compact-v2` protocol puts quantities first and requests a <=200-word explanation. This is a declared protocol change, not selective correction of a model's failed answers. Local reruns have a common 2048-token budget; the future primary GPU standard track uses 4096. Do not pool old/new tracks or infer training deltas from them.
 
+## Completed compact pilot
+
+All eight requests completed without token-limit truncation. Strict scoring is **3/22 (13.64%)**, units **11/22 (50%)**, **3/8 structured parse failures**: prose outside JSON, an invalid JSON escape, and a wrong object schema. Missing parsed quantities fail. Raw predictions and `numeric_pilot_manual_review.json` are retained in `evals/results/E0-local-qwen35-Q4-compact-v2/`.
+
+The lower score is not a training delta: the protocol/budget changed and no training occurred. All eight outputs were individually inspected. They show composition inversion and temperature-sign errors, cm/m/Jones scaling errors, tau/fc inconsistency, PSD integration failures and invalid causal claims about surface traps. Critically, Beer-Lambert structured quantities pass while the explanation converts 0.003 cm to **3 um**, a factor-of-ten error (correct: 30 um). Numeric accuracy alone would miss this scientific failure. Manual rubric observations are qualitative, not a calibrated human physical score.
+
+The public development and complete 30-case legacy runs are in progress at this documentation checkpoint; their results will be recorded separately when complete. This local artifact in non-thinking mode is insufficient evidence to select or reject a pinned HF candidate, and it gives no reason to start E2.
+
 ## Comparison tracks and frozen assets
 
 | Track | Budget / context | Thinking | Role |
