@@ -1,0 +1,62 @@
+{
+  "answers_public": true,
+  "assets": [
+    {
+      "path": "evals/firm_numeric_pilot_v1.jsonl",
+      "records": [
+        {
+          "category": "HgCdTe_composition_cutoff",
+          "id": "numeric_pilot_001",
+          "record_sha256": "dc31c0814155a08b24d9b5255dbf063ad2eb919de8b25ee08bbf35100c464112"
+        },
+        {
+          "category": "passivation_noise_detectivity",
+          "id": "numeric_pilot_002",
+          "record_sha256": "6d4bf5fa9f27904992684ca1b7e4e9bbca8d5f3593fb3c3a5ee6b1fbff75be3c"
+        },
+        {
+          "category": "frequency_response_deembedding",
+          "id": "numeric_pilot_003",
+          "record_sha256": "4bc00914e1ad1c67b6f631a16fd88bbf999aec3bed6bfd07db4369105008f3ce"
+        },
+        {
+          "category": "Hall_transport_photoconductor",
+          "id": "numeric_pilot_004",
+          "record_sha256": "e12fceeec095e9a627c80b6b32d6e2f53c61fe79857bd1535bdb1c4aa6c24555"
+        },
+        {
+          "category": "noise_PSD_band_integration",
+          "id": "numeric_pilot_005",
+          "record_sha256": "0e32802b9dcc725a32d02f862044fada3f0da81be010b22b0320fc1ee8f70a00"
+        },
+        {
+          "category": "blackbody_throughput_voltage",
+          "id": "numeric_pilot_006",
+          "record_sha256": "2c1dabc6d2fef3d0d15a28c4f661cac63f1baeef24ac97ff35dd48060bc66090"
+        },
+        {
+          "category": "absorption_thickness_uncertainty",
+          "id": "numeric_pilot_007",
+          "record_sha256": "59e1e18c8deb5218b593cdcc904e2f410158dc6ec9ddc2139e7b61e642d044d4"
+        },
+        {
+          "category": "lockin_ENBW_noise_density",
+          "id": "numeric_pilot_008",
+          "record_sha256": "03cb047755965686c1a6d8b054fc64f808de4633483020574353c14820678812"
+        }
+      ],
+      "sha256": "ea40774d8beff73cd43859f5052c990a6d5973b3cadca88b2c9d8e98c6b96b5b"
+    }
+  ],
+  "benchmark_version": "firm_numeric_pilot_v1",
+  "generation_date": "2026-10-05",
+  "leakage_check": {
+    "semantic_review": "pending; related core equations are expected training knowledge",
+    "status": "must be audited against every training release"
+  },
+  "schema_version": "1.0",
+  "source_git_sha": "17351932a7337946d2017a5aa14c0a7201767096",
+  "source_script": "scripts/build_firm_numeric_pilot.py",
+  "source_script_sha256": "0829bc4d7b86215c2d6d9e1694ba2a36f47f01ba115996c521b0d813eb950dcd",
+  "status": "public development pilot; expert review pending"
+}

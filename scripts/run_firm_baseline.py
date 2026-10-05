@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+"""Generate benchmark answers against an existing localhost compatible model server.
+
+Never loads weights or provisions resources. Uses only prompts, not grading rubrics.
+Append-only results resume after interruption; run metadata prevents mixed runs.
+"""
+import argparse
+import json
+import os
+import subprocess
+import urllib.error
+import urllib.parse
+import urllib.request
+from datetime import datetime, timezone
+from pathlib import Path
+
+from firm_data import digest, require_clean, sha256, write_json
+
+
+def messages_for(item):
+    system = ("You are FIRM, an infrared photodetector science and engineering assistant. "
+              "State relevant assumptions, equations and units, calculations, sanity checks, "
+              "physical interpretation, competing hypotheses and validation experiments.")
+    if "grading" in item:
+        # Quantity names only define the response protocol. Never send gold values/units.
+        names = list(item["grading"]["quantities"])
+        system += (" Return one JSON object with answer (text) and quantities (an object with "
+                   "numeric value and explicit unit for each quantity). Required quantity names: " + ", ".join(names))
+    return [{"role": "system", "content": system}, {"role": "user", "content": item["prompt"]}]
+
+
+def parse_answer(raw):
+    try:
+        parsed = json.loads(raw)
+        if isinstance(parsed, dict) and isinstance(parsed.get("answer"), str) and isinstance(parsed.get("quantities"), dict):
+            return parsed
+    except (ValueError, TypeError):
+        pass
+    return {"answer": raw, "quantities": {}, "structured_parse_error": True}
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--eval", type=Path, required=True)
+    ap.add_argument("--model", required=True)
+    ap.add_argument("--model-revision", required=True)
+    ap.add_argument("--base-url", default="http://127.0.0.1:8000/v1")
+    ap.add_argument("--out", type=Path, required=True)
+    ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--temperature", type=float, default=0)
+    ap.add_argument("--max-tokens", type=int, default=4096)
+    ap.add_argument("--dry-run", action="store_true")
+    args = ap.parse_args()
+    base = urllib.parse.urlparse(args.base_url)
+    if base.hostname not in {"localhost", "127.0.0.1", "::1"} or base.scheme not in {"http", "https"} or base.username or base.password:
+        ap.error("This low-cost runner permits only an existing localhost endpoint")
+    items = [r["raw"] for r in require_clean(args.eval, evaluation=True)]
+    if len({r["id"] for r in items}) != len(items):
+        ap.error("Duplicate eval IDs")
+    protocol = [{"id": item["id"], "messages": messages_for(item)} for item in items]
+    spec = {"schema_version": "1.0", "model": args.model, "model_revision": args.model_revision,
+            "revision_verification": "operator-declared; ensure the server loads this revision",
+            "eval_file": str(args.eval), "eval_sha256": sha256(args.eval),
+            "protocol_sha256": digest(protocol), "seed": args.seed, "temperature": args.temperature,
+            "max_tokens": args.max_tokens, "base_url": args.base_url,
+            "git_sha": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()}
+    if args.dry_run:
+        print(json.dumps({**spec, "items": len(items), "status": "dry_run_no_inference"}, indent=2))
+        return
+    args.out.parent.mkdir(parents=True, exist_ok=True)
+    meta_path = args.out.with_suffix(".run.json")
+    done = set()
+    if args.out.exists():
+        if not meta_path.exists() or json.loads(meta_path.read_text())["spec"] != spec:
+            ap.error("Resume manifest differs; use a new output path")
+        for line in args.out.read_text().splitlines():
+            row = json.loads(line)
+            if row["id"] in done or row["id"] not in {r["id"] for r in items}:
+                ap.error("Invalid existing prediction IDs")
+            done.add(row["id"])
+    else:
+        if meta_path.exists():
+            ap.error("Run manifest exists without predictions; use a new path")
+        write_json(meta_path, {"spec": spec, "timestamp": datetime.now(timezone.utc).isoformat(), "status": "started"})
+    for item in items:
+        if item["id"] in done:
+            continue
+        payload = {"model": args.model, "messages": messages_for(item), "temperature": args.temperature,
+                   "seed": args.seed, "max_tokens": args.max_tokens}
+        req = urllib.request.Request(args.base_url.rstrip("/") + "/chat/completions",
+                                     data=json.dumps(payload).encode(), headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=60) as response:
+            obj = json.load(response)
+        choice = obj["choices"][0]
+        raw = choice["message"].get("content")
+        if not isinstance(raw, str):
+            raise ValueError("Server returned no text content")
+        row = {"id": item["id"], **parse_answer(raw), "raw_response": raw,
+               "finish_reason": choice.get("finish_reason"), "usage": obj.get("usage"),
+               "reasoning_content": choice["message"].get("reasoning_content"),
+               "eval_sha256": spec["eval_sha256"]}
+        with args.out.open("a", encoding="utf-8") as stream:
+            stream.write(json.dumps(row, ensure_ascii=False) + "\n")
+            stream.flush()
+            os.fsync(stream.fileno())
+        print(item["id"], choice.get("finish_reason"), flush=True)
+    meta = json.loads(meta_path.read_text())
+    meta.update({"status": "complete", "predictions_sha256": sha256(args.out)})
+    write_json(meta_path, meta)
+
+
+if __name__ == "__main__":
+    main()

@@ -39,15 +39,22 @@ def main() -> None:
     ap.add_argument("--pred", required=True, type=Path)
     args = ap.parse_args()
 
-    eval_rows = {r["id"]: r for r in load_jsonl(args.eval)}
-    pred_rows = {r["id"]: r for r in load_jsonl(args.pred)}
+    evaluations = load_jsonl(args.eval)
+    predictions = load_jsonl(args.pred)
+    eval_rows = {r["id"]: r for r in evaluations}
+    pred_rows = {r["id"]: r for r in predictions}
+    if len(eval_rows) != len(evaluations) or len(pred_rows) != len(predictions):
+        raise ValueError("Duplicate eval or prediction IDs")
+    if set(pred_rows) - set(eval_rows):
+        raise ValueError("Unknown prediction IDs")
+    print("Keyword coverage proxy only; this score does not establish scientific correctness.")
 
     total = 0
     score_sum = 0.0
     for eid, item in eval_rows.items():
         answer = norm(pred_rows.get(eid, {}).get("answer", ""))
-        must = item.get("must_include", [])
-        fail = item.get("failure_modes", [])
+        must = item.get("must_include", item.get("expected_traits", []))
+        fail = item.get("must_not_include", []) + item.get("failure_modes", [])
         hit = sum(1 for k in must if norm(k) in answer)
         miss = [k for k in must if norm(k) not in answer]
         bad = [k for k in fail if norm(k) in answer]
