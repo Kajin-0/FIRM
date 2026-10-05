@@ -1,0 +1,34 @@
+{
+  "canonical_status_counts": {
+    "accept": 55,
+    "correct": 151,
+    "exclude": 725,
+    "needs_review": 1650
+  },
+  "git_sha": "58b7e4db268730a10e42830407a2d7a0a1a246cd",
+  "manual_decisions": {
+    "path": "data/reviews/firm3_manual_decisions_v1.json",
+    "sha256": "06ce60219e12a7d8dfb4ad35eb8ef987af37f834783c48e6574af70111497a10"
+  },
+  "outputs": [
+    {
+      "path": "detectivity_corrected_v1.jsonl",
+      "sha256": "26aae6a46954641453f2edf7c218309e5c0904b35a66250bc0dd12e1198ae5d8"
+    },
+    {
+      "path": "pilot_review.json",
+      "sha256": "d64aaa6680da7bdf30c7e0e8c03b039bdcde9760555d332814735a745f3b6505"
+    },
+    {
+      "path": "review_ledger.jsonl",
+      "sha256": "62a88ee865932db072bd6c6899801b02377c5c672eea0cdee1d7d861a3020295"
+    }
+  ],
+  "review_version": "scientific-review-v1",
+  "schema_version": "1.0",
+  "source_records": 2581,
+  "tool_sha256": {
+    "firm_science_reference.py": "61e5acbbc6b576719eb90362951a1ff696a448193d831a04c7efb1b36b4de52a",
+    "review_firm_seed.py": "6402993ee26aa2cda45c3efa3292b550c5b9b75f6ea5fa8f7a382aa7f7a3139b"
+  }
+}

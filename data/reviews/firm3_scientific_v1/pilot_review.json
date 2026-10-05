@@ -1,0 +1,313 @@
+{
+  "cases": [
+    {
+      "assumptions_checked": [
+        "Define optical edge versus measured cutoff criterion; empirical model is not a derivation.",
+        "Keep composition fixed with temperature; discuss inhomogeneity, absorption threshold and model uncertainty."
+      ],
+      "equation": "Supplied Eg(x,T); Eg=hc/(q lambda); Newton root and derivative positive on bracket",
+      "id": "numeric_pilot_001",
+      "quantities": [
+        {
+          "atol": 0.0,
+          "independent_value": 0.13189808343957474,
+          "name": "gap_85K",
+          "oracle_value": 0.13189808343957476,
+          "relative_difference": 2.1043198575621697e-16,
+          "rtol": 0.005,
+          "unit": "eV"
+        },
+        {
+          "atol": 0.0,
+          "independent_value": 0.2288538863285693,
+          "name": "composition_x",
+          "oracle_value": 0.2288538863285693,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "1"
+        },
+        {
+          "atol": 0.0,
+          "independent_value": 8.224147316859643,
+          "name": "cutoff_150K",
+          "oracle_value": 8.224147316859645,
+          "relative_difference": 2.1599282830922643e-16,
+          "rtol": 0.005,
+          "unit": "um"
+        }
+      ],
+      "rubric_review": "Appropriate bounded interpretation and controls; subjective scoring requires expert calibration",
+      "status": "independently_rederived_no_correction",
+      "tolerance_review": "0.5% numerical tolerance permits rounding; not a bound on empirical-model uncertainty"
+    },
+    {
+      "assumptions_checked": [
+        "Distinguish ASD from integrated RMS and PSD; no extra bandwidth factor for density NEP.",
+        "Do not prove trap reduction from one frequency; compare dark/readout controls, PSD shape, optics and filter bandwidth."
+      ],
+      "equation": "NEP_ASD=e_n/Rv; 0.40 mm2=0.004 cm2; D*=sqrt(A_cm2)/NEP_ASD",
+      "id": "numeric_pilot_002",
+      "quantities": [
+        {
+          "atol": 0.0,
+          "independent_value": 2.5e-12,
+          "name": "nep_before",
+          "oracle_value": 2.5e-12,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "W/sqrt(Hz)"
+        },
+        {
+          "atol": 0.0,
+          "independent_value": 8.571428571428571e-13,
+          "name": "nep_after",
+          "oracle_value": 8.571428571428571e-13,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "W/sqrt(Hz)"
+        },
+        {
+          "atol": 0.0,
+          "independent_value": 25298221281.347034,
+          "name": "dstar_before",
+          "oracle_value": 25298221281.347034,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "Jones"
+        },
+        {
+          "atol": 0.0,
+          "independent_value": 73786478737.26218,
+          "name": "dstar_after",
+          "oracle_value": 73786478737.26218,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "Jones"
+        },
+        {
+          "atol": 0.0,
+          "independent_value": 2.9166666666666665,
+          "name": "dstar_ratio",
+          "oracle_value": 2.9166666666666665,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "1"
+        }
+      ],
+      "rubric_review": "Appropriate bounded interpretation and controls; subjective scoring requires expert calibration",
+      "status": "independently_rederived_no_correction",
+      "tolerance_review": "0.5% numerical tolerance permits rounding; not a bound on empirical-model uncertainty"
+    },
+    {
+      "assumptions_checked": [
+        "Amplitude poles multiply; de-embed magnitude and check phase.",
+        "Bias/geometry, calibrated source and preamp sweeps can distinguish microscopic lifetime from extra poles."
+      ],
+      "equation": "Cascade magnitude squared multiplies; solve omega*tau after removing known RC magnitude",
+      "id": "numeric_pilot_003",
+      "quantities": [
+        {
+          "atol": 0.0,
+          "independent_value": 0.00014999999883878439,
+          "name": "carrier_tau",
+          "oracle_value": 0.00014999999883878439,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "s"
+        },
+        {
+          "atol": 0.0,
+          "independent_value": 1061.0329621598894,
+          "name": "detector_f3db",
+          "oracle_value": 1061.0329621598892,
+          "relative_difference": 2.142946388587018e-16,
+          "rtol": 0.005,
+          "unit": "Hz"
+        }
+      ],
+      "rubric_review": "Appropriate bounded interpretation and controls; subjective scoring requires expert calibration",
+      "status": "independently_rederived_no_correction",
+      "tolerance_review": "0.5% numerical tolerance permits rounding; not a bound on empirical-model uncertainty"
+    },
+    {
+      "assumptions_checked": [
+        "Hall factor and single-carrier assumptions must be explicit; lifetime is independently supplied.",
+        "Check field, contacts, heating, trapping, compensation and geometry uncertainty."
+      ],
+      "equation": "n SI=1e6*n_cm; mu SI=1e-4*mu_cm; R=L/(q*n*mu*W*t); drift transit=L/(mu*V/L)",
+      "id": "numeric_pilot_004",
+      "quantities": [
+        {
+          "atol": 0.0,
+          "independent_value": 1444.7937672362877,
+          "name": "dark_resistance",
+          "oracle_value": 1444.7937672362873,
+          "relative_difference": 3.1474897054431504e-16,
+          "rtol": 0.005,
+          "unit": "Ohm"
+        },
+        {
+          "atol": 0.0,
+          "independent_value": 8.888888888888888e-07,
+          "name": "transit_time",
+          "oracle_value": 8.888888888888888e-07,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "s"
+        },
+        {
+          "atol": 0.0,
+          "independent_value": 3.3750000000000004,
+          "name": "gain",
+          "oracle_value": 3.3750000000000004,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "1"
+        }
+      ],
+      "rubric_review": "Appropriate bounded interpretation and controls; subjective scoring requires expert calibration",
+      "status": "independently_rederived_no_correction",
+      "tolerance_review": "0.5% numerical tolerance permits rounding; not a bound on empirical-model uncertainty"
+    },
+    {
+      "assumptions_checked": [
+        "Integrate PSD, not ASD; A has V^2 dimensions for frequency in Hz.",
+        "Real filter weighting needs |H(f)|^2 and its ENBW; no universal single bandwidth for colored noise."
+      ],
+      "equation": "Numerical integration in log(f) with Jacobian f; variance=int S df; RMS=sqrt(variance)",
+      "id": "numeric_pilot_005",
+      "quantities": [
+        {
+          "atol": 0.0,
+          "independent_value": 44.44444444444444,
+          "name": "corner_frequency",
+          "oracle_value": 44.44444444444444,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "Hz"
+        },
+        {
+          "atol": 0.0,
+          "independent_value": 8.179599236603773e-08,
+          "name": "rms_noise",
+          "oracle_value": 8.17959923660377e-08,
+          "relative_difference": 3.236072921915834e-16,
+          "rtol": 0.005,
+          "unit": "V"
+        }
+      ],
+      "rubric_review": "Appropriate bounded interpretation and controls; subjective scoring requires expert calibration",
+      "status": "independently_rederived_no_correction",
+      "tolerance_review": "0.5% numerical tolerance permits rounding; not a bound on empirical-model uncertainty"
+    },
+    {
+      "assumptions_checked": [
+        "Convert per-m to per-um radiance; projected solid angle already includes cosine, so no extra pi.",
+        "Distinguish state difference from lock-in fundamental/RMS, finite-band integration, emissivity and warm background."
+      ],
+      "equation": "Decimal Planck in SI; B_per_um=B_per_m/1e6; P=B_per_m*dLambda*A*projectedOmega*transmission",
+      "id": "numeric_pilot_006",
+      "quantities": [
+        {
+          "atol": 0.0,
+          "independent_value": 50.9140363378436,
+          "name": "radiance_per_um",
+          "oracle_value": 50.9140363378436,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "W/(m^2*sr*um)"
+        },
+        {
+          "atol": 0.0,
+          "independent_value": 6.720652796595355e-10,
+          "name": "modulated_power_difference",
+          "oracle_value": 6.720652796595355e-10,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "W"
+        },
+        {
+          "atol": 0.0,
+          "independent_value": 5.376522237276284e-06,
+          "name": "voltage_difference",
+          "oracle_value": 5.376522237276284e-06,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "V"
+        }
+      ],
+      "rubric_review": "Appropriate bounded interpretation and controls; subjective scoring requires expert calibration",
+      "status": "independently_rederived_no_correction",
+      "tolerance_review": "0.5% numerical tolerance permits rounding; not a bound on empirical-model uncertainty"
+    },
+    {
+      "assumptions_checked": [
+        "Beer-Lambert assumptions and unit conversion must hold.",
+        "Collection, surface recombination, reflection and near-cutoff alpha affect external QE."
+      ],
+      "equation": "Beer-Lambert: exp(-alpha*t); t95=ln(20)/alpha; cm to um factor 1e4",
+      "id": "numeric_pilot_007",
+      "quantities": [
+        {
+          "atol": 0.0,
+          "independent_value": 29.957322735539908,
+          "name": "thickness_95pct",
+          "oracle_value": 29.957322735539908,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "um"
+        },
+        {
+          "atol": 0.0,
+          "independent_value": 0.8646647167633873,
+          "name": "absorption_20um",
+          "oracle_value": 0.8646647167633873,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "1"
+        }
+      ],
+      "rubric_review": "Appropriate bounded interpretation and controls; subjective scoring requires expert calibration",
+      "status": "independently_rederived_no_correction",
+      "tolerance_review": "0.5% numerical tolerance permits rounding; not a bound on empirical-model uncertainty"
+    },
+    {
+      "assumptions_checked": [
+        "Define one-sided PSD and unity DC gain; no unaccounted mixer factors.",
+        "Use actual filter order/transfer and integrate colored PSD explicitly."
+      ],
+      "equation": "Gamma-function integral of one-sided unity-gain pole; ENBW=1/(4*tau), RMS=ASD*sqrt(ENBW)",
+      "id": "numeric_pilot_008",
+      "quantities": [
+        {
+          "atol": 0.0,
+          "independent_value": 12.499999999999998,
+          "name": "enbw",
+          "oracle_value": 12.5,
+          "relative_difference": 1.4210854715202004e-16,
+          "rtol": 0.005,
+          "unit": "Hz"
+        },
+        {
+          "atol": 0.0,
+          "independent_value": 4.242640687119285e-08,
+          "name": "rms_noise",
+          "oracle_value": 4.242640687119285e-08,
+          "relative_difference": 0.0,
+          "rtol": 0.005,
+          "unit": "V"
+        }
+      ],
+      "rubric_review": "Appropriate bounded interpretation and controls; subjective scoring requires expert calibration",
+      "status": "independently_rederived_no_correction",
+      "tolerance_review": "0.5% numerical tolerance permits rounding; not a bound on empirical-model uncertainty"
+    }
+  ],
+  "limitations": "Public pilot; case 007 is a legacy-error regression. No claim of independent hidden-test generalization.",
+  "release_change": "none; v1 preserved",
+  "review_version": "pilot-independent-v1",
+  "reviewer": "Codex independent analytic review; not human signoff",
+  "schema_version": "1.0",
+  "sha256": "ea40774d8beff73cd43859f5052c990a6d5973b3cadca88b2c9d8e98c6b96b5b",
+  "source": "evals/firm_numeric_pilot_v1.jsonl"
+}
