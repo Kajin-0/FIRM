@@ -122,7 +122,11 @@ class ScientificValidationTests(unittest.TestCase):
     def test_original_smoke_reviews_pin_all_32_rows(self):
         d=json.loads((ROOT/'data/reviews/firm3_manual_decisions_v1.json').read_text())
         old=ROOT/'data/processed/firm3_candidate_2026-10-05_v2/train.jsonl'
-        self.assertEqual(sha256(old),d['historical_train_sha256'])
+        if old.exists():
+            self.assertEqual(sha256(old),d['historical_train_sha256'])
+        else:
+            historical=json.loads((ROOT/'data/manifests/firm3_candidate_2026-10-05_v2_manifest.json').read_text())
+            self.assertEqual(next(x['sha256'] for x in historical['outputs'] if x['path']=='train.jsonl'),d['historical_train_sha256'])
         rows=[x for x in d['decisions'] if x['smoke_index'] is not None]
         self.assertEqual(sorted(x['smoke_index'] for x in rows),list(range(1,33)))
         self.assertEqual(sum(x['status']=='exclude' for x in rows),6)

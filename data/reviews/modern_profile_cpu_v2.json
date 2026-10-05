@@ -1,0 +1,171 @@
+{
+  "GPU_measured": false,
+  "measurements": {
+    "adapter_bytes": 14132,
+    "checkpoint_bytes": 166132,
+    "device": "CPU fixture",
+    "gradient_checks": [
+      {
+        "adapter_tensors": 24,
+        "frozen_gradients": 0,
+        "nonzero_gradient_tensors": 12,
+        "step": 1
+      },
+      {
+        "adapter_tensors": 24,
+        "frozen_gradients": 0,
+        "nonzero_gradient_tensors": 24,
+        "step": 2
+      }
+    ],
+    "steps": [
+      {
+        "allocated_bytes": null,
+        "input_tokens": 16,
+        "peak_allocated_bytes": null,
+        "peak_reserved_bytes": null,
+        "reserved_bytes": null,
+        "seconds": 0.038989877328276634,
+        "step": 1,
+        "supervised_tokens": 11,
+        "tokens_per_second": 410.3629222858908
+      },
+      {
+        "allocated_bytes": null,
+        "input_tokens": 16,
+        "peak_allocated_bytes": null,
+        "peak_reserved_bytes": null,
+        "reserved_bytes": null,
+        "seconds": 0.034185818396508694,
+        "step": 2,
+        "supervised_tokens": 11,
+        "tokens_per_second": 468.0303339361926
+      }
+    ]
+  },
+  "release": "modern-profile-cpu-v2",
+  "result": {
+    "GPU_measured": false,
+    "adapter_reload_success": true,
+    "checkpoint_resume_success": true,
+    "completion_masks": [
+      {
+        "id": "firm3_0027c52061dda11630a2ef14870065ac6f8c37a37992bc320df2a5266b550d11",
+        "supervised_tokens": 192,
+        "tokens": 276
+      },
+      {
+        "id": "firm3_008a7c330c5123b9e0801aaf37025a5df33ae06e850c302ad38d75f29ea81d41",
+        "supervised_tokens": 71,
+        "tokens": 140
+      },
+      {
+        "id": "firm3_00e910d56cefe7eb26db39e35084fa9dedf8a95680ebff7ec8260aee82e6d5b5",
+        "supervised_tokens": 123,
+        "tokens": 198
+      },
+      {
+        "id": "firm3_015ff2dcdf831df8bb6f16af2c9826a70f14dd7d821f2baf073befd791b7c526",
+        "supervised_tokens": 84,
+        "tokens": 156
+      },
+      {
+        "id": "firm3_01f9459f66c97b1c24e28f6f4f88be628f70b8f34435bbcebb27a728d07b9faf",
+        "supervised_tokens": 20,
+        "tokens": 90
+      },
+      {
+        "id": "firm3_0255fc6f7dd5577d09c831284151e192d77e99148cd8900f1fbf7fa0e61affac",
+        "supervised_tokens": 62,
+        "tokens": 133
+      },
+      {
+        "id": "firm3_02cb4869e0a1f53143e4b136ebeda1e85e851296a6e4c760fe651a540dec688b",
+        "supervised_tokens": 112,
+        "tokens": 192
+      },
+      {
+        "id": "firm3_02f8c25be4ca7e3ffb7df1b6a780cebefd769f1dfe2233dc50383c0a17703e3b",
+        "supervised_tokens": 40,
+        "tokens": 115
+      }
+    ],
+    "fixture_parameters": 58208,
+    "gradient_checks": [
+      {
+        "adapter_tensors": 24,
+        "frozen_gradients": 0,
+        "nonzero_gradient_tensors": 12,
+        "step": 1
+      },
+      {
+        "adapter_tensors": 24,
+        "frozen_gradients": 0,
+        "nonzero_gradient_tensors": 24,
+        "step": 2
+      }
+    ],
+    "hybrid_layers": [
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention"
+    ],
+    "limitations": [
+      "Random tiny architecture, not pretrained Qwen3.5-9B",
+      "CPU float32, not GPU BF16 or 4-bit",
+      "Real pinned tokenizer masks tested separately; vision inference not tested"
+    ],
+    "native_class": "Qwen3_5ForConditionalGeneration",
+    "native_source_sha256": "d0c8561d91e31e50d9a57b74196c5a7ad023e42ebe9f84004d0a535310879939",
+    "python": "3.13.7",
+    "reload_max_absolute_error": 0.0,
+    "software_versions": {
+      "accelerate": "1.15.0",
+      "bitsandbytes": "0.50.2",
+      "datasets": "4.7.0",
+      "peft": "0.21.2",
+      "torch": "2.9.1+cpu",
+      "transformers": "5.18.0",
+      "trl": "1.14.1"
+    },
+    "status": "PASS tiny CPU software fixture only",
+    "target_modules": [
+      "model.language_model.layers.0.mlp.down_proj",
+      "model.language_model.layers.0.mlp.gate_proj",
+      "model.language_model.layers.0.mlp.up_proj",
+      "model.language_model.layers.1.mlp.down_proj",
+      "model.language_model.layers.1.mlp.gate_proj",
+      "model.language_model.layers.1.mlp.up_proj",
+      "model.language_model.layers.2.mlp.down_proj",
+      "model.language_model.layers.2.mlp.gate_proj",
+      "model.language_model.layers.2.mlp.up_proj",
+      "model.language_model.layers.3.mlp.down_proj",
+      "model.language_model.layers.3.mlp.gate_proj",
+      "model.language_model.layers.3.mlp.up_proj"
+    ],
+    "vision_and_all_frozen_tensors_unchanged": true
+  },
+  "reviewed_seed_manifest_sha256": "88fbf10096a8aaf040711d889ef94a48786347e34832de0d3dbaaf27f76a474a",
+  "schema_version": "1.0",
+  "source_architecture_manifest": {
+    "path": "data/reviews/modern_profile_cpu_v1/manifest.json",
+    "sha256": "fc156ad18c3d6e968cc1b846a843010a3c7d9739e6965c8c0d19142ba4029a2a"
+  },
+  "supersedes_report": "data/reviews/modern_profile_cpu_v1/profile_validation.json",
+  "tested_tools": {
+    "scripts/firm_model_profiles.py": "88568053d00c9ca7d10452269e41c2ab2c1de4ecd2232f72c60565c00b7da82b",
+    "scripts/firm_training_measurements.py": "916234d070c1eb89a309eadfaecc272d0fb561e9d2ee5a91cbc4aaa860072ecd",
+    "scripts/validate_firm_modern_profile.py": "d4788903c717539b17880ffb231a0745f0fe35bb224a055010783d3acd788cc5"
+  },
+  "timestamp": "2026-10-05T22:52:51.089762+00:00",
+  "tokenizer_files": {
+    "added_tokens.json": "e5f9bfb644ead13bd36dd6cfc41553a93b7c264c0a2e1ac67d033aa8250c8538",
+    "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+    "merges.txt": "3bd640ba6d8da8f5844f3548b7e2184fc664dd670e1447e425a48dbaaad1ef43",
+    "special_tokens_map.json": "ce0d9ff22f10349bc6609d40dee870b5e77f70fc8cde5d6140cb9aa0396b213c",
+    "tokenizer.json": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+    "tokenizer_config.json": "e3ca3754699d8dfb963a85d64d419645291594796197bb170870f208953e4241",
+    "vocab.json": "4ab0d5c096294054b66444a116a20baf6e29998fc1fae410ffe4b6fadbc56b5c"
+  }
+}
