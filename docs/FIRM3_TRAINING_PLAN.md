@@ -1,0 +1,118 @@
+# FIRM 3 training and experiment plan
+
+Date: 2026-10-05. No training, cloud instance, paid inference or model-weight download was launched. This plan separates evidence from estimates. Selection is provisional until independent FIRM evaluation; a model-card benchmark is not an IR-detector result.
+
+## Candidate decision matrix
+
+Model availability, licenses and revisions were independently checked against publisher model cards and the Hugging Face model API. Immutable revisions for the principal candidates are in `data/manifests/model_candidates_2026-10-05.json`. Commercial use still requires compliance with the relevant license and rights to downstream data; the repository itself has no established dataset/repository license.
+
+| Candidate | Scale / architecture / modality | License; native context | Reasoning and instruction evidence | Tooling and deployment assessment | Decision |
+|---|---|---|---|---|---|
+| [Qwen3.5-9B](https://huggingface.co/Qwen/Qwen3.5-9B) | 9B language model, dense FFNs with DeltaNet/attention hybrid; vision-language | Apache-2.0; 262,144 tokens | Publisher STEM/math, instruction and tool benchmarks support testing | HF/vLLM/SGLang ecosystem; hybrid attention and VLM handling need an explicitly tested modern training profile; quantized serving must be checked | Preferred lightweight E0 candidate; no IR score yet |
+| [Gemma 4 12B](https://huggingface.co/google/gemma-4-12B-it) | 11.95B dense unified model; text/image/audio without separate encoders | Apache-2.0; 256K | Publisher reasoning evidence; useful medium multimodal challenger | Modern library/profile needed; text-only adapter targeting must preserve multimodal input projections; quantify local 4/8-bit regression | Preferred medium comparison alongside Ministral |
+| [Ministral 3 14B Reasoning](https://huggingface.co/mistralai/Ministral-3-14B-Reasoning-2512) | Dense 14B family; vision; BF16 reasoning weights | Apache-2.0; 256K | Publisher reasoning/system adherence; native function calling and JSON | HF and Mistral tokenizer paths; official GGUF variants exist; use BF16 rather than the default FP8 instruct checkpoint for ordinary PEFT experiments | Medium reasoning challenger; paired Base variant useful for DAPT |
+| [Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B) | 27B dense language hybrid; native image/video | Apache-2.0; 262,144 | Current publisher reports stronger science/research and agent benchmarks; flexible thinking modes | Shares Qwen3.5 architecture; publisher lists serving integrations; verify loader, adapters and quantization at pinned revisions | Preferred research-scale E0 candidate; released August 2026 |
+| [Qwen3.6-27B](https://huggingface.co/Qwen/Qwen3.6-27B) | 27B hybrid language + vision | Apache-2.0; 262,144 | Strong publisher STEM/reasoning evidence | Earlier checkpoint in same family, useful controlled reference | Secondary reference, rather than presumed newest |
+| [Gemma 4 31B](https://huggingface.co/google/gemma-4-31B-it) | About 30.7B dense decoder + vision encoder | Apache-2.0; 256K | Publisher science/math and multimodal evidence | Higher memory class; modern tool/PEFT/quantization recipe requires testing | Optional research challenger after 9B/27B comparison |
+| [Phi-4-reasoning](https://huggingface.co/microsoft/Phi-4-reasoning) | 14B dense decoder; text only | MIT; 32K | Math/science reasoning focus; card cautions about downstream evaluation | Conventional causal Transformers path; no native IR vision capability; compare instruction/tool behavior rather than assume it | Text-only reasoning fallback; revision must be pinned before a run |
+| [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) | Conventional dense causal model; text | Apache-2.0; 32,768 | Established reasoning/chat control | Mature causal PEFT stack; straightforward 4/8-bit and GGUF compatibility | Compatibility/ablation control, not automatic FIRM 3 winner |
+
+Model-card capability evidence is a selection signal. PEFT compatibility and quantization support in an ecosystem are not proof that a particular complete recipe works. Prefer dense total-parameter targets for initial adaptation; low-active-parameter MoE models still require all expert weights in memory and a different training plan. Do not equate active parameter count with storage or optimizer cost.
+
+Recommended strategy: benchmark unmodified Qwen3.5-9B first, then Qwen3.8-27B and a 12–14B challenger when existing resources permit. Choose the smallest checkpoint that solves reviewed linked detector problems reliably. Keep Qwen3-8B as a reproducible causal-stack control. A 0.6B legacy Qwen checkpoint is strictly an inexpensive pipeline smoke target. The existing Qwen3-4B config is historical, not the selection conclusion.
+
+Initial SFT should adapt a strong post-trained checkpoint because instruction/format behavior is useful. DAPT must explicitly compare a genuine pretraining checkpoint where available (for example the publisher's [Ministral 3 14B Base](https://huggingface.co/mistralai/Ministral-3-14B-Base-2512)) with continuing a post-trained checkpoint followed by recovery SFT. Do not relabel Qwen3.5/3.8 post-trained weights as raw foundation checkpoints. Record the exact lineage.
+
+## Controlled staged experiments
+
+Every experiment records a run manifest, source/base revisions, dataset/eval hashes, seeds, exact token budget, hardware/software, checkpoint/adapter location, loss and paired benchmark output. Use the same independently reviewed frozen benchmark across base, old FIRM if recovered, and new checkpoints. Legacy and public pilot results are labeled separately from the eventual permanent test.
+
+| Experiment | Hypothesis and changed variable | Fixed variables and dataset | Hardware / cost class | Evaluation and stop/go |
+|---|---|---|---|---|
+| E0 — unmodified checkpoints | Candidate and scale change baseline reasoning, units and diagnosis | Same eval release, prompt/template policy, token budget, tool-free track and declared sampling; 8 public pilot + 30 legacy diagnostics now; independent expert suite later | Existing local/server hardware preferred; no provisioning now; single A100/H100 short-context serving later | Preserve raw generations, truncation and structured parse failures; numerical grader plus independent expert review. Do not select by keyword score. Stop if loader/template or protocol invalid. |
+| E1 — tiny QLoRA smoke | Dataset -> masks -> gradients -> checkpoint -> resume -> adapter is reproducible | Qwen3-0.6B pinned revision; 32 deterministic candidate training rows, 65 validation rows, seed 42; 10 optimizer steps, rank 8, 2,048 tokens | One existing CUDA GPU with roughly 6–12 GB available; minutes-class after downloads, not measured | Finite loss/gradients, completion-only labels inspected, no truncation, checkpoint resumes at recorded step, adapter reload works. No domain-quality claim. |
+| E2 — controlled seed SFT | Reviewed/capped existing data can improve IR anchors without damaging quantitative reasoning | Same chosen checkpoint and hyperparameters; reviewed successor of 717/65/106 candidate split; no leaked/flagged groups | One A100 40/80 GB; short pilot-hours class subject to throughput measurement | Compare E0 and E2 on identical frozen eval. Stop on unit regressions, over-refusal or memorization; no E2 until scientific flags and provenance are reviewed. |
+| E3 — long-form SFT | Linked derivations/measurements improve physics and diagnosis beyond anchor SFT | Same checkpoint, heldout families, optimizer/seed and matched token-budget control; first 500–1,500 reviewed examples, eventually 5,000–15,000 | One A100 80 GB/H100 80 GB; moderate pilot | Require improvement across multiple independent cases, unit correctness and expert diagnosis; distinguish data-quality changes from added compute. |
+| E4 — DAPT-only pilot | Clean IR prose/equations improve domain representation and model likelihood | Same pretrained or explicitly chosen post-trained starting checkpoint; ~2M rights-reviewed tokens initially, fixed token budget and disjoint document validation | Single 80 GB LoRA for 9–14B or multi-GPU/full update only after justification; moderate relative to SFT | Evaluate loss on document-heldout corpus and E0 benchmark before recovery SFT. Stop on extraction defects, duplicate/eval contamination or large instruction/math regressions. |
+| E5 — DAPT + matched SFT | DAPT benefits survive instruction recovery and outperform SFT alone | E4 lineage followed by exactly the E3 SFT recipe; control uses same starting lineage and matched overall compute where possible | Same memory class as E4/E3; additive cost, bounded token budget | Paired comparisons against base, DAPT-only and SFT-only; reject DAPT if gain is negligible relative to cost or protected-category regression. |
+| E6 — reasoning/correctness | Reviewed error corrections improve linked quantitative reliability | Same selected model/eval; supervised repairs first; matched-token SFT control. Preference pairs only after discriminative review | One 80 GB GPU QLoRA initially; DPO reference memory planned explicitly | Use numerical/unit defects and expert preference agreement, not verbosity. No automatic RL reward for substring matches; stop on reward hacking or unreliable labels. |
+| E7 — scientific tools + retrieval | Explicit computations/evidence reduce arithmetic and unsupported claims | Frozen no-tool track plus separately specified tool/evidence track; authentic execution traces and rights-reviewed sources | CPU tools plus existing model inference; low incremental infrastructure | Grade tool inputs/results, units, solver failures, citation entailment and abstention; separate tool gains from parametric gains. |
+| E8 — local quantized release | Quantization makes deployment practical with bounded science regression | Same checkpoint/adapter, merged export revision, prompts and eval release; compare BF16, 8-bit and practical 4/5-bit | Local workstation or existing GPU; no cloud needed after conversion | Re-run numerical/physical/citation checks and latency/memory. Export only with a converter supporting the exact architecture and validated tokenizer. |
+
+E0 must precede quality conclusions from any fine-tune. E1 is a pipeline check, not a successor to E0 science evaluation. RAG and multimodal additions need their own baselines and ablations. A reasonable provisional release gate is no new serious unit/density failure on protected cases and an independently reviewed improvement in linked tasks; a numerical score threshold should be fixed after E0 and expert agreement, not invented now.
+
+## DAPT corpus and pipeline design
+
+1. Create a source manifest with document/version identity, URL/DOI, creator, content hash, license or explicit permission, authorized uses, acquisition date and access class. Begin with user-owned notes, explicit permissions, reusable licensed texts and public-domain material whose status is actually established. Open access does not by itself establish training rights. Do not mass-download literature before rights review.
+2. Preserve original files. Extract text/layout with one deliberately selected tool; evaluate born-digital versus scanned/OCR sources separately. Store page/section provenance, equations as source LaTeX or verified text plus original crop reference, and tables with headers/units/captions. Reject broken math, scrambled columns and unverified OCR rather than silently flattening them.
+3. Normalize Unicode/header whitespace without destroying signs, subscripts, units or equation structure. Detect duplicate whole documents by hashes and normalized text; detect versions/near copies by section shingles and paper identity. Track the chosen canonical version and keep source lineage.
+4. Keep meaningful section titles and table/equation captions; remove repeated running headers/footers and extraction artifacts. References belong in a separate bibliographic store and should not dominate next-token training. Retain contextual citation markers with a provenance mapping. Copyright notices and permission boundaries remain recorded even if excluded from training tokens.
+5. Run benchmark prompt/solution/formula-template and document-family leakage screening. Apply review exclusions to DAPT as well as SFT. A reserved paper or experimental dataset cannot contribute training text, paraphrases or derived examples. Scan packing outputs as well as raw text. Foundation pretraining exposure is unknown and must be disclosed separately.
+6. Split by document/paper/sample/family before tokenization or packing. Versioned validation documents never contribute any section to training. Record actual split proportions and material/mechanism coverage, not only random seeds.
+7. Pin tokenizer/revision and record tokens per document. Pack deterministic 2,048–4,096-token segments initially, with EOS/document boundaries and loss on text tokens; avoid cross-document attention if the chosen trainer supports it correctly. Record segment-to-document ranges and any equation/table boundary handling. Reject or explicitly route overlong tables/equations rather than fragmenting them invisibly.
+8. Pilot the highest-priority materials/transport/noise/radiometry/epitaxy/processing/cryogenic corpus. QWIP/QCD, APD, T2SL, surface/defect physics, optical coupling, electronics and ROIC fundamentals are planned coverage, not existing assets. Audit heldout loss and domain reasoning; mixed licensed general math/science replay is an explicit ablation if instruction/reasoning deteriorates.
+
+DAPT is causal next-token continuation, not a collection of question/answer paraphrases. Start with low learning rates and bounded updates (LoRA initial exploration roughly 1e-5–5e-5, full update roughly 1e-6–1e-5 are search ranges, not validated recipes). Schedule/checkpoint by measured tokens. Stop before scaling if extraction quality or heldout outcomes do not justify the experiment.
+
+## Memory estimates and hardware profiles
+
+The following are **planning ranges**, not measured peaks or guarantees. They assume one sample per device, 2K–4K text sequences, checkpointed activations, memory-efficient attention where supported, modest rank, and no image tokens. Large vocabularies, unquantized embeddings/output heads, vision components, hybrid kernels, optimizer choices and fragmentation can move peaks substantially. Profile a few steps before committing a budget.
+
+Weight-only floors for P total parameters: BF16 approximately `2P` bytes; 8-bit approximately `P`; 4-bit approximately `P/2`, plus scales and unquantized tensors. Optimizer training memory is much higher. Conventional full Adam training can require roughly 12–20 bytes/parameter before activations; distributed sharding reduces per-device state, not total work. These decimal-GB approximations are not the full memory of a deployed model.
+
+| Scale | Short-context BF16 inference | 4/8-bit inference | QLoRA SFT (NF4, rank 16–32) | BF16 LoRA SFT/DAPT | Full update state floor before activations |
+|---|---:|---:|---:|---:|---:|
+| 7–10B | ~18–30 GB | ~8–16 / 12–22 GB | ~16–32 GB | ~26–46 GB | ~84–200 GB |
+| 12–16B | ~28–44 GB | ~12–24 / 20–32 GB | ~24–48 GB | ~40–68 GB | ~144–320 GB |
+| 20–32B | ~48–80+ GB | ~20–36 / 30–50 GB | ~40–76 GB | ~68–110+ GB | ~240–640 GB |
+
+LoRA DAPT has similar weight/optimizer classes to LoRA SFT but larger token volume and often longer packing; allow more activation/headroom. QLoRA DAPT is a hypothesis worth comparing with BF16 LoRA, not an assumed equivalent to full representation adaptation. Do not promise 27–32B full tuning on a single 80 GB GPU. Inference KV/recurrent cache depends on architecture, context and concurrency; native 256K support is not a recommendation to allocate that context on a small GPU.
+
+Concrete starting profiles (effective batch is sequences across devices):
+
+| Work | GPU/count | Precision/quantization | Rank | Sequence | Microbatch / accumulation / effective batch | Checkpointing and memory class |
+|---|---|---|---:|---:|---|---|
+| E1 0.6B smoke | 1 existing CUDA GPU | BF16 where supported, NF4 base | 8 | 2,048 | 1 / 4 / 4 | Gradient checkpointing; ~6–12 GB estimate |
+| 9B SFT economical | 1 A100 40 GB | BF16 compute, NF4 base | 16 | 2,048 | 1 / 16 / 16 | Gradient checkpointing; ~16–32 GB |
+| 9B longer SFT | 1 A100 80 GB or H100 80 GB | BF16 LoRA; NF4 alternative | 32 | 4,096 | 1 / 16 / 16 | Checkpointing; ~32–56 GB BF16 estimate |
+| 12–16B SFT | 1 A100 80 GB or H100 80 GB | BF16 compute/NF4; BF16 LoRA separately | 16–32 | 4,096 | 1 / 16 / 16 | ~30–56 GB NF4, ~48–76 GB BF16; start at 2K on 40 GB |
+| 27B research SFT | 1 H100/A100 80 GB | BF16 compute/NF4 base | 16 | 2,048 then 4,096 | 1 / 16 / 16 | ~44–76 GB; no assumed fit at larger rank/batch |
+| 9–14B DAPT LoRA | 1 80 GB GPU | BF16 frozen base + LoRA | 32 | 4,096 | 1 / 32 / 32 | ~40–76 GB; token-budget pilot first |
+| 27–32B DAPT LoRA | 2 x 80 GB, if single-GPU fit fails | BF16 sharded base + LoRA | 32 | 4,096 | 1 per GPU / 16 / 32 | FSDP tested separately; ~40–70 GB per GPU estimate |
+| 9B full DAPT/FT | 4 x A100/H100 80 GB | BF16 parameters, sharded optimizer | n/a | 2,048 then 4,096 | 1 per GPU / 8 / 32 | FSDP/ZeRO-3; activations/network/large head must be profiled |
+| 14B full DAPT/FT | 4–8 x 80 GB | BF16 + optimizer sharding | n/a | 2,048–4,096 | 1 / 4–8 / 32 | Larger cluster cost; justify over adapters |
+| 27–32B full DAPT/FT | 8–16 x 80 GB | BF16 + full sharding | n/a | 2,048–4,096 | 1 / 2–4 / 32 | 8 may fit only favorable configurations; 16 gives headroom; not an initial experiment |
+
+A100 40 GB is useful for 9B QLoRA and constrained medium-model work. A100 80 GB buys sequence/headroom. H100 80 GB can improve throughput, but compare dollars per validated token rather than hourly rate alone. Multi-GPU becomes appropriate for full state memory or a measured throughput requirement; the current trainer deliberately uses one visible GPU and does not pretend `device_map=auto` is distributed training.
+
+## Cloud comparison and budget discipline
+
+Public price snapshot checked 2026-10-05; availability, region, storage, tax and discounts can change. These are advertised hardware rates, not elapsed-time estimates or spending authorization:
+
+| Provider / offer | Advertised USD/hour | Interpretation |
+|---|---:|---|
+| Lambda 1-GPU A100 40 GB | 1.99 | On-demand, PCIe/SXM entries shown |
+| Lambda 1-GPU H100 80 GB PCIe / SXM | 3.29 / 4.29 | On-demand; hardware differs |
+| Lambda 8-GPU A100 80 GB | 2.79 per GPU | Advertised **8-GPU bundle**, not a single-GPU price |
+| Runpod A100 80 GB PCIe / SXM | 1.59 / 1.59 | Public Pods starting rates; verify chosen availability/tier |
+| Runpod H100 80 GB PCIe / SXM | 2.89 / 3.49 | Public Pods starting rates |
+
+Sources: [Lambda instance tables](https://lambda.ai/instances) and [Runpod pricing](https://www.runpod.io/pricing). Lambda tables exclude applicable taxes; Runpod rates must be rechecked for the actual Pod offer. Google pricing varies with accelerator-optimized machine, region and full VM bundle; the [official pricing page](https://cloud.google.com/products/compute/pricing) did not yield a comparable fixed A100/H100 quote during this audit, so none is invented. Spot/preemptible rates are variable and were not verified. Reserved/committed offers require specific terms/quotes; do not compare them directly with on-demand headlines.
+
+Provider choice remains open. Budget formula: `GPU_count * hourly_rate * measured_elapsed_hours + storage + other provider charges`. Measure setup/download and first-step throughput, estimate tokens/update count, set a maximum runtime/spend, and only then authorize the actual run. No dollar total is fabricated without measured throughput and an accepted live offer.
+
+Keep provider-specific provisioning separate from training. Use persistent artifact storage with restrictive access, pinned images/environment files, dataset/eval hash checks, local scratch and resumable optimizer/RNG checkpoints. Save every 2 steps for E1 and roughly 50–200 steps for larger pilots, adjusted to keep checkpoint intervals around 5–15 minutes. Copy completed checkpoints to persistent storage atomically; retain at least two plus manifest. Verify a stop/resume before using spot instances. A termination hook can request a safe save between steps later; do not write half-updated optimizer state from an asynchronous signal handler. Lost work is bounded by the last completed persistent checkpoint, not guaranteed zero.
+
+## Training stack and validation status
+
+For the existing causal smoke path: Python 3.11 on the future GPU runner; PyTorch 2.9.1 CUDA 12.8 wheel; Transformers 4.57.6; PEFT 0.18.1; TRL 0.24.0; bitsandbytes 0.48.2; Accelerate 1.11.0; Datasets 4.4.1. Direct pins are in `requirements-training.txt`; data-only pins are separate. PyTorch/CUDA installation must match driver/hardware, rather than allowing an unconstrained PyPI upgrade to choose a CUDA family. See [PyTorch previous versions](https://pytorch.org/get-started/previous-versions/) and [TRL 0.24 SFT API](https://huggingface.co/docs/trl/v0.24.0/en/sft_trainer).
+
+The script now uses `processing_class`, `max_length`, conversational prompt/completion and completion-only loss. It checks token length instead of silently truncating answers; pins the model/tokenizer revision; seeds initialization/data order; writes experiment metadata; and supports `--resume-from-checkpoint`. GPU forward/backward, loss-mask visualization, adapter reload and optimizer resume remain E1 checks. Direct dependency existence/API constraints were checked; a complete GPU resolver lock has not been tested.
+
+Current native vision/hybrid candidates require a separately pinned modern Transformers/PEFT/TRL profile, validated loader and module selection, appropriate multimodal processors/templates, and compatible DeltaNet/attention kernels. [Transformers' Qwen3.5 documentation](https://huggingface.co/docs/transformers/model_doc/qwen3_5) distinguishes causal and conditional generation paths. Do not run these candidates with the old causal profile merely by changing a model ID. Freeze visual/input-projection components for initial text work, explicitly target language modules, and check vision regressions. No FlashAttention, DeepSpeed, FSDP, vLLM or llama.cpp dependency was added to the data tooling just to claim support; each is introduced in its own measured runner/profile when needed.
+
+## Exact next experiment
+
+First action: expert-review the 8 public pilot oracles/rubrics and correct a versioned scientific-data release from quarantine. Immediate infrastructure checks are runnable now: `python3 scripts/train_firm_qlora.py --config configs/firm3_e1_smoke.json --dry-run` and the E0 baseline dry-run in README.
+
+Next **training** experiment is E1 with exactly `configs/firm3_e1_smoke.json`: pinned Qwen3-0.6B, 32 selected candidate rows, 65 validation rows, seed 42, NF4, rank/alpha 8/16, 2,048 tokens, microbatch 1, accumulation 4, 10 optimizer steps, save/eval every 2. On an existing compatible GPU after E0 protocol validation and inspection of those 32 rows, run the same command without `--dry-run`. Validate a separate stop/resume and adapter reload before scaling. This session did not run it or request a cloud purchase. Serious E2/E3 waits for reviewed data and a contemporary candidate training profile.

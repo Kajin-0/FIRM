@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-05",
+  "source": "https://huggingface.co/api/models/{id}",
+  "models": [
+    {
+      "id": "Qwen/Qwen3.5-9B",
+      "sha": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "license": "apache-2.0",
+      "gated": false
+    },
+    {
+      "id": "Qwen/Qwen3.6-27B",
+      "sha": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+      "license": "apache-2.0",
+      "gated": false
+    },
+    {
+      "id": "Qwen/Qwen3-8B",
+      "sha": "b968826d9c46dd6066d109eabc6255188de91218",
+      "license": "apache-2.0",
+      "gated": false
+    },
+    {
+      "id": "Qwen/Qwen3-0.6B",
+      "sha": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "license": "apache-2.0",
+      "gated": false
+    },
+    {
+      "id": "mistralai/Ministral-3-14B-Reasoning-2512",
+      "sha": "51f9210f3cd20f3452a80d5819d15dc61cc50630",
+      "license": "apache-2.0",
+      "gated": false
+    },
+    {
+      "id": "google/gemma-4-12B-it",
+      "sha": "707f0a3b8a3c7ad586ed01e27eafbad8a27dd0f7",
+      "license": "apache-2.0",
+      "gated": false
+    },
+    {
+      "id": "google/gemma-4-31B-it",
+      "sha": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+      "license": "apache-2.0",
+      "gated": false
+    },
+    {
+      "id": "Qwen/Qwen3.8-27B",
+      "sha": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+      "license": "apache-2.0",
+      "gated": false
+    }
+  ]
+}
