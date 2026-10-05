@@ -1,0 +1,49 @@
+{
+  "active_snapshot": "data/manifests/firm3_candidate_2026-10-05_v2_manifest.json",
+  "eligible_leakage_checks": {
+    "test": {
+      "leakage_candidate_pairs": 0
+    },
+    "train": {
+      "leakage_candidate_pairs": 0
+    },
+    "valid": {
+      "leakage_candidate_pairs": 0
+    }
+  },
+  "method": "Reordered inputs reproduced every output byte hash; eligible splits rechecked against all 38 eval prompts",
+  "partitions": [
+    {
+      "partition": "train",
+      "records": 717,
+      "reordered_reproduction_identical": true,
+      "sha256": "9ee7cda77869187861573a72c9d60ecc2dcec11257dcee002acb9e67e9e9b483"
+    },
+    {
+      "partition": "valid",
+      "records": 65,
+      "reordered_reproduction_identical": true,
+      "sha256": "80c39da1e5466818ab2950228d9608d174bc212cef7e7b802a055c3aad3648be"
+    },
+    {
+      "partition": "test",
+      "records": 106,
+      "reordered_reproduction_identical": true,
+      "sha256": "775a82a9e30b219c47c18ade589a3c9a93a58db22ad30ed7befe58a0c2c45b8e"
+    },
+    {
+      "partition": "quarantine",
+      "records": 379,
+      "reordered_reproduction_identical": true,
+      "sha256": "1756d0f9db7da5d9c98df218b32c16c0822a20827ea6d2a0d600d0f03d677ac3"
+    },
+    {
+      "partition": "capped",
+      "records": 1314,
+      "reordered_reproduction_identical": true,
+      "sha256": "b1c6e65bc52908b5d7858eab3ce257ee5056250890eee025a25f1f174ef652dd"
+    }
+  ],
+  "semantic_status": "Broader semantic review remains pending",
+  "tool_sha256": "9a22afcfa6639d166760b56c82d1a19126f2499018c244292046b3755642be46"
+}

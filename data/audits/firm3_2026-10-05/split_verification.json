@@ -1,0 +1,47 @@
+{
+  "eligible_leakage_checks": {
+    "test": {
+      "leakage_candidate_pairs": 0
+    },
+    "train": {
+      "leakage_candidate_pairs": 0
+    },
+    "valid": {
+      "leakage_candidate_pairs": 0
+    }
+  },
+  "method": "Reordered input sources reproduced every output byte hash; eligible partitions rechecked against all 38 eval prompts",
+  "partitions": [
+    {
+      "partition": "train",
+      "records": 740,
+      "reordered_reproduction_identical": true,
+      "sha256": "4605cc7f76cd22342a2607bf3b9ff16e7845d0c85fdb30a157869fa2d2a74d15"
+    },
+    {
+      "partition": "valid",
+      "records": 70,
+      "reordered_reproduction_identical": true,
+      "sha256": "135baac3740634a50a9634d089debb4a9282832a08f5d74a46d97cfe8689d68c"
+    },
+    {
+      "partition": "test",
+      "records": 78,
+      "reordered_reproduction_identical": true,
+      "sha256": "08287173a210ef37c0e24084383c2be0572817890af17970b5588c823dd450fa"
+    },
+    {
+      "partition": "quarantine",
+      "records": 379,
+      "reordered_reproduction_identical": true,
+      "sha256": "dcc31c531ad75cfd44c07e066d4055d63df16873e8b6f4a2f0490cbbc3259eee"
+    },
+    {
+      "partition": "capped",
+      "records": 1314,
+      "reordered_reproduction_identical": true,
+      "sha256": "5cfae4e1ce3a314abae51213b472d10a0e847cd94babcafa0bff1136f4bab454"
+    }
+  ],
+  "semantic_status": "manual review exclusions applied; broader semantic review remains pending"
+}

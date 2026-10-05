@@ -1,0 +1,271 @@
+{
+  "date": "2026-10-05",
+  "exclusions": [
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": "v2_004",
+      "line": 5,
+      "prompt": "How do you extract an infrared photodetector time constant from chopped-source or lock-in frequency response data?",
+      "prompt_sha256": "c1afa19fffab4d42716d498a7495d02273b39040916178d04a27f479deb0aaf4",
+      "reason": "Equivalent frequency-response lifetime extraction and artifact controls",
+      "reviewer": "Codex scientific/semantic audit; not human expert approval",
+      "source": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+      "source_sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": "v2_004",
+      "line": 18,
+      "prompt": "Give a mathematical framework for separating detector response, readout response, and optical-source response in a measured frequency roll-off.",
+      "prompt_sha256": "513d237742ae320d76ad6331046d4c232138006985d449ed58196f5692881e11",
+      "reason": "Equivalent measurement-chain rolloff de-embedding",
+      "reviewer": "Codex scientific/semantic audit; not human expert approval",
+      "source": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+      "source_sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": "v2_007",
+      "line": 7,
+      "prompt": "How should blackbody radiometry be connected to measured voltage responsivity in an HgCdTe detector test?",
+      "prompt_sha256": "ea231300776f4fb80f32c1fe00918409139f45878de18363b772ce28e9b21537",
+      "reason": "Close paraphrase of blackbody-to-voltage workflow",
+      "reviewer": "Codex scientific/semantic audit; not human expert approval",
+      "source": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+      "source_sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": "v2_008",
+      "line": 12,
+      "prompt": "What is the correct way to interpret a negative slope in the high-transmission region of an HgCdTe transmission spectrum?",
+      "prompt_sha256": "11a09c442e27d7e65a0afe9c77898e0aa2c8f90ef22ecfa355b818834b27dd10",
+      "reason": "Close paraphrase of transmission slope/cutoff diagnosis",
+      "reviewer": "Codex scientific/semantic audit; not human expert approval",
+      "source": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+      "source_sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": "v2_010",
+      "line": 14,
+      "prompt": "Give an expert explanation of why an HgCdTe wafer anneal can change detector behavior even if the cutoff wavelength barely moves.",
+      "prompt_sha256": "cb0ae385860b7b33b92d30478e2fc3fc8fd499948656d76f9d9744460a2f5bf7",
+      "reason": "Equivalent unchanged-cutoff annealing interpretation",
+      "reviewer": "Codex scientific/semantic audit; not human expert approval",
+      "source": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+      "source_sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": "v2_006",
+      "line": 17,
+      "prompt": "Explain why a detector can look good in IV but poor in optical response.",
+      "prompt_sha256": "f743797abfefc5d10111ec9e82ed45a8e21cb045356eb0c59eb8553002304f56",
+      "reason": "Equivalent insufficiency of IV alone",
+      "reviewer": "Codex scientific/semantic audit; not human expert approval",
+      "source": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+      "source_sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": "v2_006",
+      "line": 19,
+      "prompt": "How should FIRM handle empirical claims about HgCdTe material quality from limited data?",
+      "prompt_sha256": "3d0d709ba4cfaf130a5b522e327b0ad0a721edfe3a002f77f69e133d0be76d04",
+      "reason": "Equivalent limited-data material-quality interpretation",
+      "reviewer": "Codex scientific/semantic audit; not human expert approval",
+      "source": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+      "source_sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": "v2_009",
+      "line": 4,
+      "prompt": "How can Hall measurements constrain HgCdTe detector modeling?",
+      "prompt_sha256": "d6aa2877f4acc53a84e0a13e0f2cae255d33b50721793dd4a8ced1431e6a3be0",
+      "reason": "Close paraphrase of Hall constraints on detector model",
+      "reviewer": "Codex scientific/semantic audit; not human expert approval",
+      "source": "data/processed/firm_v2_expert_hgcdte_deep_batch02.jsonl",
+      "source_sha256": "675fd8002bff3c3a08113ce2f3d71e68535339646eed2884e63dd8a8d6b0fff5"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": "v2_005",
+      "line": 6,
+      "prompt": "How should FIRM analyze a detector whose noise improves after passivation but responsivity decreases?",
+      "prompt_sha256": "df0f47bda85633076362648de1325e236a3cafea537fbfe0b9eb5d6abc5ebeec",
+      "reason": "Close paraphrase of passivation noise-responsivity tradeoff",
+      "reviewer": "Codex scientific/semantic audit; not human expert approval",
+      "source": "data/processed/firm_v2_expert_hgcdte_deep_batch03.jsonl",
+      "source_sha256": "25cebc45acb71f398e2f8f597d9bc7599b99cbd59ff15c1364886cf2cd232c2c"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": "v2_010",
+      "line": 38,
+      "prompt": "Why is annealing important after HgCdTe growth, and why can it change electrical behavior without moving cutoff?",
+      "prompt_sha256": "3c3baaaced5da55c4c45fbabeab353d9799debf366e616b3539dee80f74ebf1b",
+      "reason": "Equivalent annealing electrical change without moving cutoff",
+      "reviewer": "Codex scientific/semantic audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": null,
+      "line": 2526,
+      "prompt": "Estimate GR lifetime from a Lorentzian noise spectrum.\nA device shows a single-peaked current-noise PSD that is flat at low f and rolls off ~f⁻² above 2 kHz (−3 dB near 2 kHz). Estimate the trap lifetime τ and compute total GR variance (all f) for mean current I=50 μA.",
+      "prompt_sha256": "ecd6e838ab3c628241d8547672b697c61ef18042517a983416390473d2474879",
+      "reason": "Mean current and corner frequency do not determine GR PSD amplitude or integrated variance without population/volume or measured S0",
+      "reviewer": "Codex scientific/semantic audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": "firm_core_008",
+      "line": 2525,
+      "prompt": "Extract 1/f corner frequency f_c from a measured noise curve.\nMeasured voltage noise densities: at 10 Hz → 40 nV/√Hz; at 1 kHz → 4 nV/√Hz (flat white floor). Estimate the 1/f corner where 1/f equals white noise, then compute integrated noise from 1–1000 Hz.",
+      "prompt_sha256": "cefd06ddbc70530a34b52062fd8dda7c4a9751242fcd12c3e181f4c2fde3dc6c",
+      "reason": "Numeric variant of corner-frequency extraction scenario",
+      "reviewer": "Codex scientific/semantic audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": null,
+      "line": 86,
+      "prompt": "Derive or use an empirical HgCdTe bandgap relation versus Cd composition at 77 K, and state its limitations.",
+      "prompt_sha256": "dae92d98ca00873e0a99326db78695a1c53d9e707efab8a9ee665d56bf917b96",
+      "reason": "Truncated unreferenced HSC-like polynomial presented as a 77 K model; lacks temperature and cubic terms; pending source verification",
+      "reviewer": "Codex scientific audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": null,
+      "line": 2519,
+      "prompt": "Voltage responsivity for a photoconductor with load.\nGiven: optical responsivity R_I=0.6 A/W, bias V_b=1 V across series of detector R_d=200 Ω and load R_L=800 Ω. Low frequency. Compute small-signal V_out per watt at the load in V/W.",
+      "prompt_sha256": "2c18446634c3ab1998146dc9c41c8a5367ce6de373d550cc2071e8bcdef91c1b",
+      "reason": "A/W times dimensionless divider labeled V/W; missing transimpedance and unspecified photocurrent model",
+      "reviewer": "Codex scientific audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": null,
+      "line": 2520,
+      "prompt": "Compute D* for a 1×1 mm² detector.\nGiven: R_I=0.8 A/W, R_L=1 kΩ in series with R_d=1 kΩ → R_V= (R_I R_L/(R_d+R_L))=0.4 V/W. Measured output noise density e_n=5 nV/√Hz flat over Δf=100 Hz. Find D* using D* = (R_V √A)/e_n.",
+      "prompt_sha256": "f9468d590d1896124765ab3a89e11a8df32a0ecfa8be74ad8df83dcb5664a813",
+      "reason": "Prompt provides a dimensionally invalid A/W to V/W divider conversion, although final density Dstar arithmetic alone is consistent",
+      "reviewer": "Codex scientific audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": null,
+      "line": 2521,
+      "prompt": "SNR penalty from series resistance.\nGiven: R_d=100 Ω, R_L=900 Ω vs. a matched case R_L=100 Ω. Noise is dominated by front-end e_n=2 nV/√Hz. Signal current from flux is i_p=10 μA. Bandwidth 1 kHz. Compare SNR at the load in both cases.",
+      "prompt_sha256": "5a1057c5ec5a8196a3420f4af2fb41ab7cc9f6c6e7a4099fc7582a79f6e92dad",
+      "reason": "Answer switches between parallel transimpedance and using RL alone; Norton-source consistency unresolved",
+      "reviewer": "Codex scientific audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": null,
+      "line": 2523,
+      "prompt": "Johnson noise scaling with bandwidth and temperature.\nGiven a 200 Ω resistor, compute v_n,rms at (a) 77 K over 1 kHz, (b) 300 K over 10 kHz. Provide the spectral density and totals, and comment on scaling.",
+      "prompt_sha256": "06a7a04ed88aca6b99e386d42be177dee1a8cd71010141863051910ef8dbb18e",
+      "reason": "Johnson sqrt(4kBTR) arithmetic and temperature scaling are inconsistent",
+      "reviewer": "Codex scientific audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": null,
+      "line": 2524,
+      "prompt": "Equivalent Johnson noise of two resistors in parallel.\nGiven R1=1 kΩ and R2=1 kΩ at 300 K, compute the Thevenin-equivalent voltage noise density seen at the port and the integrated rms over 1 kHz. Show why you cannot just add voltages.",
+      "prompt_sha256": "20f2ba6e0895a1088c9a7bf5b60149d114fa54788b62f9487df136e1d94adece",
+      "reason": "Two 1kohm resistors at 300K imply sqrt(4kBT*500)=2.88 nV/sqrtHz, not 0.911 nV/sqrtHz",
+      "reviewer": "Codex scientific audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": null,
+      "line": 2528,
+      "prompt": "Emissivity effect on apparent radiance.\nA target at 320 K has emissivity ε=0.8 and fills the FOV (8–12 μm band). Background is 300 K, optics f/2, η=0.7. Estimate equivalent blackbody temperature T_bb that gives same band power as seen by the detector.",
+      "prompt_sha256": "b257cfaa950be114130e5c008b14874de07aaacfba842e2b60602d1d1e0f2bf3",
+      "reason": "Mixed scene from 300K and 320K cannot have a 322K equivalent blackbody temperature for positive monotonic radiance",
+      "reviewer": "Codex scientific audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": null,
+      "line": 2529,
+      "prompt": "Compute small-signal voltage responsivity (V/W) for a biased photoconductor.\nGiven: R_I=0.5 A/W; dark resistance R_d=500 Ω; load R_L=500 Ω in series from a stiff 1 V bias. Low frequency. Calculate R_V at the load and comment on maximum achievable.",
+      "prompt_sha256": "ea8b1009e7dbed3b84a271e969edb7bc7704d75c371e4b7515604f69e31c9149",
+      "reason": "A/W times dimensionless divider mislabeled V/W; treats current responsivity as a voltage ceiling",
+      "reviewer": "Codex scientific audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": null,
+      "line": 2517,
+      "prompt": "Blackbody band power on a single pixel.\nGiven: 300 K blackbody, f/#=2 optics, passband 8–12 μm, pixel area A=25×25 μm², total optical efficiency η=0.6. Compute incident power on pixel (use band-averaged radiance).",
+      "prompt_sha256": "b88129270480c745bcddad4d9aaf477ec80857ff5e5b7df622b1b4db86495457",
+      "reason": "Quoted 8-12um 300K band radiance 1100 W/m2/sr exceeds total hemispheric blackbody radiance sigma*T^4/pi (~146 W/m2/sr)",
+      "reviewer": "Codex scientific audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": null,
+      "line": 2518,
+      "prompt": "Irradiance at the detector from a 300 K Lambertian source filling the FOV.\nGiven: entrance pupil diameter D=10 mm (area A_p), f/#=2 → Ω≈π/16, η=0.7, band 3–5 μm with L_band≈2.0×10³ W·m⁻²·sr⁻¹. Compute power on detector area A_d=1 mm².",
+      "prompt_sha256": "71beb5fd5e532907d4262d5945a8ca91473f9493ac920b84b2c19d4b2b939637",
+      "reason": "Quoted 3-5um 300K band radiance 2000 W/m2/sr exceeds total blackbody radiance (~146 W/m2/sr); given value needs explicit physical caveat",
+      "reviewer": "Codex scientific audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": null,
+      "line": 2522,
+      "prompt": "Estimate carrier lifetime from a small-signal step response.\nGiven: biased photoconductor shows exponential decay in current after a light pulse: i(t)=I₀ e^{-t/τ_m}. Measured τ_m=120 μs with load R_L=1 kΩ and device capacitance C_d=10 nF. Separate electrical RC from recombination lifetime and report τ_rec.",
+      "prompt_sha256": "822426aa2acb8c955f10ba9c56d41d9ada8fce0c760a243fdbe22e9fc9f33dc7",
+      "reason": "Cascade RC and recombination poles do not obey parallel-rate addition; conclusion that RC must be slower than lifetime reverses bandwidth discipline",
+      "reviewer": "Codex scientific audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "decision": "quarantine connected family pending review",
+      "eval_id": null,
+      "line": 2527,
+      "prompt": "Estimate photon flux onto a 25 μm pixel from a 300 K blackbody in the 8–12 μm band with f/1 optics and η=0.5. Provide photons/s at the pixel (use band-averaged values).",
+      "prompt_sha256": "d1f8f68c3d9939e24cae38166fb09270df43d052fb106f2045857dea684d4052",
+      "reason": "Band photon radiance is an unsupported estimate; re-integrate Planck photon radiance and define whether efficiency is optical or quantum",
+      "reviewer": "Codex scientific audit; not human expert approval",
+      "source": "data/processed/firm_rewritten_large_sft.jsonl",
+      "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    }
+  ],
+  "limitations": "Conservative manually inspected overlaps; not an exhaustive semantic proof. Automatic lexical and numerical checks also quarantine separately.",
+  "schema_version": "1.0"
+}

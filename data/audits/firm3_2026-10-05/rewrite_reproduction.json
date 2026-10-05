@@ -1,0 +1,10 @@
+{
+  "applied": 815,
+  "dataset_csv_byte_identical": true,
+  "date": "2026-10-05",
+  "no_match": 0,
+  "report_byte_identical": true,
+  "rewrites": 815,
+  "rows": 2532,
+  "sft_jsonl_byte_identical": true
+}

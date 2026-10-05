@@ -1,0 +1,2872 @@
+{
+  "artifact_directory": "data/processed/firm3_candidate_2026-10-05",
+  "eval_sources": [
+    {
+      "path": "evals/firm_core_eval.jsonl",
+      "sha256": "4038e70b5503c7eff3c188d74ef44da6211e252d7edd0745f872ff130e10e46d"
+    },
+    {
+      "path": "evals/firm_domain_boundary_eval.jsonl",
+      "sha256": "23a66ef49345108c6f5514e8503c2475e2e932a6a3556766b07109ae7ac5d03e"
+    },
+    {
+      "path": "evals/firm_numeric_pilot_v1.jsonl",
+      "sha256": "ea40774d8beff73cd43859f5052c990a6d5973b3cadca88b2c9d8e98c6b96b5b"
+    },
+    {
+      "path": "evals/firm_v2_expert_eval.jsonl",
+      "sha256": "edd2a8a3435aef8fb64366d473c203f9ecb5bce2696daed63f39b6c3c11b728f"
+    }
+  ],
+  "git_sha": "17351932a7337946d2017a5aa14c0a7201767096",
+  "max_per_template": 3,
+  "method": "hash-assigned connected numeric prompt/response templates and declared families",
+  "outputs": [
+    {
+      "path": "train.jsonl",
+      "records": 740,
+      "sha256": "4605cc7f76cd22342a2607bf3b9ff16e7845d0c85fdb30a157869fa2d2a74d15"
+    },
+    {
+      "path": "valid.jsonl",
+      "records": 70,
+      "sha256": "135baac3740634a50a9634d089debb4a9282832a08f5d74a46d97cfe8689d68c"
+    },
+    {
+      "path": "test.jsonl",
+      "records": 78,
+      "sha256": "08287173a210ef37c0e24084383c2be0572817890af17970b5588c823dd450fa"
+    },
+    {
+      "path": "quarantine.jsonl",
+      "records": 379,
+      "sha256": "dcc31c531ad75cfd44c07e066d4055d63df16873e8b6f4a2f0490cbbc3259eee"
+    },
+    {
+      "path": "capped.jsonl",
+      "records": 1314,
+      "sha256": "5cfae4e1ce3a314abae51213b472d10a0e847cd94babcafa0bff1136f4bab454"
+    }
+  ],
+  "reason": "Active v2 preserves scientific unit case during pair deduplication and propagates all duplicate document/family links.",
+  "reproduction": "See README.md: candidate split command. Generated rows are local ignored artifacts; this snapshot records hashes.",
+  "requested_fractions": {
+    "test": 0.1,
+    "valid": 0.1
+  },
+  "review_exclusions": {
+    "path": "data/manifests/firm3_review_exclusions.json",
+    "sha256": "53a9eb318bb61ee2b8ef6c6414883aedf489740e1b9ee37ab23a55a1b91168ed"
+  },
+  "schema_version": "1.0",
+  "scientific_review": "pending; not a production release",
+  "seed": 42,
+  "sources": [
+    {
+      "path": "data/processed/firm_rewritten_large_sft.jsonl",
+      "sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+    },
+    {
+      "path": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+      "sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+    },
+    {
+      "path": "data/processed/firm_v2_expert_hgcdte_deep_batch02.jsonl",
+      "sha256": "675fd8002bff3c3a08113ce2f3d71e68535339646eed2884e63dd8a8d6b0fff5"
+    },
+    {
+      "path": "data/processed/firm_v2_expert_hgcdte_deep_batch03.jsonl",
+      "sha256": "25cebc45acb71f398e2f8f597d9bc7599b99cbd59ff15c1364886cf2cd232c2c"
+    },
+    {
+      "path": "data/processed/firm_v2_root_expert_sft.jsonl",
+      "sha256": "37a8e121036a9ae2f6d16a123b8efc160d1722bfd409b35b900e089af98dd2f0"
+    }
+  ],
+  "status": "superseded local prototype",
+  "summary": {
+    "duplicate_pairs_collapsed": 0,
+    "groups_by_partition": {
+      "quarantine": 32,
+      "test": 78,
+      "train": 710,
+      "valid": 69
+    },
+    "input_records": 2581,
+    "leakage": {
+      "closest_per_eval": [
+        {
+          "char_similarity": 0.7764705882352941,
+          "eval_id": "firm_core_001",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.5,
+          "reasons": [],
+          "source_line": 1081,
+          "template_jaccard": 0.5
+        },
+        {
+          "char_similarity": 0.625,
+          "eval_id": "firm_core_001",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.3076923076923077,
+          "reasons": [],
+          "source_line": 2491,
+          "template_jaccard": 0.3076923076923077
+        },
+        {
+          "char_similarity": 0.5679012345679012,
+          "eval_id": "firm_core_001",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.2727272727272727,
+          "reasons": [],
+          "source_line": 1952,
+          "template_jaccard": 0.2727272727272727
+        },
+        {
+          "char_similarity": 0.6902654867256637,
+          "eval_id": "firm_core_002",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.3333333333333333,
+          "reasons": [],
+          "source_line": 1546,
+          "template_jaccard": 0.3333333333333333
+        },
+        {
+          "char_similarity": 0.56,
+          "eval_id": "firm_core_002",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.29411764705882354,
+          "reasons": [],
+          "source_line": 1259,
+          "template_jaccard": 0.29411764705882354
+        },
+        {
+          "char_similarity": 0.5444444444444444,
+          "eval_id": "firm_core_002",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.2777777777777778,
+          "reasons": [],
+          "source_line": 1071,
+          "template_jaccard": 0.2777777777777778
+        },
+        {
+          "char_similarity": 0.8715083798882681,
+          "eval_id": "firm_core_003",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.47058823529411764,
+          "reasons": [
+            "fuzzy_or_structural_review"
+          ],
+          "source_line": 527,
+          "template_jaccard": 0.47058823529411764
+        },
+        {
+          "char_similarity": 0.7006369426751592,
+          "eval_id": "firm_core_003",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.4375,
+          "reasons": [],
+          "source_line": 208,
+          "template_jaccard": 0.4375
+        },
+        {
+          "char_similarity": 0.6011560693641619,
+          "eval_id": "firm_core_003",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.2631578947368421,
+          "reasons": [],
+          "source_line": 96,
+          "template_jaccard": 0.2631578947368421
+        },
+        {
+          "char_similarity": 0.8333333333333334,
+          "eval_id": "firm_core_004",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.7142857142857143,
+          "reasons": [
+            "fuzzy_or_structural_review"
+          ],
+          "source_line": 801,
+          "template_jaccard": 0.7142857142857143
+        },
+        {
+          "char_similarity": 0.46808510638297873,
+          "eval_id": "firm_core_004",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.17391304347826086,
+          "reasons": [],
+          "source_line": 1133,
+          "template_jaccard": 0.17391304347826086
+        },
+        {
+          "char_similarity": 0.4666666666666667,
+          "eval_id": "firm_core_004",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.16,
+          "reasons": [],
+          "source_line": 1720,
+          "template_jaccard": 0.16
+        },
+        {
+          "char_similarity": 0.5227272727272727,
+          "eval_id": "firm_core_005",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.16666666666666666,
+          "reasons": [],
+          "source_line": 248,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.5145631067961165,
+          "eval_id": "firm_core_005",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.2608695652173913,
+          "reasons": [],
+          "source_line": 1199,
+          "template_jaccard": 0.2608695652173913
+        },
+        {
+          "char_similarity": 0.5024154589371981,
+          "eval_id": "firm_core_005",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 1850,
+          "template_jaccard": 0.15384615384615385
+        },
+        {
+          "char_similarity": 0.693069306930693,
+          "eval_id": "firm_core_006",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.3157894736842105,
+          "reasons": [],
+          "source_line": 1822,
+          "template_jaccard": 0.3157894736842105
+        },
+        {
+          "char_similarity": 0.6198830409356725,
+          "eval_id": "firm_core_006",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.6428571428571429,
+          "reasons": [],
+          "source_line": 443,
+          "template_jaccard": 0.6428571428571429
+        },
+        {
+          "char_similarity": 0.5988700564971752,
+          "eval_id": "firm_core_006",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.29411764705882354,
+          "reasons": [],
+          "source_line": 1234,
+          "template_jaccard": 0.29411764705882354
+        },
+        {
+          "char_similarity": 0.3835616438356164,
+          "eval_id": "firm_core_007",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.23076923076923078,
+          "reasons": [],
+          "source_line": 666,
+          "template_jaccard": 0.23076923076923078
+        },
+        {
+          "char_similarity": 0.1702127659574468,
+          "eval_id": "firm_core_007",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 1534,
+          "template_jaccard": 0.15384615384615385
+        },
+        {
+          "char_similarity": 0.16161616161616163,
+          "eval_id": "firm_core_007",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 1647,
+          "template_jaccard": 0.15384615384615385
+        },
+        {
+          "char_similarity": 0.42016806722689076,
+          "eval_id": "firm_core_008",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.1935483870967742,
+          "reasons": [],
+          "source_line": 1,
+          "template_jaccard": 0.2222222222222222
+        },
+        {
+          "char_similarity": 0.42016806722689076,
+          "eval_id": "firm_core_008",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.1935483870967742,
+          "reasons": [],
+          "source_line": 97,
+          "template_jaccard": 0.2222222222222222
+        },
+        {
+          "char_similarity": 0.42016806722689076,
+          "eval_id": "firm_core_008",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.15625,
+          "reasons": [],
+          "source_line": 104,
+          "template_jaccard": 0.2222222222222222
+        },
+        {
+          "char_similarity": 0.5774647887323944,
+          "eval_id": "firm_core_009",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.25,
+          "reasons": [],
+          "source_line": 2187,
+          "template_jaccard": 0.25
+        },
+        {
+          "char_similarity": 0.5714285714285714,
+          "eval_id": "firm_core_009",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.21052631578947367,
+          "reasons": [],
+          "source_line": 865,
+          "template_jaccard": 0.21052631578947367
+        },
+        {
+          "char_similarity": 0.5647058823529412,
+          "eval_id": "firm_core_009",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.2,
+          "reasons": [],
+          "source_line": 2401,
+          "template_jaccard": 0.2
+        },
+        {
+          "char_similarity": 0.4375,
+          "eval_id": "firm_core_010",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.16666666666666666,
+          "reasons": [],
+          "source_line": 1880,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_010",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.14814814814814814,
+          "reasons": [],
+          "source_line": 2402,
+          "template_jaccard": 0.14814814814814814
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "firm_core_010",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.13793103448275862,
+          "reasons": [],
+          "source_line": 1167,
+          "template_jaccard": 0.13793103448275862
+        },
+        {
+          "char_similarity": 0.5543478260869565,
+          "eval_id": "boundary_001",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.2777777777777778,
+          "reasons": [],
+          "source_line": 456,
+          "template_jaccard": 0.2777777777777778
+        },
+        {
+          "char_similarity": 0.4090909090909091,
+          "eval_id": "boundary_001",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.2,
+          "reasons": [],
+          "source_line": 1546,
+          "template_jaccard": 0.2
+        },
+        {
+          "char_similarity": 0.3972602739726027,
+          "eval_id": "boundary_001",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.1875,
+          "reasons": [],
+          "source_line": 709,
+          "template_jaccard": 0.1875
+        },
+        {
+          "char_similarity": 0.6277372262773723,
+          "eval_id": "boundary_002",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.16666666666666666,
+          "reasons": [],
+          "source_line": 1280,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.5540540540540541,
+          "eval_id": "boundary_002",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.21052631578947367,
+          "reasons": [],
+          "source_line": 2326,
+          "template_jaccard": 0.21052631578947367
+        },
+        {
+          "char_similarity": 0.55,
+          "eval_id": "boundary_002",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.15,
+          "reasons": [],
+          "source_line": 1234,
+          "template_jaccard": 0.15
+        },
+        {
+          "char_similarity": 0.9795918367346939,
+          "eval_id": "boundary_003",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 1.0,
+          "reasons": [
+            "fuzzy_or_structural_review"
+          ],
+          "source_line": 2218,
+          "template_jaccard": 1.0
+        },
+        {
+          "char_similarity": 0.6181818181818182,
+          "eval_id": "boundary_003",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.5,
+          "reasons": [],
+          "source_line": 848,
+          "template_jaccard": 0.5
+        },
+        {
+          "char_similarity": 0.6122448979591837,
+          "eval_id": "boundary_003",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.2857142857142857,
+          "reasons": [],
+          "source_line": 409,
+          "template_jaccard": 0.2857142857142857
+        },
+        {
+          "char_similarity": 0.6451612903225806,
+          "eval_id": "boundary_004",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.16666666666666666,
+          "reasons": [],
+          "source_line": 1453,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.5909090909090909,
+          "eval_id": "boundary_004",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.2857142857142857,
+          "reasons": [],
+          "source_line": 1701,
+          "template_jaccard": 0.2857142857142857
+        },
+        {
+          "char_similarity": 0.5490196078431373,
+          "eval_id": "boundary_004",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.2222222222222222,
+          "reasons": [],
+          "source_line": 25,
+          "template_jaccard": 0.2222222222222222
+        },
+        {
+          "char_similarity": 0.6666666666666666,
+          "eval_id": "boundary_005",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.8333333333333334,
+          "reasons": [
+            "fuzzy_or_structural_review"
+          ],
+          "source_line": 1240,
+          "template_jaccard": 0.8333333333333334
+        },
+        {
+          "char_similarity": 0.5925925925925926,
+          "eval_id": "boundary_005",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.42857142857142855,
+          "reasons": [],
+          "source_line": 2309,
+          "template_jaccard": 0.42857142857142855
+        },
+        {
+          "char_similarity": 0.56,
+          "eval_id": "boundary_005",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.2857142857142857,
+          "reasons": [],
+          "source_line": 2008,
+          "template_jaccard": 0.2857142857142857
+        },
+        {
+          "char_similarity": 0.7,
+          "eval_id": "boundary_006",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.5714285714285714,
+          "reasons": [],
+          "source_line": 1444,
+          "template_jaccard": 0.5714285714285714
+        },
+        {
+          "char_similarity": 0.6666666666666666,
+          "eval_id": "boundary_006",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.42857142857142855,
+          "reasons": [],
+          "source_line": 1131,
+          "template_jaccard": 0.42857142857142855
+        },
+        {
+          "char_similarity": 0.6176470588235294,
+          "eval_id": "boundary_006",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.4444444444444444,
+          "reasons": [],
+          "source_line": 953,
+          "template_jaccard": 0.4444444444444444
+        },
+        {
+          "char_similarity": 1.0,
+          "eval_id": "boundary_007",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 1.0,
+          "reasons": [
+            "exact_prompt"
+          ],
+          "source_line": 1378,
+          "template_jaccard": 1.0
+        },
+        {
+          "char_similarity": 0.5866666666666667,
+          "eval_id": "boundary_007",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.2,
+          "reasons": [],
+          "source_line": 2156,
+          "template_jaccard": 0.2
+        },
+        {
+          "char_similarity": 0.575,
+          "eval_id": "boundary_007",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.25,
+          "reasons": [],
+          "source_line": 2134,
+          "template_jaccard": 0.25
+        },
+        {
+          "char_similarity": 0.6666666666666666,
+          "eval_id": "boundary_008",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.4,
+          "reasons": [],
+          "source_line": 334,
+          "template_jaccard": 0.4
+        },
+        {
+          "char_similarity": 0.584070796460177,
+          "eval_id": "boundary_008",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.1875,
+          "reasons": [],
+          "source_line": 118,
+          "template_jaccard": 0.1875
+        },
+        {
+          "char_similarity": 0.5063291139240507,
+          "eval_id": "boundary_008",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 524,
+          "template_jaccard": 0.15384615384615385
+        },
+        {
+          "char_similarity": 0.4656084656084656,
+          "eval_id": "boundary_009",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 208,
+          "template_jaccard": 0.15384615384615385
+        },
+        {
+          "char_similarity": 0.44565217391304346,
+          "eval_id": "boundary_009",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 921,
+          "template_jaccard": 0.15384615384615385
+        },
+        {
+          "char_similarity": 0.39378238341968913,
+          "eval_id": "boundary_009",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 1724,
+          "template_jaccard": 0.15384615384615385
+        },
+        {
+          "char_similarity": 0.6153846153846154,
+          "eval_id": "boundary_010",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.5384615384615384,
+          "reasons": [],
+          "source_line": 2101,
+          "template_jaccard": 0.5384615384615384
+        },
+        {
+          "char_similarity": 0.5693430656934306,
+          "eval_id": "boundary_010",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.18181818181818182,
+          "reasons": [],
+          "source_line": 1212,
+          "template_jaccard": 0.18181818181818182
+        },
+        {
+          "char_similarity": 0.546875,
+          "eval_id": "boundary_010",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.15789473684210525,
+          "reasons": [],
+          "source_line": 1385,
+          "template_jaccard": 0.15789473684210525
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_001",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.12195121951219512,
+          "reasons": [],
+          "source_line": 47,
+          "template_jaccard": 0.15
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_001",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.12195121951219512,
+          "reasons": [],
+          "source_line": 220,
+          "template_jaccard": 0.15
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_001",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.12195121951219512,
+          "reasons": [],
+          "source_line": 554,
+          "template_jaccard": 0.15
+        },
+        {
+          "char_similarity": 0.2857142857142857,
+          "eval_id": "numeric_pilot_002",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.1744186046511628,
+          "reasons": [],
+          "source_line": 2450,
+          "template_jaccard": 0.17333333333333334
+        },
+        {
+          "char_similarity": 0.2627118644067797,
+          "eval_id": "numeric_pilot_002",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.16666666666666666,
+          "reasons": [],
+          "source_line": 190,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.2585034013605442,
+          "eval_id": "numeric_pilot_002",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.1590909090909091,
+          "reasons": [],
+          "source_line": 1696,
+          "template_jaccard": 0.16883116883116883
+        },
+        {
+          "char_similarity": 0.23237597911227154,
+          "eval_id": "numeric_pilot_003",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 1312,
+          "template_jaccard": 0.1686746987951807
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_003",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.14942528735632185,
+          "reasons": [],
+          "source_line": 2450,
+          "template_jaccard": 0.16455696202531644
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_003",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.14457831325301204,
+          "reasons": [],
+          "source_line": 501,
+          "template_jaccard": 0.16
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_004",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.11764705882352941,
+          "reasons": [],
+          "source_line": 1564,
+          "template_jaccard": 0.13333333333333333
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_004",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.11764705882352941,
+          "reasons": [],
+          "source_line": 1588,
+          "template_jaccard": 0.13333333333333333
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_004",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.1111111111111111,
+          "reasons": [],
+          "source_line": 1720,
+          "template_jaccard": 0.125
+        },
+        {
+          "char_similarity": 0.15561959654178675,
+          "eval_id": "numeric_pilot_005",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 153,
+          "template_jaccard": 0.1791044776119403
+        },
+        {
+          "char_similarity": 0.1412639405204461,
+          "eval_id": "numeric_pilot_005",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.17647058823529413,
+          "reasons": [],
+          "source_line": 1919,
+          "template_jaccard": 0.1724137931034483
+        },
+        {
+          "char_similarity": 0.14152700186219738,
+          "eval_id": "numeric_pilot_005",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.17391304347826086,
+          "reasons": [],
+          "source_line": 49,
+          "template_jaccard": 0.1724137931034483
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_006",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.125,
+          "reasons": [],
+          "source_line": 485,
+          "template_jaccard": 0.15384615384615385
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_006",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.1134020618556701,
+          "reasons": [],
+          "source_line": 985,
+          "template_jaccard": 0.15384615384615385
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_006",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.125,
+          "reasons": [],
+          "source_line": 1441,
+          "template_jaccard": 0.15384615384615385
+        },
+        {
+          "char_similarity": 0.21132075471698114,
+          "eval_id": "numeric_pilot_007",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.15,
+          "reasons": [],
+          "source_line": 1821,
+          "template_jaccard": 0.15789473684210525
+        },
+        {
+          "char_similarity": 0.2053388090349076,
+          "eval_id": "numeric_pilot_007",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.16363636363636364,
+          "reasons": [],
+          "source_line": 584,
+          "template_jaccard": 0.17307692307692307
+        },
+        {
+          "char_similarity": 0.2020618556701031,
+          "eval_id": "numeric_pilot_007",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.16363636363636364,
+          "reasons": [],
+          "source_line": 2253,
+          "template_jaccard": 0.17307692307692307
+        },
+        {
+          "char_similarity": 0.29455081001472755,
+          "eval_id": "numeric_pilot_008",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.1590909090909091,
+          "reasons": [],
+          "source_line": 51,
+          "template_jaccard": 0.18072289156626506
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_008",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.13580246913580246,
+          "reasons": [],
+          "source_line": 153,
+          "template_jaccard": 0.14666666666666667
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "numeric_pilot_008",
+          "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+          "jaccard": 0.13253012048192772,
+          "reasons": [],
+          "source_line": 501,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.27586206896551724,
+          "eval_id": "v2_001",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.1794871794871795,
+          "reasons": [],
+          "source_line": 45,
+          "template_jaccard": 0.18421052631578946
+        },
+        {
+          "char_similarity": 0.2585034013605442,
+          "eval_id": "v2_001",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 1357,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.2585034013605442,
+          "eval_id": "v2_001",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 1366,
+          "template_jaccard": 0.14285714285714285
+        },
+        {
+          "char_similarity": 0.42574257425742573,
+          "eval_id": "v2_002",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.2,
+          "reasons": [],
+          "source_line": 1576,
+          "template_jaccard": 0.2
+        },
+        {
+          "char_similarity": 0.4131455399061033,
+          "eval_id": "v2_002",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.28,
+          "reasons": [],
+          "source_line": 1647,
+          "template_jaccard": 0.28
+        },
+        {
+          "char_similarity": 0.4,
+          "eval_id": "v2_002",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.15384615384615385,
+          "reasons": [],
+          "source_line": 447,
+          "template_jaccard": 0.15384615384615385
+        },
+        {
+          "char_similarity": 0.29836829836829837,
+          "eval_id": "v2_003",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.15254237288135594,
+          "reasons": [],
+          "source_line": 51,
+          "template_jaccard": 0.18867924528301888
+        },
+        {
+          "char_similarity": 0.21103117505995203,
+          "eval_id": "v2_003",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.1836734693877551,
+          "reasons": [],
+          "source_line": 153,
+          "template_jaccard": 0.18604651162790697
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_003",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.13513513513513514,
+          "reasons": [],
+          "source_line": 287,
+          "template_jaccard": 0.14705882352941177
+        },
+        {
+          "char_similarity": 0.33663366336633666,
+          "eval_id": "v2_004",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.175,
+          "reasons": [],
+          "source_line": 96,
+          "template_jaccard": 0.1794871794871795
+        },
+        {
+          "char_similarity": 0.2598187311178248,
+          "eval_id": "v2_004",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.20454545454545456,
+          "reasons": [],
+          "source_line": 3,
+          "template_jaccard": 0.20930232558139536
+        },
+        {
+          "char_similarity": 0.2597402597402597,
+          "eval_id": "v2_004",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.1590909090909091,
+          "reasons": [],
+          "source_line": 252,
+          "template_jaccard": 0.16279069767441862
+        },
+        {
+          "char_similarity": 0.32599118942731276,
+          "eval_id": "v2_005",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.16129032258064516,
+          "reasons": [],
+          "source_line": 2079,
+          "template_jaccard": 0.16129032258064516
+        },
+        {
+          "char_similarity": 0.31693989071038253,
+          "eval_id": "v2_005",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.16666666666666666,
+          "reasons": [],
+          "source_line": 2369,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.2857142857142857,
+          "eval_id": "v2_005",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.23076923076923078,
+          "reasons": [],
+          "source_line": 2527,
+          "template_jaccard": 0.23076923076923078
+        },
+        {
+          "char_similarity": 0.5034013605442177,
+          "eval_id": "v2_006",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.2222222222222222,
+          "reasons": [],
+          "source_line": 709,
+          "template_jaccard": 0.2222222222222222
+        },
+        {
+          "char_similarity": 0.42857142857142855,
+          "eval_id": "v2_006",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.16666666666666666,
+          "reasons": [],
+          "source_line": 712,
+          "template_jaccard": 0.16666666666666666
+        },
+        {
+          "char_similarity": 0.42105263157894735,
+          "eval_id": "v2_006",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.19047619047619047,
+          "reasons": [],
+          "source_line": 1860,
+          "template_jaccard": 0.19047619047619047
+        },
+        {
+          "char_similarity": 0.5106382978723404,
+          "eval_id": "v2_007",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.21739130434782608,
+          "reasons": [],
+          "source_line": 293,
+          "template_jaccard": 0.21739130434782608
+        },
+        {
+          "char_similarity": 0.460093896713615,
+          "eval_id": "v2_007",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.4090909090909091,
+          "reasons": [],
+          "source_line": 1097,
+          "template_jaccard": 0.4090909090909091
+        },
+        {
+          "char_similarity": 0.44,
+          "eval_id": "v2_007",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.16,
+          "reasons": [],
+          "source_line": 2401,
+          "template_jaccard": 0.16
+        },
+        {
+          "char_similarity": 0.4965986394557823,
+          "eval_id": "v2_008",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.3870967741935484,
+          "reasons": [],
+          "source_line": 864,
+          "template_jaccard": 0.3870967741935484
+        },
+        {
+          "char_similarity": 0.4247104247104247,
+          "eval_id": "v2_008",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.21875,
+          "reasons": [],
+          "source_line": 1419,
+          "template_jaccard": 0.21875
+        },
+        {
+          "char_similarity": 0.375886524822695,
+          "eval_id": "v2_008",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.20588235294117646,
+          "reasons": [],
+          "source_line": 2307,
+          "template_jaccard": 0.20588235294117646
+        },
+        {
+          "char_similarity": 0.45535714285714285,
+          "eval_id": "v2_009",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.17857142857142858,
+          "reasons": [],
+          "source_line": 46,
+          "template_jaccard": 0.17857142857142858
+        },
+        {
+          "char_similarity": 0.4358974358974359,
+          "eval_id": "v2_009",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.1724137931034483,
+          "reasons": [],
+          "source_line": 1720,
+          "template_jaccard": 0.1724137931034483
+        },
+        {
+          "char_similarity": 0.42857142857142855,
+          "eval_id": "v2_009",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.22727272727272727,
+          "reasons": [],
+          "source_line": 1529,
+          "template_jaccard": 0.22727272727272727
+        },
+        {
+          "char_similarity": 0.32684824902723736,
+          "eval_id": "v2_010",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.2222222222222222,
+          "reasons": [],
+          "source_line": 2527,
+          "template_jaccard": 0.2222222222222222
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_010",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.14814814814814814,
+          "reasons": [],
+          "source_line": 1265,
+          "template_jaccard": 0.14814814814814814
+        },
+        {
+          "char_similarity": 0.0,
+          "eval_id": "v2_010",
+          "eval_source": "evals/firm_v2_expert_eval.jsonl",
+          "jaccard": 0.14814814814814814,
+          "reasons": [],
+          "source_line": 2188,
+          "template_jaccard": 0.14814814814814814
+        }
+      ],
+      "findings": [
+        {
+          "char_similarity": 0.8715083798882681,
+          "eval_id": "firm_core_003",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.47058823529411764,
+          "reasons": [
+            "fuzzy_or_structural_review"
+          ],
+          "source_line": 527,
+          "template_jaccard": 0.47058823529411764
+        },
+        {
+          "char_similarity": 0.8333333333333334,
+          "eval_id": "firm_core_004",
+          "eval_source": "evals/firm_core_eval.jsonl",
+          "jaccard": 0.7142857142857143,
+          "reasons": [
+            "fuzzy_or_structural_review"
+          ],
+          "source_line": 801,
+          "template_jaccard": 0.7142857142857143
+        },
+        {
+          "char_similarity": 0.9795918367346939,
+          "eval_id": "boundary_003",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 1.0,
+          "reasons": [
+            "fuzzy_or_structural_review"
+          ],
+          "source_line": 2218,
+          "template_jaccard": 1.0
+        },
+        {
+          "char_similarity": 0.6666666666666666,
+          "eval_id": "boundary_005",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 0.8333333333333334,
+          "reasons": [
+            "fuzzy_or_structural_review"
+          ],
+          "source_line": 1240,
+          "template_jaccard": 0.8333333333333334
+        },
+        {
+          "char_similarity": 1.0,
+          "eval_id": "boundary_007",
+          "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+          "jaccard": 1.0,
+          "reasons": [
+            "exact_prompt"
+          ],
+          "source_line": 1378,
+          "template_jaccard": 1.0
+        }
+      ],
+      "limitations": "Lexical and numeric-template candidates only; manual semantic review still required.",
+      "manual_review_exclusions": [
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": "v2_004",
+          "line": 5,
+          "prompt": "How do you extract an infrared photodetector time constant from chopped-source or lock-in frequency response data?",
+          "prompt_sha256": "c1afa19fffab4d42716d498a7495d02273b39040916178d04a27f479deb0aaf4",
+          "reason": "Equivalent frequency-response lifetime extraction and artifact controls",
+          "reviewer": "Codex scientific/semantic audit; not human expert approval",
+          "source": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+          "source_sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": "v2_004",
+          "line": 18,
+          "prompt": "Give a mathematical framework for separating detector response, readout response, and optical-source response in a measured frequency roll-off.",
+          "prompt_sha256": "513d237742ae320d76ad6331046d4c232138006985d449ed58196f5692881e11",
+          "reason": "Equivalent measurement-chain rolloff de-embedding",
+          "reviewer": "Codex scientific/semantic audit; not human expert approval",
+          "source": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+          "source_sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": "v2_007",
+          "line": 7,
+          "prompt": "How should blackbody radiometry be connected to measured voltage responsivity in an HgCdTe detector test?",
+          "prompt_sha256": "ea231300776f4fb80f32c1fe00918409139f45878de18363b772ce28e9b21537",
+          "reason": "Close paraphrase of blackbody-to-voltage workflow",
+          "reviewer": "Codex scientific/semantic audit; not human expert approval",
+          "source": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+          "source_sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": "v2_008",
+          "line": 12,
+          "prompt": "What is the correct way to interpret a negative slope in the high-transmission region of an HgCdTe transmission spectrum?",
+          "prompt_sha256": "11a09c442e27d7e65a0afe9c77898e0aa2c8f90ef22ecfa355b818834b27dd10",
+          "reason": "Close paraphrase of transmission slope/cutoff diagnosis",
+          "reviewer": "Codex scientific/semantic audit; not human expert approval",
+          "source": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+          "source_sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": "v2_010",
+          "line": 14,
+          "prompt": "Give an expert explanation of why an HgCdTe wafer anneal can change detector behavior even if the cutoff wavelength barely moves.",
+          "prompt_sha256": "cb0ae385860b7b33b92d30478e2fc3fc8fd499948656d76f9d9744460a2f5bf7",
+          "reason": "Equivalent unchanged-cutoff annealing interpretation",
+          "reviewer": "Codex scientific/semantic audit; not human expert approval",
+          "source": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+          "source_sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": "v2_006",
+          "line": 17,
+          "prompt": "Explain why a detector can look good in IV but poor in optical response.",
+          "prompt_sha256": "f743797abfefc5d10111ec9e82ed45a8e21cb045356eb0c59eb8553002304f56",
+          "reason": "Equivalent insufficiency of IV alone",
+          "reviewer": "Codex scientific/semantic audit; not human expert approval",
+          "source": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+          "source_sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": "v2_006",
+          "line": 19,
+          "prompt": "How should FIRM handle empirical claims about HgCdTe material quality from limited data?",
+          "prompt_sha256": "3d0d709ba4cfaf130a5b522e327b0ad0a721edfe3a002f77f69e133d0be76d04",
+          "reason": "Equivalent limited-data material-quality interpretation",
+          "reviewer": "Codex scientific/semantic audit; not human expert approval",
+          "source": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl",
+          "source_sha256": "c5e98c902d8cbb6f9fd8930f1352ddf985f47d3f60c90ca95240e9b8e2e56877"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": "v2_009",
+          "line": 4,
+          "prompt": "How can Hall measurements constrain HgCdTe detector modeling?",
+          "prompt_sha256": "d6aa2877f4acc53a84e0a13e0f2cae255d33b50721793dd4a8ced1431e6a3be0",
+          "reason": "Close paraphrase of Hall constraints on detector model",
+          "reviewer": "Codex scientific/semantic audit; not human expert approval",
+          "source": "data/processed/firm_v2_expert_hgcdte_deep_batch02.jsonl",
+          "source_sha256": "675fd8002bff3c3a08113ce2f3d71e68535339646eed2884e63dd8a8d6b0fff5"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": "v2_005",
+          "line": 6,
+          "prompt": "How should FIRM analyze a detector whose noise improves after passivation but responsivity decreases?",
+          "prompt_sha256": "df0f47bda85633076362648de1325e236a3cafea537fbfe0b9eb5d6abc5ebeec",
+          "reason": "Close paraphrase of passivation noise-responsivity tradeoff",
+          "reviewer": "Codex scientific/semantic audit; not human expert approval",
+          "source": "data/processed/firm_v2_expert_hgcdte_deep_batch03.jsonl",
+          "source_sha256": "25cebc45acb71f398e2f8f597d9bc7599b99cbd59ff15c1364886cf2cd232c2c"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": "v2_010",
+          "line": 38,
+          "prompt": "Why is annealing important after HgCdTe growth, and why can it change electrical behavior without moving cutoff?",
+          "prompt_sha256": "3c3baaaced5da55c4c45fbabeab353d9799debf366e616b3539dee80f74ebf1b",
+          "reason": "Equivalent annealing electrical change without moving cutoff",
+          "reviewer": "Codex scientific/semantic audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": null,
+          "line": 2526,
+          "prompt": "Estimate GR lifetime from a Lorentzian noise spectrum.\nA device shows a single-peaked current-noise PSD that is flat at low f and rolls off ~f⁻² above 2 kHz (−3 dB near 2 kHz). Estimate the trap lifetime τ and compute total GR variance (all f) for mean current I=50 μA.",
+          "prompt_sha256": "ecd6e838ab3c628241d8547672b697c61ef18042517a983416390473d2474879",
+          "reason": "Mean current and corner frequency do not determine GR PSD amplitude or integrated variance without population/volume or measured S0",
+          "reviewer": "Codex scientific/semantic audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": "firm_core_008",
+          "line": 2525,
+          "prompt": "Extract 1/f corner frequency f_c from a measured noise curve.\nMeasured voltage noise densities: at 10 Hz → 40 nV/√Hz; at 1 kHz → 4 nV/√Hz (flat white floor). Estimate the 1/f corner where 1/f equals white noise, then compute integrated noise from 1–1000 Hz.",
+          "prompt_sha256": "cefd06ddbc70530a34b52062fd8dda7c4a9751242fcd12c3e181f4c2fde3dc6c",
+          "reason": "Numeric variant of corner-frequency extraction scenario",
+          "reviewer": "Codex scientific/semantic audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": null,
+          "line": 86,
+          "prompt": "Derive or use an empirical HgCdTe bandgap relation versus Cd composition at 77 K, and state its limitations.",
+          "prompt_sha256": "dae92d98ca00873e0a99326db78695a1c53d9e707efab8a9ee665d56bf917b96",
+          "reason": "Truncated unreferenced HSC-like polynomial presented as a 77 K model; lacks temperature and cubic terms; pending source verification",
+          "reviewer": "Codex scientific audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": null,
+          "line": 2519,
+          "prompt": "Voltage responsivity for a photoconductor with load.\nGiven: optical responsivity R_I=0.6 A/W, bias V_b=1 V across series of detector R_d=200 Ω and load R_L=800 Ω. Low frequency. Compute small-signal V_out per watt at the load in V/W.",
+          "prompt_sha256": "2c18446634c3ab1998146dc9c41c8a5367ce6de373d550cc2071e8bcdef91c1b",
+          "reason": "A/W times dimensionless divider labeled V/W; missing transimpedance and unspecified photocurrent model",
+          "reviewer": "Codex scientific audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": null,
+          "line": 2520,
+          "prompt": "Compute D* for a 1×1 mm² detector.\nGiven: R_I=0.8 A/W, R_L=1 kΩ in series with R_d=1 kΩ → R_V= (R_I R_L/(R_d+R_L))=0.4 V/W. Measured output noise density e_n=5 nV/√Hz flat over Δf=100 Hz. Find D* using D* = (R_V √A)/e_n.",
+          "prompt_sha256": "f9468d590d1896124765ab3a89e11a8df32a0ecfa8be74ad8df83dcb5664a813",
+          "reason": "Prompt provides a dimensionally invalid A/W to V/W divider conversion, although final density Dstar arithmetic alone is consistent",
+          "reviewer": "Codex scientific audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": null,
+          "line": 2521,
+          "prompt": "SNR penalty from series resistance.\nGiven: R_d=100 Ω, R_L=900 Ω vs. a matched case R_L=100 Ω. Noise is dominated by front-end e_n=2 nV/√Hz. Signal current from flux is i_p=10 μA. Bandwidth 1 kHz. Compare SNR at the load in both cases.",
+          "prompt_sha256": "5a1057c5ec5a8196a3420f4af2fb41ab7cc9f6c6e7a4099fc7582a79f6e92dad",
+          "reason": "Answer switches between parallel transimpedance and using RL alone; Norton-source consistency unresolved",
+          "reviewer": "Codex scientific audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": null,
+          "line": 2523,
+          "prompt": "Johnson noise scaling with bandwidth and temperature.\nGiven a 200 Ω resistor, compute v_n,rms at (a) 77 K over 1 kHz, (b) 300 K over 10 kHz. Provide the spectral density and totals, and comment on scaling.",
+          "prompt_sha256": "06a7a04ed88aca6b99e386d42be177dee1a8cd71010141863051910ef8dbb18e",
+          "reason": "Johnson sqrt(4kBTR) arithmetic and temperature scaling are inconsistent",
+          "reviewer": "Codex scientific audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": null,
+          "line": 2524,
+          "prompt": "Equivalent Johnson noise of two resistors in parallel.\nGiven R1=1 kΩ and R2=1 kΩ at 300 K, compute the Thevenin-equivalent voltage noise density seen at the port and the integrated rms over 1 kHz. Show why you cannot just add voltages.",
+          "prompt_sha256": "20f2ba6e0895a1088c9a7bf5b60149d114fa54788b62f9487df136e1d94adece",
+          "reason": "Two 1kohm resistors at 300K imply sqrt(4kBT*500)=2.88 nV/sqrtHz, not 0.911 nV/sqrtHz",
+          "reviewer": "Codex scientific audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": null,
+          "line": 2528,
+          "prompt": "Emissivity effect on apparent radiance.\nA target at 320 K has emissivity ε=0.8 and fills the FOV (8–12 μm band). Background is 300 K, optics f/2, η=0.7. Estimate equivalent blackbody temperature T_bb that gives same band power as seen by the detector.",
+          "prompt_sha256": "b257cfaa950be114130e5c008b14874de07aaacfba842e2b60602d1d1e0f2bf3",
+          "reason": "Mixed scene from 300K and 320K cannot have a 322K equivalent blackbody temperature for positive monotonic radiance",
+          "reviewer": "Codex scientific audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": null,
+          "line": 2529,
+          "prompt": "Compute small-signal voltage responsivity (V/W) for a biased photoconductor.\nGiven: R_I=0.5 A/W; dark resistance R_d=500 Ω; load R_L=500 Ω in series from a stiff 1 V bias. Low frequency. Calculate R_V at the load and comment on maximum achievable.",
+          "prompt_sha256": "ea8b1009e7dbed3b84a271e969edb7bc7704d75c371e4b7515604f69e31c9149",
+          "reason": "A/W times dimensionless divider mislabeled V/W; treats current responsivity as a voltage ceiling",
+          "reviewer": "Codex scientific audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": null,
+          "line": 2517,
+          "prompt": "Blackbody band power on a single pixel.\nGiven: 300 K blackbody, f/#=2 optics, passband 8–12 μm, pixel area A=25×25 μm², total optical efficiency η=0.6. Compute incident power on pixel (use band-averaged radiance).",
+          "prompt_sha256": "b88129270480c745bcddad4d9aaf477ec80857ff5e5b7df622b1b4db86495457",
+          "reason": "Quoted 8-12um 300K band radiance 1100 W/m2/sr exceeds total hemispheric blackbody radiance sigma*T^4/pi (~146 W/m2/sr)",
+          "reviewer": "Codex scientific audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": null,
+          "line": 2518,
+          "prompt": "Irradiance at the detector from a 300 K Lambertian source filling the FOV.\nGiven: entrance pupil diameter D=10 mm (area A_p), f/#=2 → Ω≈π/16, η=0.7, band 3–5 μm with L_band≈2.0×10³ W·m⁻²·sr⁻¹. Compute power on detector area A_d=1 mm².",
+          "prompt_sha256": "71beb5fd5e532907d4262d5945a8ca91473f9493ac920b84b2c19d4b2b939637",
+          "reason": "Quoted 3-5um 300K band radiance 2000 W/m2/sr exceeds total blackbody radiance (~146 W/m2/sr); given value needs explicit physical caveat",
+          "reviewer": "Codex scientific audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": null,
+          "line": 2522,
+          "prompt": "Estimate carrier lifetime from a small-signal step response.\nGiven: biased photoconductor shows exponential decay in current after a light pulse: i(t)=I₀ e^{-t/τ_m}. Measured τ_m=120 μs with load R_L=1 kΩ and device capacitance C_d=10 nF. Separate electrical RC from recombination lifetime and report τ_rec.",
+          "prompt_sha256": "822426aa2acb8c955f10ba9c56d41d9ada8fce0c760a243fdbe22e9fc9f33dc7",
+          "reason": "Cascade RC and recombination poles do not obey parallel-rate addition; conclusion that RC must be slower than lifetime reverses bandwidth discipline",
+          "reviewer": "Codex scientific audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        },
+        {
+          "decision": "quarantine connected family pending review",
+          "eval_id": null,
+          "line": 2527,
+          "prompt": "Estimate photon flux onto a 25 μm pixel from a 300 K blackbody in the 8–12 μm band with f/1 optics and η=0.5. Provide photons/s at the pixel (use band-averaged values).",
+          "prompt_sha256": "d1f8f68c3d9939e24cae38166fb09270df43d052fb106f2045857dea684d4052",
+          "reason": "Band photon radiance is an unsupported estimate; re-integrate Planck photon radiance and define whether efficiency is optical or quantum",
+          "reviewer": "Codex scientific audit; not human expert approval",
+          "source": "data/processed/firm_rewritten_large_sft.jsonl",
+          "source_sha256": "bc9f733123ec832d6e0b9bcea5627946c1ec463314db31e89e348ce27de2698f"
+        }
+      ],
+      "scientific_review_flags": {
+        "by_family": {
+          "Dstar_Jones": 150,
+          "Johnson_RMS": 100,
+          "NEP_integrated": 180,
+          "Planck_radiance_per_m": 100,
+          "photocurrent": 100,
+          "shot_limited_SNR": 140,
+          "shot_noise_RMS": 120
+        },
+        "count": 890,
+        "flagged": [
+          {
+            "expected": 12648327461975.12,
+            "family": "Dstar_Jones",
+            "line": 6,
+            "relative_error": 0.9899986776607185,
+            "reported": 126500000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 2083645.55912307,
+            "family": "Dstar_Jones",
+            "line": 20,
+            "relative_error": 0.9899791018157678,
+            "reported": 20880.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 15847262339.409822,
+            "family": "Dstar_Jones",
+            "line": 32,
+            "relative_error": 0.989954100803639,
+            "reported": 159200000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 3798227946371.6836,
+            "family": "Dstar_Jones",
+            "line": 33,
+            "relative_error": 0.990011131365551,
+            "reported": 37940000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 92046459.51229058,
+            "family": "Dstar_Jones",
+            "line": 37,
+            "relative_error": 0.9900637134242205,
+            "reported": 914600.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 66904736.178330936,
+            "family": "Dstar_Jones",
+            "line": 48,
+            "relative_error": 0.9900111705362878,
+            "reported": 668300.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 64250230944.80048,
+            "family": "Dstar_Jones",
+            "line": 53,
+            "relative_error": 0.9899984795299479,
+            "reported": 642600000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 76582232.18680224,
+            "family": "Dstar_Jones",
+            "line": 62,
+            "relative_error": 0.9900002914758083,
+            "reported": 765800.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 151496647960.91193,
+            "family": "Dstar_Jones",
+            "line": 85,
+            "relative_error": 0.9899667747078326,
+            "reported": 1520000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 11695192281.711824,
+            "family": "Dstar_Jones",
+            "line": 86,
+            "relative_error": 0.9900044396719496,
+            "reported": 116900000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 464055080.6766699,
+            "family": "Dstar_Jones",
+            "line": 109,
+            "relative_error": 0.9900011869426489,
+            "reported": 4640000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 777284996632.1045,
+            "family": "Dstar_Jones",
+            "line": 138,
+            "relative_error": 0.9899985204478615,
+            "reported": 7774000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 3567202278.533,
+            "family": "Dstar_Jones",
+            "line": 148,
+            "relative_error": 0.9900201902722936,
+            "reported": 35600000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 8893691.719914094,
+            "family": "Dstar_Jones",
+            "line": 165,
+            "relative_error": 0.9900052753345425,
+            "reported": 88890.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 31799652051.529858,
+            "family": "Dstar_Jones",
+            "line": 173,
+            "relative_error": 0.9898489455332116,
+            "reported": 322800000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 18178062828.280544,
+            "family": "Dstar_Jones",
+            "line": 196,
+            "relative_error": 0.9899989343354472,
+            "reported": 181800000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 94742816666.57393,
+            "family": "Dstar_Jones",
+            "line": 200,
+            "relative_error": 0.9899992418070648,
+            "reported": 947500000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 32038391007.05857,
+            "family": "Dstar_Jones",
+            "line": 209,
+            "relative_error": 0.989999497792214,
+            "reported": 320400000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 8645984947117.761,
+            "family": "Dstar_Jones",
+            "line": 210,
+            "relative_error": 0.990027741139112,
+            "reported": 86220000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 9760126563140.184,
+            "family": "Dstar_Jones",
+            "line": 211,
+            "relative_error": 0.9899970559430339,
+            "reported": 97630000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1337089169644162.0,
+            "family": "Dstar_Jones",
+            "line": 223,
+            "relative_error": 0.9900006668937733,
+            "reported": 13370000000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 8837756683.479225,
+            "family": "Dstar_Jones",
+            "line": 250,
+            "relative_error": 0.9899997246852007,
+            "reported": 88380000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 732685934.0696661,
+            "family": "Dstar_Jones",
+            "line": 280,
+            "relative_error": 0.9900039025461848,
+            "reported": 7324000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 530040775.7259307,
+            "family": "Dstar_Jones",
+            "line": 284,
+            "relative_error": 0.9899969959995275,
+            "reported": 5302000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 0.0030316979899684747,
+            "family": "Planck_radiance_per_m",
+            "line": 294,
+            "relative_error": 0.026947931567987183,
+            "reported": 0.00295,
+            "status": "review",
+            "unit": "W/(m^2*sr*m)"
+          },
+          {
+            "expected": 1232088345.3339033,
+            "family": "Dstar_Jones",
+            "line": 299,
+            "relative_error": 0.9899844844351191,
+            "reported": 12340000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 21759564665874.887,
+            "family": "Dstar_Jones",
+            "line": 312,
+            "relative_error": 0.989999799934359,
+            "reported": 217600000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1648746012.6482224,
+            "family": "Dstar_Jones",
+            "line": 319,
+            "relative_error": 0.9899984595119574,
+            "reported": 16490000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 59645860678.12498,
+            "family": "Dstar_Jones",
+            "line": 330,
+            "relative_error": 0.989997629454632,
+            "reported": 596600000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 174722542793.1785,
+            "family": "Dstar_Jones",
+            "line": 348,
+            "relative_error": 0.9899955668452631,
+            "reported": 1748000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 129594809353.37625,
+            "family": "Dstar_Jones",
+            "line": 367,
+            "relative_error": 0.9899995994711015,
+            "reported": 1296000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 3921288311.273118,
+            "family": "Dstar_Jones",
+            "line": 369,
+            "relative_error": 0.9898961777724687,
+            "reported": 39620000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 4536473328683.893,
+            "family": "Dstar_Jones",
+            "line": 382,
+            "relative_error": 0.9899988390291798,
+            "reported": 45370000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 172190739414.31876,
+            "family": "Dstar_Jones",
+            "line": 385,
+            "relative_error": 0.9899530020842913,
+            "reported": 1730000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 92912798.74378411,
+            "family": "Dstar_Jones",
+            "line": 389,
+            "relative_error": 0.9899970723886715,
+            "reported": 929400.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 44074464026.27483,
+            "family": "Dstar_Jones",
+            "line": 392,
+            "relative_error": 0.9899873995124042,
+            "reported": 441300000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 24215649.824225638,
+            "family": "Dstar_Jones",
+            "line": 418,
+            "relative_error": 0.9900312400554083,
+            "reported": 241400.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 276499306.8028021,
+            "family": "Dstar_Jones",
+            "line": 427,
+            "relative_error": 0.9899999749295141,
+            "reported": 2765000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 72441641674.75937,
+            "family": "Dstar_Jones",
+            "line": 444,
+            "relative_error": 0.9900002266203142,
+            "reported": 724400000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 163593580.39343798,
+            "family": "Dstar_Jones",
+            "line": 464,
+            "relative_error": 0.9899996075881128,
+            "reported": 1636000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 2739822298294.8755,
+            "family": "Dstar_Jones",
+            "line": 493,
+            "relative_error": 0.9900030012833145,
+            "reported": 27390000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 2890887051.7997975,
+            "family": "Dstar_Jones",
+            "line": 506,
+            "relative_error": 0.9899996092957,
+            "reported": 28910000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 6362626722.52378,
+            "family": "Dstar_Jones",
+            "line": 511,
+            "relative_error": 0.9900009850059592,
+            "reported": 63620000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 5945840719964.091,
+            "family": "Dstar_Jones",
+            "line": 526,
+            "relative_error": 0.9899980502672532,
+            "reported": 59470000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 2383805648.4952507,
+            "family": "Dstar_Jones",
+            "line": 570,
+            "relative_error": 0.9899991847007122,
+            "reported": 23840000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 93273220.89774236,
+            "family": "Dstar_Jones",
+            "line": 576,
+            "relative_error": 0.990002489556758,
+            "reported": 932500.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 3385491729.3976383,
+            "family": "Dstar_Jones",
+            "line": 583,
+            "relative_error": 0.9899984986801239,
+            "reported": 33860000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 565137271295.1832,
+            "family": "Dstar_Jones",
+            "line": 602,
+            "relative_error": 0.9900006595087083,
+            "reported": 5651000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 9754995566.528465,
+            "family": "Dstar_Jones",
+            "line": 610,
+            "relative_error": 0.990018447539423,
+            "reported": 97370000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1040586973403.4025,
+            "family": "Dstar_Jones",
+            "line": 652,
+            "relative_error": 0.9899960308306066,
+            "reported": 10410000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 188160959598.7962,
+            "family": "Dstar_Jones",
+            "line": 680,
+            "relative_error": 0.9900032397580735,
+            "reported": 1881000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 80664528010.43481,
+            "family": "Dstar_Jones",
+            "line": 702,
+            "relative_error": 0.99000056133849,
+            "reported": 806600000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 377438363.6988149,
+            "family": "Dstar_Jones",
+            "line": 719,
+            "relative_error": 0.9900010164228786,
+            "reported": 3774000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1321237824563.5037,
+            "family": "Dstar_Jones",
+            "line": 756,
+            "relative_error": 0.9900018000132836,
+            "reported": 13210000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 74077378800.33356,
+            "family": "Dstar_Jones",
+            "line": 758,
+            "relative_error": 0.9899550981412878,
+            "reported": 744100000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 26111958667.746677,
+            "family": "Dstar_Jones",
+            "line": 785,
+            "relative_error": 0.9900045797666498,
+            "reported": 261000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 3162713332.8219433,
+            "family": "Dstar_Jones",
+            "line": 813,
+            "relative_error": 0.9900022554457103,
+            "reported": 31620000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 3358482252146.462,
+            "family": "Dstar_Jones",
+            "line": 814,
+            "relative_error": 0.9899984583874064,
+            "reported": 33590000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 4165741288.619136,
+            "family": "Dstar_Jones",
+            "line": 841,
+            "relative_error": 0.9900017794878937,
+            "reported": 41650000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 894823756804.9073,
+            "family": "Dstar_Jones",
+            "line": 853,
+            "relative_error": 0.990003618106945,
+            "reported": 8945000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 161266090.6928105,
+            "family": "Dstar_Jones",
+            "line": 877,
+            "relative_error": 0.990078509418029,
+            "reported": 1600000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1022968025358.6912,
+            "family": "Dstar_Jones",
+            "line": 878,
+            "relative_error": 0.9899996874326419,
+            "reported": 10230000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 66513768110614.77,
+            "family": "Dstar_Jones",
+            "line": 899,
+            "relative_error": 0.9900020699640099,
+            "reported": 665000000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 2820292020.458852,
+            "family": "Dstar_Jones",
+            "line": 932,
+            "relative_error": 0.9899974896942019,
+            "reported": 28210000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 668739419508.8805,
+            "family": "Dstar_Jones",
+            "line": 933,
+            "relative_error": 0.9900020848106873,
+            "reported": 6686000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1595272795122.7417,
+            "family": "Dstar_Jones",
+            "line": 944,
+            "relative_error": 0.9899829044606941,
+            "reported": 15980000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1783075455.566007,
+            "family": "Dstar_Jones",
+            "line": 976,
+            "relative_error": 0.9900004231765166,
+            "reported": 17830000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 2.61989008026931e-16,
+            "family": "Planck_radiance_per_m",
+            "line": 1076,
+            "relative_error": 0.049196751130895125,
+            "reported": 2.491e-16,
+            "status": "review",
+            "unit": "W/(m^2*sr*m)"
+          },
+          {
+            "expected": 38317185.12031864,
+            "family": "Dstar_Jones",
+            "line": 1100,
+            "relative_error": 0.9899992653740946,
+            "reported": 383200.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 40395536152.605225,
+            "family": "Dstar_Jones",
+            "line": 1111,
+            "relative_error": 0.9899914684020371,
+            "reported": 404300000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1641319886303.4885,
+            "family": "Dstar_Jones",
+            "line": 1135,
+            "relative_error": 0.9900019489577027,
+            "reported": 16410000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 8411417968940.47,
+            "family": "Dstar_Jones",
+            "line": 1154,
+            "relative_error": 0.9900004969066357,
+            "reported": 84110000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 51718753283.12912,
+            "family": "Dstar_Jones",
+            "line": 1178,
+            "relative_error": 0.9899301516966402,
+            "reported": 520800000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 219473417.47085267,
+            "family": "Dstar_Jones",
+            "line": 1185,
+            "relative_error": 0.9899668942809785,
+            "reported": 2202000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 10951183381.838509,
+            "family": "Dstar_Jones",
+            "line": 1186,
+            "relative_error": 0.9900010805972261,
+            "reported": 109500000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 72303178.20965728,
+            "family": "Dstar_Jones",
+            "line": 1200,
+            "relative_error": 0.9900336331286783,
+            "reported": 720600.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 7994021849653.01,
+            "family": "Dstar_Jones",
+            "line": 1228,
+            "relative_error": 0.9900000273324909,
+            "reported": 79940000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 8.835998220508864e-07,
+            "family": "Johnson_RMS",
+            "line": 1253,
+            "relative_error": 0.02354026950892216,
+            "reported": 9.044e-07,
+            "status": "review",
+            "unit": "V"
+          },
+          {
+            "expected": 19697998.9308457,
+            "family": "Dstar_Jones",
+            "line": 1262,
+            "relative_error": 0.9899888308100576,
+            "reported": 197200.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 72539648.9244245,
+            "family": "Dstar_Jones",
+            "line": 1302,
+            "relative_error": 0.9899792732556878,
+            "reported": 726900.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 3644682710.085074,
+            "family": "Dstar_Jones",
+            "line": 1309,
+            "relative_error": 0.9899991294443435,
+            "reported": 36450000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 80717946002.578,
+            "family": "Dstar_Jones",
+            "line": 1326,
+            "relative_error": 0.9899985066521115,
+            "reported": 807300000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 19606497018.421066,
+            "family": "Dstar_Jones",
+            "line": 1341,
+            "relative_error": 0.9899625109056912,
+            "reported": 196800000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 45682833044952.94,
+            "family": "Dstar_Jones",
+            "line": 1393,
+            "relative_error": 0.9900006201552671,
+            "reported": 456800000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 17590905459921.055,
+            "family": "Dstar_Jones",
+            "line": 1396,
+            "relative_error": 0.9900005147318444,
+            "reported": 175900000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 20068725.740053035,
+            "family": "Dstar_Jones",
+            "line": 1409,
+            "relative_error": 0.9900043479292936,
+            "reported": 200600.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 3145780290219.833,
+            "family": "Dstar_Jones",
+            "line": 1418,
+            "relative_error": 0.9900056592961224,
+            "reported": 31440000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 57685530819.30864,
+            "family": "Dstar_Jones",
+            "line": 1432,
+            "relative_error": 0.989999225251007,
+            "reported": 576900000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 67478063891.743454,
+            "family": "Dstar_Jones",
+            "line": 1439,
+            "relative_error": 0.9900382441162149,
+            "reported": 672200000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 30060721760.608215,
+            "family": "Dstar_Jones",
+            "line": 1445,
+            "relative_error": 0.9900002401008912,
+            "reported": 300600000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 9917617853024.686,
+            "family": "Dstar_Jones",
+            "line": 1452,
+            "relative_error": 0.9899975980653716,
+            "reported": 99200000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 4592827204210.802,
+            "family": "Dstar_Jones",
+            "line": 1467,
+            "relative_error": 0.9899974464621962,
+            "reported": 45940000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 29307296830.007133,
+            "family": "Dstar_Jones",
+            "line": 1468,
+            "relative_error": 0.9899990776460864,
+            "reported": 293100000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 13665647248.948902,
+            "family": "Dstar_Jones",
+            "line": 1516,
+            "relative_error": 0.9899968148226193,
+            "reported": 136700000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 4407108181.586428,
+            "family": "Dstar_Jones",
+            "line": 1540,
+            "relative_error": 0.9900093217171377,
+            "reported": 44030000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 12929552986.155346,
+            "family": "Dstar_Jones",
+            "line": 1545,
+            "relative_error": 0.9900073884891192,
+            "reported": 129200000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 193537159.48006028,
+            "family": "Dstar_Jones",
+            "line": 1560,
+            "relative_error": 0.9899967530514497,
+            "reported": 1936000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1512973741696.7947,
+            "family": "Dstar_Jones",
+            "line": 1584,
+            "relative_error": 0.9900064359457799,
+            "reported": 15120000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 2203391550419.3564,
+            "family": "Dstar_Jones",
+            "line": 1620,
+            "relative_error": 0.9900017770351315,
+            "reported": 22030000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 33839774921.669724,
+            "family": "Dstar_Jones",
+            "line": 1630,
+            "relative_error": 0.9899969783846512,
+            "reported": 338500000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 747305.0497727047,
+            "family": "Dstar_Jones",
+            "line": 1642,
+            "relative_error": 0.9899625996073739,
+            "reported": 7501.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 2036252546.335445,
+            "family": "Dstar_Jones",
+            "line": 1667,
+            "relative_error": 0.9899963292683617,
+            "reported": 20370000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 19969704802.86316,
+            "family": "Dstar_Jones",
+            "line": 1703,
+            "relative_error": 0.989999852177516,
+            "reported": 199700000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1660213463338.5393,
+            "family": "Dstar_Jones",
+            "line": 1707,
+            "relative_error": 0.9900012857583874,
+            "reported": 16600000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 27688014027.85756,
+            "family": "Dstar_Jones",
+            "line": 1709,
+            "relative_error": 0.9899992827321814,
+            "reported": 276900000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 6726117.431064675,
+            "family": "Dstar_Jones",
+            "line": 1722,
+            "relative_error": 0.9899763867207224,
+            "reported": 67420.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 10789416297139.951,
+            "family": "Dstar_Jones",
+            "line": 1729,
+            "relative_error": 0.9900087273462073,
+            "reported": 107800000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 13727393087484.701,
+            "family": "Dstar_Jones",
+            "line": 1745,
+            "relative_error": 0.9899981009413086,
+            "reported": 137300000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 830167966967.7203,
+            "family": "Dstar_Jones",
+            "line": 1811,
+            "relative_error": 0.9899996141379389,
+            "reported": 8302000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 322931828295.63153,
+            "family": "Dstar_Jones",
+            "line": 1840,
+            "relative_error": 0.9900009856041692,
+            "reported": 3229000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 274231681379.58798,
+            "family": "Dstar_Jones",
+            "line": 1855,
+            "relative_error": 0.9899975087261957,
+            "reported": 2743000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 33651156253792.203,
+            "family": "Dstar_Jones",
+            "line": 1868,
+            "relative_error": 0.9900003436000189,
+            "reported": 336500000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 706476913490.7086,
+            "family": "Dstar_Jones",
+            "line": 1878,
+            "relative_error": 0.9899982577419454,
+            "reported": 7066000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 17270856646.908363,
+            "family": "Dstar_Jones",
+            "line": 1899,
+            "relative_error": 0.9900004960071905,
+            "reported": 172700000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 268165206174056.6,
+            "family": "Dstar_Jones",
+            "line": 1937,
+            "relative_error": 0.9899987025227307,
+            "reported": 2682000000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 112531162902.8195,
+            "family": "Dstar_Jones",
+            "line": 1938,
+            "relative_error": 0.9900027692687088,
+            "reported": 1125000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1291230370580.4421,
+            "family": "Dstar_Jones",
+            "line": 1958,
+            "relative_error": 0.9900017841168058,
+            "reported": 12910000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 95048396.77480906,
+            "family": "Dstar_Jones",
+            "line": 1977,
+            "relative_error": 0.9899261846334081,
+            "reported": 957500.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 209881143817.91272,
+            "family": "Dstar_Jones",
+            "line": 1982,
+            "relative_error": 0.9899991015780768,
+            "reported": 2099000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 6397549.128107129,
+            "family": "Dstar_Jones",
+            "line": 1986,
+            "relative_error": 0.9900258679187541,
+            "reported": 63810.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 5327555946.181501,
+            "family": "Dstar_Jones",
+            "line": 1988,
+            "relative_error": 0.9900029205628195,
+            "reported": 53260000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1400409725.5555074,
+            "family": "Dstar_Jones",
+            "line": 1996,
+            "relative_error": 0.9899957849875382,
+            "reported": 14010000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 2000422244232.7769,
+            "family": "Dstar_Jones",
+            "line": 2038,
+            "relative_error": 0.990162077003124,
+            "reported": 19680000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 204141315423.03235,
+            "family": "Dstar_Jones",
+            "line": 2039,
+            "relative_error": 0.9899971252964229,
+            "reported": 2042000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 7360644.811766241,
+            "family": "Dstar_Jones",
+            "line": 2042,
+            "relative_error": 0.9900103860625825,
+            "reported": 73530.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 5005114761.215349,
+            "family": "Dstar_Jones",
+            "line": 2047,
+            "relative_error": 0.9900002292878801,
+            "reported": 50050000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 0.06396267302787645,
+            "family": "Planck_radiance_per_m",
+            "line": 2129,
+            "relative_error": 0.021147850204554817,
+            "reported": 0.06261,
+            "status": "review",
+            "unit": "W/(m^2*sr*m)"
+          },
+          {
+            "expected": 9578645785.464466,
+            "family": "Dstar_Jones",
+            "line": 2133,
+            "relative_error": 0.990000674192865,
+            "reported": 95780000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 253048508.99574825,
+            "family": "Dstar_Jones",
+            "line": 2189,
+            "relative_error": 0.9900019169840574,
+            "reported": 2530000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 352495635934.8267,
+            "family": "Dstar_Jones",
+            "line": 2223,
+            "relative_error": 0.9899998761951999,
+            "reported": 3525000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1806777042856.0483,
+            "family": "Dstar_Jones",
+            "line": 2224,
+            "relative_error": 0.9899876965608305,
+            "reported": 18090000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 19981842.503576882,
+            "family": "Dstar_Jones",
+            "line": 2231,
+            "relative_error": 0.9899708948279355,
+            "reported": 200400.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 673700555577.621,
+            "family": "Dstar_Jones",
+            "line": 2237,
+            "relative_error": 0.9900000082466552,
+            "reported": 6737000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 3136970640.407164,
+            "family": "Dstar_Jones",
+            "line": 2266,
+            "relative_error": 0.9899999064078177,
+            "reported": 31370000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 3279230655814.923,
+            "family": "Dstar_Jones",
+            "line": 2270,
+            "relative_error": 0.990000703383931,
+            "reported": 32790000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 153159248702.74008,
+            "family": "Dstar_Jones",
+            "line": 2332,
+            "relative_error": 0.9899712226782912,
+            "reported": 1536000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1705995036.0143313,
+            "family": "Dstar_Jones",
+            "line": 2342,
+            "relative_error": 0.9899999709026958,
+            "reported": 17060000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 250797982966.98163,
+            "family": "Dstar_Jones",
+            "line": 2353,
+            "relative_error": 0.9899999195753891,
+            "reported": 2508000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 416721901100.89343,
+            "family": "Dstar_Jones",
+            "line": 2355,
+            "relative_error": 0.9899861274654013,
+            "reported": 4173000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 16149884719.243965,
+            "family": "Dstar_Jones",
+            "line": 2368,
+            "relative_error": 0.9900308885915355,
+            "reported": 161000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 199421951.42038685,
+            "family": "Dstar_Jones",
+            "line": 2375,
+            "relative_error": 0.989920868862812,
+            "reported": 2010000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 2063137722.2935462,
+            "family": "Dstar_Jones",
+            "line": 2383,
+            "relative_error": 0.989995820551885,
+            "reported": 20640000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 31249332514.55111,
+            "family": "Dstar_Jones",
+            "line": 2393,
+            "relative_error": 0.990002986468446,
+            "reported": 312400000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 218506646.4747081,
+            "family": "Dstar_Jones",
+            "line": 2432,
+            "relative_error": 0.9900048806970602,
+            "reported": 2184000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 14103435716.867846,
+            "family": "Dstar_Jones",
+            "line": 2436,
+            "relative_error": 0.9900166170267574,
+            "reported": 140800000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 97027662167.741,
+            "family": "Dstar_Jones",
+            "line": 2449,
+            "relative_error": 0.990001820322921,
+            "reported": 970100000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 106195102546.03369,
+            "family": "Dstar_Jones",
+            "line": 2475,
+            "relative_error": 0.9899995388248752,
+            "reported": 1062000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 9031231680183.885,
+            "family": "Dstar_Jones",
+            "line": 2497,
+            "relative_error": 0.9900002565322119,
+            "reported": 90310000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 6158656505.611712,
+            "family": "Dstar_Jones",
+            "line": 2513,
+            "relative_error": 0.9901520729489076,
+            "reported": 60650000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 106906969607.87428,
+            "family": "Dstar_Jones",
+            "line": 2515,
+            "relative_error": 0.9900006519320396,
+            "reported": 1069000000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 73519996931.37762,
+            "family": "Dstar_Jones",
+            "line": 2535,
+            "relative_error": 0.9899972792342958,
+            "reported": 735400000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 198548451.52583236,
+            "family": "Dstar_Jones",
+            "line": 2540,
+            "relative_error": 0.9899772575172107,
+            "reported": 1990000.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 68234585.89883675,
+            "family": "Dstar_Jones",
+            "line": 2542,
+            "relative_error": 0.9899816201564776,
+            "reported": 683600.0,
+            "status": "review",
+            "unit": "Jones"
+          },
+          {
+            "expected": 1387635044638.7283,
+            "family": "Dstar_Jones",
+            "line": 2556,
+            "relative_error": 0.9900045764528734,
+            "reported": 13870000000.0,
+            "status": "review",
+            "unit": "Jones"
+          }
+        ],
+        "method": "seven exact legacy prompt families; final-number extraction; SI constants; 2% rounding tolerance",
+        "status": {
+          "pass": 736,
+          "review": 154
+        }
+      },
+      "thresholds": {
+        "char": 0.8,
+        "token_jaccard": 0.65
+      }
+    },
+    "unique_pairs": 2581
+  },
+  "superseded_by": "data/manifests/firm3_candidate_2026-10-05_v2_manifest.json"
+}

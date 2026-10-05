@@ -1,0 +1,299 @@
+{
+  "by_extension": {
+    ".csv": 3,
+    ".jsonl": 37,
+    ".md": 5,
+    ".py": 7,
+    ".txt": 1,
+    ".yaml": 1,
+    ".yml": 1
+  },
+  "by_top_level": {
+    ".github": 1,
+    "<root>": 3,
+    "configs": 1,
+    "data": 38,
+    "docs": 2,
+    "evals": 3,
+    "scripts": 7
+  },
+  "files": [
+    {
+      "bytes": 1812,
+      "lines": 53,
+      "path": ".github/workflows/build-dataset.yml"
+    },
+    {
+      "bytes": 771920,
+      "lines": 3078,
+      "path": "FIRM Dataset Large - FIRM_Dataset_Sheet1_updated.csv"
+    },
+    {
+      "bytes": 2726,
+      "lines": 75,
+      "path": "README.md"
+    },
+    {
+      "bytes": 1271,
+      "lines": 52,
+      "path": "configs/qwen3_4b_qlora.yaml"
+    },
+    {
+      "bytes": 6869,
+      "lines": 185,
+      "path": "data/audits/firm_dataset_audit_report.md"
+    },
+    {
+      "bytes": 262532,
+      "lines": 816,
+      "path": "data/audits/firm_rewrite_report.csv"
+    },
+    {
+      "bytes": 220,
+      "lines": 3,
+      "path": "data/curation/PLACEHOLDER_FIX_NOTE.md"
+    },
+    {
+      "bytes": 8907,
+      "lines": 8,
+      "path": "data/curation/firm_v2_rewrite_overrides.jsonl"
+    },
+    {
+      "bytes": 37933,
+      "lines": 31,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_001_rows_0001_0031.jsonl"
+    },
+    {
+      "bytes": 35538,
+      "lines": 29,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_002_rows_0032_0060.jsonl"
+    },
+    {
+      "bytes": 34116,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_003_rows_0061_0090.jsonl"
+    },
+    {
+      "bytes": 35036,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_004_rows_0091_0120.jsonl"
+    },
+    {
+      "bytes": 34267,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_005_rows_0121_0150.jsonl"
+    },
+    {
+      "bytes": 33820,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_006_rows_0151_0180.jsonl"
+    },
+    {
+      "bytes": 32599,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_007_rows_0181_0210.jsonl"
+    },
+    {
+      "bytes": 25126,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_008_rows_0211_0240.jsonl"
+    },
+    {
+      "bytes": 30285,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_009_rows_0241_0270.jsonl"
+    },
+    {
+      "bytes": 25218,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_010_rows_0271_0300.jsonl"
+    },
+    {
+      "bytes": 5085,
+      "lines": 6,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_010b_cleanup_rows_0265_0270.jsonl"
+    },
+    {
+      "bytes": 22970,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_011_guardrail_cleanup.jsonl"
+    },
+    {
+      "bytes": 28183,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_012_rows_0331_0360.jsonl"
+    },
+    {
+      "bytes": 30366,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_013_rows_0361_0390.jsonl"
+    },
+    {
+      "bytes": 28114,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_014_rows_0391_0420.jsonl"
+    },
+    {
+      "bytes": 30623,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_015_semiconductor_math_modeling.jsonl"
+    },
+    {
+      "bytes": 25671,
+      "lines": 29,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_015b_identity_scope_cleanup.jsonl"
+    },
+    {
+      "bytes": 28094,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_016_materials_and_dopant_ionization.jsonl"
+    },
+    {
+      "bytes": 26354,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_017_dopant_ionization_continued.jsonl"
+    },
+    {
+      "bytes": 25748,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_018_dopant_ionization_tail.jsonl"
+    },
+    {
+      "bytes": 24351,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_019_dopant_ionization_tail_2.jsonl"
+    },
+    {
+      "bytes": 24028,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_020_dopant_ionization_tail_3.jsonl"
+    },
+    {
+      "bytes": 23534,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_021_dopant_ionization_tail_4.jsonl"
+    },
+    {
+      "bytes": 23554,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_022_dopant_ionization_tail_5.jsonl"
+    },
+    {
+      "bytes": 23391,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_023_dopant_ionization_tail_6.jsonl"
+    },
+    {
+      "bytes": 23125,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_024_dopant_ionization_tail_7.jsonl"
+    },
+    {
+      "bytes": 23142,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_025_dopant_ionization_tail_8.jsonl"
+    },
+    {
+      "bytes": 23256,
+      "lines": 30,
+      "path": "data/curation/rewrite_batches/firm_rewrite_batch_026_dopant_ionization_tail_9.jsonl"
+    },
+    {
+      "bytes": 1065544,
+      "lines": 2999,
+      "path": "data/processed/firm_rewritten_large_dataset.csv"
+    },
+    {
+      "bytes": 2187347,
+      "lines": 2532,
+      "path": "data/processed/firm_rewritten_large_sft.jsonl"
+    },
+    {
+      "bytes": 33002,
+      "lines": 19,
+      "path": "data/processed/firm_v2_expert_hgcdte_deep_batch01.jsonl"
+    },
+    {
+      "bytes": 16394,
+      "lines": 10,
+      "path": "data/processed/firm_v2_expert_hgcdte_deep_batch02.jsonl"
+    },
+    {
+      "bytes": 14271,
+      "lines": 10,
+      "path": "data/processed/firm_v2_expert_hgcdte_deep_batch03.jsonl"
+    },
+    {
+      "bytes": 11643,
+      "lines": 10,
+      "path": "data/processed/firm_v2_root_expert_sft.jsonl"
+    },
+    {
+      "bytes": 4549,
+      "lines": 114,
+      "path": "docs/dataset_rewrite_rules.md"
+    },
+    {
+      "bytes": 3191,
+      "lines": 93,
+      "path": "docs/domain_boundary_guardrail_strategy.md"
+    },
+    {
+      "bytes": 2485,
+      "lines": 10,
+      "path": "evals/firm_core_eval.jsonl"
+    },
+    {
+      "bytes": 2651,
+      "lines": 10,
+      "path": "evals/firm_domain_boundary_eval.jsonl"
+    },
+    {
+      "bytes": 3891,
+      "lines": 10,
+      "path": "evals/firm_v2_expert_eval.jsonl"
+    },
+    {
+      "bytes": 112,
+      "lines": 2,
+      "path": "requirements.txt"
+    },
+    {
+      "bytes": 6995,
+      "lines": 186,
+      "path": "scripts/apply_rewrite_batches.py"
+    },
+    {
+      "bytes": 17925,
+      "lines": 364,
+      "path": "scripts/build_firm_v3_large_dataset.py"
+    },
+    {
+      "bytes": 8077,
+      "lines": 205,
+      "path": "scripts/curate_firm_dataset_v2.py"
+    },
+    {
+      "bytes": 2398,
+      "lines": 76,
+      "path": "scripts/eval_firm_keywords.py"
+    },
+    {
+      "bytes": 4541,
+      "lines": 134,
+      "path": "scripts/merge_expert_jsonl_into_csv.py"
+    },
+    {
+      "bytes": 9328,
+      "lines": 228,
+      "path": "scripts/prepare_firm_dataset.py"
+    },
+    {
+      "bytes": 12721,
+      "lines": 261,
+      "path": "scripts/train_firm_qlora.py"
+    }
+  ],
+  "python_loc_including_comments": 1454,
+  "tracked_files": 55
+}

@@ -1,0 +1,1091 @@
+{
+  "closest_per_eval": [
+    {
+      "char_similarity": 0.625,
+      "eval_id": "firm_core_001",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.3076923076923077,
+      "reasons": [],
+      "source_line": 1530,
+      "template_jaccard": 0.3076923076923077
+    },
+    {
+      "char_similarity": 0.5714285714285714,
+      "eval_id": "firm_core_001",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.3333333333333333,
+      "reasons": [],
+      "source_line": 33,
+      "template_jaccard": 0.3333333333333333
+    },
+    {
+      "char_similarity": 0.5679012345679012,
+      "eval_id": "firm_core_001",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.2727272727272727,
+      "reasons": [],
+      "source_line": 487,
+      "template_jaccard": 0.2727272727272727
+    },
+    {
+      "char_similarity": 0.6902654867256637,
+      "eval_id": "firm_core_002",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.3333333333333333,
+      "reasons": [],
+      "source_line": 564,
+      "template_jaccard": 0.3333333333333333
+    },
+    {
+      "char_similarity": 0.5470085470085471,
+      "eval_id": "firm_core_002",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.23076923076923078,
+      "reasons": [],
+      "source_line": 720,
+      "template_jaccard": 0.23076923076923078
+    },
+    {
+      "char_similarity": 0.5,
+      "eval_id": "firm_core_002",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.2,
+      "reasons": [],
+      "source_line": 2753,
+      "template_jaccard": 0.2
+    },
+    {
+      "char_similarity": 0.7643312101910829,
+      "eval_id": "firm_core_003",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.4666666666666667,
+      "reasons": [],
+      "source_line": 132,
+      "template_jaccard": 0.4666666666666667
+    },
+    {
+      "char_similarity": 0.7006369426751592,
+      "eval_id": "firm_core_003",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.4375,
+      "reasons": [],
+      "source_line": 543,
+      "template_jaccard": 0.4375
+    },
+    {
+      "char_similarity": 0.5842696629213483,
+      "eval_id": "firm_core_003",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.2777777777777778,
+      "reasons": [],
+      "source_line": 2770,
+      "template_jaccard": 0.2777777777777778
+    },
+    {
+      "char_similarity": 0.45962732919254656,
+      "eval_id": "firm_core_004",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.21052631578947367,
+      "reasons": [],
+      "source_line": 2694,
+      "template_jaccard": 0.21052631578947367
+    },
+    {
+      "char_similarity": 0.43529411764705883,
+      "eval_id": "firm_core_004",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.2,
+      "reasons": [],
+      "source_line": 2715,
+      "template_jaccard": 0.2
+    },
+    {
+      "char_similarity": 0.4276729559748428,
+      "eval_id": "firm_core_004",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.15,
+      "reasons": [],
+      "source_line": 47,
+      "template_jaccard": 0.15
+    },
+    {
+      "char_similarity": 0.5227272727272727,
+      "eval_id": "firm_core_005",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 2688,
+      "template_jaccard": 0.16666666666666666
+    },
+    {
+      "char_similarity": 0.4712041884816754,
+      "eval_id": "firm_core_005",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.25,
+      "reasons": [],
+      "source_line": 2762,
+      "template_jaccard": 0.25
+    },
+    {
+      "char_similarity": 0.4656084656084656,
+      "eval_id": "firm_core_005",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.25,
+      "reasons": [],
+      "source_line": 2772,
+      "template_jaccard": 0.25
+    },
+    {
+      "char_similarity": 0.6190476190476191,
+      "eval_id": "firm_core_006",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.23529411764705882,
+      "reasons": [],
+      "source_line": 14,
+      "template_jaccard": 0.23529411764705882
+    },
+    {
+      "char_similarity": 0.5714285714285714,
+      "eval_id": "firm_core_006",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.23809523809523808,
+      "reasons": [],
+      "source_line": 150,
+      "template_jaccard": 0.23809523809523808
+    },
+    {
+      "char_similarity": 0.49295774647887325,
+      "eval_id": "firm_core_006",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.21428571428571427,
+      "reasons": [],
+      "source_line": 74,
+      "template_jaccard": 0.21428571428571427
+    },
+    {
+      "char_similarity": 0.3128491620111732,
+      "eval_id": "firm_core_007",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 94,
+      "template_jaccard": 0.16666666666666666
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_007",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.14583333333333334,
+      "reasons": [],
+      "source_line": 2941,
+      "template_jaccard": 0.1590909090909091
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_007",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.14285714285714285,
+      "reasons": [],
+      "source_line": 3052,
+      "template_jaccard": 0.15217391304347827
+    },
+    {
+      "char_similarity": 0.42016806722689076,
+      "eval_id": "firm_core_008",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.1935483870967742,
+      "reasons": [],
+      "source_line": 1852,
+      "template_jaccard": 0.2222222222222222
+    },
+    {
+      "char_similarity": 0.42016806722689076,
+      "eval_id": "firm_core_008",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.15625,
+      "reasons": [],
+      "source_line": 1855,
+      "template_jaccard": 0.2222222222222222
+    },
+    {
+      "char_similarity": 0.42016806722689076,
+      "eval_id": "firm_core_008",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.15625,
+      "reasons": [],
+      "source_line": 1856,
+      "template_jaccard": 0.2222222222222222
+    },
+    {
+      "char_similarity": 0.5774647887323944,
+      "eval_id": "firm_core_009",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.17647058823529413,
+      "reasons": [],
+      "source_line": 39,
+      "template_jaccard": 0.17647058823529413
+    },
+    {
+      "char_similarity": 0.5333333333333333,
+      "eval_id": "firm_core_009",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.15789473684210525,
+      "reasons": [],
+      "source_line": 724,
+      "template_jaccard": 0.15789473684210525
+    },
+    {
+      "char_similarity": 0.5294117647058824,
+      "eval_id": "firm_core_009",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.1875,
+      "reasons": [],
+      "source_line": 720,
+      "template_jaccard": 0.1875
+    },
+    {
+      "char_similarity": 0.494949494949495,
+      "eval_id": "firm_core_010",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.15384615384615385,
+      "reasons": [],
+      "source_line": 163,
+      "template_jaccard": 0.15384615384615385
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_010",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.13793103448275862,
+      "reasons": [],
+      "source_line": 2568,
+      "template_jaccard": 0.13793103448275862
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "firm_core_010",
+      "eval_source": "evals/firm_core_eval.jsonl",
+      "jaccard": 0.13793103448275862,
+      "reasons": [],
+      "source_line": 2602,
+      "template_jaccard": 0.13793103448275862
+    },
+    {
+      "char_similarity": 0.4090909090909091,
+      "eval_id": "boundary_001",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.2,
+      "reasons": [],
+      "source_line": 564,
+      "template_jaccard": 0.2
+    },
+    {
+      "char_similarity": 0.3973509933774834,
+      "eval_id": "boundary_001",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 146,
+      "template_jaccard": 0.16666666666666666
+    },
+    {
+      "char_similarity": 0.3972602739726027,
+      "eval_id": "boundary_001",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.1875,
+      "reasons": [],
+      "source_line": 568,
+      "template_jaccard": 0.1875
+    },
+    {
+      "char_similarity": 0.6277372262773723,
+      "eval_id": "boundary_002",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 217,
+      "template_jaccard": 0.16666666666666666
+    },
+    {
+      "char_similarity": 0.5755395683453237,
+      "eval_id": "boundary_002",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.15,
+      "reasons": [],
+      "source_line": 225,
+      "template_jaccard": 0.15
+    },
+    {
+      "char_similarity": 0.5540540540540541,
+      "eval_id": "boundary_002",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.21052631578947367,
+      "reasons": [],
+      "source_line": 227,
+      "template_jaccard": 0.21052631578947367
+    },
+    {
+      "char_similarity": 0.9795918367346939,
+      "eval_id": "boundary_003",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 1.0,
+      "reasons": [
+        "fuzzy_or_structural_review"
+      ],
+      "source_line": 343,
+      "template_jaccard": 1.0
+    },
+    {
+      "char_similarity": 0.7391304347826086,
+      "eval_id": "boundary_003",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.6,
+      "reasons": [],
+      "source_line": 453,
+      "template_jaccard": 0.6
+    },
+    {
+      "char_similarity": 0.7142857142857143,
+      "eval_id": "boundary_003",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.5,
+      "reasons": [],
+      "source_line": 442,
+      "template_jaccard": 0.5
+    },
+    {
+      "char_similarity": 1.0,
+      "eval_id": "boundary_004",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 1.0,
+      "reasons": [
+        "exact_prompt"
+      ],
+      "source_line": 441,
+      "template_jaccard": 1.0
+    },
+    {
+      "char_similarity": 0.6666666666666666,
+      "eval_id": "boundary_004",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.2857142857142857,
+      "reasons": [],
+      "source_line": 362,
+      "template_jaccard": 0.2857142857142857
+    },
+    {
+      "char_similarity": 0.6666666666666666,
+      "eval_id": "boundary_004",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.2857142857142857,
+      "reasons": [],
+      "source_line": 364,
+      "template_jaccard": 0.2857142857142857
+    },
+    {
+      "char_similarity": 0.6666666666666666,
+      "eval_id": "boundary_005",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.8333333333333334,
+      "reasons": [
+        "fuzzy_or_structural_review"
+      ],
+      "source_line": 320,
+      "template_jaccard": 0.8333333333333334
+    },
+    {
+      "char_similarity": 0.5925925925925926,
+      "eval_id": "boundary_005",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.42857142857142855,
+      "reasons": [],
+      "source_line": 384,
+      "template_jaccard": 0.42857142857142855
+    },
+    {
+      "char_similarity": 0.56,
+      "eval_id": "boundary_005",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.2857142857142857,
+      "reasons": [],
+      "source_line": 393,
+      "template_jaccard": 0.2857142857142857
+    },
+    {
+      "char_similarity": 0.7,
+      "eval_id": "boundary_006",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.5714285714285714,
+      "reasons": [],
+      "source_line": 403,
+      "template_jaccard": 0.5714285714285714
+    },
+    {
+      "char_similarity": 0.6666666666666666,
+      "eval_id": "boundary_006",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.42857142857142855,
+      "reasons": [],
+      "source_line": 421,
+      "template_jaccard": 0.42857142857142855
+    },
+    {
+      "char_similarity": 0.6176470588235294,
+      "eval_id": "boundary_006",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.4444444444444444,
+      "reasons": [],
+      "source_line": 327,
+      "template_jaccard": 0.4444444444444444
+    },
+    {
+      "char_similarity": 1.0,
+      "eval_id": "boundary_007",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 1.0,
+      "reasons": [
+        "exact_prompt"
+      ],
+      "source_line": 334,
+      "template_jaccard": 1.0
+    },
+    {
+      "char_similarity": 0.5866666666666667,
+      "eval_id": "boundary_007",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.2,
+      "reasons": [],
+      "source_line": 329,
+      "template_jaccard": 0.2
+    },
+    {
+      "char_similarity": 0.575,
+      "eval_id": "boundary_007",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.25,
+      "reasons": [],
+      "source_line": 313,
+      "template_jaccard": 0.25
+    },
+    {
+      "char_similarity": 0.6666666666666666,
+      "eval_id": "boundary_008",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.4,
+      "reasons": [],
+      "source_line": 398,
+      "template_jaccard": 0.4
+    },
+    {
+      "char_similarity": 0.5063291139240507,
+      "eval_id": "boundary_008",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.15384615384615385,
+      "reasons": [],
+      "source_line": 438,
+      "template_jaccard": 0.15384615384615385
+    },
+    {
+      "char_similarity": 0.48,
+      "eval_id": "boundary_008",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.15384615384615385,
+      "reasons": [],
+      "source_line": 326,
+      "template_jaccard": 0.15384615384615385
+    },
+    {
+      "char_similarity": 0.4656084656084656,
+      "eval_id": "boundary_009",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.15384615384615385,
+      "reasons": [],
+      "source_line": 543,
+      "template_jaccard": 0.15384615384615385
+    },
+    {
+      "char_similarity": 0.4222222222222222,
+      "eval_id": "boundary_009",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.2,
+      "reasons": [],
+      "source_line": 92,
+      "template_jaccard": 0.2
+    },
+    {
+      "char_similarity": 0.39285714285714285,
+      "eval_id": "boundary_009",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.18181818181818182,
+      "reasons": [],
+      "source_line": 72,
+      "template_jaccard": 0.18181818181818182
+    },
+    {
+      "char_similarity": 0.6153846153846154,
+      "eval_id": "boundary_010",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.5384615384615384,
+      "reasons": [],
+      "source_line": 339,
+      "template_jaccard": 0.5384615384615384
+    },
+    {
+      "char_similarity": 0.5517241379310345,
+      "eval_id": "boundary_010",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.17391304347826086,
+      "reasons": [],
+      "source_line": 37,
+      "template_jaccard": 0.17391304347826086
+    },
+    {
+      "char_similarity": 0.5396825396825397,
+      "eval_id": "boundary_010",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 252,
+      "template_jaccard": 0.16666666666666666
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_001",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.11392405063291139,
+      "reasons": [],
+      "source_line": 1664,
+      "template_jaccard": 0.14035087719298245
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_001",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.11392405063291139,
+      "reasons": [],
+      "source_line": 1665,
+      "template_jaccard": 0.14035087719298245
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_001",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.11392405063291139,
+      "reasons": [],
+      "source_line": 1666,
+      "template_jaccard": 0.14035087719298245
+    },
+    {
+      "char_similarity": 0.2857142857142857,
+      "eval_id": "numeric_pilot_002",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.1744186046511628,
+      "reasons": [],
+      "source_line": 2941,
+      "template_jaccard": 0.17333333333333334
+    },
+    {
+      "char_similarity": 0.2627118644067797,
+      "eval_id": "numeric_pilot_002",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 2952,
+      "template_jaccard": 0.16666666666666666
+    },
+    {
+      "char_similarity": 0.2585034013605442,
+      "eval_id": "numeric_pilot_002",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.1590909090909091,
+      "reasons": [],
+      "source_line": 3052,
+      "template_jaccard": 0.16883116883116883
+    },
+    {
+      "char_similarity": 0.23237597911227154,
+      "eval_id": "numeric_pilot_003",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.15384615384615385,
+      "reasons": [],
+      "source_line": 3070,
+      "template_jaccard": 0.1686746987951807
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_003",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.14942528735632185,
+      "reasons": [],
+      "source_line": 2941,
+      "template_jaccard": 0.16455696202531644
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_003",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.14457831325301204,
+      "reasons": [],
+      "source_line": 3061,
+      "template_jaccard": 0.16
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_004",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.11764705882352941,
+      "reasons": [],
+      "source_line": 2770,
+      "template_jaccard": 0.13333333333333333
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_004",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.11764705882352941,
+      "reasons": [],
+      "source_line": 2780,
+      "template_jaccard": 0.13333333333333333
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_004",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.10638297872340426,
+      "reasons": [],
+      "source_line": 3052,
+      "template_jaccard": 0.12048192771084337
+    },
+    {
+      "char_similarity": 0.15561959654178675,
+      "eval_id": "numeric_pilot_005",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.15384615384615385,
+      "reasons": [],
+      "source_line": 3016,
+      "template_jaccard": 0.1791044776119403
+    },
+    {
+      "char_similarity": 0.1412639405204461,
+      "eval_id": "numeric_pilot_005",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.17647058823529413,
+      "reasons": [],
+      "source_line": 2471,
+      "template_jaccard": 0.1724137931034483
+    },
+    {
+      "char_similarity": 0.1412639405204461,
+      "eval_id": "numeric_pilot_005",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.17391304347826086,
+      "reasons": [],
+      "source_line": 2459,
+      "template_jaccard": 0.1724137931034483
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_006",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.125,
+      "reasons": [],
+      "source_line": 586,
+      "template_jaccard": 0.15384615384615385
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_006",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.125,
+      "reasons": [],
+      "source_line": 587,
+      "template_jaccard": 0.15384615384615385
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_006",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.1134020618556701,
+      "reasons": [],
+      "source_line": 588,
+      "template_jaccard": 0.15384615384615385
+    },
+    {
+      "char_similarity": 0.21132075471698114,
+      "eval_id": "numeric_pilot_007",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.15,
+      "reasons": [],
+      "source_line": 2548,
+      "template_jaccard": 0.15789473684210525
+    },
+    {
+      "char_similarity": 0.2053388090349076,
+      "eval_id": "numeric_pilot_007",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.16363636363636364,
+      "reasons": [],
+      "source_line": 2761,
+      "template_jaccard": 0.17307692307692307
+    },
+    {
+      "char_similarity": 0.2020618556701031,
+      "eval_id": "numeric_pilot_007",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.16363636363636364,
+      "reasons": [],
+      "source_line": 2771,
+      "template_jaccard": 0.17307692307692307
+    },
+    {
+      "char_similarity": 0.29455081001472755,
+      "eval_id": "numeric_pilot_008",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.1590909090909091,
+      "reasons": [],
+      "source_line": 3025,
+      "template_jaccard": 0.18072289156626506
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_008",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.13580246913580246,
+      "reasons": [],
+      "source_line": 3016,
+      "template_jaccard": 0.14666666666666667
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "numeric_pilot_008",
+      "eval_source": "evals/firm_numeric_pilot_v1.jsonl",
+      "jaccard": 0.13253012048192772,
+      "reasons": [],
+      "source_line": 3061,
+      "template_jaccard": 0.14285714285714285
+    },
+    {
+      "char_similarity": 0.2585034013605442,
+      "eval_id": "v2_001",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.15384615384615385,
+      "reasons": [],
+      "source_line": 1864,
+      "template_jaccard": 0.14285714285714285
+    },
+    {
+      "char_similarity": 0.2585034013605442,
+      "eval_id": "v2_001",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.15384615384615385,
+      "reasons": [],
+      "source_line": 1881,
+      "template_jaccard": 0.14285714285714285
+    },
+    {
+      "char_similarity": 0.2585034013605442,
+      "eval_id": "v2_001",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.15384615384615385,
+      "reasons": [],
+      "source_line": 1884,
+      "template_jaccard": 0.14285714285714285
+    },
+    {
+      "char_similarity": 0.42574257425742573,
+      "eval_id": "v2_002",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.2,
+      "reasons": [],
+      "source_line": 2767,
+      "template_jaccard": 0.2
+    },
+    {
+      "char_similarity": 0.4,
+      "eval_id": "v2_002",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.15384615384615385,
+      "reasons": [],
+      "source_line": 2777,
+      "template_jaccard": 0.15384615384615385
+    },
+    {
+      "char_similarity": 0.3879310344827586,
+      "eval_id": "v2_002",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.2413793103448276,
+      "reasons": [],
+      "source_line": 1852,
+      "template_jaccard": 0.28
+    },
+    {
+      "char_similarity": 0.29836829836829837,
+      "eval_id": "v2_003",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.15254237288135594,
+      "reasons": [],
+      "source_line": 3025,
+      "template_jaccard": 0.18867924528301888
+    },
+    {
+      "char_similarity": 0.21103117505995203,
+      "eval_id": "v2_003",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.1836734693877551,
+      "reasons": [],
+      "source_line": 3016,
+      "template_jaccard": 0.18604651162790697
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_003",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.13793103448275862,
+      "reasons": [],
+      "source_line": 76,
+      "template_jaccard": 0.15384615384615385
+    },
+    {
+      "char_similarity": 0.22736842105263158,
+      "eval_id": "v2_004",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 3078,
+      "template_jaccard": 0.2033898305084746
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_004",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.125,
+      "reasons": [],
+      "source_line": 4,
+      "template_jaccard": 0.15789473684210525
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_004",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.12195121951219512,
+      "reasons": [],
+      "source_line": 229,
+      "template_jaccard": 0.15384615384615385
+    },
+    {
+      "char_similarity": 0.3389830508474576,
+      "eval_id": "v2_005",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.15384615384615385,
+      "reasons": [],
+      "source_line": 65,
+      "template_jaccard": 0.15384615384615385
+    },
+    {
+      "char_similarity": 0.31693989071038253,
+      "eval_id": "v2_005",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 542,
+      "template_jaccard": 0.16666666666666666
+    },
+    {
+      "char_similarity": 0.21468926553672316,
+      "eval_id": "v2_005",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.16,
+      "reasons": [],
+      "source_line": 274,
+      "template_jaccard": 0.16
+    },
+    {
+      "char_similarity": 0.5034013605442177,
+      "eval_id": "v2_006",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.2222222222222222,
+      "reasons": [],
+      "source_line": 568,
+      "template_jaccard": 0.2222222222222222
+    },
+    {
+      "char_similarity": 0.4233576642335766,
+      "eval_id": "v2_006",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.15789473684210525,
+      "reasons": [],
+      "source_line": 131,
+      "template_jaccard": 0.15789473684210525
+    },
+    {
+      "char_similarity": 0.4171779141104294,
+      "eval_id": "v2_006",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.19047619047619047,
+      "reasons": [],
+      "source_line": 162,
+      "template_jaccard": 0.19047619047619047
+    },
+    {
+      "char_similarity": 0.423841059602649,
+      "eval_id": "v2_007",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.15,
+      "reasons": [],
+      "source_line": 294,
+      "template_jaccard": 0.15
+    },
+    {
+      "char_similarity": 0.40963855421686746,
+      "eval_id": "v2_007",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.19047619047619047,
+      "reasons": [],
+      "source_line": 197,
+      "template_jaccard": 0.19047619047619047
+    },
+    {
+      "char_similarity": 0.4049079754601227,
+      "eval_id": "v2_007",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.19047619047619047,
+      "reasons": [],
+      "source_line": 279,
+      "template_jaccard": 0.19047619047619047
+    },
+    {
+      "char_similarity": 0.31759656652360513,
+      "eval_id": "v2_008",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 164,
+      "template_jaccard": 0.16666666666666666
+    },
+    {
+      "char_similarity": 0.2831858407079646,
+      "eval_id": "v2_008",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 297,
+      "template_jaccard": 0.16666666666666666
+    },
+    {
+      "char_similarity": 0.08333333333333333,
+      "eval_id": "v2_008",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 303,
+      "template_jaccard": 0.16666666666666666
+    },
+    {
+      "char_similarity": 0.425531914893617,
+      "eval_id": "v2_009",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.16666666666666666,
+      "reasons": [],
+      "source_line": 105,
+      "template_jaccard": 0.16666666666666666
+    },
+    {
+      "char_similarity": 0.4021164021164021,
+      "eval_id": "v2_009",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.18181818181818182,
+      "reasons": [],
+      "source_line": 38,
+      "template_jaccard": 0.18181818181818182
+    },
+    {
+      "char_similarity": 0.36065573770491804,
+      "eval_id": "v2_009",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.18181818181818182,
+      "reasons": [],
+      "source_line": 2687,
+      "template_jaccard": 0.18181818181818182
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_010",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.13043478260869565,
+      "reasons": [],
+      "source_line": 53,
+      "template_jaccard": 0.13043478260869565
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_010",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.125,
+      "reasons": [],
+      "source_line": 66,
+      "template_jaccard": 0.125
+    },
+    {
+      "char_similarity": 0.0,
+      "eval_id": "v2_010",
+      "eval_source": "evals/firm_v2_expert_eval.jsonl",
+      "jaccard": 0.12121212121212122,
+      "reasons": [],
+      "source_line": 2803,
+      "template_jaccard": 0.12121212121212122
+    }
+  ],
+  "findings": [
+    {
+      "char_similarity": 0.9795918367346939,
+      "eval_id": "boundary_003",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 1.0,
+      "reasons": [
+        "fuzzy_or_structural_review"
+      ],
+      "source_line": 343,
+      "template_jaccard": 1.0
+    },
+    {
+      "char_similarity": 1.0,
+      "eval_id": "boundary_004",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 1.0,
+      "reasons": [
+        "exact_prompt"
+      ],
+      "source_line": 441,
+      "template_jaccard": 1.0
+    },
+    {
+      "char_similarity": 0.6666666666666666,
+      "eval_id": "boundary_005",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 0.8333333333333334,
+      "reasons": [
+        "fuzzy_or_structural_review"
+      ],
+      "source_line": 320,
+      "template_jaccard": 0.8333333333333334
+    },
+    {
+      "char_similarity": 1.0,
+      "eval_id": "boundary_007",
+      "eval_source": "evals/firm_domain_boundary_eval.jsonl",
+      "jaccard": 1.0,
+      "reasons": [
+        "exact_prompt"
+      ],
+      "source_line": 334,
+      "template_jaccard": 1.0
+    }
+  ],
+  "limitations": "Lexical and numeric-template candidates only; manual semantic review still required.",
+  "source": "FIRM Dataset Large - FIRM_Dataset_Sheet1_updated.csv",
+  "source_sha256": "7235e4a17e0e9708ebc84ca2277907a3cf12bbf7615583de321ff77a5534d8a2",
+  "thresholds": {
+    "char": 0.8,
+    "token_jaccard": 0.65
+  }
+}
