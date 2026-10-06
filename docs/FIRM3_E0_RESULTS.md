@@ -1,6 +1,10 @@
 # FIRM 3 E0 measurements and protocol
 
-**Pinned Hugging Face candidate comparison: NOT RUN.** The VPS has no usable CUDA GPU or already-running server with the pinned HF revisions. No endpoint was provisioned and no paid GPU/cloud model was invoked. Local installed Qwen3.5 GGUF measurements below are real, separately labeled exploratory results; they do not satisfy the same-revision E0 gate for adaptation.
+**Exact pinned Qwen3.5-9B E0: RUN on 2026-10-06.** The pinned Hugging Face revision `c202236235762e1c871ad0ccb60c8ee5ba337b9a` was served in BF16 on one NVIDIA L4 with vLLM 0.31.0, context 8192, temperature 0, seed 42, tools off and thinking explicitly off. The complete five-set standard-track run is preserved under `evals/results/E0-qwen35-pinned/`; all 78 requests returned terminal responses with zero backend generation errors. This closes the exact-revision E0 gap for Qwen3.5-9B only; other pinned candidates remain unmeasured.
+
+Primary structured results are poor. Numeric pilot: **1/22 numerical quantities (4.55%)**, **13/22 accepted units (59.09%)**, 3/8 strict structured parse failures, no truncations. Public science development v2: **4/106 numerical quantities (3.77%)**, **41/106 accepted units (38.68%)**, 25/40 strict parse failures, one output-budget truncation, and zero backend generation errors. Legacy keyword proxies are core **0.363**, boundary **0.440**, expert **0.412**; these remain contaminated coverage proxies, not scientific scores. Raw predictions, generation manifests, scorer outputs, server metadata and vLLM log are preserved.
+
+The exact pinned BF16 result is numerically worse than the exploratory local `qwen3.5:9b` Q4 compact track (pilot 3/22; development 9/106), but the local artifact's upstream Hugging Face revision is unknown. Therefore this reversal must **not** be attributed to quantization or precision alone; revision/template/runtime differences are confounded. The exact pinned result nevertheless shows that Qwen3.5-9B, as executed under the declared standard track, is not a strong quantitative infrared baseline.
 
 ## Actual local model and limitations
 
@@ -36,7 +40,7 @@ Two runner bookkeeping defects were repaired for future runs with regression tes
 
 The Bash suite wrapper exited 2 with unexpected EOF after all requested inference manifests completed because it was edited while Bash was still reading it. I verified every expected ID, eval hash, prediction hash and source snapshot; the current wrapper passes `bash -n`. This orchestration mistake did not trigger selective retries or replacement of failed answers. Never edit a live launch wrapper.
 
-This local artifact in non-thinking mode is insufficient evidence to select or reject a pinned HF candidate. **Exact-revision E0 remains NOT RUN and E2 remains NO-GO.**
+The local artifact remains unsuitable for same-revision comparison, but the exact pinned Qwen3.5-9B GPU baseline has now been measured. It is not sufficient to select a winner among the pinned candidate set because the other candidates remain unmeasured. **E2 remains NO-GO.**
 
 ## Comparison tracks and frozen assets
 
@@ -54,7 +58,7 @@ Report separately: **pilot** (8 cases/22 quantities), **public science developme
 
 Exact revisions/licenses were reverified from publisher metadata; `configs/firm3_e0_models_v1.json` pins them. No candidate is declared the winner. Qwen3.5-9B is the first technical smoke target; Ministral 14B Reasoning and Qwen3.8-27B remain unmeasured challengers; Qwen3-8B is the conventional-stack control. Publisher sources: [Qwen3.5](https://huggingface.co/Qwen/Qwen3.5-9B), [Ministral 14B Reasoning](https://huggingface.co/mistralai/Ministral-3-14B-Reasoning-2512), [Qwen3.8](https://huggingface.co/Qwen/Qwen3.8-27B), [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B).
 
-On an already authorized GPU machine, use a **separate serving environment**. vLLM 0.31.0 and mistral_common 1.12.0 are current pinned release candidates; their registry contains the native Qwen3.5 and Mistral3 classes. Actual CUDA server compatibility/resolution remains NOT RUN; do not mix vLLM's Torch dependencies with the validated training environment. Pin and record the full resolved serving environment before measurements. The publisher's original Qwen instructions mention nightly vLLM; no unpinned nightly is installed here.
+The Qwen3.5-9B exact GPU run used a **separate serving environment**, as intended. vLLM 0.31.0 resolved to Torch 2.13.0+cu130 and Transformers 5.17.0 on NVIDIA L4 driver 580.178.04; mistral_common 1.12.0 was installed. The actual launch used BF16, context 8192, eager mode, `--reasoning-parser qwen3`, GPU-memory utilization 0.95 and `--skip-mm-profiling`; exact metadata is preserved with the results. Do not mix this serving environment with the validated training environment.
 
 ```bash
 python3.13 -m venv .venv-e0

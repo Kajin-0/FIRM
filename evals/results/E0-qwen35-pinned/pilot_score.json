@@ -1,0 +1,395 @@
+{
+  "eval_manifest_sha256": "bfe2de376210e09a22b3aa6ca4f1867d10cc602b2d971f2c7248ae825271eadb",
+  "eval_sha256": "ea40774d8beff73cd43859f5052c990a6d5973b3cadca88b2c9d8e98c6b96b5b",
+  "generation_manifest": {
+    "path": "evals/results/E0-qwen35-pinned/firm_numeric_pilot_v1_predictions.run.json",
+    "sha256": "d70640f9d9a38c79b526af3a6b94a7b3ad3aace8281403b9e5aa61e486ba3005",
+    "spec": {
+      "backend": "openai",
+      "base_url": "http://127.0.0.1:8000/v1",
+      "context_length": 8192,
+      "eval_file": "evals/firm_numeric_pilot_v1.jsonl",
+      "eval_sha256": "ea40774d8beff73cd43859f5052c990a6d5973b3cadca88b2c9d8e98c6b96b5b",
+      "git_sha": "92ece72ce85752f1a9b9e8e90e159d599a576dea",
+      "max_tokens": 4096,
+      "model": "Qwen/Qwen3.5-9B",
+      "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "protocol_name": "scientific-compact-v2",
+      "protocol_sha256": "e1650486de17b25e4606d2240a93ce0a9afe23b20f8b1442e0dd43e890fbe6c0",
+      "revision_verification": "operator-declared; ensure the server loads this revision",
+      "runner_sha256": "b097e16786e02201f3b4532639922f538db6af5c3fa970584a1e58ef665d0ff7",
+      "sampling": {
+        "presence_penalty": 0,
+        "top_p": 1
+      },
+      "schema_version": "1.0",
+      "seed": 42,
+      "server_metadata": {
+        "context_length": 8192,
+        "driver": "580.178.04",
+        "dtype": "bfloat16",
+        "generation_config": "vllm",
+        "gpu": "NVIDIA L4",
+        "gpu_memory_utilization": 0.95,
+        "launch_note": "localhost-only; exact pinned revision; BF16; no quantization; eager mode; text-only benchmark",
+        "mistral_common": "1.12.0",
+        "model": "Qwen/Qwen3.5-9B",
+        "package_sha256": "ee7207db1f0e350167d5ae9560893b1b9ffb3125c94bc0c55e7675d5f0456792",
+        "reasoning_parser": "qwen3",
+        "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+        "seed": 42,
+        "server": "vllm",
+        "skip_mm_profiling": true,
+        "source_git_sha": "92ece72",
+        "temperature": 0,
+        "thinking": "off",
+        "tools": "off",
+        "torch": "2.13.0+cu130",
+        "transformers": "5.17.0",
+        "vllm": "0.31.0"
+      },
+      "temperature": 0,
+      "thinking": "off",
+      "track": "E0-standard-compact-v2"
+    },
+    "status": "complete"
+  },
+  "grader_sha256": "8c012938a70d2db253241f07354bbb97b8bcaf8f238ea14784442d2e9fc98474",
+  "items": [
+    {
+      "category": "HgCdTe_composition_cutoff",
+      "id": "numeric_pilot_001",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Define optical edge versus measured cutoff criterion; empirical model is not a derivation.",
+        "Keep composition fixed with temperature; discuss inhomogeneity, absorption threshold and model uncertainty."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "composition_x": {
+          "absolute_error": 0.014853886328569293,
+          "converted_value": 0.214,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.06490554548522424,
+          "unit_correct": true
+        },
+        "cutoff_150K": {
+          "absolute_error": 2.575852683140356,
+          "converted_value": 10.8,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.31320604846897787,
+          "unit_correct": true
+        },
+        "gap_85K": {
+          "absolute_error": 0.027898083439574783,
+          "converted_value": 0.10399999999999998,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.21151242468474132,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "passivation_noise_detectivity",
+      "id": "numeric_pilot_002",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Distinguish ASD from integrated RMS and PSD; no extra bandwidth factor for density NEP.",
+        "Do not prove trap reduction from one frequency; compare dark/readout controls, PSD shape, optics and filter bandwidth."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "dstar_after": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "dstar_before": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "dstar_ratio": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "nep_after": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "nep_before": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "frequency_response_deembedding",
+      "id": "numeric_pilot_003",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Amplitude poles multiply; de-embed magnitude and check phase.",
+        "Bias/geometry, calibrated source and preamp sweeps can distinguish microscopic lifetime from extra poles."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "carrier_tau": {
+          "absolute_error": 0.0001489999988387844,
+          "converted_value": 1e-06,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.9933333332817238,
+          "unit_correct": true
+        },
+        "detector_f3db": {
+          "absolute_error": 901.8829621598892,
+          "converted_value": 159.15,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.8500046599155349,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "Hall_transport_photoconductor",
+      "id": "numeric_pilot_004",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Hall factor and single-carrier assumptions must be explicit; lifetime is independently supplied.",
+        "Check field, contacts, heating, trapping, compensation and geometry uncertainty."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "dark_resistance": {
+          "absolute_error": 11999998555.206232,
+          "converted_value": 12000000000.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 8305682.670656001,
+          "unit_correct": true
+        },
+        "gain": {
+          "absolute_error": 1.8750000000000004,
+          "converted_value": 1.5,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.5555555555555556,
+          "unit_correct": true
+        },
+        "transit_time": {
+          "absolute_error": 8.844488888888888e-07,
+          "converted_value": 4.44e-09,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.995005,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "noise_PSD_band_integration",
+      "id": "numeric_pilot_005",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Integrate PSD, not ASD; A has V^2 dimensions for frequency in Hz.",
+        "Real filter weighting needs |H(f)|^2 and its ENBW; no universal single bandwidth for colored noise."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "corner_frequency": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "rms_noise": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "blackbody_throughput_voltage",
+      "id": "numeric_pilot_006",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Convert per-m to per-um radiance; projected solid angle already includes cosine, so no extra pi.",
+        "Distinguish state difference from lock-in fundamental/RMS, finite-band integration, emissivity and warm background."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "modulated_power_difference": {
+          "absolute_error": 5.300652796595354e-10,
+          "converted_value": 1.42e-10,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.7887110013004445,
+          "unit_correct": true
+        },
+        "radiance_per_um": {
+          "absolute_error": 14199999999949.086,
+          "converted_value": 14200000000000.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 278901478282.41327,
+          "unit_correct": true
+        },
+        "voltage_difference": {
+          "absolute_error": 1.1399946234777627,
+          "converted_value": 1.14,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 212031.97404708914,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "absorption_thickness_uncertainty",
+      "id": "numeric_pilot_007",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Beer-Lambert assumptions and unit conversion must hold.",
+        "Collection, surface recombination, reflection and near-cutoff alpha affect external QE."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "absorption_20um": {
+          "absolute_error": 3.5283236612726476e-05,
+          "converted_value": 0.8647,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 4.080568563592912e-05,
+          "unit_correct": true
+        },
+        "thickness_95pct": {
+          "absolute_error": 39.34267726446011,
+          "converted_value": 69.30000000000001,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 1.3132908308186657,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "lockin_ENBW_noise_density",
+      "id": "numeric_pilot_008",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Define one-sided PSD and unity DC gain; no unaccounted mixer factors.",
+        "Use actual filter order/transfer and integrate colored PSD explicitly."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "enbw": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "rms_noise": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    }
+  ],
+  "limitations": "Structured quantities only; correct numbers do not establish correct physics or derivation.",
+  "manual_status": "not scored; requires independent scientific review",
+  "numerical_accuracy": 0.045454545454545456,
+  "prediction_coverage": 1.0,
+  "predictions_sha256": "b32189483a5f28c45760486f068f376dcc54e76d026018c1ce19f8a0e131cefa",
+  "quantity_count": 22,
+  "schema_version": "1.0",
+  "unit_correctness": 0.5909090909090909
+}
