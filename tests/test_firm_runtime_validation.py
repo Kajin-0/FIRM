@@ -14,7 +14,7 @@ from firm_data import sha256
 from firm_model_profiles import modern_targets,validate_profile,QWEN35_REVISION
 from run_firm_baseline import messages_for,ollama_metadata,prediction_record
 from firm_run_context import repository_revision
-from train_firm_qlora import require_reviewed_inputs
+from train_firm_qlora import require_reviewed_inputs,sft_warmup_kwargs,json_safe_loading_info
 from build_firm_science_dev import development_items
 from eval_firm_science import grade_quantity
 import run_firm_baseline
@@ -70,6 +70,14 @@ class RuntimeValidationTests(unittest.TestCase):
             meta=json.loads(out.with_suffix('.run.json').read_text())
             self.assertEqual(meta['status'],'complete_with_generation_errors')
             self.assertEqual(meta['generation_error_count'],1)
+
+    def test_gpu_compatibility_metadata_is_json_safe_and_warmup_ratio_preserved(self):
+        self.assertEqual(sft_warmup_kwargs(), {'warmup_steps':0.03})
+        loading={'missing_keys':set(), 'unexpected_keys':{'mtp.b','mtp.a'}, 'error_msgs':[]}
+        normalized=json_safe_loading_info(loading)
+        self.assertEqual(normalized['unexpected_keys'],['mtp.a','mtp.b'])
+        self.assertEqual(normalized['missing_keys'],[])
+        json.dumps(normalized)
 
     def test_modern_targets_exclude_visual_and_hybrid_state_and_E2_is_gated(self):
         names=['model.visual.blocks.0.mlp.gate_proj','model.language_model.layers.0.mlp.gate_proj',

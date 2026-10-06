@@ -26,6 +26,17 @@ from firm_model_profiles import validate_profile, validate_runtime_versions, loa
 from firm_run_context import repository_revision
 
 
+def sft_warmup_kwargs():
+    # Transformers 5.x accepts fractional warmup_steps and interprets 0 < x < 1 as a ratio.
+    return {'warmup_steps': 0.03}
+
+
+def json_safe_loading_info(value):
+    if value is None:
+        return None
+    return {k: sorted(v) if isinstance(v, set) else v for k, v in value.items()}
+
+
 def parse_args() -> argparse.Namespace:
     pre = argparse.ArgumentParser(add_help=False)
     pre.add_argument("--config", type=Path, help="JSON profile; command-line flags override defaults")
@@ -212,7 +223,7 @@ def main() -> None:
         max_steps=args.max_steps,
         seed=args.seed,
         data_seed=args.seed,
-        warmup_ratio=0.03,
+        **sft_warmup_kwargs(),
         lr_scheduler_type="cosine",
         logging_steps=10,
         eval_strategy="steps" if "validation" in ds else "no",
@@ -245,7 +256,7 @@ def main() -> None:
     run['completion_mask_check']={'masked_tokens':int((probe_batch['labels']==-100).sum()),
                                   'supervised_tokens':int((probe_batch['labels']!=-100).sum())}
     run['adapter_targets']=targets
-    run['checkpoint_loading_info']=getattr(model,'firm_loading_info',None)
+    run['checkpoint_loading_info']=json_safe_loading_info(getattr(model,'firm_loading_info',None))
     run['trainable_parameter_count']=sum(p.numel() for p in trainer.model.parameters() if p.requires_grad)
     from firm_training_measurements import SmokeMeasurements
     measurements=SmokeMeasurements(trainer.model,Path(args.out),modern)
