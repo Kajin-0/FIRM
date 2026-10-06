@@ -1,5 +1,7 @@
 # FIRM 3 audit — 2026-10-05
 
+The original sections below record the foundation snapshot. The 2026-10-06 follow-up at the end supersedes its pending correction/profile/baseline status while preserving historical findings.
+
 ## Repository identity and preservation
 
 Verified before editing: Git root `/home/User/FIRM`; remote `git@github.com:Kajin-0/FIRM.git`; branch `main`; local HEAD `17351932a7337946d2017a5aa14c0a7201767096`. `git fetch --all --prune` succeeded. Live `git ls-remote --symref origin HEAD` returned `main` and the same SHA. `git rev-list --left-right --count HEAD...origin/main` returned `0 0`. The initial working tree was clean, with no untracked files. This establishes identity and equality at takeover, rather than inferring them from directory names.
@@ -119,3 +121,17 @@ New numerical grading checks declared quantities, finite values, explicit suppor
 ## Reproduction and remaining debt
 
 Commands are in README and handoff. Audit artifacts include source hashes, full category distributions, candidate locations and near-pair counts. Remaining: explicit dataset/source licensing, human review of flagged and unflagged examples, corrected versioned data release, a substantially broader independently authored benchmark, expert rubric calibration, GPU stack validation and contemporary VLM/hybrid model training integration. No historical trained FIRM checkpoint was recovered from this repository.
+
+## Scientific-validation follow-up — 2026-10-06
+
+Takeover independently reverified `/home/User/FIRM`, origin `git@github.com:Kajin-0/FIRM.git`, clean foundation branch at live/local `58b7e4db268730a10e42830407a2d7a0a1a246cd`, ahead/behind 0/0 after safe fetch. The original 17 tests passed. Work proceeded on `firm3/scientific-validation-e0`; main was neither merged nor modified. All original source/eval bytes and candidate v2 remain preserved. Publication/tip details are in the updated handoff and live Git metadata.
+
+- Eight pilot cases/22 quantities independently rederived: no errors, no new pilot release. Original 32 E1 rows individually inspected: 25 accept, one correction, six exclusions. Another 30 anchors individually reviewed.
+- All 150 D* variants individually confirmed and corrected through `Jones-SI-area-v1`, with old/new values, explicit units, source/parent hashes and transformation lineage. No unaffected family changed. Every corrected D* row remains quarantined as eval-equivalent.
+- Machine-readable review ledger covers 2,581 canonical examples plus flagged historical representations (2,889 entries). Four other arithmetic flags and subjective/under-specified problems remain unresolved/excluded. No generic scientific auto-repair.
+- Active reviewed seed v3: 45/1/1 train/valid/test, 159 quarantine, 725 excluded, 1,650 unreviewed. Seven output files regenerate byte-identically; grouped partition and conservative quarantine/cap behavior retained. Zero implemented lexical/structural leakage findings in eligible rows; semantic independence is not proved.
+- Public development v2: 40 scenarios/106 deterministic quantities, analytic reference/oracle checks and per-scenario review notes. V1 remains preserved; one potentially legacy-related scenario was replaced in v2. Human calibration and permanent hidden benchmark remain outstanding.
+- Real installed Qwen3.5 Q4 CPU diagnostic: pilot 3/22, development 9/106, 16 development parse failures, two truncations and one incomplete backend reply. All 30 legacy diagnostic cases attempted; no mixed aggregate score. Upstream HF revision unknown, so exact-revision E0 remains NOT RUN.
+- Native pinned Qwen3.5 profile and provider-neutral GPU package added by extending the trainer. Actual tiny random native CPU forward/backward/mask/frozen/checkpoint/resume/reload checks passed. Full 9B CUDA, modern quantization, peak GPU memory and paid experiments remain NOT RUN.
+
+Detailed evidence: [scientific review](FIRM3_SCIENTIFIC_REVIEW.md), [E0](FIRM3_E0_RESULTS.md), [GPU runbook](FIRM3_GPU_RUNBOOK.md). E2 remains NO-GO: the eligible corpus is a small conceptual smoke set, source rights/human review are unresolved, and full-size GPU/exact-revision baseline gates have not passed.

@@ -1,65 +1,68 @@
-# FIRM 3 handoff
+# FIRM 3 scientific-validation handoff
 
-Updated 2026-10-05. Objective: build a quantitatively reliable IR-detector research model through reviewed data, controlled adaptation and evidence-based evaluation. This session established the foundation; it did not produce trained weights or model scores.
+Updated 2026-10-06. Objective: trustworthy quantitative IR-detector adaptation, not plausible short answers. **E2 NO-GO.** Data/oracles and the native CPU integration path justify preparing a bounded E1B technical smoke; they do not yet justify substantive paid FIRM 3 fine-tuning. No paid compute was provisioned or launched.
 
-## Repository and Git
+## Repository / implementation / publication
 
-- VPS checkout `/home/User/FIRM` is GitHub `Kajin-0/FIRM`, origin `git@github.com:Kajin-0/FIRM.git`.
-- Takeover: clean `main`, local/live remote HEAD both `17351932a7337946d2017a5aa14c0a7201767096`; ahead/behind `0/0` after safe fetch.
-- Working branch: `firm3/audit-and-foundation`, upstream `origin/firm3/audit-and-foundation`. No merge to main.
-- Implementation HEAD: `bbd30af60fd11f689311fd6f3402f2bcf01a198b`, successfully pushed. The documentation commit containing this handoff follows it; obtain the final tip with `git rev-parse HEAD`. Its own SHA cannot be embedded in its contents.
-- Implementation commits: `146b0c0` audit/quarantine; `e2309c5` numerical pilot/baseline; `bbd30af` reproducible smoke training. Final documentation is a separate commit.
-- Remote publication was verified at the implementation HEAD before this document was committed. Verify the latest documentation tip using `git rev-list --left-right --count HEAD...origin/firm3/audit-and-foundation` and `git ls-remote origin refs/heads/firm3/audit-and-foundation`.
-- Original CSV, curation transformations, processed sources and three legacy eval files were preserved byte-for-byte. No original uncommitted work existed. Never reset/force-push or overwrite an existing generated release.
+- Git root `/home/User/FIRM`, origin `git@github.com:Kajin-0/FIRM.git` (Kajin-0/FIRM).
+- Takeover independently verified clean/synchronized foundation branch at local/live `58b7e4db268730a10e42830407a2d7a0a1a246cd`; original 17 tests passed. No pre-existing changes needed preservation.
+- Branch/upstream: `firm3/scientific-validation-e0` / `origin/firm3/scientific-validation-e0`; no merge to main.
+- Implementation HEAD: **5050c5ce72a583d86f40cc9f767fc1ee91133233**, pushed and independently verified live, ahead/behind 0/0. Documentation/package-evidence commits follow it; obtain their final tip with `git rev-parse HEAD` (a document cannot contain its own commit SHA).
+- Main remains `17351932a7337946d2017a5aa14c0a7201767096`; foundation remote remains 58b7e4d. Verify the final published tip with commands below.
+- Implementation commits: e8d3634 scientific reviews/Jones repair; a3424f9 dev v1/oracles; 5d1bdab reviewed seed/dev v2; 4cfc88c independent data/runtime tests; 77024c6 pinned native profile/CPU gates; 69fd189 portable GPU/E0 protocols; 8af5243 compact pilot findings; 5050c5c completed E0 artifacts/reporting fixes.
+- Original CSV, rewritten sources, expert corpora, legacy evals, pilot v1 and historical candidate v2 are preserved byte-identically. Published releases are immutable; regenerate to NEW paths. Local draft seed v1/v2, CPU fixture runs/venvs and package archives are preserved ignored artifacts.
 
-## Findings and data state
+## Scientific data state
 
-- Original CSV: 2,532 complete examples, zero exact duplicate pairs/prompts, 114 repeated response extras. Whitespace-word means: input 14.58, output 21.02; response p95 31, maximum 299. Historical length claims do not reproduce.
-- Rewritten corpus: 2,532 examples, mean response 33.30 words. Four expert sources add 49 examples. Numbered rewrite batches are transformations, not additional independent training examples.
-- Numeric families dominate: 1,721 original prompts participate in repeated templates. All 150 D* calculation answers miss the factor 100 needed for Jones when area is in square metres. Long-form sources contain further unit/arithmetic/measurement-model errors. Dopant-ionization recipes lack necessary statistics/neutrality assumptions. See review exclusions and audit before training.
-- Latest local candidate directory: `data/processed/firm3_candidate_2026-10-05_v2/`; counts **717 train / 65 valid / 106 test / 379 quarantine / 1,314 capped**. All 2,581 inputs are accounted for. These candidates remain scientifically unreviewed, with unknown source licensing.
-- Generated candidate rows are ignored in Git. Tracked snapshot: `data/manifests/firm3_candidate_2026-10-05_v2_manifest.json`; active training manifest is inside the local directory. Reproduce into a NEW directory with the README command. Row hashes reproduce; the regenerated manifest records the current Git SHA.
-- The earlier candidate snapshot is retained and explicitly superseded. Use v2: exact-pair identity preserves unit case (mW and MW must not collapse); duplicate origins/document families stay linked.
-- Audit snapshot `data/audits/firm3_2026-10-05/` covers all 36 existing source files. Actual pinned Qwen3.5-9B tokenizer counts, scientific checks, duplicate distributions, leakage candidates, takeover inventory, byte-identical rewrite reproduction and v2 reversed-input split verification are recorded there.
+- Pilot: all 8 cases/22 quantities independently rederived, no oracle error, no pilot v2. Explicit assumptions/units/conventions/tolerances in scientific-review doc and reference tests.
+- Original E1 selection was the first 32 stable-ID-sorted training rows, not a seeded random sample: **25 accept / 1 correct / 6 exclude / 0 unresolved**. Five exclusions lack dopant carrier statistics/neutrality; one junction lacks necessary ni/degeneracy assumptions. One Poisson radiometry claim was bounded. Compact full row-review table is in FIRM3_SCIENTIFIC_REVIEW.md.
+- Another 30 conceptual anchors individually accepted. AI analytic review, not human expert signoff; unknown source rights do not become known through correction.
+- All **150 D* rows** confirmed individually: old answers approximately sqrt(A_m2*BW)/NEP_RMS but labeled Jones. Versioned `Jones-SI-area-v1` recomputes sqrt((A_m2*1e4)*BW)/NEP_RMS, with explicit units, old/new values/formula/parent/source hashes. Originals and unaffected families unchanged. Corrected rows are **all quarantined** as eval-equivalent, not leaked into training.
+- `data/reviews/firm3_scientific_v1/firm3_scientific_review_v1.jsonl` records 2,889 entries (2,581 canonical plus flagged historical representations); manual decisions are separately source/hash-pinned. Four other arithmetic flags remain needs_review; subjective errors are not guessed away.
+- Active `data/processed/firm3_reviewed_seed_v3/`: **45 train / 1 valid / 1 test / 159 quarantine / 0 capped / 725 excluded / 1,650 unreviewed**. Of 206 accepted/corrected rows, 159 are reserved (150 D* + nine reviewed numerical variants). The eligible 47 are conceptual smoke material; one-row heldouts are plumbing checks, not quality validation.
+- Manifest SHA-256: **88fbf10096a8aaf040711d889ef94a48786347e34832de0d3dbaaf27f76a474a**. Seven JSONL outputs regenerate identically. Whole-family connected groups, cap3 and conservative quarantine retained. `firm3_reviewed_seed_v3_leakage.json` has zero implemented lexical/structural matches; semantic/base-pretraining exposure is unknown.
 
-## Benchmark state
+## Benchmark / actual E0
 
-- Three legacy eval files, 30 cases, preserved and hashed in `evals/firm_legacy_v1_manifest.json`. Training contains exact/paraphrased/equivalent tasks; legacy results are diagnostic coverage only.
-- Separate `evals/firm_numeric_pilot_v1.jsonl`: 8 idealized problems, 22 deterministic numerical quantities, explicit units/tolerances and manual physical/diagnosis rubrics. Public answers; expert review pending. Case 007 is an explicit legacy-error regression, not independent unseen evidence.
-- New candidate train/valid/test partitions have zero lexical/structural leakage candidates against these 38 evals under the implemented detector, plus explicit equivalent-task exclusions. This does not establish absence of semantic leakage.
-- A permanent benchmark still needs independently authored, expert-reviewed, document/family-disjoint scenarios and controlled solution access. Preserve published releases; correct through new versions.
-- Numerical grading is deterministic with an explicit unit-conversion whitelist. Missing/invalid outputs fail. Subjective physics, equation, derivation, diagnosis and citation metrics remain manual; no perfect automatic judge is claimed.
+- Legacy30 and numeric pilot v1 remain frozen. Active **firm_science_dev_v2**: 40 cases,40 category labels,106 deterministic quantities; per-case assumptions/units/reference functions/tolerances/manual rubrics. Public AI-reviewed development, not unbiased hidden test. Dev v1 retained; v2 replaces only a legacy-related greybody scenario with a two-color Planck inverse.
+- Dev v2 JSONL SHA **ebfd7d3e62231fb1710ccd572bab24a1233f06b0d570e964aa40d8054db68164**; manifest SHA **fec09c634d9bdde5993363dcf826229ef1208f223e3ab27236579c1f2810e692**.
+- Actually run: installed Ollama0.32.15 `qwen3.5:9b`, Q4_K_M, CPU, artifact digest **6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7**. **HF upstream revision UNKNOWN.** No weights pulled and no CUDA/server provisioned.
+- Primary local compact-v2 track: thinking off,temperature0,seed42,2048 output tokens/context8192,tool-free. Pilot **3/22 numeric,12/22 units,3/8 parse failures,zero truncation**. Development **9/106 numeric,65/106 units,16/40 parse failures,two truncations,39/40 terminal replies**. Case013 incomplete backend reply retained and fails; attempted coverage is not successful generation coverage.
+- Legacy: each10/10 terminal; coverage proxies core0.307/boundary0.415/expert0.445, contaminated diagnostics only. Manual findings include passive-filter variance violation, absorption/reflection bound violation, wrong Jones and lock-in model, and correct structured values contradicted by prose.
+- Raw outputs/run manifests/exact executed source snapshots, old verbose track, final `*_score_v2.json`, manual observations and `results_manifest_v1.json` are tracked under `evals/results/`. Valid unit aliases were corrected without changing numerical scores; old scores retained.
+- Future runner now reports nonterminal generation errors and does not demand JSON from legacy prose. A live Bash wrapper edit caused exit2 after all inference sets completed; all IDs/hashes were verified. Do not edit running launch scripts. Manual findings are AI qualitative observations, not calibrated physical/citation scores.
+- **Pinned HF E0 comparison: NOT RUN.** Primary standard track4096/8192/off; separate reasoning8192/16384/on or declared native-always-on. All models share protocol/budget within track; no gold/rubric values sent. Exact launch commands in FIRM3_E0_RESULTS.md.
 
-## Implemented paths and model strategy
+## Modern profile / E1 gates / cloud
 
-- Shared stdlib data loader; expanded audit; conservative grouped splitter/quarantine; frozen manifests; numerical schema/oracles/grader; resumable localhost-compatible baseline runner; corrected legacy keyword coverage handling.
-- Existing QLoRA trainer improved rather than replaced: immutable model revisions, hashed inputs, config validation, lazy GPU imports, completion-only training, no silent truncation, seed/run metadata and checkpoint resume. CPU tests and preflights pass; actual GPU masks/gradients/resume/reload remain unverified.
-- Minimal experiment schema and separate pinned data/training requirements; read-only CPU CI. VPS: Python 3.13.7, 8 CPUs, about 31 GiB RAM, no accessible CUDA GPU. Ignored `.venv-audit` contains only audit/tokenizer dependencies, not model weights.
-- Provisional E0 choices: **Qwen3.5-9B** lightweight, **Gemma 4 12B / Ministral 3 14B Reasoning** medium challengers, **Qwen3.8-27B** research scale. Qwen3-8B is a conventional-stack control; Qwen3-0.6B is smoke-only. Publisher evidence/licenses/revisions are recorded in the training plan and model manifest; no FIRM score exists.
-- Modern hybrid/vision candidates are deliberately rejected by the pinned legacy causal trainer. Validate a separate native loader, processor, PEFT targets and training profile before adapting them.
-- Architecture: rights-reviewed DAPT -> expert/long-form scientific SFT -> reviewed correctness -> scientific tools -> provenance-preserving RAG -> authentic multimodal analysis -> validated quantized deployment. The spec distinguishes parametric physics from retrieved paper-specific claims.
-- Cloud plan: 9B QLoRA initially one A100 40 GB; medium/27B work one A100/H100 80 GB subject to measured fit. DAPT/full updates may need sharding. VRAM ranges and verified advertised hourly prices are planning estimates, not measured performance or a spending authorization.
+- Initial technical target **Qwen/Qwen3.5-9B**, pin **c202236235762e1c871ad0ccb60c8ee5ba337b9a**; not selected as a benchmark winner. Challengers in configs/firm3_e0_models_v1.json: Ministral14B Reasoning pin51f9210f3cd20f3452a80d5819d15dc61cc50630; Qwen3.8-27B pin1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0; Qwen3-8B control pinb968826d9c46dd6066d109eabc6255188de91218. Authoritative licenses/architecture/revisions recorded; all these E0 runs are NOT RUN.
+- Native **Qwen3_5ForConditionalGeneration + pinned AutoTokenizer**, text only/no pixels; preserve frozen full vision model. Exactly96 language MLP gate/up/down projections adapted. Full/DeltaNet attention, convolution/state, embeddings, LM head and visual modules frozen. BF16 rank4 alpha8,SDPA/native reference hybrid fallback. Modern NF4/FlashAttention/optimized kernels unvalidated; NF4 is refused.
+- Actual random **58,208-parameter native CPU** fixture (3DeltaNet+1full attention) passed two TRL updates, prompt masks, finite/nonzero LoRA gradients, every frozen tensor unchanged, step1 checkpoint/resume to2, separate adapter reload with **zero full-logit error**. Real pinned tokenizer checked8 reviewed examples (90–276 tokens). Evidence `data/reviews/modern_profile_cpu_v2.json`; no9B/GPU quality claim.
+- Pinned modern stack: Python3.13,torch2.9.1,Transformers5.18.0,PEFT0.21.2,TRL1.14.1,bitsandbytes0.50.2,Accelerate1.15.0,Datasets4.7.0; CPU pip-check passes. CUDA12.8 wheel/environment untested. Found/fixed TRL attention-mask column removal and CPU autocast/reload mismatch.
+- **E1A GPU NOT RUN**: configs/firm3_e1a_reviewed.json, pinned Qwen3-.6B,32 reviewed train/1valid,10steps,NF4,r8/a16,2048tokens. Historical unreviewed32/65 config remains preserved and actual execution is refused.
+- **E1B GPU NOT RUN**: configs/firm3_e1b_qwen35.json,8 reviewed train/1valid,2steps,512tokens,microbatch1,r4/a8,BF16/no quantization. Hard limited to8–16 rows/1–3steps. Measured full-size gradient/mask/frozen/VRAM/timing/checkpoint/resume/reload gates required before E2.
+- Provider-neutral package/bootstrap/run/resume/reload/artifact collection ready; no credentials or provisioning code. Persistent output/cache required; checkpoint-boundary SIGTERM save; never overwrite outputs. Package-evidence section is appended after final archive validation.
+- Planning only: A10040GB fit risk (estimated28–40GB class, not measured); **A10080GB preferred** first E1B; H10080GB alternative, speed unmeasured. Google shapes a2-highgpu-1g/a2-ultragpu-1g/a3-highgpu-1g; small A3 uses Spot/Flex-start. No invented cost; authorize a spending cap before rental.
 
-## Checks and exact next steps
-
-From `/home/User/FIRM`:
+## Reproduce and exact next experiment
 
 ```bash
+cd /home/User/FIRM
 python3 -m unittest discover -s tests -v
 python3 -m compileall -q scripts tests
-python3 scripts/train_firm_qlora.py --config configs/firm3_e1_smoke.json --dry-run
-python3 scripts/run_firm_baseline.py --eval evals/firm_numeric_pilot_v1.jsonl --model Qwen/Qwen3.5-9B --model-revision c202236235762e1c871ad0ccb60c8ee5ba337b9a --out predictions/E0-qwen35-9b.jsonl --dry-run
-python3 scripts/audit_firm_data.py --out data/audits/new_snapshot --date 2026-10-05
+python3 scripts/train_firm_qlora.py --config configs/firm3_e1a_reviewed.json --dry-run
+python3 scripts/train_firm_qlora.py --config configs/firm3_e1b_qwen35.json --dry-run
+bash -n scripts/bootstrap_firm_gpu.sh scripts/firm_gpu_run.sh scripts/run_firm_e0_suite.sh
 git status --short --branch
 git rev-parse HEAD
+git rev-list --left-right --count HEAD...origin/firm3/scientific-validation-e0
+git ls-remote origin refs/heads/firm3/scientific-validation-e0 refs/heads/main
 ```
 
-Seventeen CPU tests passed, including independent radiometric/PSD integration, Jones conversion, leakage/group determinism, malformed inputs, frozen hashes, no-gold baseline requests, interrupted mock resume and training preflight. Actual token audits and legacy rewrite byte reproduction passed. See README for optional offline tokenizer audit, candidate regeneration and scoring commands. Mock predictions are temporary test fixtures; no benchmark results were fabricated.
+**36 CPU tests PASS**, compile/bash syntax/preflights PASS, modern pip-check PASS; extracted package preflight/tests PASS. To regenerate data, use README review command with new directories. To repeat tiny native CPU proof, see GPU runbook/validator help in the existing isolated modern environment. Do not rerun the completed CPU baseline merely to resolve protocol bookkeeping.
 
-Immediate next work: expert-review the 8 pilot oracles/rubrics and 32 selected smoke rows; create versioned corrections for flagged training data and resolve provenance/rights. Run **E0** on an already-running compatible server at the pinned Qwen3.5-9B revision, removing only baseline `--dry-run`; grade with `eval_firm_science.py` and manually assess reasoning. Do not provision a paid endpoint merely for this check.
+Next training experiment is **bounded E1B only**, after explicit paid-GPU authorization/spending cap: extract verified package on approved A10080GB, `bash scripts/bootstrap_firm_gpu.sh E1B`; set persistent `FIRM_RUN_DIR`; `bash scripts/firm_gpu_run.sh E1B preflight`, then `train`, explicit interrupted `resume`, `reload`, `collect`, and stop rented GPU. Capture actual hardware/software/VRAM/timing/frozen/gradient/resume/reload evidence. Run exact-HF-revision E0 in the separate serving environment before domain adaptation.
 
-Exact next **training** experiment: **E1**, `configs/firm3_e1_smoke.json`, pinned Qwen3-0.6B, 32 training/65 validation rows, seed 42, NF4, rank 8/alpha 16, sequence 2,048, microbatch 1, accumulation 4, **10 optimizer steps**, save/eval every 2. After subset inspection and compatible GPU/environment validation, remove trainer `--dry-run`; inspect completion labels, test stop/resume and reload the adapter. No domain-quality conclusion from E1. E2 waits for reviewed data and a validated contemporary model profile.
+E2 blockers: richer independently reviewed rights-cleared training examples (current47 inadequate), human scientific/semantic review and benchmark calibration, exact-revision E0, full-size CUDA profile/resume/reload/runtime measurements, explicit spending authorization. DAPT -> long-form SFT -> correctness/tools -> provenance RAG -> authentic multimodal -> validated quantization remains the roadmap. No mass literature download or E2 occurred.
 
-Outstanding: human scientific and semantic-leakage review; source/data licenses; permanent benchmark; GPU environment resolver/forward/backward/resume validation; actual E0 scores; native modern-model training integration. No mass literature download, GPU job, cloud spending, checkpoint export or model availability claim based solely on memory occurred.
-
-Detailed evidence: [audit](FIRM3_AUDIT.md), [specification](FIRM3_SPEC.md), [training plan](FIRM3_TRAINING_PLAN.md), [reproduction commands](../README.md).
+Detailed evidence: [scientific review](FIRM3_SCIENTIFIC_REVIEW.md), [E0](FIRM3_E0_RESULTS.md), [GPU runbook](FIRM3_GPU_RUNBOOK.md), [spec](FIRM3_SPEC.md), [training plan](FIRM3_TRAINING_PLAN.md), [audit](FIRM3_AUDIT.md).

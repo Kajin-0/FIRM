@@ -2,6 +2,8 @@
 
 Status: architecture and measurable interfaces established; no FIRM 3 weights trained. FIRM is intentionally specialized. Its objective is correct quantitative detector work and experimentally disciplined inference, rather than broad conversational coverage.
 
+2026-10-06 implementation: reviewed seed v3 (47 eligible conceptual rows), public science development v2 (40 scenarios/106 quantities), versioned correction/review lineage, separate standard/reasoning E0 tracks and a pinned native text-only Qwen3.5 smoke profile. The installed Q4 CPU diagnostic is measured, but its upstream revision is unknown. Tiny native CPU training checks are software evidence; the full model/GPU gate is unrun. Details and limitations are in [scientific review](FIRM3_SCIENTIFIC_REVIEW.md), [E0 results](FIRM3_E0_RESULTS.md) and [GPU runbook](FIRM3_GPU_RUNBOOK.md).
+
 ## Domain and target behavior
 
 Scope includes HgCdTe/MCT, InSb, InGaAs, InAsSb, T2SL, QWIP/QCD and related SWIR/MWIR/LWIR/VLWIR materials; semiconductor statistics, transport and recombination; photoconductors, photodiodes and APDs; noise, responsivity, NEP, D*, radiometry and blackbody calculations; epitaxy, LPE/MBE/MOCVD, annealing, contacts, passivation and device processing; cryogenic, Hall, lock-in, FTIR and spectral-response measurements; ROIC/electronics fundamentals where they affect interpretation.
@@ -54,7 +56,7 @@ Long-form drafts may organize problem, known/required quantities, assumptions, e
 
 ## Benchmark architecture
 
-Keep three distinct assets: frozen legacy diagnostics; a public numerical development pilot; a future frozen independent benchmark with public protocol and privately held solutions where feasible. Existing files are never repurposed into training. Public pilot answers are forbidden training inputs, even though foundational equations should be taught elsewhere. Fine-tune development uses a separate development set; repeated inspection of a fixed test consumes its evidentiary value.
+Keep distinct assets: frozen legacy diagnostics; the public numerical pilot; the expanded public development suite; a future frozen independent benchmark with public protocol and privately held solutions where feasible. Existing files are never repurposed into training. Public eval answers and their numerical template variants are forbidden training inputs, even though foundational equations should be taught elsewhere. Development v1/v2 histories and all release hashes are preserved. Repeated inspection of a fixed test consumes its evidentiary value.
 
 Future coverage matrix:
 
