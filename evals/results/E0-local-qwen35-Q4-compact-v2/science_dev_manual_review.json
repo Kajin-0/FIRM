@@ -1,0 +1,329 @@
+{
+  "items": [
+    {
+      "generation_terminal": true,
+      "id": "science_dev_001",
+      "raw_response_sha256": "a7ee6f4453902ca4a7bebea34c5219f368baf726bc0b4fc37e37fe66e60f2fa0",
+      "review_notes": "Warm cutoff falls within tolerance, but x=0.25 is wrong; exact-match/residual claim is unsupported by its own substitution.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_002",
+      "raw_response_sha256": "df4290c6983714b20e29b86f1b8ddb6fd86440619d3e1e0eeae47b3e934800b3",
+      "review_notes": "Derivative drops terms; gap slope and cutoff slope use wrong dimensions. Composition uncertainty confused with wavelength uncertainty.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_003",
+      "raw_response_sha256": "af2c9b2202268655880779e2558896da44cf38f21c82624a42c402d1a4b9f011",
+      "review_notes": "All structured quantities fail; numerical derivative/temperature reasoning needs correction before use.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_004",
+      "raw_response_sha256": "0cb8ddd2a99d7b37c8666647dabeaad37d54ad5ebbedee8f09cffd54391c8065",
+      "review_notes": "Structured rho/conductivity wrong by orders of magnitude; prose later recovers correct values. Per-contact structured 60 Ohm contradicts prose 30 Ohm.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_005",
+      "raw_response_sha256": "a32d37ff65f0ef21770847a4914422b7a6a2a29f9885be11e7e6a7a8aa5444a4",
+      "review_notes": "Schema failure; uncertainty propagation does not reproduce independent relative quadrature.",
+      "structured_parse_failure": true,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_006",
+      "raw_response_sha256": "d1f1c4675e6371e9d488e7ffd79cabb32747b1623b7c2da2f288eb73080f1b94",
+      "review_notes": "Hall transport structured results fail; supplied Hall-factor/single-carrier assumptions must be retained.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_007",
+      "raw_response_sha256": "c3d3828e01c91b8a2e84d5f08cfa11f529c2dae0fe79dde21404bc10e608794c",
+      "review_notes": "Two-carrier Hall quantities fail. No unique one-carrier interpretation is justified.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_008",
+      "raw_response_sha256": "daef94fd64f4ffd663089a0d46d7cbea26095dd3a5f11a9e47284864a9181458",
+      "review_notes": "Schema failure and bulk/contact/illumination calculation errors.",
+      "structured_parse_failure": true,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_009",
+      "raw_response_sha256": "7198b127bf69776f133372476604548f4b9e7bfd735baa6e938d96e1c2ff507b",
+      "review_notes": "Gain ratio 2 passes; absolute transit/gain values fail despite supplied mobility/geometry.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_010",
+      "raw_response_sha256": "529964c9e16fc6ab61900cb19c91d1cfff87310f1b7fa471942e3da8b0fc2e39",
+      "review_notes": "Responsivity passes; gain inversion fails. Numeric success in one output does not establish a consistent solution.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_011",
+      "raw_response_sha256": "68cf648f2a7fb6361834a7baea0384736d82708bb03a41e9c1d59bcfeb588d4d",
+      "review_notes": "Tau arithmetic violates 1/(2*pi*fc); structured magnitude contradicts value discussed in prose.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_012",
+      "raw_response_sha256": "c38f3a8371a1c8549ac35dc1fc2459edcac6b32775a8ebc52676305d6cad440f",
+      "review_notes": "Invalid JSON escapes; equivalent R=160 Ohm appears correctly in raw text. Parallel thermal-noise weighting/formula and ASD fail.",
+      "structured_parse_failure": true,
+      "truncated": false
+    },
+    {
+      "generation_terminal": false,
+      "id": "science_dev_013",
+      "raw_response_sha256": "451d9aa668e73f3ae7f41a6e5b32cf8451640fa1aef60237d032c8ae80728f41",
+      "review_notes": "Infrastructure failure: native Ollama returned done=false and no terminal reason/token counts. Partial reply cannot support a complete scientific review.",
+      "structured_parse_failure": true,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_014",
+      "raw_response_sha256": "a7c757030d07834820913fa973481b3c768d9ecb5c958bdf09a4d58ac482ec0c",
+      "review_notes": "Schema failure; shot-noise ASD/PSD dimensions and scale incorrect.",
+      "structured_parse_failure": true,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_015",
+      "raw_response_sha256": "c440f2c63eaf73856e03da7cfd81f373eee3b6c51a26dce8f35f82de9aceedf4",
+      "review_notes": "Colored-noise integration quantities fail; do not replace frequency-dependent PSD by a flat ASD.",
+      "structured_parse_failure": true,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_016",
+      "raw_response_sha256": "7af338b98afaa98f720d3810325a2841c9d200fcdf14d9eb9c7c79a66db58d67",
+      "review_notes": "Corner 500 Hz passes; plateau fails and tau is 100 times too small. Integrated variance also fails and contradicts prose.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_017",
+      "raw_response_sha256": "92d918ccb49579becc11748a6888530315d1842cad027529583b72594819c616",
+      "review_notes": "Schema failure; integrated Lorentzian model gains an unjustified factor.",
+      "structured_parse_failure": true,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_018",
+      "raw_response_sha256": "f9050e336e8b794c22a61d99b3557b5c217157f7888d137273acfca65b33bccd",
+      "review_notes": "Token-limit truncation while repeatedly deriving ENBW. No complete answer; strict schema/quantities fail.",
+      "structured_parse_failure": true,
+      "truncated": true
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_019",
+      "raw_response_sha256": "a128b53dbd406be103697c371e09538790163cc11e69d61732379e3f9f828028",
+      "review_notes": "Token-limit truncation with repeated ENBW formulas; adding cascade bandwidths violates attenuation bound and cross-term dimensions.",
+      "structured_parse_failure": true,
+      "truncated": true
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_020",
+      "raw_response_sha256": "9a7bee31a0287da2f145527f58fc191894569e64252e34f5c69e6c6a82d7e996",
+      "review_notes": "Filtered RMS exceeds unfiltered RMS for a passive unity-DC-gain lowpass over the same support. Explanation rationalizes an impossible result.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_021",
+      "raw_response_sha256": "b34134e66db881d3a5d4e570cfc39c1afc68db66f5d4234a4031d5d49768cd03",
+      "review_notes": "Mean power passes; square-wave fundamental omits 2/pi and RMS-versus-state-difference calibration is inconsistent.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_022",
+      "raw_response_sha256": "8d9cbdc37879d78932e1639ea3af6ea3b160b08a229f5f1f95b5e67564b72c24",
+      "review_notes": "Parallel-load arithmetic fails; V/W times nW converted to mV incorrectly.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_023",
+      "raw_response_sha256": "b1f8188e1d9e5fb1e3b7f04a7ac8df85b32c8fe735fcfc2f7b63cd11d082674f",
+      "review_notes": "Schema failure; D* inversion has Jones/area scaling errors.",
+      "structured_parse_failure": true,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_024",
+      "raw_response_sha256": "ba5152d5788ead0bd844ef2c43dac5f405655b1b205dc7892d8f0b799b49889a",
+      "review_notes": "RC/carrier de-embedding values fail and structured/prose time constants conflict.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_025",
+      "raw_response_sha256": "164aa284384df1df7798c289b21e252c3516543ddf70b6dfacb7d6a85a8ea5f6",
+      "review_notes": "Lifetime inversion uses an inappropriate log-magnitude shortcut; consistency claims unsupported.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_026",
+      "raw_response_sha256": "407fd222db83b058308a031510b1a4bfeb330c11fb02c7e5db2b9e9b9b34498e",
+      "review_notes": "Schema failure; Planck/wavelength/area/radiometric scales fail.",
+      "structured_parse_failure": true,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_027",
+      "raw_response_sha256": "547650a2580a46f32bc77f4e27039c3029287b5b17ab4fe935cf99722610cf09",
+      "review_notes": "Schema failure; finite-band radiometry quantities fail.",
+      "structured_parse_failure": true,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_028",
+      "raw_response_sha256": "2eedb70ef025c1446f3c50670b26ceb2fd66b51519243eddcf84ab28d7ce6343",
+      "review_notes": "Relative paraxial error magnitude passes; projected solid angle uses unprojected cone formula and incorrect arithmetic/sign interpretation.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_029",
+      "raw_response_sha256": "1859097de810c07b0ed8f63702e6a5d71d62e46582ebe06b69c4321add3259a0",
+      "review_notes": "Invalid JSON escapes; temperature 294 K contradicts oracle 330 K; RJ ratio correct in prose but structured ratio wrong.",
+      "structured_parse_failure": true,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_030",
+      "raw_response_sha256": "d3f1f83413c1007ccd4866b59ed1e02bb0894eb27020a740b780742332b90580",
+      "review_notes": "Photon rate/current do not satisfy supplied q*eta conversion.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_031",
+      "raw_response_sha256": "c9b0e74ab0079d143ebc7d759cecc71da928c4ca09b23ddfeca095d8b081e872",
+      "review_notes": "Absorbed incident fraction/EQE=0.98 exceeds the reflection bound 0.8; absorption, IQE and collection are conflated.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_032",
+      "raw_response_sha256": "dfcbbf6d592dbbfc1b2d99808129264bd361cd7b8f007596913172a7b5db39eb",
+      "review_notes": "Beer-Lambert inverse/units fail; no quantitative consistency established.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_033",
+      "raw_response_sha256": "bc69fd44401081ad032c29b308850d1309fc29216e7200da522446efde0d5973",
+      "review_notes": "Photocurrent passes; external-QE result fails.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_034",
+      "raw_response_sha256": "117d99392414858438d65d123755b580f312d24a52f56eaa72f3da17ef523602",
+      "review_notes": "Schema failure; gain and external-QE distinction not quantitatively solved.",
+      "structured_parse_failure": true,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_035",
+      "raw_response_sha256": "d5a854c7803858ee649b80f3b78c1ea8267d7c1baa83e52f66ef7f9745859907",
+      "review_notes": "Schema failure; uncertainty quantities fail.",
+      "structured_parse_failure": true,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_036",
+      "raw_response_sha256": "58d0130d57f38e9416b49a8f3cdf03742df2de2e9b464d3fab91a3dc5c7b7a09",
+      "review_notes": "Schema failure; uncertainty quantities fail.",
+      "structured_parse_failure": true,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_037",
+      "raw_response_sha256": "9e6be0e0605e4b537c2bd62b6d70ff49a599accc956daefabc1398a47bb868cb",
+      "review_notes": "Current ratio passes; activation energy wrong. Generic diffusion activation >0.5 eV claim unjustified for infrared materials.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_038",
+      "raw_response_sha256": "15e5f6c9210db6beb3bddb1da8f8fbc81279a08d7dc93be1602789c45132661b",
+      "review_notes": "Contact-intercept algebra fails (30->20 Ohm per contact); constant slope supports a conditional model, not unique proof of a bulk mechanism.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_039",
+      "raw_response_sha256": "a24aeb36c7bd86494b763274afdc5eccb5895e3a18f460e059c82051f173a804",
+      "review_notes": "Current ratio passes; transimpedance=1 V/A fails. Dummy voltage gain change misread as a doubled control current; V/A is a valid Ohm alias.",
+      "structured_parse_failure": false,
+      "truncated": false
+    },
+    {
+      "generation_terminal": true,
+      "id": "science_dev_040",
+      "raw_response_sha256": "cf55492efd2688fbad70a059c108847a8ba579590ce3b007e5f6f2bfd3f50008",
+      "review_notes": "All eight linked quantities fail; invented unity gain, incorrect noise units and geometry/arithmetic inconsistent with supplied model.",
+      "structured_parse_failure": false,
+      "truncated": false
+    }
+  ],
+  "manual_rubric_score": null,
+  "predictions_sha256": "86a20bc67b750c39ca355d962b257d85c008d90cf959af5e5fb9e4f6f06a63df",
+  "review_scope": "All structured quantities and response excerpts inspected; focused equation/measurement review of failures. Not a calibrated full manual-rubric grade.",
+  "reviewer": "Codex analytic review; no human signoff",
+  "schema_version": "1.0"
+}

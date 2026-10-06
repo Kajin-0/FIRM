@@ -1,0 +1,25 @@
+{
+  "models": [
+    {
+      "context_length": 8192,
+      "details": {
+        "families": [
+          "qwen35"
+        ],
+        "family": "qwen35",
+        "format": "gguf",
+        "parameter_size": "9.7B",
+        "parent_model": "",
+        "quantization_level": "Q4_K_M"
+      },
+      "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "expires_at": "2026-10-05T22:27:54.390897013Z",
+      "model": "qwen3.5:9b",
+      "name": "qwen3.5:9b",
+      "size": 6319085975,
+      "size_vram": 0
+    }
+  ],
+  "observation": "CPU execution; size_vram is residency at this instant, not peak process memory.",
+  "timestamp": "2026-10-05T22:47:03.045562+00:00"
+}

@@ -1,0 +1,1682 @@
+{
+  "eval_manifest_sha256": "fec09c634d9bdde5993363dcf826229ef1208f223e3ab27236579c1f2810e692",
+  "eval_sha256": "ebfd7d3e62231fb1710ccd572bab24a1233f06b0d570e964aa40d8054db68164",
+  "generation_manifest": {
+    "path": "evals/results/E0-local-qwen35-Q4-compact-v2/science_dev_predictions.run.json",
+    "sha256": "2945135998c442b0707e794d6485ba630e0b99b70c21c888d82e44c85d636948",
+    "spec": {
+      "backend": "ollama",
+      "base_url": "http://127.0.0.1:11434",
+      "context_length": 8192,
+      "eval_file": "evals/firm_science_dev_v2.jsonl",
+      "eval_sha256": "ebfd7d3e62231fb1710ccd572bab24a1233f06b0d570e964aa40d8054db68164",
+      "git_sha": "a3424f91518f3e1649f5d76a0eac9eb6140aa282",
+      "max_tokens": 2048,
+      "model": "qwen3.5:9b",
+      "model_revision": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "protocol_name": "scientific-compact-v2",
+      "protocol_sha256": "f6610e45893ed5c1e6b4670a9cba2569583d349e51e600916cbc41fdd3d8567a",
+      "revision_verification": "operator-declared; ensure the server loads this revision",
+      "runner_sha256": "d0a52790c8e9f175a1fcdcb388c4a70e3de56bb3a2764adb2858acd842531fa1",
+      "sampling": {
+        "presence_penalty": 0,
+        "top_p": 1
+      },
+      "schema_version": "1.0",
+      "seed": 42,
+      "server_metadata": {
+        "artifact_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+        "cpu": "",
+        "cpu_count": 8,
+        "default_parameters": "presence_penalty               1.5\ntemperature                    1\ntop_k                          20\ntop_p                          0.95",
+        "details": {
+          "families": [
+            "qwen35"
+          ],
+          "family": "qwen35",
+          "format": "gguf",
+          "parameter_size": "9.7B",
+          "parent_model": "",
+          "quantization_level": "Q4_K_M"
+        },
+        "gpu": "not established; inspect per-response residency",
+        "implementation": "ollama",
+        "model_info": {
+          "general.architecture": "qwen35",
+          "general.file_type": 15,
+          "general.parameter_count": 9653104368,
+          "general.quantization_version": 2,
+          "qwen35.attention.head_count": 16,
+          "qwen35.attention.head_count_kv": null,
+          "qwen35.attention.key_length": 256,
+          "qwen35.attention.layer_norm_rms_epsilon": 1e-06,
+          "qwen35.attention.value_length": 256,
+          "qwen35.block_count": 32,
+          "qwen35.context_length": 262144,
+          "qwen35.embedding_length": 4096,
+          "qwen35.feed_forward_length": 12288,
+          "qwen35.full_attention_interval": 4,
+          "qwen35.image_token_id": 248056,
+          "qwen35.mrope_sections": null,
+          "qwen35.rope.dimension_count": 64,
+          "qwen35.rope.dimension_sections": null,
+          "qwen35.rope.freq_base": 10000000,
+          "qwen35.rope.mrope_interleaved": true,
+          "qwen35.rope.mrope_section": null,
+          "qwen35.ssm.conv_kernel": 4,
+          "qwen35.ssm.group_count": 16,
+          "qwen35.ssm.inner_size": 4096,
+          "qwen35.ssm.state_size": 128,
+          "qwen35.ssm.time_step_rank": 32,
+          "qwen35.ssm.v_head_reordered": true,
+          "qwen35.vision.attention.head_count": 16,
+          "qwen35.vision.block_count": 27,
+          "qwen35.vision.deepstack_visual_indexes": [],
+          "qwen35.vision.embedding_length": 1152,
+          "qwen35.vision.image_mean": null,
+          "qwen35.vision.image_std": null,
+          "qwen35.vision.longest_edge": 16777216,
+          "qwen35.vision.num_channels": 3,
+          "qwen35.vision.patch_size": 16,
+          "qwen35.vision.shortest_edge": 65536,
+          "qwen35.vision.spatial_merge_size": 2,
+          "qwen35.vision.temporal_patch_size": 2,
+          "qwen35.vision_end_token_id": 248054,
+          "qwen35.vision_start_token_id": 248053,
+          "tokenizer.ggml.add_eos_token": false,
+          "tokenizer.ggml.add_padding_token": false,
+          "tokenizer.ggml.eos_token_id": 248046,
+          "tokenizer.ggml.merges": null,
+          "tokenizer.ggml.model": "gpt2",
+          "tokenizer.ggml.padding_token_id": 248044,
+          "tokenizer.ggml.pre": "qwen35",
+          "tokenizer.ggml.scores": null,
+          "tokenizer.ggml.token_type": null,
+          "tokenizer.ggml.tokens": null
+        },
+        "renderer_modelfile_sha256": "08db85c6660e288d3c60692471c94bfed5233ed51d69ca24243c006640e333fe",
+        "template_sha256": "39302355407942b6b0b50e1a78741740fc8a31926a4febea429526497e0e6008",
+        "upstream_hf_revision": "unknown",
+        "version": "0.32.15"
+      },
+      "temperature": 0,
+      "thinking": "off",
+      "track": "E0-local-standard-Q4-compact-v2"
+    },
+    "status": "complete"
+  },
+  "items": [
+    {
+      "category": "HgCdTe_edge_consistency",
+      "id": "science_dev_001",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Temperature, cutoff criterion and empirical-model uncertainty precede a material-quality claim; one residual does not identify gradients."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "composition": {
+          "absolute_error": 0.032354066515796504,
+          "converted_value": 0.25,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.1486545877419057,
+          "unit_correct": true
+        },
+        "predicted_warm_cutoff": {
+          "absolute_error": 0.023088924850267034,
+          "converted_value": 9.0,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 0.002572034484577081,
+          "unit_correct": true
+        },
+        "warm_residual": {
+          "absolute_error": 0.023088924850267034,
+          "converted_value": 0.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 1.0,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "HgCdTe_sensitivity",
+      "id": "science_dev_002",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "x is dimensionless; dEg/dx therefore has eV units; coefficient/model and temperature uncertainties excluded."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "cutoff_temperature_slope": {
+          "error": "unknown unit or wrong dimension",
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "gap_slope_x": {
+          "error": "unknown unit or wrong dimension",
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "sigma_x": {
+          "error": "unknown unit or wrong dimension",
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "HgCdTe_temperature_sign",
+      "id": "science_dev_003",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Positive slope in this bracket is empirical, not a universal semiconductor law."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "delta_gap_x020": {
+          "absolute_error": 0.04786,
+          "converted_value": -0.0286,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 2.4849428868120462,
+          "unit_correct": true
+        },
+        "delta_gap_x035": {
+          "absolute_error": 0.05083,
+          "converted_value": -0.0412,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 5.278296988577363,
+          "unit_correct": true
+        },
+        "gap_x020": {
+          "absolute_error": 0.9020640000000001,
+          "converted_value": 0.9860000000000001,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 10.747045367899357,
+          "unit_correct": true
+        },
+        "gap_x035": {
+          "absolute_error": 0.6222129999999999,
+          "converted_value": 0.945,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 1.927627196882154,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "four_terminal_transport",
+      "id": "science_dev_004",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Four-terminal voltage-probe geometry and current uniformity must be checked."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "conductivity": {
+          "absolute_error": 6249.999722199999,
+          "converted_value": 0.0002778,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.999999955552,
+          "unit_correct": true
+        },
+        "contact_resistance": {
+          "absolute_error": 30.0,
+          "converted_value": 60.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 1.0,
+          "unit_correct": true
+        },
+        "resistivity": {
+          "absolute_error": 3599.99984,
+          "converted_value": 3600.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 22499998.999999996,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "geometry_uncertainty",
+      "id": "science_dev_005",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "First-order, independent Gaussian errors; correlated errors require covariance."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "relative_sigma": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "sigma_resistivity": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "Hall_factor_transport",
+      "id": "science_dev_006",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Single carrier, low-field Hall model; polarity and offset correction explicit."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "carrier_density": {
+          "absolute_error": 2.650296860858268e+24,
+          "converted_value": 2.746e+24,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 27.692893719330435,
+          "unit_correct": true
+        },
+        "drift_mobility": {
+          "absolute_error": 0.23982608695652172,
+          "converted_value": 0.292,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 4.596666666666666,
+          "unit_correct": true
+        },
+        "hall_coefficient": {
+          "absolute_error": 0.00017800000000000004,
+          "converted_value": -0.000253,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 2.373333333333334,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "two_carrier_Hall",
+      "id": "science_dev_007",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Mobility squared weights Hall signal; single-carrier density inference is invalid."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "conductivity": {
+          "absolute_error": 470.4529902,
+          "converted_value": 10.2,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.9787788691468334,
+          "unit_correct": true
+        },
+        "hall_coefficient": {
+          "absolute_error": 0.00044621066546045594,
+          "converted_value": -1.15e-05,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.9748749573304545,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "bipolar_bar_resistance",
+      "id": "science_dev_008",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Neglecting holes increases inferred resistance here; density and mobility assumptions are supplied."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "bulk_resistance": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "electron_only_ratio": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "bias_gain_comparison",
+      "id": "science_dev_009",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Active voltage, uniform field and ohmic reinjection; heating and velocity saturation can invalidate gain scaling."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "gain": {
+          "absolute_error": 1996.8,
+          "converted_value": 2000.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 624.0,
+          "unit_correct": true
+        },
+        "gain_ratio": {
+          "absolute_error": 0.0,
+          "converted_value": 2.0,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 0.0,
+          "unit_correct": true
+        },
+        "transit_time": {
+          "absolute_error": 1.24875e-06,
+          "converted_value": 1.25e-09,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.999,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "photoconductor_gain_from_photons",
+      "id": "science_dev_010",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Generation efficiency, electrical gain and EQE are different; lifetime also needs transit/model information."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "effective_gain": {
+          "absolute_error": 4.166008268050012,
+          "converted_value": 1.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.8064269455036189,
+          "unit_correct": true
+        },
+        "responsivity": {
+          "absolute_error": 1.7763568394002505e-15,
+          "converted_value": 10.0,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 1.77635683940025e-16,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "phase_lifetime",
+      "id": "science_dev_011",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Hz-to-radians factor 2*pi mandatory; pole does not uniquely identify microscopic mechanism."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "magnitude_6400Hz": {
+          "absolute_error": 0.05278640450004207,
+          "converted_value": 0.5,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.11803398874989487,
+          "unit_correct": true
+        },
+        "time_constant": {
+          "error": "unknown unit or wrong dimension",
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "Johnson_network",
+      "id": "science_dev_012",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Uncorrelated classical Johnson sources; source temperatures remain distinct."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "equivalent_resistance": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "voltage_asd": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "shot_Johnson_readout_budget",
+      "id": "science_dev_013",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Background noise contributes although useful modulation is separate; no double-counting amplifier or diode sources."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "current_asd": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "nep_density": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "rms_current": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "PSD_ASD_sidedness",
+      "id": "science_dev_014",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Factor sqrt2 for ASD, not factor2; negative frequencies must not be integrated again."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "one_sided_asd": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "rms_current": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "colored_noise_filtered_band",
+      "id": "science_dev_015",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Finite lower limit essential for ideal 1/f; real filter changes weighting."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "colored_variance_fraction": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "rms_voltage": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "GR_spectral_inverse",
+      "id": "science_dev_016",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "PSD amplitude is independently inferred, not inferred from mean current; phenomenological trap time."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "corner": {
+          "absolute_error": 0.0,
+          "converted_value": 500.0,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 0.0,
+          "unit_correct": true
+        },
+        "gr_variance": {
+          "absolute_error": 6.281685307179586e-17,
+          "converted_value": 1.5e-20,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.9997612675853622,
+          "unit_correct": true
+        },
+        "plateau": {
+          "absolute_error": 7e-20,
+          "converted_value": 1e-20,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.8750000000000001,
+          "unit_correct": true
+        },
+        "tau": {
+          "absolute_error": 0.0003151298861837907,
+          "converted_value": 3.18e-06,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.9900097353615845,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "multiple_GR_band",
+      "id": "science_dev_017",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Correlated processes require cross-spectra; RMS values do not add linearly."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "band_rms": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "first_variance_fraction": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "lockin_filter_order",
+      "id": "science_dev_018",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Use transfer squared and stated pole count; one-sided post-demodulator input convention."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "enbw": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "rms_voltage": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "unequal_pole_ENBW",
+      "id": "science_dev_019",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Poles cascade; magnitude-squared transfer functions multiply."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "enbw": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "rms_voltage": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "colored_noise_actual_filter",
+      "id": "science_dev_020",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "No spectrum is assumed outside the stated support; integration convention matters."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "filtered_rms": {
+          "absolute_error": 1.8783800717083654e-08,
+          "converted_value": 1.58e-09,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.9224113404982154,
+          "unit_correct": true
+        },
+        "unfiltered_rms": {
+          "absolute_error": 4.0618302933447365e-08,
+          "converted_value": 1.41e-09,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.966451179286664,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "chopper_RMS_fundamental",
+      "id": "science_dev_021",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "State difference, DC mean and sinusoidal RMS are distinct; lock-in calibration must match the chosen convention."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "fundamental_peak_current": {
+          "absolute_error": 1.6352110243458839e-09,
+          "converted_value": 4.500000000000001e-09,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.5707963267948964,
+          "unit_correct": true
+        },
+        "fundamental_rms_current": {
+          "absolute_error": 1.1562882886465108e-09,
+          "converted_value": 3.182e-09,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.5708059454688797,
+          "unit_correct": true
+        },
+        "mean_power": {
+          "absolute_error": 8.271806125530277e-25,
+          "converted_value": 4.500000000000001e-09,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 1.8381791390067283e-16,
+          "unit_correct": true
+        },
+        "naive_responsivity": {
+          "absolute_error": 0.23125765772930218,
+          "converted_value": 0.6364,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.5708059454688799,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "Norton_voltage_responsivity",
+      "id": "science_dev_022",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "A/W multiplied by Ohm gives V/W; a dimensionless voltage divider alone does not."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "signal_voltage": {
+          "absolute_error": 0.0024138714285714285,
+          "converted_value": 0.00242,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 393.87179487179486,
+          "unit_correct": true
+        },
+        "voltage_responsivity": {
+          "absolute_error": 92.71428571428572,
+          "converted_value": 60.5,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.6051282051282052,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "area_normalized_sensitivity",
+      "id": "science_dev_023",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Larger collecting area and normalized Dstar are separate metrics; matching frequency/bias/temperature required."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "dstar_A": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "dstar_B": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "ratio_B_A": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "cable_RC_deembedding",
+      "id": "science_dev_024",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Changing cable C can move readout pole while intrinsic lifetime remains fixed."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "RC_time": {
+          "absolute_error": 0.00094,
+          "converted_value": 0.001,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 15.666666666666666,
+          "unit_correct": true
+        },
+        "carrier_time": {
+          "absolute_error": 0.00088,
+          "converted_value": 0.001,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 7.333333333333333,
+          "unit_correct": true
+        },
+        "total_phase": {
+          "absolute_error": 15.583661695082583,
+          "converted_value": -72.19268218648372,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.17753828658105306,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "phase_magnitude_consistency",
+      "id": "science_dev_025",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Single-pole model is inconsistent; source timing, phase offset and multiple poles compete."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "ratio": {
+          "absolute_error": 1.999038105676658,
+          "converted_value": 0.8,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.7141875280734691,
+          "unit_correct": true
+        },
+        "tau_magnitude": {
+          "absolute_error": 0.12080063379268108,
+          "converted_value": 0.12092,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 1012.0170231255408,
+          "unit_correct": true
+        },
+        "tau_phase": {
+          "absolute_error": 0.12087735456152711,
+          "converted_value": 0.12092,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 2834.473249427521,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "Planck_differential_radiance",
+      "id": "science_dev_026",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Bandpass, projected throughput, emissivity and response weighting still required."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "difference": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "radiance_300K": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "radiance_400K": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "finite_band_projected_throughput",
+      "id": "science_dev_027",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Projected solid angle already contains cosine; no second pi factor; uniform source radiance and flat transmission assumed."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "band_radiance": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "projected_solid_angle": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "received_power": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "finite_Fnumber_cone",
+      "id": "science_dev_028",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Cone definition supplied; actual pupil/etendue and vignetting may differ."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "paraxial_relative_overestimate": {
+          "absolute_error": 0.0,
+          "converted_value": 0.0625,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 0.0,
+          "unit_correct": true
+        },
+        "projected_solid_angle": {
+          "absolute_error": 0.6006004321417768,
+          "converted_value": 0.7854,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 3.250009938348736,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "two_color_temperature_inverse",
+      "id": "science_dev_029",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Two-channel spectral calibration and same emissivity are assumptions; one unknown emissivity per wavelength makes temperature non-identifiable."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "color_temperature": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "rayleigh_jeans_ratio_limit": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "band_photon_radiometry",
+      "id": "science_dev_030",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Transmission and QE are separate; projected geometry and uniform band assumptions stated."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "photocurrent": {
+          "absolute_error": 1.0869819872295307e-08,
+          "converted_value": 1.24e-09,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.8976037618167338,
+          "unit_correct": true
+        },
+        "photon_rate": {
+          "absolute_error": 1793717614426.1287,
+          "converted_value": 1910000000000.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 15.425531610603416,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "absorption_collection_depth",
+      "id": "science_dev_031",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Absorption is not collection; exponential collection model is supplied, not a universal device law."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "absorbed_incident_fraction": {
+          "absolute_error": 0.4599501992889242,
+          "converted_value": 0.98,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.8844349111566315,
+          "unit_correct": true
+        },
+        "external_QE": {
+          "absolute_error": 0.590472814503407,
+          "converted_value": 0.98,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 1.5158706156815125,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "transmission_thickness_inverse",
+      "id": "science_dev_032",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Reflection factor cancels only if common; no claim that C determines refractive index uniquely."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "absorption_coefficient": {
+          "absolute_error": 449.0857833715113,
+          "converted_value": 1.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.997778201318626,
+          "unit_correct": true
+        },
+        "surface_factor": {
+          "absolute_error": 0.3126456995021938,
+          "converted_value": 0.55,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.36242654392482565,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "diode_EQE_calibration",
+      "id": "science_dev_033",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "External versus internal QE and electrical gain assumptions explicit."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "external_QE": {
+          "absolute_error": 0.3879164046143496,
+          "converted_value": 0.268,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.5914113473689191,
+          "unit_correct": true
+        },
+        "photocurrent": {
+          "absolute_error": 5.293955920339377e-23,
+          "converted_value": 2.46e-07,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 2.152014601763975e-16,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "gain_responsivity_not_QE",
+      "id": "science_dev_034",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Bias supplies electrical gain energy; efficiency and gain estimates remain model dependent."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "apparent_QE_without_gain": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "generation_efficiency": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "NEP_calibration_uncertainty",
+      "id": "science_dev_035",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Calibration covariance and nonlinear/model uncertainty omitted."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "NEP_sigma": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "relative_Dstar_sigma": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "relative_NEP_sigma": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "Hall_density_uncertainty",
+      "id": "science_dev_036",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Statistics and Hall factor are model assumptions; precision is not validation of a single-carrier model."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "density_sigma": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "relative_sigma": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "Arrhenius_prefactor",
+      "id": "science_dev_037",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Apparent Arrhenius energy/prefactor over two points is not a unique mechanism assignment."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "activation_energy": {
+          "absolute_error": 0.079,
+          "converted_value": 0.124,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 1.7555555555555555,
+          "unit_correct": true
+        },
+        "current_ratio": {
+          "absolute_error": 9.812180177704022e-06,
+          "converted_value": 11.2138,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 8.75008613669037e-07,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "contact_geometry_diagnosis",
+      "id": "science_dev_038",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Contact inference conditional on common geometry/material; parallel surface leakage/current crowding can violate linear model."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "bulk_resistivity": {
+          "absolute_error": 1.03968,
+          "converted_value": 1.04,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 3248.999999999999,
+          "unit_correct": true
+        },
+        "contact_resistance_after": {
+          "absolute_error": 40.0,
+          "converted_value": 60.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 2.0,
+          "unit_correct": true
+        },
+        "contact_resistance_before": {
+          "absolute_error": 50.0,
+          "converted_value": 80.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 1.6666666666666667,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "readout_calibration_artifact",
+      "id": "science_dev_039",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Readout change suffices; no carrier-gain improvement follows without independent optical/current and noise controls."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "current_ratio": {
+          "absolute_error": 0.0,
+          "converted_value": 1.0,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 0.0,
+          "unit_correct": true
+        },
+        "transimpedance_after": {
+          "error": "unknown unit or wrong dimension",
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "transimpedance_before": {
+          "error": "unknown unit or wrong dimension",
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "linked_detector_design",
+      "id": "science_dev_040",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Lifetime independent; optical area differs from electrical cross-section; low-field gain/contact/bias conventions explicit.",
+        "Shot/GR/1f/background omitted, so this is a restricted ideal noise budget; do not claim achieved sensitivity."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "dstar": {
+          "error": "unknown unit or wrong dimension",
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "f3dB": {
+          "absolute_error": 1120422.5284540523,
+          "converted_value": 1200000.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 14.079644737231007,
+          "unit_correct": true
+        },
+        "gain": {
+          "absolute_error": 0.9199999999999999,
+          "converted_value": 1.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.47916666666666663,
+          "unit_correct": true
+        },
+        "joule_power": {
+          "absolute_error": 2.4455261470800004e-06,
+          "converted_value": 1.5e-07,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.9422082493105486,
+          "unit_correct": true
+        },
+        "nep_density": {
+          "error": "unknown unit or wrong dimension",
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "resistance": {
+          "absolute_error": 1666147.2166207032,
+          "converted_value": 1670000.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 432.45286656235993,
+          "unit_correct": true
+        },
+        "responsivity": {
+          "absolute_error": 4.0911779771218315,
+          "converted_value": 0.09,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.9784749655497916,
+          "unit_correct": true
+        },
+        "transit_time": {
+          "absolute_error": 8.336666666666668e-07,
+          "converted_value": 2.08e-07,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.80032,
+          "unit_correct": true
+        }
+      }
+    }
+  ],
+  "limitations": "Structured quantities only; correct numbers do not establish correct physics or derivation.",
+  "manual_status": "not scored; requires independent scientific review",
+  "numerical_accuracy": 0.08490566037735849,
+  "prediction_coverage": 1.0,
+  "predictions_sha256": "86a20bc67b750c39ca355d962b257d85c008d90cf959af5e5fb9e4f6f06a63df",
+  "quantity_count": 106,
+  "schema_version": "1.0",
+  "unit_correctness": 0.5754716981132075
+}

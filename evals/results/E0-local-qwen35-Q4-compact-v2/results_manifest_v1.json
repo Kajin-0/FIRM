@@ -1,0 +1,108 @@
+{
+  "artifact_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+  "final_score_files": [
+    "numeric_pilot_score_v2.json",
+    "science_dev_score_v2.json"
+  ],
+  "generation_defect": "Science013 returned done=false. Original runner marked attempted set complete; raw reply retained, grade failed, terminal coverage39/40. Future runner reports complete_with_generation_errors.",
+  "model": "qwen3.5:9b",
+  "runs": [
+    {
+      "analysis_status": "complete",
+      "attempts": 10,
+      "completion_tokens_total_observed": 2901,
+      "eval_sha256": "4038e70b5503c7eff3c188d74ef44da6211e252d7edd0745f872ff130e10e46d",
+      "latency_seconds_median": 78.31276664789766,
+      "latency_seconds_total": 1098.9828857295215,
+      "manifest": "evals/results/E0-local-qwen35-Q4-compact-v2/firm_core_eval_predictions.run.json",
+      "manifest_sha256": "df138ed77db3cfa960bfa72d5f96c6eab98269612770180f021b784732394c0c",
+      "nonterminal_ids": [],
+      "predictions_sha256": "a495f6862c930cd17012bb84c03939110d17683770ab7645d5fdb966504c813a",
+      "recorded_run_status": "complete",
+      "structured_parse_failures": null,
+      "terminal_replies": 10,
+      "token_usage_missing_count": 0,
+      "truncated_ids": []
+    },
+    {
+      "analysis_status": "complete",
+      "attempts": 10,
+      "completion_tokens_total_observed": 2840,
+      "eval_sha256": "23a66ef49345108c6f5514e8503c2475e2e932a6a3556766b07109ae7ac5d03e",
+      "latency_seconds_median": 62.57135670166463,
+      "latency_seconds_total": 699.0424813786522,
+      "manifest": "evals/results/E0-local-qwen35-Q4-compact-v2/firm_domain_boundary_eval_predictions.run.json",
+      "manifest_sha256": "53dd8e5e70d3af541c9b824fe70c8028cdb1b1293ad0acbc9b391d57f25973c7",
+      "nonterminal_ids": [],
+      "predictions_sha256": "99eecfd427c8b4ca13eab206a26bac60b0677c7bbd8e0e4b8925b5347c60115d",
+      "recorded_run_status": "complete",
+      "structured_parse_failures": null,
+      "terminal_replies": 10,
+      "token_usage_missing_count": 0,
+      "truncated_ids": []
+    },
+    {
+      "analysis_status": "complete",
+      "attempts": 8,
+      "completion_tokens_total_observed": 2530,
+      "eval_sha256": "ea40774d8beff73cd43859f5052c990a6d5973b3cadca88b2c9d8e98c6b96b5b",
+      "latency_seconds_median": 85.2234460846521,
+      "latency_seconds_total": 875.6636626375839,
+      "manifest": "evals/results/E0-local-qwen35-Q4-compact-v2/firm_numeric_pilot_v1_predictions.run.json",
+      "manifest_sha256": "a3b921e360cbb5dfa05226615a1e671db5699c81e4632f462d1751c073d60700",
+      "nonterminal_ids": [],
+      "predictions_sha256": "e90654f17e46ee2e1c8f9ffcc52ff8c24386391f5e0cf81e01d1be91cf5daa65",
+      "recorded_run_status": "complete",
+      "structured_parse_failures": 3,
+      "terminal_replies": 8,
+      "token_usage_missing_count": 0,
+      "truncated_ids": []
+    },
+    {
+      "analysis_status": "complete",
+      "attempts": 10,
+      "completion_tokens_total_observed": 3085,
+      "eval_sha256": "edd2a8a3435aef8fb64366d473c203f9ecb5bce2696daed63f39b6c3c11b728f",
+      "latency_seconds_median": 58.89473432768136,
+      "latency_seconds_total": 617.6681572198868,
+      "manifest": "evals/results/E0-local-qwen35-Q4-compact-v2/firm_v2_expert_eval_predictions.run.json",
+      "manifest_sha256": "0a3e83a4ca652169bc333c2e7dcf6860d4019f1b50d7af1ad0125b7230339a53",
+      "nonterminal_ids": [],
+      "predictions_sha256": "7e3fbe08c941cdb088eee23f6a2b52cee3c76279a5dc52f6d0f38fca8c580a05",
+      "recorded_run_status": "complete",
+      "structured_parse_failures": null,
+      "terminal_replies": 10,
+      "token_usage_missing_count": 0,
+      "truncated_ids": []
+    },
+    {
+      "analysis_status": "complete_attempts_with_generation_error",
+      "attempts": 40,
+      "completion_tokens_total_observed": 16290,
+      "eval_sha256": "ebfd7d3e62231fb1710ccd572bab24a1233f06b0d570e964aa40d8054db68164",
+      "latency_seconds_median": 73.1259935842827,
+      "latency_seconds_total": 3509.729864127934,
+      "manifest": "evals/results/E0-local-qwen35-Q4-compact-v2/science_dev_predictions.run.json",
+      "manifest_sha256": "2945135998c442b0707e794d6485ba630e0b99b70c21c888d82e44c85d636948",
+      "nonterminal_ids": [
+        "science_dev_013"
+      ],
+      "predictions_sha256": "86a20bc67b750c39ca355d962b257d85c008d90cf959af5e5fb9e4f6f06a63df",
+      "recorded_run_status": "complete",
+      "structured_parse_failures": 16,
+      "terminal_replies": 39,
+      "token_usage_missing_count": 1,
+      "truncated_ids": [
+        "science_dev_018",
+        "science_dev_019"
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "scientific_model_selection": "Not an exact-HF-revision E0 and cannot select a winner; quantized CPU non-thinking local diagnostic only.",
+  "scoring_change": "Four valid explicit unit aliases added; old scores retained. Numerical totals unchanged. Grader SHA recorded in v2 scores.",
+  "timestamp": "2026-10-06",
+  "track": "E0-local-standard-Q4-compact-v2",
+  "upstream_hf_revision": "unknown",
+  "wrapper_exit": "Suite Bash wrapper exited2(unexpected EOF)after all requested inference manifests completed because it was edited while running. Current on-disk wrapper passes bash-n. No output replaced or retried."
+}

@@ -1,5 +1,6 @@
 """Runtime safety gates do not import GPU libraries or load weights."""
 import copy
+import io
 import json
 import sys
 import tempfile
@@ -11,12 +12,65 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from firm_data import sha256
 from firm_model_profiles import modern_targets,validate_profile,QWEN35_REVISION
-from run_firm_baseline import messages_for,ollama_metadata
+from run_firm_baseline import messages_for,ollama_metadata,prediction_record
 from firm_run_context import repository_revision
 from train_firm_qlora import require_reviewed_inputs
 from build_firm_science_dev import development_items
+from eval_firm_science import grade_quantity
+import run_firm_baseline
 
 class RuntimeValidationTests(unittest.TestCase):
+    def test_observed_valid_unit_spellings_do_not_fail_or_change_dimensions(self):
+        for canonical,alternative in [('Ohm','V/A'),('s','seconds'),('Jones','cm*Hz^{1/2}/W'),
+                                       ('W/(m^2*sr*um)','W/(sr*m^2*um)')]:
+            self.assertTrue(grade_quantity({'value':2,'unit':canonical,'rtol':0,'atol':0},
+                                           {'value':2,'unit':alternative})['numerical_correct'])
+        self.assertFalse(grade_quantity({'value':2,'unit':'V/W','rtol':0,'atol':0},
+                                        {'value':2,'unit':'V/A'})['unit_correct'])
+
+    def test_legacy_prose_has_no_structured_contract_and_raw_response_is_preserved(self):
+        obj={'message':{'content':'A prose scientific answer.', 'thinking':'trace'},
+             'done':True,'done_reason':'stop','eval_count':8,'prompt_eval_count':12}
+        original=copy.deepcopy(obj)
+        row=prediction_record({'id':'legacy'},obj,'ollama',0.5,'hash')
+        self.assertNotIn('structured_parse_error',row)
+        self.assertIsNone(row['generation_error'])
+        self.assertEqual(row['reasoning_content'],'trace')
+        self.assertEqual(obj,original)
+        structured=prediction_record({'id':'numeric','grading':{}},obj,'ollama',0.5,'hash')
+        self.assertTrue(structured['structured_parse_error'])
+
+    def test_nonterminal_backend_reply_is_a_generation_error_not_a_successful_answer(self):
+        obj={'message':{'content':'partial output'},'done':False}
+        row=prediction_record({'id':'fixture'},obj,'ollama',1,'hash')
+        self.assertFalse(row['generation_terminal'])
+        self.assertEqual(row['generation_error'],'nonterminal_backend_reply')
+        self.assertIsNone(row['usage']['completion_tokens'])
+        truncated={'choices':[{'message':{'content':'partial'},'finish_reason':'length'}]}
+        row=prediction_record({'id':'fixture'},truncated,'openai',1,'hash')
+        self.assertTrue(row['truncated'])
+        self.assertTrue(row['generation_terminal'])
+
+    def test_generation_error_manifest_survives_resume_without_retry(self):
+        from firm_data import write_jsonl
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);evaluation=root/'eval.jsonl';out=root/'pred.jsonl'
+            write_jsonl(evaluation,development_items()[:1])
+            argv=['runner','--eval',str(evaluation),'--model','fixture/no-weights',
+                  '--model-revision','0'*40,'--out',str(out)]
+            response=io.BytesIO(json.dumps({'choices':[{'message':{'content':'partial'},
+                                                       'finish_reason':None}]}).encode())
+            with patch.object(sys,'argv',argv),patch.object(run_firm_baseline,'repository_revision',return_value='0'*40),\
+                    patch.object(run_firm_baseline.urllib.request,'urlopen',return_value=response):
+                run_firm_baseline.main()
+            with patch.object(sys,'argv',argv),patch.object(run_firm_baseline,'repository_revision',return_value='0'*40),\
+                    patch.object(run_firm_baseline.urllib.request,'urlopen') as request:
+                run_firm_baseline.main()
+                request.assert_not_called()
+            meta=json.loads(out.with_suffix('.run.json').read_text())
+            self.assertEqual(meta['status'],'complete_with_generation_errors')
+            self.assertEqual(meta['generation_error_count'],1)
+
     def test_modern_targets_exclude_visual_and_hybrid_state_and_E2_is_gated(self):
         names=['model.visual.blocks.0.mlp.gate_proj','model.language_model.layers.0.mlp.gate_proj',
                'model.language_model.layers.0.linear_attn.in_proj_a','model.language_model.layers.3.self_attn.q_proj','lm_head']

@@ -1,0 +1,80 @@
+{
+  "bookkeeping_defect": "Original runner tagged prose-only legacy outputs structured_parse_error although JSON was not requested; those30 flags are not compliance failures. Fixed for future runs; raw history preserved.",
+  "contaminated": true,
+  "manual_rubric_score": null,
+  "reviewer": "Codex analytic review; no human signoff",
+  "sets": [
+    {
+      "coverage": 10,
+      "eval_file": "evals/firm_core_eval.jsonl",
+      "findings": [
+        {
+          "id": "firm_core_001",
+          "raw_response_sha256": "1d3cc74ad6c6f8d4384aa9df8ac000ca1cdb693ba0a2affa84b14715c421cd1c",
+          "review_notes": "Invents an incorrect FIRM acronym, instrument identity and performance specifications. Base model identity familiarity is a contaminated diagnostic, not a scientific selection metric."
+        },
+        {
+          "id": "firm_core_002",
+          "raw_response_sha256": "610f45f0b65de2caa25cb94020bf581397608e78eac8c4866ce0539d59c14348",
+          "review_notes": "Dark-current discussion uses diffusion proportional to ni without necessary ni^2/doping assumptions; the proposed observation cannot uniquely confirm a bulk mechanism."
+        },
+        {
+          "id": "firm_core_008",
+          "raw_response_sha256": "789c7c715bb3cfcd5437a5e8e8b9dddd3a438c6dbb8092000ee6086a76cd87d4",
+          "review_notes": "Useful corner description, but area independence and dB/Hz versus log-log slope require qualification."
+        }
+      ],
+      "keyword_proxy_mean_rounded": 0.307,
+      "manual_review_scope": "Selected diagnostic responses only; not a calibrated full-suite rubric score",
+      "predictions_sha256": "a495f6862c930cd17012bb84c03939110d17683770ab7645d5fdb966504c813a"
+    },
+    {
+      "coverage": 10,
+      "eval_file": "evals/firm_domain_boundary_eval.jsonl",
+      "findings": [
+        {
+          "id": "boundary_005",
+          "raw_response_sha256": "71704f4c27867f5976f7053beede5b083a8ec4839606b83a0afc696a6e7b3143",
+          "review_notes": "Says it cannot provide lasagna, then gives a recipe: contradictory domain-policy compliance."
+        },
+        {
+          "id": "boundary_008",
+          "raw_response_sha256": "61971b4a8c460dea1200815fc9ff6d11ffa912a9b82c6f872e21fade8c97168b",
+          "review_notes": "Refuses cheating, then supplies dimensionally wrong D*=A*bandwidth/NEP and an unsupported Radyonov-equation reference."
+        }
+      ],
+      "keyword_proxy_mean_rounded": 0.415,
+      "manual_review_scope": "Selected diagnostic responses only; not a calibrated full-suite rubric score",
+      "predictions_sha256": "99eecfd427c8b4ca13eab206a26bac60b0677c7bbd8e0e4b8925b5347c60115d"
+    },
+    {
+      "coverage": 10,
+      "eval_file": "evals/firm_v2_expert_eval.jsonl",
+      "findings": [
+        {
+          "id": "v2_001",
+          "raw_response_sha256": "ebe3410aea730113c75b55e2c234ade0460e9436e09545336b92dc856f99bf6c",
+          "review_notes": "Keyword proxy1.0 does not establish physical correctness; Arrhenius behavior alone does not directly confirm bulk control."
+        },
+        {
+          "id": "v2_002",
+          "raw_response_sha256": "e05a58a288d5ccd688f2c1b2903b30bcf1aaab07f28215dbfc0e49a2e6ab068a",
+          "review_notes": "NEP density dimensions useful, but D* derivation conflates RMS and density conventions; m*sqrt(Hz)/W cannot equal cm*sqrt(Hz)/W without100 conversion."
+        },
+        {
+          "id": "v2_004",
+          "raw_response_sha256": "c03e1d7ade3dc6f0d8ff75ec0c28acb0b1ce5fde0b23803389d16b0f2325f3be",
+          "review_notes": "Claims time constant must be10times shorter than chop period. Post-demodulation filtering does not track the carrier this way; settling/sweep dynamics must be modeled."
+        },
+        {
+          "id": "v2_005",
+          "raw_response_sha256": "5aa8e32f94440a04cc481dfcad31f5e60a89dcfee47e343520a43092de5bd8fd",
+          "review_notes": "Voltage responsivity V/W divided by current noise is dimensionally wrong. Passivation reducing recombination does not by itself prove lower responsivity or a specific1/f mechanism."
+        }
+      ],
+      "keyword_proxy_mean_rounded": 0.445,
+      "manual_review_scope": "Selected diagnostic responses only; not a calibrated full-suite rubric score",
+      "predictions_sha256": "7e3fbe08c941cdb088eee23f6a2b52cee3c76279a5dc52f6d0f38fca8c580a05"
+    }
+  ]
+}

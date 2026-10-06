@@ -1,0 +1,22 @@
+Keyword coverage proxy only; this score does not establish scientific correctness.
+v2_001: score=1.000 hits=7/7 bad=0
+v2_002: score=0.429 hits=3/7 bad=0
+  missing: ['V/sqrt(Hz)', 'W/sqrt(Hz)', 'sqrt(A)', 'Jones']
+v2_003: score=0.429 hits=3/7 bad=0
+  missing: ['Lorentzian', 'G-R noise', 'bias dependence', 'temperature dependence']
+v2_004: score=0.429 hits=3/7 bad=0
+  missing: ['f_3dB', '1/(2 pi tau)', 'preamp bandwidth', 'source response']
+v2_005: score=0.286 hits=2/7 bad=0
+  missing: ['surface traps', 'noise density', 'D*', 'tradeoff', 'optical or electrical loss']
+v2_006: score=0.143 hits=1/7 bad=0
+  missing: ['contacts', 'bulk resistance', 'geometry scaling', 'temperature dependence', 'noise PSD', 'optical response']
+v2_007: score=0.375 hits=3/8 bad=0
+  missing: ['optical transmission', 'area', 'solid angle', 'bandpass', 'modulated power']
+v2_008: score=0.571 hits=4/7 bad=0
+  missing: ['baseline', 'thickness', 'absorption edge']
+v2_009: score=0.500 hits=3/6 bad=0
+  missing: ['resistivity', 'R = rho L/(W t)', 'limitations']
+v2_010: score=0.286 hits=2/7 bad=0
+  missing: ['Hg vacancies', 'defects', 'passivation or surface', 'cutoff stability', 'Hall or resistance versus temperature']
+
+mean_score=0.445

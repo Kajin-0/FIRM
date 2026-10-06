@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "finish_reason": "stop",
+      "id": "numeric_pilot_001",
+      "review_notes": "Gap conversion correct; root x and warm cutoff fail. Predicted warming sign contradicts supplied empirical slope at this x. Cutoff-definition caution is appropriate but does not repair the algebra.",
+      "structured_parse_failure": false
+    },
+    {
+      "finish_reason": "stop",
+      "id": "numeric_pilot_002",
+      "review_notes": "Complete but not one protocol JSON object. NEP/Jones numbers contain serious scale errors; ratio 2.9167 appears correct in prose. Trap-reduction causality asserted without discriminating data; proposed annealing/gettering recipe unsupported.",
+      "structured_parse_failure": true
+    },
+    {
+      "finish_reason": "stop",
+      "id": "numeric_pilot_003",
+      "review_notes": "Equations partly correct; numerical inversion fails, then reported tau and fc violate tau=1/(2*pi*fc). Readout approximation loses measurable correction. Claim about cascade 3dB at readout pole neglects the carrier pole.",
+      "structured_parse_failure": false
+    },
+    {
+      "finish_reason": "stop",
+      "id": "numeric_pilot_004",
+      "review_notes": "Invalid JSON escape and serious density/mobility/geometry errors. Hall alone does not determine lifetime (correct caution), but independent lifetime was supplied. Gain/time values violate supplied assumptions.",
+      "structured_parse_failure": true
+    },
+    {
+      "finish_reason": "stop",
+      "id": "numeric_pilot_005",
+      "review_notes": "Corner and integrated RMS fail by large factors; dimensional/sanity checks absent. Claim that a generic real lock-in always reduces noise relative to a finite rectangular band is unjustified without transfer/support details.",
+      "structured_parse_failure": false
+    },
+    {
+      "finish_reason": "stop",
+      "id": "numeric_pilot_006",
+      "review_notes": "Projected cosine statement correct; Planck/area/wavelength/power scale and responsivity multiplication fail. Unit spelling outside audited whitelist noted, but errors remain many orders of magnitude even if interpreted generously.",
+      "structured_parse_failure": false
+    },
+    {
+      "finish_reason": "stop",
+      "id": "numeric_pilot_007",
+      "review_notes": "Two structured quantities pass. Explanation then converts .003 cm to 3 um instead of 30 um: failed physical/unit rubric despite correct numeric score. Absorption versus EQE distinction broadly appropriate.",
+      "structured_parse_failure": false
+    },
+    {
+      "finish_reason": "stop",
+      "id": "numeric_pilot_008",
+      "review_notes": "Complete JSON with wrong schema (quantities unwrapped); ENBW and RMS arithmetic fail on manual inspection. pi/2*7.96 equals12.5, not15.915; 12nV*sqrt15.915 is47.9nV, not197nV.",
+      "structured_parse_failure": true
+    }
+  ],
+  "manual_rubric_score": null,
+  "predictions_sha256": "e90654f17e46ee2e1c8f9ffcc52ff8c24386391f5e0cf81e01d1be91cf5daa65",
+  "reviewer": "Codex analytic review; no human signoff",
+  "schema_version": "1.0",
+  "status": "All eight responses individually inspected; qualitative failure findings, not a calibrated subjective score.",
+  "track": "E0-local-standard-Q4-compact-v2"
+}

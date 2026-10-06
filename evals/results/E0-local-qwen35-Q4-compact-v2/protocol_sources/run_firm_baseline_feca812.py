@@ -52,35 +52,6 @@ def parse_answer(raw):
     return {"answer": raw, "quantities": {}, "structured_parse_error": True}
 
 
-def prediction_record(item, obj, backend, elapsed, eval_hash):
-    """Preserve incomplete backend replies; prose-only evals have no JSON contract."""
-    if backend == 'ollama':
-        message = obj['message']
-        finish = obj.get('done_reason')
-        terminal = obj.get('done') is True
-        usage = {'prompt_tokens': obj.get('prompt_eval_count'),
-                 'completion_tokens': obj.get('eval_count')}
-        reasoning = message.get('thinking')
-    else:
-        choice = obj['choices'][0]
-        message = choice['message']
-        finish = choice.get('finish_reason')
-        terminal = finish is not None
-        usage = obj.get('usage')
-        reasoning = message.get('reasoning_content')
-    raw = message.get('content')
-    if not isinstance(raw, str):
-        raise ValueError('Server returned no text content')
-    answer = parse_answer(raw) if 'grading' in item else {'answer': raw, 'quantities': {}}
-    return {'id': item['id'], **answer, 'raw_response': raw,
-            'finish_reason': finish, 'generation_terminal': terminal,
-            'generation_error': None if terminal else 'nonterminal_backend_reply',
-            'truncated': finish in {'length', 'max_tokens'},
-            'usage': usage, 'reasoning_content': reasoning,
-            'latency_seconds': elapsed, 'raw_server_response': obj,
-            'eval_sha256': eval_hash}
-
-
 def ollama_metadata(base_url, model, revision):
     """Verify an existing local artifact; never pull or invoke a remote cloud model."""
     def get(path, payload=None):
@@ -155,7 +126,6 @@ def main():
     args.out.parent.mkdir(parents=True, exist_ok=True)
     meta_path = args.out.with_suffix(".run.json")
     done = set()
-    generation_errors = 0
     if args.out.exists():
         if not meta_path.exists() or json.loads(meta_path.read_text())["spec"] != spec:
             ap.error("Resume manifest differs; use a new output path")
@@ -164,7 +134,6 @@ def main():
             if row["id"] in done or row["id"] not in {r["id"] for r in items}:
                 ap.error("Invalid existing prediction IDs")
             done.add(row["id"])
-            generation_errors += bool(row.get('generation_error'))
     else:
         if meta_path.exists():
             ap.error("Run manifest exists without predictions; use a new path")
@@ -189,17 +158,27 @@ def main():
         with urllib.request.urlopen(req, timeout=args.timeout) as response:
             obj = json.load(response)
         elapsed = time.perf_counter() - started
-        row = prediction_record(item, obj, args.backend, elapsed, spec['eval_sha256'])
-        generation_errors += bool(row['generation_error'])
+        if args.backend == 'ollama':
+            choice = {'message': obj['message'], 'finish_reason': obj.get('done_reason')}
+            choice['message']['reasoning_content'] = obj['message'].get('thinking')
+            obj['usage'] = {'prompt_tokens': obj.get('prompt_eval_count'), 'completion_tokens': obj.get('eval_count')}
+        else:
+            choice = obj["choices"][0]
+        raw = choice["message"].get("content")
+        if not isinstance(raw, str):
+            raise ValueError("Server returned no text content")
+        row = {"id": item["id"], **parse_answer(raw), "raw_response": raw,
+               "finish_reason": choice.get("finish_reason"), "usage": obj.get("usage"),
+               "reasoning_content": choice["message"].get("reasoning_content"),
+               "latency_seconds": elapsed, "raw_server_response": obj,
+               "eval_sha256": spec["eval_sha256"]}
         with args.out.open("a", encoding="utf-8") as stream:
             stream.write(json.dumps(row, ensure_ascii=False) + "\n")
             stream.flush()
             os.fsync(stream.fileno())
-        print(item["id"], row['finish_reason'], row['generation_error'] or '', flush=True)
+        print(item["id"], choice.get("finish_reason"), flush=True)
     meta = json.loads(meta_path.read_text())
-    meta.update({"status": "complete_with_generation_errors" if generation_errors else "complete",
-                 "generation_error_count": generation_errors,
-                 "predictions_sha256": sha256(args.out)})
+    meta.update({"status": "complete", "predictions_sha256": sha256(args.out)})
     write_json(meta_path, meta)
 
 

@@ -1,0 +1,23 @@
+Keyword coverage proxy only; this score does not establish scientific correctness.
+firm_core_001: score=0.000 hits=0/4 bad=0
+  missing: ['infrared photodetectors', 'HgCdTe or MCT', 'technical equations and units', 'empirical troubleshooting']
+firm_core_002: score=0.667 hits=4/6 bad=0
+  missing: ['exponential dependence', 'k_B T']
+firm_core_003: score=0.400 hits=2/5 bad=0
+  missing: ['E_g = hc/lambda_c', 'micrometers', 'physical interpretation']
+firm_core_004: score=0.400 hits=2/5 bad=0
+  missing: ['unmodulated carriers', 'generation-recombination noise', 'photocurrent from absorbed photons']
+firm_core_005: score=0.600 hits=3/5 bad=0
+  missing: ['v_n = sqrt(4 k_B T R Delta f)', 'V rms']
+firm_core_006: score=0.000 hits=0/5 bad=0
+  missing: ['mechanism comparison', 'frequency dependence', 'bias dependence', 'carrier statistics', 'trap or recombination behavior']
+firm_core_007: score=0.200 hits=1/5 bad=0
+  missing: ['frequency roll-off', 'carrier lifetime', 'RC bandwidth', 'lock-in reference']
+firm_core_008: score=0.600 hits=3/5 bad=0
+  missing: ['intersection', 'log-log slope']
+firm_core_009: score=0.200 hits=1/5 bad=0
+  missing: ['Planck spectrum', 'detector bandpass', 'optical power', 'temperature dependence']
+firm_core_010: score=0.000 hits=0/4 bad=0
+  missing: ['state uncertainty', 'ask for composition or temperature if needed', 'give typical range only with caveat', 'avoid hallucination']
+
+mean_score=0.307

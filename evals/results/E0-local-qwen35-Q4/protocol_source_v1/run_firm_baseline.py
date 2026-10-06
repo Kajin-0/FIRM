@@ -17,20 +17,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from firm_data import digest, require_clean, sha256, write_json
-from firm_run_context import repository_revision
 
 
-def messages_for(item, protocol='v1'):
-    if protocol == 'scientific-compact-v2':
-        system = ('Solve the infrared detector problem using the supplied assumptions. '
-                  'Be precise about equations, units and measurement conventions. '
-                  'Keep the explanation within 200 words; state a competing hypothesis or validation check where relevant.')
-        if 'grading' in item:
-            names = list(item['grading']['quantities'])
-            system += (' Return only one JSON object. Put quantities first, then answer. '
-                       'quantities maps each required name to {"value": number, "unit": "explicit unit"}; '
-                       'answer is your concise explanation. Required names: ' + ', '.join(names))
-        return [{'role':'system','content':system},{'role':'user','content':item['prompt']}]
+def messages_for(item):
     system = ("You are FIRM, an infrared photodetector science and engineering assistant. "
               "State relevant assumptions, equations and units, calculations, sanity checks, "
               "physical interpretation, competing hypotheses and validation experiments.")
@@ -50,35 +39,6 @@ def parse_answer(raw):
     except (ValueError, TypeError):
         pass
     return {"answer": raw, "quantities": {}, "structured_parse_error": True}
-
-
-def prediction_record(item, obj, backend, elapsed, eval_hash):
-    """Preserve incomplete backend replies; prose-only evals have no JSON contract."""
-    if backend == 'ollama':
-        message = obj['message']
-        finish = obj.get('done_reason')
-        terminal = obj.get('done') is True
-        usage = {'prompt_tokens': obj.get('prompt_eval_count'),
-                 'completion_tokens': obj.get('eval_count')}
-        reasoning = message.get('thinking')
-    else:
-        choice = obj['choices'][0]
-        message = choice['message']
-        finish = choice.get('finish_reason')
-        terminal = finish is not None
-        usage = obj.get('usage')
-        reasoning = message.get('reasoning_content')
-    raw = message.get('content')
-    if not isinstance(raw, str):
-        raise ValueError('Server returned no text content')
-    answer = parse_answer(raw) if 'grading' in item else {'answer': raw, 'quantities': {}}
-    return {'id': item['id'], **answer, 'raw_response': raw,
-            'finish_reason': finish, 'generation_terminal': terminal,
-            'generation_error': None if terminal else 'nonterminal_backend_reply',
-            'truncated': finish in {'length', 'max_tokens'},
-            'usage': usage, 'reasoning_content': reasoning,
-            'latency_seconds': elapsed, 'raw_server_response': obj,
-            'eval_sha256': eval_hash}
 
 
 def ollama_metadata(base_url, model, revision):
@@ -119,7 +79,6 @@ def main():
     ap.add_argument("--backend", choices=['openai', 'ollama'], default='openai')
     ap.add_argument("--thinking", choices=['server-default', 'off', 'on'], default='server-default')
     ap.add_argument("--track", default='E0-standard')
-    ap.add_argument('--protocol',choices=['v1','scientific-compact-v2'],default='v1')
     ap.add_argument("--context-length", type=int, default=8192)
     ap.add_argument("--timeout", type=float, default=900)
     ap.add_argument("--server-metadata", type=Path, help='Recorded server version, precision, hardware and template configuration')
@@ -133,17 +92,16 @@ def main():
     items = [r["raw"] for r in require_clean(args.eval, evaluation=True)]
     if len({r["id"] for r in items}) != len(items):
         ap.error("Duplicate eval IDs")
-    protocol = [{"id": item["id"], "messages": messages_for(item,args.protocol)} for item in items]
+    protocol = [{"id": item["id"], "messages": messages_for(item)} for item in items]
     spec = {"schema_version": "1.0", "model": args.model, "model_revision": args.model_revision,
             "revision_verification": "operator-declared; ensure the server loads this revision",
             "eval_file": str(args.eval), "eval_sha256": sha256(args.eval),
             "protocol_sha256": digest(protocol), "seed": args.seed, "temperature": args.temperature,
-            'protocol_name':args.protocol, 'runner_sha256':sha256(Path(__file__)),
             "max_tokens": args.max_tokens, "base_url": args.base_url,
             "backend": args.backend, "thinking": args.thinking, "track": args.track,
             "context_length": args.context_length, "sampling": {'presence_penalty': 0, 'top_p': 1},
             "server_metadata": json.loads(args.server_metadata.read_text()) if args.server_metadata else None,
-            "git_sha": repository_revision()}
+            "git_sha": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()}
     if args.dry_run:
         print(json.dumps({**spec, "items": len(items), "status": "dry_run_no_inference"}, indent=2))
         return
@@ -151,11 +109,9 @@ def main():
         if args.thinking == 'server-default':
             ap.error('Declare --thinking off/on for reproducible Ollama comparisons')
         spec['server_metadata'] = ollama_metadata(args.base_url, args.model, args.model_revision)
-        spec['revision_verification']='local artifact digest verified; upstream HF revision unknown'
     args.out.parent.mkdir(parents=True, exist_ok=True)
     meta_path = args.out.with_suffix(".run.json")
     done = set()
-    generation_errors = 0
     if args.out.exists():
         if not meta_path.exists() or json.loads(meta_path.read_text())["spec"] != spec:
             ap.error("Resume manifest differs; use a new output path")
@@ -164,7 +120,6 @@ def main():
             if row["id"] in done or row["id"] not in {r["id"] for r in items}:
                 ap.error("Invalid existing prediction IDs")
             done.add(row["id"])
-            generation_errors += bool(row.get('generation_error'))
     else:
         if meta_path.exists():
             ap.error("Run manifest exists without predictions; use a new path")
@@ -172,11 +127,11 @@ def main():
     for item in items:
         if item["id"] in done:
             continue
-        payload = {"model": args.model, "messages": messages_for(item,args.protocol), "temperature": args.temperature,
+        payload = {"model": args.model, "messages": messages_for(item), "temperature": args.temperature,
                    "seed": args.seed, "max_tokens": args.max_tokens, 'presence_penalty': 0, 'top_p': 1}
         route = '/chat/completions'
         if args.backend == 'ollama':
-            payload = {'model': args.model, 'messages': messages_for(item,args.protocol), 'stream': False,
+            payload = {'model': args.model, 'messages': messages_for(item), 'stream': False,
                        'think': args.thinking == 'on', 'options': {'temperature': 0, 'seed': args.seed,
                        'num_predict': args.max_tokens, 'num_ctx': args.context_length,
                        'presence_penalty': 0, 'top_p': 1, 'top_k': 0}}
@@ -189,17 +144,27 @@ def main():
         with urllib.request.urlopen(req, timeout=args.timeout) as response:
             obj = json.load(response)
         elapsed = time.perf_counter() - started
-        row = prediction_record(item, obj, args.backend, elapsed, spec['eval_sha256'])
-        generation_errors += bool(row['generation_error'])
+        if args.backend == 'ollama':
+            choice = {'message': obj['message'], 'finish_reason': obj.get('done_reason')}
+            choice['message']['reasoning_content'] = obj['message'].get('thinking')
+            obj['usage'] = {'prompt_tokens': obj.get('prompt_eval_count'), 'completion_tokens': obj.get('eval_count')}
+        else:
+            choice = obj["choices"][0]
+        raw = choice["message"].get("content")
+        if not isinstance(raw, str):
+            raise ValueError("Server returned no text content")
+        row = {"id": item["id"], **parse_answer(raw), "raw_response": raw,
+               "finish_reason": choice.get("finish_reason"), "usage": obj.get("usage"),
+               "reasoning_content": choice["message"].get("reasoning_content"),
+               "latency_seconds": elapsed, "raw_server_response": obj,
+               "eval_sha256": spec["eval_sha256"]}
         with args.out.open("a", encoding="utf-8") as stream:
             stream.write(json.dumps(row, ensure_ascii=False) + "\n")
             stream.flush()
             os.fsync(stream.fileno())
-        print(item["id"], row['finish_reason'], row['generation_error'] or '', flush=True)
+        print(item["id"], choice.get("finish_reason"), flush=True)
     meta = json.loads(meta_path.read_text())
-    meta.update({"status": "complete_with_generation_errors" if generation_errors else "complete",
-                 "generation_error_count": generation_errors,
-                 "predictions_sha256": sha256(args.out)})
+    meta.update({"status": "complete", "predictions_sha256": sha256(args.out)})
     write_json(meta_path, meta)
 
 

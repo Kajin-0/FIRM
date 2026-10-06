@@ -1,0 +1,442 @@
+{
+  "eval_manifest_sha256": "bfe2de376210e09a22b3aa6ca4f1867d10cc602b2d971f2c7248ae825271eadb",
+  "eval_sha256": "ea40774d8beff73cd43859f5052c990a6d5973b3cadca88b2c9d8e98c6b96b5b",
+  "generation_manifest": {
+    "path": "evals/results/E0-local-qwen35-Q4/numeric_pilot_predictions.run.json",
+    "sha256": "732650b2bef2ca48096a2ffa7db3396a20db23ae80ce61374589a0a03058d643",
+    "spec": {
+      "backend": "ollama",
+      "base_url": "http://127.0.0.1:11434",
+      "context_length": 8192,
+      "eval_file": "evals/firm_numeric_pilot_v1.jsonl",
+      "eval_sha256": "ea40774d8beff73cd43859f5052c990a6d5973b3cadca88b2c9d8e98c6b96b5b",
+      "git_sha": "58b7e4db268730a10e42830407a2d7a0a1a246cd",
+      "max_tokens": 1024,
+      "model": "qwen3.5:9b",
+      "model_revision": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "protocol_sha256": "6faab5b1b5355ba2521b68bfbb80c6978e7cb01cfe0744f2554ba850770999ee",
+      "revision_verification": "operator-declared; ensure the server loads this revision",
+      "sampling": {
+        "presence_penalty": 0,
+        "top_p": 1
+      },
+      "schema_version": "1.0",
+      "seed": 42,
+      "server_metadata": {
+        "artifact_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+        "cpu": "",
+        "cpu_count": 8,
+        "default_parameters": "presence_penalty               1.5\ntemperature                    1\ntop_k                          20\ntop_p                          0.95",
+        "details": {
+          "families": [
+            "qwen35"
+          ],
+          "family": "qwen35",
+          "format": "gguf",
+          "parameter_size": "9.7B",
+          "parent_model": "",
+          "quantization_level": "Q4_K_M"
+        },
+        "gpu": "not established; inspect per-response residency",
+        "implementation": "ollama",
+        "model_info": {
+          "general.architecture": "qwen35",
+          "general.file_type": 15,
+          "general.parameter_count": 9653104368,
+          "general.quantization_version": 2,
+          "qwen35.attention.head_count": 16,
+          "qwen35.attention.head_count_kv": null,
+          "qwen35.attention.key_length": 256,
+          "qwen35.attention.layer_norm_rms_epsilon": 1e-06,
+          "qwen35.attention.value_length": 256,
+          "qwen35.block_count": 32,
+          "qwen35.context_length": 262144,
+          "qwen35.embedding_length": 4096,
+          "qwen35.feed_forward_length": 12288,
+          "qwen35.full_attention_interval": 4,
+          "qwen35.image_token_id": 248056,
+          "qwen35.mrope_sections": null,
+          "qwen35.rope.dimension_count": 64,
+          "qwen35.rope.dimension_sections": null,
+          "qwen35.rope.freq_base": 10000000,
+          "qwen35.rope.mrope_interleaved": true,
+          "qwen35.rope.mrope_section": null,
+          "qwen35.ssm.conv_kernel": 4,
+          "qwen35.ssm.group_count": 16,
+          "qwen35.ssm.inner_size": 4096,
+          "qwen35.ssm.state_size": 128,
+          "qwen35.ssm.time_step_rank": 32,
+          "qwen35.ssm.v_head_reordered": true,
+          "qwen35.vision.attention.head_count": 16,
+          "qwen35.vision.block_count": 27,
+          "qwen35.vision.deepstack_visual_indexes": [],
+          "qwen35.vision.embedding_length": 1152,
+          "qwen35.vision.image_mean": null,
+          "qwen35.vision.image_std": null,
+          "qwen35.vision.longest_edge": 16777216,
+          "qwen35.vision.num_channels": 3,
+          "qwen35.vision.patch_size": 16,
+          "qwen35.vision.shortest_edge": 65536,
+          "qwen35.vision.spatial_merge_size": 2,
+          "qwen35.vision.temporal_patch_size": 2,
+          "qwen35.vision_end_token_id": 248054,
+          "qwen35.vision_start_token_id": 248053,
+          "tokenizer.ggml.add_eos_token": false,
+          "tokenizer.ggml.add_padding_token": false,
+          "tokenizer.ggml.eos_token_id": 248046,
+          "tokenizer.ggml.merges": null,
+          "tokenizer.ggml.model": "gpt2",
+          "tokenizer.ggml.padding_token_id": 248044,
+          "tokenizer.ggml.pre": "qwen35",
+          "tokenizer.ggml.scores": null,
+          "tokenizer.ggml.token_type": null,
+          "tokenizer.ggml.tokens": null
+        },
+        "renderer_modelfile_sha256": "08db85c6660e288d3c60692471c94bfed5233ed51d69ca24243c006640e333fe",
+        "template_sha256": "39302355407942b6b0b50e1a78741740fc8a31926a4febea429526497e0e6008",
+        "upstream_hf_revision": "unknown",
+        "version": "0.32.15"
+      },
+      "temperature": 0,
+      "thinking": "off",
+      "track": "E0-local-standard-Q4"
+    },
+    "status": "complete"
+  },
+  "items": [
+    {
+      "category": "HgCdTe_composition_cutoff",
+      "id": "numeric_pilot_001",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Define optical edge versus measured cutoff criterion; empirical model is not a derivation.",
+        "Keep composition fixed with temperature; discuss inhomogeneity, absorption threshold and model uncertainty."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "composition_x": {
+          "absolute_error": 0.01085388632856929,
+          "converted_value": 0.218,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.04742714446625646,
+          "unit_correct": true
+        },
+        "cutoff_150K": {
+          "absolute_error": 2.5958526831403557,
+          "converted_value": 10.82,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.3156379115216981,
+          "unit_correct": true
+        },
+        "gap_85K": {
+          "absolute_error": 1.9165604252247004e-06,
+          "converted_value": 0.1319,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 1.4530616179140436e-05,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "passivation_noise_detectivity",
+      "id": "numeric_pilot_002",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Distinguish ASD from integrated RMS and PSD; no extra bandwidth factor for density NEP.",
+        "Do not prove trap reduction from one frequency; compare dark/readout controls, PSD shape, optics and filter bandwidth."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "dstar_after": {
+          "absolute_error": 1176213521262.7378,
+          "converted_value": 1250000000000.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 15.940773179473462,
+          "unit_correct": true
+        },
+        "dstar_before": {
+          "absolute_error": 974701778718.653,
+          "converted_value": 1000000000000.0,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 38.52847075210474,
+          "unit_correct": true
+        },
+        "dstar_ratio": {
+          "absolute_error": 1.6666666666666665,
+          "converted_value": 1.25,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.5714285714285714,
+          "unit_correct": true
+        },
+        "nep_after": {
+          "error": "unknown unit or wrong dimension",
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "nep_before": {
+          "error": "unknown unit or wrong dimension",
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "frequency_response_deembedding",
+      "id": "numeric_pilot_003",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Amplitude poles multiply; de-embed magnitude and check phase.",
+        "Bias/geometry, calibrated source and preamp sweeps can distinguish microscopic lifetime from extra poles."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "carrier_tau": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "detector_f3db": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "Hall_transport_photoconductor",
+      "id": "numeric_pilot_004",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Hall factor and single-carrier assumptions must be explicit; lifetime is independently supplied.",
+        "Check field, contacts, heating, trapping, compensation and geometry uncertainty."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "dark_resistance": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "gain": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "transit_time": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "noise_PSD_band_integration",
+      "id": "numeric_pilot_005",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Integrate PSD, not ASD; A has V^2 dimensions for frequency in Hz.",
+        "Real filter weighting needs |H(f)|^2 and its ENBW; no universal single bandwidth for colored noise."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "corner_frequency": {
+          "absolute_error": 0.004444444444445139,
+          "converted_value": 44.44,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 0.00010000000000001563,
+          "unit_correct": true
+        },
+        "rms_noise": {
+          "absolute_error": 6.71959923660377e-08,
+          "converted_value": 1.46e-08,
+          "numerical_correct": false,
+          "present": true,
+          "relative_error": 0.8215071475058963,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "blackbody_throughput_voltage",
+      "id": "numeric_pilot_006",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Convert per-m to per-um radiance; projected solid angle already includes cosine, so no extra pi.",
+        "Distinguish state difference from lock-in fundamental/RMS, finite-band integration, emissivity and warm background."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "modulated_power_difference": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "radiance_per_um": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        },
+        "voltage_difference": {
+          "error": "missing or non-finite quantity",
+          "numerical_correct": false,
+          "present": false,
+          "relative_error": null,
+          "unit_correct": false
+        }
+      }
+    },
+    {
+      "category": "absorption_thickness_uncertainty",
+      "id": "numeric_pilot_007",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Beer-Lambert assumptions and unit conversion must hold.",
+        "Collection, surface recombination, reflection and near-cutoff alpha affect external QE."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "absorption_20um": {
+          "absolute_error": 3.5283236612726476e-05,
+          "converted_value": 0.8647,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 4.080568563592912e-05,
+          "unit_correct": true
+        },
+        "thickness_95pct": {
+          "absolute_error": 0.0026772644600931983,
+          "converted_value": 29.96,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 8.936928322092756e-05,
+          "unit_correct": true
+        }
+      }
+    },
+    {
+      "category": "lockin_ENBW_noise_density",
+      "id": "numeric_pilot_008",
+      "manual_metrics": {
+        "citation_correctness": null,
+        "derivation_validity": null,
+        "diagnosis_quality": null,
+        "equation_correctness": null,
+        "physical_correctness": null,
+        "reasoning_completeness": null,
+        "unsupported_claim_rate": null
+      },
+      "manual_rubric": [
+        "Define one-sided PSD and unity DC gain; no unaccounted mixer factors.",
+        "Use actual filter order/transfer and integrate colored PSD explicitly."
+      ],
+      "prediction_present": true,
+      "quantities": {
+        "enbw": {
+          "absolute_error": 0.0,
+          "converted_value": 12.5,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 0.0,
+          "unit_correct": true
+        },
+        "rms_noise": {
+          "absolute_error": 6.617444900424222e-24,
+          "converted_value": 4.242640687119286e-08,
+          "numerical_correct": true,
+          "present": true,
+          "relative_error": 1.5597467210727683e-16,
+          "unit_correct": true
+        }
+      }
+    }
+  ],
+  "limitations": "Structured quantities only; correct numbers do not establish correct physics or derivation.",
+  "manual_status": "not scored; requires independent scientific review",
+  "numerical_accuracy": 0.2727272727272727,
+  "prediction_coverage": 1.0,
+  "predictions_sha256": "f398400934a12828292b0773e5ee6581fb26d8b5080eeb0057448e5d60a65b7f",
+  "quantity_count": 22,
+  "schema_version": "1.0",
+  "unit_correctness": 0.5454545454545454
+}

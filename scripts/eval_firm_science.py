@@ -16,12 +16,12 @@ from firm_data import require_clean, sha256, write_json
 UNITS = {
     "1": ("dimensionless", 1), "": ("dimensionless", 1),
     "dimensionless": ("dimensionless", 1),
-    "s": ("time", 1), "ms": ("time", 1e-3), "us": ("time", 1e-6), "ns": ("time", 1e-9),
+    "s": ("time", 1), "seconds": ("time", 1), "ms": ("time", 1e-3), "us": ("time", 1e-6), "ns": ("time", 1e-9),
     "Hz": ("frequency", 1), "kHz": ("frequency", 1e3),
     "m": ("length", 1), "cm": ("length", .01), "um": ("length", 1e-6),
     "m^2": ("area", 1), "cm^2": ("area", 1e-4),
     "K": ("temperature", 1), "eV": ("energy", 1.602176634e-19), "J": ("energy", 1),
-    "Ohm": ("resistance", 1), "kOhm": ("resistance", 1e3),
+    "Ohm": ("resistance", 1), "V/A": ("resistance", 1), "kOhm": ("resistance", 1e3),
     "Ohm*m": ("resistivity", 1), "Ohm*cm": ("resistivity", .01),
     "V": ("voltage", 1), "mV": ("voltage", 1e-3), "uV": ("voltage", 1e-6), "nV": ("voltage", 1e-9),
     "A": ("current", 1), "mA": ("current", 1e-3), "uA": ("current", 1e-6), "nA": ("current", 1e-9),
@@ -32,9 +32,11 @@ UNITS = {
     "W/sqrt(Hz)": ("NEP_ASD", 1), "pW/sqrt(Hz)": ("NEP_ASD", 1e-12),
     "V^2/Hz": ("voltage_PSD", 1), "A^2/Hz": ("current_PSD", 1),
     "Jones": ("detectivity", .01), "cm*sqrt(Hz)/W": ("detectivity", .01),
+    "cm*Hz^{1/2}/W": ("detectivity", .01),
     "m*sqrt(Hz)/W": ("detectivity", 1),
     "W/(m^2*sr*m)": ("spectral_radiance_lambda", 1),
     "W/(m^2*sr*um)": ("spectral_radiance_lambda", 1e6),
+    "W/(sr*m^2*um)": ("spectral_radiance_lambda", 1e6),
     "S/m": ("conductivity", 1), "S/cm": ("conductivity", 100),
     "m^3/C": ("Hall_coefficient", 1), "cm^3/C": ("Hall_coefficient", 1e-6),
     "m^-3": ("number_density", 1), "cm^-3": ("number_density", 1e6),
@@ -153,6 +155,7 @@ def main():
         if prediction.get("eval_sha256", eval_hash) != eval_hash:
             raise ValueError("Prediction was generated for a different eval hash")
     report = score(items, predictions)
+    report["grader_sha256"] = sha256(Path(__file__))
     report["eval_sha256"] = sha256(args.eval)
     report["predictions_sha256"] = sha256(args.pred)
     report["eval_manifest_sha256"] = sha256(manifest_path) if manifest_path.exists() else None
