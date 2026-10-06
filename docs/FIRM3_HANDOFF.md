@@ -66,3 +66,8 @@ Next training experiment is **bounded E1B only**, after explicit paid-GPU author
 E2 blockers: richer independently reviewed rights-cleared training examples (current47 inadequate), human scientific/semantic review and benchmark calibration, exact-revision E0, full-size CUDA profile/resume/reload/runtime measurements, explicit spending authorization. DAPT -> long-form SFT -> correctness/tools -> provenance RAG -> authentic multimodal -> validated quantization remains the roadmap. No mass literature download or E2 occurred.
 
 Detailed evidence: [scientific review](FIRM3_SCIENTIFIC_REVIEW.md), [E0](FIRM3_E0_RESULTS.md), [GPU runbook](FIRM3_GPU_RUNBOOK.md), [spec](FIRM3_SPEC.md), [training plan](FIRM3_TRAINING_PLAN.md), [audit](FIRM3_AUDIT.md).
+
+
+## Final portable package evidence
+
+Archive: `/home/User/FIRM/runs/packages/firm3-e1b-ready-v2.tar.gz`; SHA-256 **852a88681eb4624d1bfe1f233b56964c270ca666213b10a2d2ca469eeb6e948c**. Package source Git revision **a5f12ccc04f913989370e9dbca471dff4f37f2f9** (implementation plus runbooks); 95 hash-verified payload files. Extraction into a fresh temporary directory without Git passed modern preflight, all36 CPU tests and Bash syntax checks. No weights/GPU loaded. Evidence `data/manifests/firm3_gpu_package_validation_v1.json`; full companion payload manifest remains beside the ignored archive. Earlier integration/ready archives are preserved. Package, final handoff and raw E0 results can also be reconstructed from published Git; use an unused output path when rebuilding. All96 historical tracked data/eval/source files were checked byte-identical against foundation58b7e4d. Final publication follows this documentation commit; verify live tip and0/0 with the Git commands above.

@@ -1,0 +1,20 @@
+{
+  "archive_manifest_path": "runs/packages/firm3-e1b-ready-v2.tar.gz.manifest.json",
+  "archive_path": "runs/packages/firm3-e1b-ready-v2.tar.gz",
+  "archive_sha256": "852a88681eb4624d1bfe1f233b56964c270ca666213b10a2d2ca469eeb6e948c",
+  "artifact_storage": "Archive and full payload manifest preserved locally, ignored; this validation record is tracked. Rebuild from package Git revision into a new archive path if unavailable.",
+  "bash_syntax": "PASS",
+  "cloud_execution": "NOT RUN",
+  "dataset_manifest_sha256": "88fbf10096a8aaf040711d889ef94a48786347e34832de0d3dbaaf27f76a474a",
+  "extracted_without_git": true,
+  "historical_sources_byte_identical": 96,
+  "implementation_git_sha": "5050c5ce72a583d86f40cc9f767fc1ee91133233",
+  "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "no_gpu_or_weights_loaded": true,
+  "package_git_sha": "a5f12ccc04f913989370e9dbca471dff4f37f2f9",
+  "payload_files": 95,
+  "preflight_status": "dry_run_no_training",
+  "tests_count": 36,
+  "tests_status": "PASS",
+  "timestamp": "2026-10-06"
+}
