@@ -18,6 +18,8 @@ Actual CPU architecture evidence is in `data/reviews/modern_profile_cpu_v1/`; th
 
 Two observed fixes are explicit: preserve attention_mask with `remove_unused_columns=False`; disable TRL's default CPU BF16 for the FP32 fixture and use the same autocast context for actual GPU probe/reload. Adapter reload is a separate process with the same pinned base weights and numerical tolerance, not a claim based on successful saving alone.
 
+To reproduce the CPU fixture in the existing isolated environment, first inspect `scripts/validate_firm_modern_profile.py --help` and choose a NEW output path. The saved v2 proof records the exact executed arguments, code/tokenizer hashes and software versions; no full-size model weights are needed. Keep these CPU metrics separate from E1B GPU measurements.
+
 ## Pinned environments and experiments
 
 | Profile | Environment | Data / optimizer steps | Precision / adaptation |
@@ -46,10 +48,12 @@ Google Compute Engine examples are `a2-highgpu-1g` (A100 40 GB), `a2-ultragpu-1g
 On this VPS, after committing the implementation:
 
 ```bash
-python3 scripts/package_firm_gpu.py --out runs/packages/firm3-e1b-ready.tar.gz
+python3 scripts/package_firm_gpu.py --out runs/packages/firm3-e1b-ready-v2.tar.gz
 ```
 
 The archive includes committed code/configs, pinned requirements, reviewed dataset and lineage, preserved evals/manifests, tests and runbooks. It contains no model weights, virtualenv, Git internals, .env or credentials. An embedded manifest verifies every payload hash on preflight. Extract into a **new empty directory** on an already approved GPU machine. Alternatively clone this branch at the recorded commit. Mount a persistent disk for outputs and Hugging Face cache; never rely on a preemptible boot disk alone.
+
+On this VPS the ready archive has already been generated and validated; use the handoff's recorded archive/hash rather than overwriting it. Earlier integration/ready archives are preserved. For a new package after later code changes, supply another unused path.
 
 ```bash
 bash scripts/bootstrap_firm_gpu.sh E1B
