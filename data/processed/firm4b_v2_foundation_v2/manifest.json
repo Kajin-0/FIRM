@@ -1,0 +1,42 @@
+{
+  "categories": {
+    "canonical_fact": 2512,
+    "contrastive_correction": 101,
+    "diagnostic_reasoning": 329,
+    "out_of_scope": 26,
+    "quantitative_open": 2355,
+    "taxonomy": 82
+  },
+  "contrastive_unique_targets": 20,
+  "diagnostic_unique_targets": 50,
+  "exact_user_stress_prompts_imported": false,
+  "foundational_fact_cards": 157,
+  "private_benchmark_imported": false,
+  "rows": {
+    "train": 4973,
+    "valid": 432
+  },
+  "schema_version": "2.1",
+  "source_urls": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10007274/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10488450/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10490682/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12430745/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12552865/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12944146/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC3297127/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC3673126/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5090602/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6270612/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7282310/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7692601/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7763214/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9420685/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9533753/",
+    "https://www.hamamatsu.com/us/en/product/optical-sensors/infrared-detector/ingaas-photodiode/G17190-005K.html"
+  ],
+  "status": "PROVISIONAL_RESEARCH_CLAIM_CHECKED_NOT_EXPERT_RELEASE_APPROVED",
+  "taxonomy_unique_targets": 16,
+  "train_sha256": "2ab07828e285c768abc9d06bde01d5f302ceff992485a12bc5ea2964c5a89473",
+  "valid_sha256": "9f02f4358fd287091adeb7b00325f7036bc08bb941d2e9e64a5909e966af6a47"
+}
