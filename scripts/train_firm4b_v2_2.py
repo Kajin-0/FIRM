@@ -145,7 +145,18 @@ def run(args):
     write_json(runfile,runmeta)
     cb=SmokeMeasurements(trainer.model,args.out,True);trainer.add_callback(cb)
     result=trainer.train(resume_from_checkpoint=str(args.resume_from_checkpoint) if args.resume_from_checkpoint else None)
-    trainer.save_model(args.out);tokenizer.save_pretrained(args.out);cb.save()
+    trainer.save_model(args.out);tokenizer.save_pretrained(args.out)
+    # Preserve the exact pinned base's reload-compatible tokenizer declaration.
+    # Transformers may otherwise serialize the runtime alias Qwen3_5Tokenizer,
+    # which older/local conversion environments cannot import by class name.
+    tcfg_path=args.out/"tokenizer_config.json"
+    tcfg=json.loads(tcfg_path.read_text())
+    tcfg["tokenizer_class"]="Qwen2Tokenizer"
+    if getattr(tokenizer,"chat_template",None):
+        tcfg["chat_template"]=tokenizer.chat_template
+        (args.out/"chat_template.jinja").write_text(tokenizer.chat_template)
+    tcfg_path.write_text(json.dumps(tcfg,indent=2,ensure_ascii=False)+"\n")
+    cb.save()
     after=frozen_fingerprint(trainer.model)
     if after!=before: raise RuntimeError("Frozen weights changed")
     runmeta.update(status="TRAINED",train_loss=float(result.training_loss),
