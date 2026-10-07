@@ -1,0 +1,52 @@
+{
+  "categories": {
+    "canonical_fact": 2512,
+    "contrastive_correction": 125,
+    "diagnostic_reasoning": 379,
+    "out_of_scope": 26,
+    "process_engineering": 56,
+    "quantitative_open": 2355,
+    "reasoning_trace": 62,
+    "taxonomy": 82
+  },
+  "exact_user_stress_prompts_imported": false,
+  "inherited_from": "firm4b_v2_1_expanded",
+  "new_contrastive_targets": 6,
+  "private_benchmark_imported": false,
+  "process_diagnostic_targets": 10,
+  "process_fact_targets": 11,
+  "rows": {
+    "train": 5150,
+    "valid": 447
+  },
+  "schema_version": "2.2",
+  "source_urls": [
+    "https://hwjs.nvir.cn/en/article/id/a11a283f-e755-42a5-9f12-2baa36ab47f2",
+    "https://patents.google.com/patent/US4317689A/en",
+    "https://patents.google.com/patent/US4567849A/en",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10007274/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10488450/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10490682/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12430745/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12552865/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12944146/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC3297127/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC3673126/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5090602/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6270612/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7282310/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7692601/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7763214/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9420685/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9533753/",
+    "https://www.epotek.com/docs/en/Datasheet/H20E.pdf",
+    "https://www.epotek.com/wp-content/uploads/2021/01/HI-REL-Die-Attach-Adhesives.pdf",
+    "https://www.hamamatsu.com/us/en/product/optical-sensors/infrared-detector/ingaas-photodiode/G17190-005K.html",
+    "https://www.masterbond.com/tds/ep29lpsp",
+    "https://www.nature.com/articles/007361c0"
+  ],
+  "status": "PROVISIONAL_RESEARCH_CLAIM_CHECKED_NOT_EXPERT_RELEASE_APPROVED",
+  "thinking_trace_targets": 12,
+  "train_sha256": "3ab05692f1b6587e9bf0720cd9c1c13434d771382400615894852cef92ffb128",
+  "valid_sha256": "59cbf8b031a37589cbeaf4519f0cd5117b0a069e2f3f72a4b44e55daf2afde3b"
+}

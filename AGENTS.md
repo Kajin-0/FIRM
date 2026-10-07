@@ -43,6 +43,10 @@ At that commit the v2.1 curriculum/trainer uses:
 - sequence length 1024
 - 1,250 optimizer steps, approximately one effective pass
 
+v2.1 training used `enable_thinking=False` for every SFT row. Its non-thinking specialist behavior is therefore fine-tuned, while its thinking behavior is mostly inherited from the base model. Manual v2.1 testing showed that thinking can loop until the generation limit and return no final answer.
+
+FIRM-4B v2.2 is the next candidate experiment. It retains the full v2.1 curriculum, adds targeted HgCdTe process/packaging corrections, and adds a sparse set of short `assistant.reasoning_content` traces encoded with `enable_thinking=True`. The goal is a dual-mode specialist: strong direct answers plus short, terminating reasoning when thinking is enabled. See `docs/FIRM4B_V22_PLAN.md`. Exact user stress prompts remain evaluation-only.
+
 Do **not** infer that a run completed successfully merely because this file names the experiment. Inspect `runs/gpu-results/`, run metadata, checkpoint/final artifacts, and logs.
 
 ## Scientific behavior
