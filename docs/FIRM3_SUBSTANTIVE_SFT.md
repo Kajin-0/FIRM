@@ -2,6 +2,8 @@
 
 **Status (2026-10-06): dataset and training/evaluation recipes prepared and CPU-validated; new substantive adapter weights are NOT trained yet.** This is not E1B. No cloud/GPU charges were incurred while preparing this curriculum.
 
+> **Scope update (2026-10-06):** This numeric-only 9B recipe is an engineering module, **not the final FIRM specialist training strategy**. The current authoritative product target is a compact (~3–4B, model selection pending) infrared-photonics/semiconductor specialist with native in-domain competence and learned abstention from unrelated questions. See `docs/FIRM3_SPECIALIST_CHARTER.md` and the strictly held-out `evals/firm_specialist_scope_v1.jsonl`. Do not launch the 660-step recipe and call it a complete specialist: first assemble the reviewed subject-matter curriculum and separately sourced out-of-domain refusal set, and benchmark the candidate student checkpoints. User stress prompts stay held out.
+
 ## Deliverables already present
 
 - Original, programmatically checked corpus at `data/processed/firm3_synthetic_quant_v1/`: **2,640 train / 264 validation** across **22** quantitative IR-detector physics families.
