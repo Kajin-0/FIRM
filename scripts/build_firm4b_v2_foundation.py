@@ -225,6 +225,10 @@ def perturb(q:str,variant:int)->str:
     if variant==5:return q.replace("photodetectors","photo detectors").replace("detector","detctor",1)
     if variant==6:return q.replace("infrared","IR").replace("Infrared","IR")
     if variant==7:return q.replace(" what "," whats ").replace("What ","Whats ",1).replace("?","?")
+    if variant==8:return q.replace(" infrared "," IR ").replace(" photodetectors","photodetectors")
+    if variant==9:return q.replace("responsivity","responsivty").replace("photodetectors","photodetecors").replace("substrates","subtrates")
+    if variant==10:return q.lower().replace("?","").replace("what is","whats")
+    if variant==11:return "technical question: "+q
     return q
 
 FACT_WRAPPERS=[
@@ -241,7 +245,7 @@ def make_fact_rows():
     rows=[]
     for i,(fid,q,a,src) in enumerate(FACTS):
         for v,wrapper in enumerate(FACT_WRAPPERS):
-            prompt=wrapper.format(q=perturb(q,v%8))
+            prompt=wrapper.format(q=perturb(q,v%12))
             rows.append({"id":f"fact_{fid}_{v:02d}","category":"canonical_fact",
               "messages":[{"role":"system","content":SYSTEM},{"role":"user","content":prompt},{"role":"assistant","content":a}],
               "metadata":{"fact_id":fid,"source_url":SOURCES[src],"rights":"original_paraphrase_from_verified_claims",
@@ -264,7 +268,7 @@ def make_taxonomy_rows():
     for i,(q,a) in enumerate(TAXONOMY):
         for v in range(10):
             rows.append({"id":f"taxonomy_{i}_{v}","category":"taxonomy",
-              "messages":[{"role":"system","content":SYSTEM},{"role":"user","content":perturb(q,v%8)},{"role":"assistant","content":a}],
+              "messages":[{"role":"system","content":SYSTEM},{"role":"user","content":perturb(q,v%12)},{"role":"assistant","content":a}],
               "metadata":{"review_status":"provisional_research","rights":"original"}})
     return rows
 
@@ -406,7 +410,7 @@ def diagnostic_rows():
     for i,(q,a) in enumerate(base):
         for v in range(20):
             rows.append({"id":f"diag_{i}_{v}","category":"diagnostic_reasoning",
-             "messages":[{"role":"system","content":SYSTEM},{"role":"user","content":perturb(q,v%8)},{"role":"assistant","content":a}],
+             "messages":[{"role":"system","content":SYSTEM},{"role":"user","content":perturb(q,v%12)},{"role":"assistant","content":a}],
              "metadata":{"review_status":"provisional_research","rights":"original"}})
     return rows
 

@@ -46,6 +46,12 @@ class Firm4BV2Tests(unittest.TestCase):
         self.assertNotIn("8.1 µm at 300 K",text)
         self.assertNotIn("8.1um MCT at 300 K",text)
 
+    def test_v1_known_false_strings_absent(self):
+        text=((DATA_DEFAULT/"train.jsonl").read_text()+(DATA_DEFAULT/"valid.jsonl").read_text()).lower()
+        for bad in ("nasdaq","bohn","haacke","in0.53ga0.47p","stainless steel",
+                    "jones is s/cm/v","d*=lambda","d* = lambda","copper zinc telluride","cdznmct"):
+            self.assertNotIn(bad,text)
+
     def test_provisional_gate_and_v2_hyperparameters(self):
         args=get_args(["--out","/tmp/firm4b-v2-test","--dry-run"])
         with self.assertRaises(PermissionError):verify_data(args)

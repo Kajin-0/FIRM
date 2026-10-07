@@ -1,7 +1,7 @@
 {
   "categories": {
     "canonical_fact": 1344,
-    "diagnostic_reasoning": 116,
+    "diagnostic_reasoning": 160,
     "out_of_scope": 26,
     "quantitative_open": 2355,
     "taxonomy": 24
@@ -10,8 +10,8 @@
   "foundational_fact_cards": 84,
   "private_benchmark_imported": false,
   "rows": {
-    "train": 3556,
-    "valid": 309
+    "train": 3596,
+    "valid": 313
   },
   "schema_version": "2.0",
   "source_urls": [
@@ -28,6 +28,6 @@
     "https://www.hamamatsu.com/us/en/product/optical-sensors/infrared-detector/ingaas-photodiode/G17190-005K.html"
   ],
   "status": "PROVISIONAL_RESEARCH_CLAIM_CHECKED_NOT_EXPERT_RELEASE_APPROVED",
-  "train_sha256": "79773a34a5a3e1e3aece5a8c7769b2a4e9138769332b607a659d4bb55ac50a2f",
-  "valid_sha256": "29d69e2f558a8b30eda4a1e8b762fa31bb859a8d5b91096e5131ef173af31ec3"
+  "train_sha256": "1121b9e90ab1e86ead476f4e3447a4eb738717469d9eabc49cbbac71674f98f3",
+  "valid_sha256": "04a49b70598239af0a7b6a1715f5645637de7504060f7af08d0dd4eef2953db3"
 }
