@@ -120,13 +120,11 @@ def unseen_case(family,r):
                 "response_time",v,"us","τ=1/(2π f3dB), converted to microseconds. This need not equal minority carrier lifetime when electronics also contribute.",
                 lambda x: close(x*1e-6*2*PI*frequency,1))
     if family=="noise_equivalent_electrons":
-        asd=10**r.uniform(-13,-9)
-        bw=10**r.uniform(-1,4)
-        integration=r.uniform(1e2,1e5)
-        rms=asd*math.sqrt(bw)*integration/Q
-        return (f"A transimpedance sensor has input white current-noise ASD {fmt(asd)} A/sqrt(Hz), effective noise bandwidth {fmt(bw)} Hz, and integrates charge for {fmt(integration)} seconds in this ideal mathematical model. Compute equivalent RMS electron count when equivalent charge is I_rms × integration time.",
-                "electrons_rms",rms,"electrons","Compute I_rms=i_n sqrt(ENBW); Q_rms=I_rms t, N=Q_rms/q. This is a stipulated equivalent-charge conversion, not a physical independent boxcar ENBW model.",
-                lambda x: close(x*Q/(asd*math.sqrt(bw)*integration),1))
+        charge=10**r.uniform(-17,-14)
+        v=charge/Q
+        return (f"A detector readout is specified with input-referred RMS equivalent noise charge of {fmt(charge)} C per measurement. Express the RMS equivalent noise charge in electrons, using q=1.602176634e-19 C.",
+                "electrons_rms",v,"electrons","ENC_electrons=Q_noise,rms/q. Charge is already input-referred RMS, so do not add arbitrary integration time or bandwidth factors.",
+                lambda x: close(x*Q,charge))
     if family=="drift_transit_time":
         length=r.uniform(3,100)
         mobility=r.uniform(150,20000)

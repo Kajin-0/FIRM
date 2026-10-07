@@ -18,7 +18,7 @@ A private 256-bit seed lives at:
 
 `~/.config/firm-private-bench/large_quant_seed` (permissions 0600).
 
-The GitHub repository contains **benchmark generators and scoring logic only**, not any actual private evaluation prompts or gold labels. These files MUST NEVER be added to a training set, published to GitHub, sent to candidate teachers as example problems during SFT, or used to optimize prompts iteratively.
+The GitHub repository contains **benchmark generators and scoring logic only**, not any actual private evaluation prompts or gold labels. A small public scope development set is separately labeled and not a private release benchmark. These files MUST NEVER be added to a training set, published to GitHub, sent to candidate teachers as example problems during SFT, or used to optimize prompts iteratively.
 
 | Tier | Families | Locked questions | Interpretation |
 |---|---:|---:|---|
@@ -30,7 +30,7 @@ The GitHub repository contains **benchmark generators and scoring logic only**, 
 
 Quantitative checksum commitments:
 - Known family SHA-256: `784c84569e48387a098b4788453fb6edef0a5f48d1039a6ce9ffe0666110ee6f`.
-- Unseen family SHA-256: `4549209adfe7b91c38d417df3c8513bf1d4fc252509cff8b3dccd314790be8ed`.
+- Unseen family SHA-256: `b8a7c00539eba70874d7171287beaa062e4654aeb219e6c3fadf69cf51a4d943`.
 
 Both partitions are deterministically regenerated with private seed, checked against analytical invariants and the existing synthetic SFT train/validation prompt set. Prompts explicitly request strict JSON so parse-compliance scoring is meaningful; units are supplied by the model. The generator refuses to overwrite a locked partition without an explicit force flag and updated checksum commitments. Their test prompts have never been given to a model as training examples by this benchmark-building workflow.
 
@@ -65,7 +65,7 @@ https://ai.google.dev/gemma/docs/core/model_card_4
 
 ## Dataset development and evaluation stages
 
-1. Source audit: establish textbook/article license, version, DOI and provenance for each factual claim. Avoid scraping copyrighted literature into training indiscriminately.
+1. Source audit: establish textbook/article license, version, DOI and provenance for each factual claim. Avoid scraping copyrighted literature into training indiscriminately. Initial metadata-only source-candidate registry: `data/firm_scientific_source_candidates_v1.jsonl` (7 papers, all **training-blocked** until rights verification and independent review).
 2. Concepts and causal explanations: materials identity, narrow-gap semiconductor devices, epitaxy, LPE/MBE, interfaces, wet etching, electronics, optical readout, cryogenic physics and thermal radiometry.
 3. Numerical curriculum: original parameterized equations with independent oracles and explicit SI conversions, supplemented by reasoning-transfer cases **from DIFFERENT formula families**.
 4. Specialist judgment: evaluate when measurements are insufficient, when uncertainty matters, and whether a claimed failure mechanism is diagnosable.
