@@ -1,6 +1,6 @@
 # FIRM local interactive baseline. This is a prompt-configured base model,
 # NOT the fine-tuned FIRM LoRA weights.
-FROM qwen35-08b-text-q5:latest
+FROM qwen2.5:3b-instruct
 PARAMETER temperature 0
 PARAMETER seed 42
 PARAMETER num_ctx 8192
