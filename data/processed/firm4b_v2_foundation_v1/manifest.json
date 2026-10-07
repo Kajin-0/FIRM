@@ -1,0 +1,33 @@
+{
+  "categories": {
+    "canonical_fact": 1344,
+    "diagnostic_reasoning": 116,
+    "out_of_scope": 26,
+    "quantitative_open": 2355,
+    "taxonomy": 24
+  },
+  "exact_user_stress_prompts_imported": false,
+  "foundational_fact_cards": 84,
+  "private_benchmark_imported": false,
+  "rows": {
+    "train": 3556,
+    "valid": 309
+  },
+  "schema_version": "2.0",
+  "source_urls": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10007274/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10490682/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12430745/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12552865/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12944146/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5090602/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6270612/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7282310/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9420685/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9533753/",
+    "https://www.hamamatsu.com/us/en/product/optical-sensors/infrared-detector/ingaas-photodiode/G17190-005K.html"
+  ],
+  "status": "PROVISIONAL_RESEARCH_CLAIM_CHECKED_NOT_EXPERT_RELEASE_APPROVED",
+  "train_sha256": "79773a34a5a3e1e3aece5a8c7769b2a4e9138769332b607a659d4bb55ac50a2f",
+  "valid_sha256": "29d69e2f558a8b30eda4a1e8b762fa31bb859a8d5b91096e5131ef173af31ec3"
+}

@@ -21,3 +21,5 @@ data/processed/firm3_candidate_*/
 # group partitions and the science-dev-v2 lineage.
 data/processed/firm3_reviewed_seed_v1/
 data/processed/firm3_reviewed_seed_v2/
+
+models/
