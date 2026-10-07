@@ -26,7 +26,7 @@ def package_files():
     for name in tracked:
         if not name:continue
         path=Path(name)
-        if (name.startswith(('scripts/','configs/','tests/','docs/FIRM3_','data/reviews/','data/manifests/','data/processed/firm3_reviewed_seed_v3/'))
+        if (name.startswith(('scripts/','configs/','tests/','docs/FIRM3_','data/reviews/','data/manifests/','data/processed/firm3_reviewed_seed_v3/','data/processed/firm3_synthetic_quant_v1/'))
             or name in {'data/processed/firm_rewritten_large_sft.jsonl','data/audits/firm3_2026-10-05/dataset_audit.json'}
             or name.startswith('data/processed/firm_v2') and 'expert' in name and path.suffix=='.jsonl'
             or (name.startswith('evals/') and len(path.parts)==2 and path.suffix in {'.json','.jsonl'})

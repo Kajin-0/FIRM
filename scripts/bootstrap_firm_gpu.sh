@@ -4,7 +4,7 @@ set -euo pipefail
 profile=${1:?Usage: bootstrap_firm_gpu.sh E1A|E1B}
 case "$profile" in
   E1A) firm_python=${FIRM_PYTHON:-python3.11}; req=requirements-training.txt; expected=3.11 ;;
-  E1B) firm_python=${FIRM_PYTHON:-python3.13}; req=requirements-modern.txt; expected=3.13 ;;
+  E1B) firm_python=${FIRM_PYTHON:-python3.13}; req=requirements-modern-gpu.txt; expected=3.13 ;;
   *) exit 2 ;;
 esac
 cd "$(dirname "$0")/.."

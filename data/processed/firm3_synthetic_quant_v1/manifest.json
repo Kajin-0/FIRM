@@ -1,0 +1,55 @@
+{
+  "benchmark_exclusion": "No E0 benchmark prompts, answers, or source records imported",
+  "families": [
+    "photon_energy",
+    "cutoff_wavelength",
+    "photon_rate",
+    "johnson_density",
+    "shot_density",
+    "diode_responsivity",
+    "photocurrent",
+    "voltage_signal",
+    "nep_density",
+    "detectivity",
+    "noise_rms",
+    "snr",
+    "rc_cutoff",
+    "lifetime_cutoff",
+    "beer_lambert",
+    "optical_density",
+    "wien",
+    "hall_density",
+    "mobility",
+    "photoconductor_gain",
+    "psd_integral",
+    "resistivity"
+  ],
+  "family_count": 22,
+  "generator": "build_firm_quantitative_sft.py",
+  "limitations": [
+    "Parameter-disjoint train/validation only, same formula families.",
+    "Numerical equation checks do not validate all real-device assumptions.",
+    "No improvement is claimed until pre/post heldout evaluation."
+  ],
+  "outputs": [
+    {
+      "bytes": 3052358,
+      "path": "train.jsonl",
+      "rows": 2640,
+      "sha256": "8dab57f24749bee00f0aaeb4043319650027769a9f394fe7d57c81ffef243c7b"
+    },
+    {
+      "bytes": 305289,
+      "path": "valid.jsonl",
+      "rows": 264,
+      "sha256": "fff4467b4583d481caabc445a491942b5b9be2f3b7712af827568ae481542883"
+    }
+  ],
+  "schema_version": "1.0",
+  "scientific_status": "symbolic/numeric equations programmatically cross-checked; NOT human reviewed",
+  "seed": 20261006,
+  "source_rights": "original generated prompts and solutions",
+  "source_type": "original_programmatic_formula_synthesis",
+  "train_per_family": 120,
+  "valid_per_family": 12
+}
