@@ -11,7 +11,7 @@ class AutomationTests(unittest.TestCase):
     def test_bound_one_vm(self):
         self.assertIn('INSTANCE="firm-4b-train-01"',self.watch)
         self.assertIn('PROJECT="firm-gpu-experiments"',self.watch)
-        self.assertIn('ZONE="us-east4-c"',self.watch)
+        self.assertIn('ZONE="us-east4-a"',self.watch)
         for arg in ('--max-run-duration=2h','--instance-termination-action=DELETE','--no-service-account','--no-scopes'):
             self.assertIn(arg,self.launch)
         self.assertIn('seconds!=7200',self.launch)

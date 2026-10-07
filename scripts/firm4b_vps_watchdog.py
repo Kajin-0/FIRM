@@ -10,7 +10,7 @@ import argparse,datetime,hashlib,json,os,subprocess,time
 from pathlib import Path
 
 PROJECT="firm-gpu-experiments"
-ZONE="us-east4-c"
+ZONE="us-east4-a"
 INSTANCE="firm-4b-train-01"
 REMOTE="/opt/firmgpu"
 RUN="firm4b-provisional-v1"
