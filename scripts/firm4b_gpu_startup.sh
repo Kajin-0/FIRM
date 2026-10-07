@@ -50,6 +50,13 @@ test "$(git rev-parse HEAD)" = "@FIRM_PINNED_COMMIT@"
 python3 scripts/train_firm_specialist_4b.py --allow-provisional-data --out "$FIRM_OUT" --dry-run
 say "Source revision and research-corpus preflight pass."
 status installing
+# The Google GPU Ubuntu 22.04 image exposes python3 but omits ensurepip/python3-venv.
+# Install the distro's version-matched venv support BEFORE creating bootstrap-venv.
+if ! python3 -m ensurepip --version >/dev/null 2>&1; then
+  say "Installing missing Ubuntu Python venv/ensurepip support."
+  apt-get update -qq
+  apt-get install -y -qq python3-venv
+fi
 python3 -m venv /opt/firmgpu/bootstrap-venv
 /opt/firmgpu/bootstrap-venv/bin/python -m pip install --disable-pip-version-check --quiet 'uv==0.9.11'
 UV=/opt/firmgpu/bootstrap-venv/bin/uv

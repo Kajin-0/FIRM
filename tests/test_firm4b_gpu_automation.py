@@ -23,6 +23,10 @@ class AutomationTests(unittest.TestCase):
         self.assertIn('--allow-provisional-data',self.startup)
         self.assertIn('timeout --signal=INT --kill-after=100s 5400s',self.startup)
         self.assertNotIn('gcloud auth',self.startup)
+        self.assertIn('python3 -m ensurepip --version',self.startup)
+        self.assertIn('apt-get install -y -qq python3-venv',self.startup)
+        self.assertLess(self.startup.index('apt-get install -y -qq python3-venv'),
+                        self.startup.index('python3 -m venv /opt/firmgpu/bootstrap-venv'))
         subprocess.run(['bash','-n',str(ROOT/'scripts/firm4b_gpu_startup.sh')],check=True)
     def test_watchdog_recovery_and_cleanup(self):
         for name in ('snapshot()','delete_and_audit()','CREDENTIALS_REVOKED','REVOKE_FAILED'):
