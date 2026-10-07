@@ -1,0 +1,22 @@
+{
+  "concept_manifest_sha256": "6fb7dfefa83af824176496967f127340003b1f01e5bc3adf26eaf91d5bf6da54",
+  "curated_review_file_sha256": "4977ae72fb0c2aaa3505be940fb8a9d6a74da48061b96cbc96df171b9399b1bd",
+  "data_scope": "specialist physics numerical+conceptual+non-domain selective refusal",
+  "model": "Qwen/Qwen3.5-4B",
+  "numeric_manifest_sha256": "f380a6667c0211ad61760918ba2a4b42b4f41651587e7a5026587d0c89090bd3",
+  "outputs": {
+    "train": {
+      "rows": 4311,
+      "sha256": "d3a57ce92e0aa3ed180f4b977216fee464dda86c3059b8b5fc792b8cf6d0786d"
+    },
+    "valid": {
+      "rows": 365,
+      "sha256": "fa4d64165eb2ef760031784408012e26fe81e8d8b73fd4e1dc005479920a132d"
+    }
+  },
+  "review_blocked_cards": 101,
+  "review_status": "PROVISIONAL_UNREVIEWED_RESEARCH_ONLY",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "schema_version": "1.0",
+  "source_rights": "original physics problem generation and original editorial cards; scientific review is separately tracked"
+}

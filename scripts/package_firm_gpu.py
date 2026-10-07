@@ -26,7 +26,7 @@ def package_files():
     for name in tracked:
         if not name:continue
         path=Path(name)
-        if (name.startswith(('scripts/','configs/','tests/','docs/FIRM3_','data/reviews/','data/manifests/','data/processed/firm3_reviewed_seed_v3/','data/processed/firm3_synthetic_quant_v1/'))
+        if (name.startswith(('scripts/','configs/','tests/','docs/FIRM3_','data/reviews/','data/manifests/','data/processed/firm3_reviewed_seed_v3/','data/processed/firm3_synthetic_quant_v1/','data/processed/firm3_specialist_concepts_v1/','data/processed/firm3_specialist_4b_mix_v1/'))
             or name in {'data/processed/firm_rewritten_large_sft.jsonl','data/audits/firm3_2026-10-05/dataset_audit.json'}
             or name.startswith('data/processed/firm_v2') and 'expert' in name and path.suffix=='.jsonl'
             or (name.startswith('evals/') and len(path.parts)==2 and path.suffix in {'.json','.jsonl'})
@@ -39,7 +39,7 @@ def package_files():
 
 
 def artifact_files(run):
-    root_names={'experiment_manifest.json','reload_reference.json','adapter_reload_validation.json',
+    root_names={'firm_quant_run.json','experiment_manifest.json','reload_reference.json','adapter_reload_validation.json',
         'smoke_measurements.json','software-lock.txt','trainer_state.json','training_args.bin',
         'adapter_config.json','adapter_model.safetensors','adapter_model.bin','tokenizer.json',
         'tokenizer_config.json','special_tokens_map.json','chat_template.jinja','vocab.json','merges.txt'}
@@ -54,7 +54,8 @@ def artifact_files(run):
         if (len(relative.parts)==1 and path.name in root_names or
             len(relative.parts)==2 and relative.parts[0].startswith('checkpoint-') and path.name in checkpoint_names):
             chosen.append(path)
-    if not any(p.name=='experiment_manifest.json' for p in chosen):raise ValueError('Missing experiment manifest')
+    if not any(p.name in {'experiment_manifest.json','firm_quant_run.json'} for p in chosen):
+        raise ValueError('Missing measured training experiment manifest')
     return chosen
 
 
@@ -68,7 +69,9 @@ def main():
         'git_sha':None if args.collect else clean_checkout(),
         'assets':[{'path':str(p.resolve().relative_to(root)),'sha256':sha256(p),'bytes':p.stat().st_size} for p in files],
         'reminder':'Provisioning and GPU spending require explicit authorization; collect artifacts and stop the machine.',
-        'commands':['bash scripts/bootstrap_firm_gpu.sh E1B','FIRM_RUN_DIR=/persistent/FIRM/E1B bash scripts/firm_gpu_run.sh E1B preflight',
+        'commands':['# Compact 4B requires explicit promotional credit validation and GPU authorization',
+                    'python3 scripts/train_firm_specialist_4b.py --allow-provisional-data --out /persistent/FIRM/compact4b --dry-run',
+                    'bash scripts/bootstrap_firm_gpu.sh E1B','FIRM_RUN_DIR=/persistent/FIRM/E1B bash scripts/firm_gpu_run.sh E1B preflight',
                     'FIRM_RUN_DIR=/persistent/FIRM/E1B bash scripts/firm_gpu_run.sh E1B train',
                     'FIRM_RUN_DIR=/persistent/FIRM/E1B bash scripts/firm_gpu_run.sh E1B resume /persistent/FIRM/E1B/checkpoint-1',
                     'FIRM_RUN_DIR=/persistent/FIRM/E1B bash scripts/firm_gpu_run.sh E1B reload',

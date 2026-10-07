@@ -4,13 +4,14 @@ import re
 import importlib.metadata
 
 QWEN35_REVISION='c202236235762e1c871ad0ccb60c8ee5ba337b9a'
+QWEN35_4B_REVISION='851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a'
 LANGUAGE_MLP=re.compile(r'^model\.language_model\.layers\.\d+\.mlp\.(gate_proj|up_proj|down_proj)$')
 
 
 def validate_runtime_versions(profile):
     expected={'torch':'2.9.1'}
     expected.update({'transformers':'5.18.0','peft':'0.21.2','trl':'1.14.1','accelerate':'1.15.0','datasets':'4.7.0','bitsandbytes':'0.50.2'}
-        if profile=='qwen35_text_bf16' else
+        if profile in ('qwen35_text_bf16','qwen35_4b_text_bf16') else
         {'transformers':'4.57.6','peft':'0.18.1','trl':'0.24.0','accelerate':'1.11.0','datasets':'4.4.1','bitsandbytes':'0.48.2'})
     for package,version in expected.items():
         actual=importlib.metadata.version(package)
@@ -26,6 +27,11 @@ def validate_profile(args):
             raise ValueError('First modern gate uses BF16 LoRA and zero adapter dropout; NF4 is not yet validated')
         if args.max_steps not in {1,2,3} or not args.max_train_examples or not 8<=args.max_train_examples<=16:
             raise ValueError('Unmeasured modern profile is limited to 8..16 reviewed rows and 1..3 steps; E2 is gated')
+    elif args.model_profile=='qwen35_4b_text_bf16':
+        if args.model!='Qwen/Qwen3.5-4B' or args.model_revision!=QWEN35_4B_REVISION:
+            raise ValueError('Compact specialist profile requires exact pinned Qwen3.5-4B revision')
+        if args.quantization!='none' or args.lora_dropout!=0:
+            raise ValueError('Compact Qwen3.5 BF16 LoRA profile forbids unvalidated NF4/dropout')
     elif args.model_profile=='legacy_causal':
         if args.model.startswith(('Qwen/Qwen3.5','Qwen/Qwen3.6','Qwen/Qwen3.8','google/gemma-4','mistralai/Ministral-3')):
             raise ValueError('Do not route modern vision/hybrid checkpoints through the legacy causal profile')
@@ -44,7 +50,7 @@ def load_model(args, compute_dtype):
     from transformers import AutoTokenizer
     tokenizer=AutoTokenizer.from_pretrained(args.model,revision=args.model_revision,trust_remote_code=False)
     if tokenizer.pad_token is None:tokenizer.pad_token=tokenizer.eos_token
-    if args.model_profile=='qwen35_text_bf16':
+    if args.model_profile in ('qwen35_text_bf16','qwen35_4b_text_bf16'):
         from transformers import Qwen3_5ForConditionalGeneration
         if compute_dtype!=torch.bfloat16:
             raise ValueError('Modern profile requires GPU BF16 support')

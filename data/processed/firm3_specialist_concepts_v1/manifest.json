@@ -1,0 +1,24 @@
+{
+  "content_origin": "original editorial physics principles and templated refusals, not scraped full texts",
+  "domain_cards": 51,
+  "generator": "build_firm_specialist_curriculum.py",
+  "limitations": [
+    "Prompt wrappers are templated; examples strongly correlated within cards",
+    "Does not by itself train a research-grade model",
+    "Adversarial scope release benchmark must remain independent",
+    "No emergency cases: medical emergencies require a separate safe exception policy"
+  ],
+  "outputs": {
+    "train": {
+      "rows": 657,
+      "sha256": "76a908228c33ede8695fbeb8e323c89f388c34b8af590f7c1c48c60cfbae8b4d"
+    },
+    "valid": {
+      "rows": 101,
+      "sha256": "504dfd3a3f074dbf089cfbaecb5e706d7c37a16a965f0c7a983e098b58c63e1b"
+    }
+  },
+  "outside_scope_cards": 50,
+  "schema_version": "1.0",
+  "training_status": "BLOCKED until independent domain fact review + scope audit; generated rows training_eligible=false"
+}

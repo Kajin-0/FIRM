@@ -5,12 +5,13 @@ import argparse,hashlib,json,math,time
 from datetime import datetime,timezone
 from pathlib import Path
 from firm_data import sha256
-from firm_model_profiles import QWEN35_REVISION
+from firm_model_profiles import QWEN35_REVISION,QWEN35_4B_REVISION
 
 MODEL="Qwen/Qwen3.5-9B"
 
 def get_args(argv=None):
     p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--model",choices=("Qwen/Qwen3.5-9B","Qwen/Qwen3.5-4B"),default=MODEL)
     p.add_argument("--data",type=Path,default=Path("data/processed/firm3_synthetic_quant_v1"))
     p.add_argument("--adapter",type=Path)
     p.add_argument("--out",type=Path,required=True)
@@ -52,7 +53,8 @@ def run(args):
     if args.out.exists(): raise ValueError("Output exists; do not overwrite a measured comparison")
     if args.max_new_tokens not in {256,384,512}: raise ValueError("Token budget not approved")
     mode="adapter" if args.adapter else "base"
-    spec={"model":MODEL,"revision":QWEN35_REVISION,"evaluation":"firm3_synthetic_quant_v1_valid",
+    revision=QWEN35_4B_REVISION if args.model=="Qwen/Qwen3.5-4B" else QWEN35_REVISION
+    spec={"model":args.model,"revision":revision,"evaluation":"firm3_synthetic_quant_v1_valid",
           "validation_sha256":a["sha256"],"mode":mode,
           "adapter":str(args.adapter) if args.adapter else None,
           "temperature":0,"thinking":False,"max_new_tokens":args.max_new_tokens,
@@ -64,9 +66,9 @@ def run(args):
     if not torch.cuda.is_available() or torch.cuda.device_count()!=1:
         raise RuntimeError("Dedicated single CUDA GPU is required")
     torch.manual_seed(42)
-    tokenizer=AutoTokenizer.from_pretrained(MODEL,revision=QWEN35_REVISION,trust_remote_code=False)
+    tokenizer=AutoTokenizer.from_pretrained(args.model,revision=revision,trust_remote_code=False)
     model,loading=Qwen3_5ForConditionalGeneration.from_pretrained(
-        MODEL,revision=QWEN35_REVISION,trust_remote_code=False,
+        args.model,revision=revision,trust_remote_code=False,
         dtype=torch.bfloat16,device_map={"":0},attn_implementation="sdpa",output_loading_info=True)
     unexpected=loading.get("unexpected_keys",[])
     if any(not x.startswith("mtp.") for x in unexpected) or loading.get("missing_keys"):
@@ -74,7 +76,7 @@ def run(args):
     if args.adapter:
         from peft import PeftModel
         cfg=json.loads((args.adapter/"adapter_config.json").read_text())
-        if cfg.get("base_model_name_or_path")!=MODEL:
+        if cfg.get("base_model_name_or_path")!=args.model:
             raise ValueError("Adapter base model differs")
         model=PeftModel.from_pretrained(model,str(args.adapter))
     model.eval()
