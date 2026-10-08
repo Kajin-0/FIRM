@@ -1,0 +1,48 @@
+{
+  "answer_stats": {
+    "max_words": 164,
+    "mean_words": 60.4,
+    "median_words": 36,
+    "p75_words": 114,
+    "p90_words": 130,
+    "p95_words": 148
+  },
+  "calibration_answer_stats": {
+    "max_words": 163,
+    "mean_words": 124.34,
+    "median_words": 118,
+    "p75_words": 137,
+    "p90_words": 151,
+    "p95_words": 163
+  },
+  "calibration_fraction": 0.2583,
+  "calibration_rows": 1541,
+  "categories": {
+    "canonical_fact": 1570,
+    "contrastive_correction": 125,
+    "depth_complete": 366,
+    "depth_policy": 32,
+    "diagnostic_reasoning": 379,
+    "multiturn_depth": 224,
+    "natural_depth": 1077,
+    "natural_depth_thinking": 240,
+    "out_of_scope": 26,
+    "precision_correction": 64,
+    "process_engineering": 56,
+    "quantitative_open": 1599,
+    "reasoning_depth": 64,
+    "reasoning_trace": 62,
+    "taxonomy": 82
+  },
+  "exact_user_stress_prompts_imported": false,
+  "inherited_from": "firm4b_v2_3_expanded_v1",
+  "private_benchmark_imported": false,
+  "rows": {
+    "train": 5489,
+    "valid": 477
+  },
+  "schema_version": "2.3.1",
+  "status": "PROVISIONAL_RESEARCH_CLAIM_CHECKED_NOT_EXPERT_RELEASE_APPROVED",
+  "train_sha256": "22ad540104e8715fa9960870e7701acfc83bce952ebb9aec4575a22e4635aab2",
+  "valid_sha256": "92df8262b1f1e7d0fc167792f135996668aaf38c6809222a559a06a71731b7df"
+}

@@ -216,3 +216,9 @@ Key changes:
 - exact user regression prompts remain private and excluded.
 
 Current frozen-candidate data are built by `scripts/build_firm4b_v2_3.py` into `data/processed/firm4b_v2_3_expanded_v1`. The trainer is `scripts/train_firm4b_v2_3.py`: exact pinned Qwen3.5-4B base, BF16 rank-16 LoRA, LR 1.5e-5, effective batch 4, 1,413 steps (~one effective pass). See `docs/FIRM4B_V23_PLAN.md`.
+
+### FIRM-4B v2.3.1 natural-prompt calibration patch
+
+v2.3 was not promoted after post-quantization evaluation: v2.2 scored 0/24 on the depth/precision gauntlet, v2.3 thinking-on scored 1/24, and v2.3 thinking-off scored 3/24. v2.3 increased answer length but remained cue-dependent and retained factual failures including KRS-5 identity and occasional HgCdTe taxonomy errors.
+
+v2.3.1 retrains from the untouched pinned Qwen3.5-4B base with a rebalanced curriculum: 5,489 train / 477 validation, 25.8% focused natural-prompt calibration, 1,077 natural-depth rows, 240 short-thinking/complete-final rows, 224 masked multi-turn expansion rows, 1,570 canonical fact rows (10 variants per 157 facts), and 1,599 quantitative rows with all families retained. The trainer supports alternating multi-turn context and supervises only the final assistant turn. Real tokenizer preflight: maximum 567 tokens under the 1024-token limit. Training config: BF16 rank-16 LoRA, alpha 32, LR 1.5e-5, effective batch 4, 1,373 steps. See `docs/FIRM4B_V231_PLAN.md`. Promotion requires beating both `evals/firm_v23_depth_gauntlet_v1.jsonl` and the new unseen `evals/firm_v231_shadow_gauntlet_v1.jsonl`, plus private regressions.
