@@ -197,3 +197,22 @@ Older FIRM3 documents are important provenance but can describe superseded pre-4
 Choose the next experiment by the largest expected improvement in **held-out specialist quality per unit of model size, memory, latency, engineering complexity, and training cost**.
 
 The final deliverable should be a compact specialist that is measurably better than its base model, scientifically trustworthy within its stated scope, robust to ordinary user phrasing, and fast enough that running it locally on a laptop is practical.
+
+### FIRM-4B v2.3 depth-and-precision candidate
+
+v2.3 follows v2.2 after manual use showed that v2.2's final answers are often too terse even when reasoning terminates correctly. It also repairs several long-tail factual failures in semiconductor packaging and IR optical materials.
+
+Key changes:
+- complete v2.2 curriculum retained,
+- adaptive-depth response policy,
+- 384 complete-answer examples (typically 80-164 words),
+- TO/Kovar/glass-seal packaging coverage,
+- KRS-5 = thallium bromoiodide correction,
+- HgCdTe direct-gap correction,
+- multi-axis HgCdTe vs InSb comparisons,
+- 64 precision-correction rows,
+- 64 short-reasoning / complete-final-answer rows,
+- held-out depth gauntlet at `evals/firm_v23_depth_gauntlet_v1.jsonl`,
+- exact user regression prompts remain private and excluded.
+
+Current frozen-candidate data are built by `scripts/build_firm4b_v2_3.py` into `data/processed/firm4b_v2_3_expanded_v1`. The trainer is `scripts/train_firm4b_v2_3.py`: exact pinned Qwen3.5-4B base, BF16 rank-16 LoRA, LR 1.5e-5, effective batch 4, 1,413 steps (~one effective pass). See `docs/FIRM4B_V23_PLAN.md`.
